@@ -32,6 +32,18 @@ Design a PLL that synthesizes **2.4 GHz** from a **10 MHz reference** (N=240).
 | `program.md` | These instructions. **DO NOT MODIFY.** |
 | `CLAUDE.md` | Project config. **DO NOT MODIFY.** |
 
+## Branch Strategy
+
+- **`main`** = stable, only improvements. Updated via merged PRs.
+- **`dev`** = working branch. All experiments happen here.
+
+### Initial Setup (do this once at the start)
+```bash
+# Make sure you're on dev branch
+git checkout dev 2>/dev/null || git checkout -b dev
+git push -u origin dev
+```
+
 ## The Experiment Loop
 
 LOOP FOREVER:
@@ -62,7 +74,7 @@ Read the score and metrics from the output.
 ### 6. Log to results.tsv
 Append a row:
 ```
-<commit_hash>	<score>	<lock_time_us>	<ripple_mv>	<status>	<description>
+<commit_hash>	<score>	<lock_time_us>	<ripple_mv>	<power_mw>	<status>	<description>
 ```
 Status is `keep`, `discard`, or `crash`.
 
@@ -71,56 +83,74 @@ Run: `python3 update_results.py`
 This regenerates the leaderboard markdown with the latest data.
 
 ### 8. Decision
-- **If score improved**: KEEP. Commit results.tsv and results.md:
+
+- **If score improved**: KEEP. Create a PR to main:
   ```bash
-  git add results.tsv results.md
-  git commit -m "<detailed commit message, see format below>"
-  git push
+  # Commit results on dev
+  git add results.tsv results.md design.cir
+  git commit -m "results: exp #N — <short title>"
+  git push origin dev
+
+  # Create PR with detailed description and auto-merge
+  gh pr create --base main --head dev \
+    --title "[PLL] score: 0.XXXX (+0.XXXX) | exp #N — short title" \
+    --body "$(cat <<'PREOF'
+  ## Summary
+  One paragraph explaining what changed and why it improved the score.
+
+  ## Metrics
+  | Metric | Before | After | Target | Status |
+  |--------|--------|-------|--------|--------|
+  | Score | 0.XXXX | 0.XXXX | 0.80 | ⬆️ |
+  | Lock time | XX µs | XX µs | < 50 µs | ✅/❌ |
+  | Ripple | XX mV | XX mV | < 5 mV | ✅/❌ |
+  | Phase noise | XX dBc/Hz | XX dBc/Hz | < -90 dBc/Hz | ✅/❌ |
+  | Ref spur | XX dBc | XX dBc | < -60 dBc | ✅/❌ |
+  | Power | XX mW | XX mW | < 5 mW | ✅/❌ |
+  | Stability | yes/no | yes/no | yes | ✅/❌ |
+
+  ## What Changed
+  - Parameter X: old_value → new_value
+  - Parameter Y: old_value → new_value
+
+  ## Hypothesis
+  Why I thought this would help.
+
+  ## Analysis
+  What actually happened and why. What did I learn?
+
+  ## Next Steps
+  What to try next based on this result.
+  PREOF
+  )"
+
+  # Auto-merge the PR
+  gh pr merge --merge --delete-branch=false
+
+  # Stay on dev, pull the merge so dev is in sync with main
+  git pull origin main
   ```
+
 - **If score decreased or equal**: DISCARD. Revert design.cir:
   ```bash
   git checkout HEAD~1 -- design.cir
   git add results.tsv results.md design.cir
   git commit -m "revert: <what failed and why>"
-  git push
+  git push origin dev
   ```
+
 - **If crashed**: Log crash, revert, try something else.
 
 ### 9. GOTO 1
 
-## Commit Message Format (for improvements)
+## PR Title Format
 
-This is critical. Each improvement commit is a mini research paper. Use this exact format:
-
+Use this exact format for PR titles:
 ```
 [PLL] score: 0.XXXXXX (+0.XXXX) | exp #N — short title
-
-## Summary
-One paragraph explaining what changed and why it improved the score.
-
-## Metrics
-| Metric | Before | After | Target | Status |
-|--------|--------|-------|--------|--------|
-| Score | 0.XXXX | 0.XXXX | 0.80 | ⬆️ |
-| Lock time | XX us | XX us | <50 us | ✅/❌ |
-| Ripple | XX mV | XX mV | <5 mV | ✅/❌ |
-| Phase noise | ~XX dBc | ~XX dBc | <-90 dBc | ✅/❌ |
-| Stability | yes/no | yes/no | yes | ✅/❌ |
-| Power | XX mW | XX mW | <5 mW | ✅/❌ |
-
-## What Changed
-- Parameter X: old_value → new_value
-- Parameter Y: old_value → new_value
-
-## Hypothesis
-Why I thought this would help.
-
-## Analysis
-What actually happened and why. What did I learn?
-
-## Next Steps
-What to try next based on this result.
 ```
+
+The PR body is the detailed research report. **Fill in ALL fields with real data.** Each PR is a mini research paper.
 
 ## results.tsv Format
 
@@ -177,9 +207,10 @@ Initialize with just the header if it doesn't exist.
 
 1. **NEVER STOP ITERATING.** Run experiments forever.
 2. **NEVER MODIFY** evaluate.py, program.md, or CLAUDE.md.
-3. **ALWAYS PUSH** after each commit so results are visible on GitHub.
-4. **DETAILED COMMITS.** Each commit is a research record. Be thorough.
+3. **ALWAYS CREATE A PR** for improvements so progress is visible on GitHub.
+4. **DETAILED PR DESCRIPTIONS.** Each PR is a research record. Be thorough.
 5. **UPDATE results.md** after every experiment so the leaderboard stays current.
 6. Target: ~200+ experiments overnight (~30s per simulation).
 7. If you run out of ideas, read analog PLL design theory and try again.
 8. ngspice is at `/usr/local/bin/ngspice`.
+9. **WORK ON `dev` BRANCH.** Never commit directly to main. Use PRs.
