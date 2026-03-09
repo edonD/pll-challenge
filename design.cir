@@ -44,11 +44,11 @@ Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
 aand1 [d_up d_dn] d_reset and1
 .model and1 d_and(rise_delay=0.1n fall_delay=0.5n input_load=0.5e-12)
 
-aff1 d_one ref_d d_zero d_reset d_up d_up_n flop1
+aff1 d_one ref_d d_reset d_zero d_up d_up_n flop1
 .model flop1 d_dff(clk_delay=0.1n set_delay=0.1n reset_delay=0.1n
 + ic=2 rise_delay=0.1n fall_delay=0.1n)
 
-aff2 d_one div_out_d d_zero d_reset d_dn d_dn_n flop1
+aff2 d_one div_out_d d_reset d_zero d_dn d_dn_n flop1
 
 * Digital constants via resistors and adc bridges
 Vone one_a 0 dc {vdd}
@@ -145,6 +145,9 @@ meas tran ctrl_avg avg v(ctrl) from=40u to=50u
 let lock_target = ctrl_final * 0.95
 meas tran lock_time trig at=0 targ v(ctrl) val=$&lock_target rise=1
 
+* Compute ripple
+let ctrl_ripple = ctrl_max - ctrl_min
+
 * Write metrics
 echo "=== PLL METRICS ===" > metrics.txt
 echo "lock_time: $&lock_time" >> metrics.txt
@@ -152,6 +155,10 @@ echo "ctrl_final: $&ctrl_final" >> metrics.txt
 echo "ctrl_max: $&ctrl_max" >> metrics.txt
 echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
+echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
+echo "icp: 500e-6" >> metrics.txt
+echo "kvco: 200e6" >> metrics.txt
+echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
 
 * Save waveform data
