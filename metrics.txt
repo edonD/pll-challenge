@@ -1,0 +1,7 @@
+=== PLL METRICS ===
+lock_time: 4.78265E-05
+ctrl_final: 42.7031
+ctrl_max: 42.7031
+ctrl_min: 33.249
+ctrl_avg: 37.9365
+=== END METRICS ===

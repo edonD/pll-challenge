@@ -37,9 +37,9 @@ def find_ngspice():
     """Find ngspice binary."""
     # Check common locations
     paths = [
+        "/usr/local/bin/ngspice",
         "ngspice",
         "/usr/bin/ngspice",
-        "/usr/local/bin/ngspice",
         os.path.expanduser("~/ngspice/bin/ngspice"),
     ]
     for p in paths:
