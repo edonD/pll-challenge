@@ -12,27 +12,23 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 500e-6
-.param Kvco = 200e6
+.param Icp = 200e-6
+.param Kvco = 50e6
 .param Vco_center = 1.65
 .param vdd = 3.3
 
 * Loop filter (standard 2nd order: series R1-C1 + shunt C2)
-* Loop BW ~30kHz, phase margin ~60 deg
-* ωc = Icp*Kvco*R1/(2π*N) => R1 = ωc*2π*N/(Icp*Kvco)
-* R1 = 2π*30e3*2π*240/(500e-6*200e6) = 2842 Ω
-* C1 = 4/(R1*ωc) = 4/(2842*2π*30e3) ≈ 7.5nF
-* C2 = C1/10 = 750pF
-.param R1 = 2.8k
-.param C1 = 7.5n
-.param C2 = 750p
-.param C3 = 75p
+* With Kvco=50e6: ωc = Icp*Kvco*R1/(2π*N)
+* For BW=20kHz: R1 = 2π*20e3*2π*240/(200e-6*50e6) = 30.2kΩ
+* C1 = 4/(R1*ωc) = 4/(30.2e3*2π*20e3) = 1.06nF
+* C2 = C1/10 for phase margin, but use larger for lower ripple
+.param R1 = 30k
+.param C1 = 1n
+.param C2 = 100p
+.param C3 = 10p
 
-* VCO noise
-.param vco_noise_amp = 50e-6
-
-* Charge pump mismatch
-.param Icp_mismatch = 0.02
+* Charge pump mismatch (reduced for lower ripple)
+.param Icp_mismatch = 0.005
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
@@ -42,8 +38,6 @@ Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
 * ---------------------------------------------------------------------------
 * PHASE-FREQUENCY DETECTOR
 * ---------------------------------------------------------------------------
-* Two D flip-flops + AND reset gate
-
 aand1 [d_up d_dn] d_reset and1
 .model and1 d_and(rise_delay=0.1n fall_delay=0.5n input_load=0.5e-12)
 
@@ -53,18 +47,15 @@ aff1 d_one ref_d d_reset d_zero d_up d_up_n flop1
 
 aff2 d_one div_out_d d_reset d_zero d_dn d_dn_n flop1
 
-* Digital constants via resistors and adc bridges
 Vone one_a 0 dc {vdd}
 Vzero zero_a 0 dc 0
 
 abridge_const [one_a zero_a] [d_one d_zero] adc1
 
-* ADC bridges: analog -> digital
 abridge_ref [ref] [ref_d] adc1
 abridge_div [div_out] [div_out_d] adc1
 .model adc1 adc_bridge(in_low=0.5 in_high=2.0 rise_delay=0.1n fall_delay=0.1n)
 
-* DAC bridges: digital -> analog (for UP/DOWN signals)
 abridge_updn [d_up d_dn] [up_a dn_a] dac1
 .model dac1 dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
 + input_load=5e-12 t_rise=0.1n t_fall=0.1n)
@@ -78,10 +69,9 @@ Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
 * ---------------------------------------------------------------------------
-* ctrl node is directly driven by charge pump
 * R1 + C1 in series from ctrl to ground (provides stabilizing zero)
-* C2 shunt from ctrl to ground (main integrating cap)
-* C3 for additional filtering
+* C2 shunt from ctrl to ground (integration)
+* C3 for additional high-freq filtering
 R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
@@ -100,9 +90,15 @@ Vgnd_clamp gnd_node 0 dc 0
 * VCO (Voltage-Controlled Oscillator)
 * ---------------------------------------------------------------------------
 * f_out = 2.4 GHz + Kvco * (Vctrl - Vco_center)
+* With Kvco=50MHz/V:
+* V=0.5 -> 2.4G + 50M*(0.5-1.65) = 2.3425G
+* V=1.0 -> 2.4G + 50M*(1.0-1.65) = 2.3675G
+* V=1.65 -> 2.4G
+* V=2.0 -> 2.4G + 50M*(2.0-1.65) = 2.4175G
+* V=2.5 -> 2.4G + 50M*(2.5-1.65) = 2.4425G
 avco ctrl d_vco vco_model
 .model vco_model d_osc(cntl_array=[0.5 1.0 1.65 2.0 2.5]
-+ freq_array=[2.17e9 2.27e9 2.4e9 2.47e9 2.57e9]
++ freq_array=[2.3425e9 2.3675e9 2.4e9 2.4175e9 2.4425e9]
 + duty_cycle=0.5 init_phase=0
 + rise_delay=0.05n fall_delay=0.05n)
 
@@ -113,7 +109,6 @@ adiv1 d_vco d_divided fdiv1
 .model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
 + rise_delay=0.1n fall_delay=0.1n)
 
-* Divider output: digital -> analog
 abridge_divout [d_divided] [div_out] dac_div
 .model dac_div dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
 + input_load=5e-12 t_rise=0.1n t_fall=0.1n)
@@ -126,10 +121,8 @@ abridge_divout [d_divided] [div_out] dac_div
 .control
 set filetype=ascii
 
-* Save only needed signals to keep memory low
 save ref div_out ctrl up_a dn_a
 
-* Run transient
 tran 0.1n 50u uic
 
 * === MEASUREMENTS ===
@@ -138,14 +131,11 @@ meas tran ctrl_max max v(ctrl) from=40u to=50u
 meas tran ctrl_min min v(ctrl) from=40u to=50u
 meas tran ctrl_avg avg v(ctrl) from=40u to=50u
 
-* Lock time: measure settling
 let lock_target = ctrl_final * 0.95
 meas tran lock_time trig at=0 targ v(ctrl) val=$&lock_target rise=1
 
-* Compute ripple
 let ctrl_ripple = ctrl_max - ctrl_min
 
-* Write metrics
 echo "=== PLL METRICS ===" > metrics.txt
 echo "lock_time: $&lock_time" >> metrics.txt
 echo "ctrl_final: $&ctrl_final" >> metrics.txt
@@ -153,12 +143,11 @@ echo "ctrl_max: $&ctrl_max" >> metrics.txt
 echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
-echo "icp: 500e-6" >> metrics.txt
-echo "kvco: 200e6" >> metrics.txt
+echo "icp: 200e-6" >> metrics.txt
+echo "kvco: 50e6" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
 
-* Save waveform data
 wrdata ctrl_waveform.txt v(ctrl)
 
 echo "Simulation complete."
