@@ -4,7 +4,7 @@
 * THIS IS THE ONLY FILE THE AI MODIFIES.
 *
 * Target: 2.4 GHz output from 10 MHz reference (N=240, fractional)
-* Architecture: PFD -> Charge Pump -> 3rd-order Loop Filter -> VCO -> Divider
+* Architecture: PFD -> Charge Pump -> Loop Filter -> VCO -> Divider
 * ============================================================================
 
 * ---------------------------------------------------------------------------
@@ -17,12 +17,16 @@
 .param Vco_center = 1.65
 .param vdd = 3.3
 
-* Loop filter (3rd order passive)
-.param R1 = 1k
-.param R2 = 500
-.param C1 = 100p
-.param C2 = 10p
-.param C3 = 1p
+* Loop filter (standard 2nd order: series R1-C1 + shunt C2)
+* Loop BW ~30kHz, phase margin ~60 deg
+* ωc = Icp*Kvco*R1/(2π*N) => R1 = ωc*2π*N/(Icp*Kvco)
+* R1 = 2π*30e3*2π*240/(500e-6*200e6) = 2842 Ω
+* C1 = 4/(R1*ωc) = 4/(2842*2π*30e3) ≈ 7.5nF
+* C2 = C1/10 = 750pF
+.param R1 = 2.8k
+.param C1 = 7.5n
+.param C2 = 750p
+.param C3 = 75p
 
 * VCO noise
 .param vco_noise_amp = 50e-6
@@ -39,7 +43,6 @@ Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
 * PHASE-FREQUENCY DETECTOR
 * ---------------------------------------------------------------------------
 * Two D flip-flops + AND reset gate
-* XSPICE d_source needs bracket syntax for single pins
 
 aand1 [d_up d_dn] d_reset and1
 .model and1 d_and(rise_delay=0.1n fall_delay=0.5n input_load=0.5e-12)
@@ -67,19 +70,22 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 + input_load=5e-12 t_rise=0.1n t_fall=0.1n)
 
 * ---------------------------------------------------------------------------
-* CHARGE PUMP
+* CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-Bcp_up cp_out 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
-Bcp_dn cp_out 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
+Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 
 * ---------------------------------------------------------------------------
-* LOOP FILTER (3rd order passive)
+* LOOP FILTER (standard CP-PLL topology)
 * ---------------------------------------------------------------------------
-R_lf1 cp_out lf1 {R1}
-R_lf2 lf1 ctrl {R2}
-C_lf1 lf1 0 {C1} ic={Vco_center}
+* ctrl node is directly driven by charge pump
+* R1 + C1 in series from ctrl to ground (provides stabilizing zero)
+* C2 shunt from ctrl to ground (main integrating cap)
+* C3 for additional filtering
+R_lf1 ctrl lf_zero {R1}
+C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
-C_lf3 cp_out 0 {C3}
+C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
@@ -93,16 +99,7 @@ Vgnd_clamp gnd_node 0 dc 0
 * ---------------------------------------------------------------------------
 * VCO (Voltage-Controlled Oscillator)
 * ---------------------------------------------------------------------------
-* Using XSPICE d_osc with piecewise-linear voltage-to-frequency mapping
 * f_out = 2.4 GHz + Kvco * (Vctrl - Vco_center)
-*
-* Build 5-point lookup table:
-* V=0.5 -> f = 2.4G + 200M*(0.5-1.65) = 2.17G
-* V=1.0 -> f = 2.4G + 200M*(1.0-1.65) = 2.27G
-* V=1.65 -> f = 2.4G (center)
-* V=2.0 -> f = 2.4G + 200M*(2.0-1.65) = 2.47G
-* V=2.5 -> f = 2.4G + 200M*(2.5-1.65) = 2.57G
-
 avco ctrl d_vco vco_model
 .model vco_model d_osc(cntl_array=[0.5 1.0 1.65 2.0 2.5]
 + freq_array=[2.17e9 2.27e9 2.4e9 2.47e9 2.57e9]
@@ -124,13 +121,13 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 * INITIAL CONDITIONS AND SIMULATION
 * ---------------------------------------------------------------------------
-.ic v(lf1)={Vco_center} v(ctrl)={Vco_center}
+.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
 
 .control
 set filetype=ascii
 
 * Save only needed signals to keep memory low
-save ref div_out ctrl cp_out up_a dn_a
+save ref div_out ctrl up_a dn_a
 
 * Run transient
 tran 0.1n 50u uic
