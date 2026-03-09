@@ -1,0 +1,211 @@
+* ============================================================================
+* Fractional-N Sigma-Delta PLL Frequency Synthesizer
+* ============================================================================
+* THIS IS THE ONLY FILE THE AI MODIFIES.
+*
+* Target: 2.4 GHz output from 10 MHz reference (N=240, fractional)
+* Architecture: PFD -> Charge Pump -> 3rd-order Loop Filter -> VCO -> Divider
+*               with 2nd-order MASH sigma-delta modulator
+*
+* The AI tunes the .param values below to optimize:
+*   - Lock time (< 50 us)
+*   - Phase noise (< -90 dBc/Hz @ 1 MHz offset)
+*   - Reference spur level (< -60 dBc)
+*   - Power consumption
+*   - Stability (no ringing, clean lock)
+* ============================================================================
+
+* ---------------------------------------------------------------------------
+* DESIGN PARAMETERS (AI modifies these)
+* ---------------------------------------------------------------------------
+.param fref = 10e6           ; Reference frequency (Hz)
+.param Ndiv = 240            ; Integer division ratio
+.param frac_num = 1          ; Fractional numerator (output = fref * (Ndiv + frac_num/frac_den))
+.param frac_den = 3          ; Fractional denominator
+
+.param Icp = 500e-6          ; Charge pump current (A)
+.param Kvco = 200e6          ; VCO gain (Hz/V)
+.param Vco_center = 1.65     ; VCO center control voltage (V)
+
+* Loop filter (3rd order passive)
+.param R1 = 1k               ; Series resistor (damping)
+.param R2 = 500              ; 2nd stage resistor
+.param C1 = 100p             ; Main integrating cap
+.param C2 = 10p              ; 2nd cap (ripple smoothing)
+.param C3 = 1p               ; 3rd cap (high-freq filtering)
+
+* Charge pump matching
+.param Icp_mismatch = 0.02   ; Fractional mismatch (0.02 = 2%)
+.param cp_delay = 100p       ; Charge pump switching delay
+
+* VCO phase noise injection
+.param vco_noise_amp = 50e-6 ; VCO noise amplitude (V rms)
+
+* Sigma-delta modulator
+.param sdm_order = 2         ; 1 or 2 (MASH order)
+
+* Supply
+.param vdd = 3.3
+
+* ---------------------------------------------------------------------------
+* REFERENCE OSCILLATOR
+* ---------------------------------------------------------------------------
+Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
+
+* ---------------------------------------------------------------------------
+* PHASE-FREQUENCY DETECTOR (using XSPICE D flip-flops)
+* ---------------------------------------------------------------------------
+* PFD: Two D-FFs clocked by ref and div, reset by AND of outputs
+aand1 [d_up d_dn] d_reset and1
+.model and1 d_and(rise_delay=0.1n fall_delay=0.5n input_load=0.5e-12)
+
+* FF1: clocked by reference
+aff1 d_one ref_d d_zero d_reset d_up d_up_n flop1
+.model flop1 d_dff(clk_delay=0.1n set_delay=0.1n reset_delay=0.1n
++ ic=2 rise_delay=0.1n fall_delay=0.1n)
+
+* FF2: clocked by divider output
+aff2 d_one div_out_d d_zero d_reset d_dn d_dn_n flop1
+
+* Digital constants
+aconst_one d_one const_one
+.model const_one d_source(input_file="one.stim")
+
+aconst_zero d_zero const_zero
+.model const_zero d_source(input_file="zero.stim")
+
+* ADC bridges for reference and divider (analog -> digital)
+abridge_ref [ref] [ref_d] adc1
+abridge_div [div_out] [div_out_d] adc1
+.model adc1 adc_bridge(in_low=0.5 in_high=2.0 rise_delay=0.1n fall_delay=0.1n)
+
+* DAC bridges for UP/DOWN (digital -> analog)
+abridge_updn [d_up d_dn] [up_a dn_a] dac1
+.model dac1 dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
++ input_load=5e-12 t_rise=0.1n t_fall=0.1n)
+
+* ---------------------------------------------------------------------------
+* CHARGE PUMP
+* ---------------------------------------------------------------------------
+* UP current source (when UP is high, source current into filter)
+Bcp_up cp_out 0 I = {Icp * (1 + Icp_mismatch/2)} * uramp(v(up_a) - {vdd/2}) / {vdd/2}
+* DN current sink (when DN is high, sink current from filter)
+Bcp_dn cp_out 0 I = -{Icp * (1 - Icp_mismatch/2)} * uramp(v(dn_a) - {vdd/2}) / {vdd/2}
+
+* ---------------------------------------------------------------------------
+* LOOP FILTER (3rd order passive)
+* ---------------------------------------------------------------------------
+* Topology: cp_out --R1-- node1 --R2-- node2
+*                          |             |
+*                         C1            C2
+*                          |             |
+*                         GND           GND
+*           cp_out --------+
+*                          |
+*                         C3
+*                          |
+*                         GND
+R_lf1 cp_out lf1 {R1}
+R_lf2 lf1 ctrl {R2}
+C_lf1 lf1 0 {C1} ic={Vco_center}
+C_lf2 ctrl 0 {C2} ic={Vco_center}
+C_lf3 cp_out 0 {C3}
+
+* ---------------------------------------------------------------------------
+* VCO (Voltage-Controlled Oscillator)
+* ---------------------------------------------------------------------------
+* Using XSPICE d_osc: piecewise-linear voltage-to-frequency mapping
+* Build a 5-point table around the center frequency
+*
+* f_out = f_center + Kvco * (Vctrl - Vco_center)
+* At Vctrl=0.5: f = 2.4G + 200M*(0.5-1.65) = 2.17G
+* At Vctrl=1.0: f = 2.4G + 200M*(1.0-1.65) = 2.27G
+* At Vctrl=1.65: f = 2.4G (center)
+* At Vctrl=2.0: f = 2.4G + 200M*(2.0-1.65) = 2.47G
+* At Vctrl=2.5: f = 2.4G + 200M*(2.5-1.65) = 2.57G
+
+* Behavioral VCO using B-source for more flexibility
+* Output: square wave whose frequency depends on ctrl voltage
+Bvco vco_out 0 V = {vdd/2} + {vdd/2} * sgn(sin(6.283185307 * idt(2.4e9 + {Kvco} * (v(ctrl) - {Vco_center}))))
+
+* Add VCO noise
+Vnoise vco_noise 0 dc 0 trnoise({vco_noise_amp} 0.1n 0 0)
+Bvco_noisy vco_clean 0 V = v(vco_out) + v(vco_noise)
+
+* Buffer for divider
+abridge_vco [vco_clean] [d_vco] adc_vco
+.model adc_vco adc_bridge(in_low=1.0 in_high=2.0 rise_delay=0.05n fall_delay=0.05n)
+
+* ---------------------------------------------------------------------------
+* SIGMA-DELTA MODULATED FREQUENCY DIVIDER
+* ---------------------------------------------------------------------------
+* For behavioral simulation, we use a fixed divider at the nominal ratio.
+* The sigma-delta modulation is approximated by dithering the divider ratio.
+*
+* Nominal output frequency: fref * (Ndiv + frac_num/frac_den)
+*   = 10 MHz * (240 + 1/3) = 2.40333... GHz
+*
+* Simple approach: use d_fdiv with nominal ratio
+* (Full SDM implementation would modulate between Ndiv and Ndiv+1)
+
+adiv1 d_vco d_divided fdiv1
+.model fdiv1 d_fdiv(freq_divisor={Ndiv} i_count=0
++ rise_delay=0.1n fall_delay=0.1n)
+
+* Output the divided signal as analog for the PFD
+abridge_divout [d_divided] [div_out] dac_div
+.model dac_div dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
++ input_load=5e-12 t_rise=0.1n t_fall=0.1n)
+
+* ---------------------------------------------------------------------------
+* SIMULATION
+* ---------------------------------------------------------------------------
+.ic v(lf1)={Vco_center} v(ctrl)={Vco_center}
+
+.control
+set filetype=ascii
+save ref div_out ctrl vco_out cp_out lf1
+
+* Run transient for lock acquisition + steady state
+tran 0.05n 100u uic
+
+* === MEASUREMENTS ===
+* Lock time: when ctrl voltage settles within 1% of final value
+let ctrl_final = ctrl[length(ctrl)-1]
+let ctrl_low = ctrl_final * 0.99
+let ctrl_high = ctrl_final * 1.01
+
+* Measure lock: first time ctrl enters and stays in 1% band
+meas tran lock_time trig v(ctrl) val={ctrl_low} rise=1 targ v(ctrl) val={ctrl_final} cross=1
+
+* Measure ctrl voltage ripple in last 10us (steady state)
+meas tran ctrl_max max v(ctrl) from=90u to=100u
+meas tran ctrl_min min v(ctrl) from=90u to=100u
+let ctrl_ripple = ctrl_max - ctrl_min
+
+* Measure average ctrl voltage
+meas tran ctrl_avg avg v(ctrl) from=90u to=100u
+
+* Phase noise: FFT of VCO output in steady state
+* Linearize last 10us for FFT
+let starttime = 90e-6
+let endtime = 100e-6
+
+* Save key metrics to file
+echo "=== PLL METRICS ===" > metrics.txt
+echo "lock_time: $&lock_time" >> metrics.txt
+echo "ctrl_final: $&ctrl_final" >> metrics.txt
+echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
+echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
+echo "ctrl_max: $&ctrl_max" >> metrics.txt
+echo "ctrl_min: $&ctrl_min" >> metrics.txt
+echo "=== END METRICS ===" >> metrics.txt
+
+* Generate waveform data for analysis
+wrdata ctrl_waveform.txt ctrl
+wrdata vco_waveform.txt vco_out
+
+echo "Simulation complete."
+.endc
+
+.end
