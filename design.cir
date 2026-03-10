@@ -102,11 +102,8 @@ avco ctrl d_vco vco_model
 * ---------------------------------------------------------------------------
 * FREQUENCY DIVIDER
 * ---------------------------------------------------------------------------
-adiv1 d_vco d_div_mid fdiv_pre
-.model fdiv_pre d_fdiv(div_factor=24 i_count=0
-+ rise_delay=0.1n fall_delay=0.1n)
-adiv2 d_div_mid d_divided fdiv_post
-.model fdiv_post d_fdiv(div_factor=10 i_count=0
+adiv1 d_vco d_divided fdiv1
+.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
 + rise_delay=0.1n fall_delay=0.1n)
 
 abridge_divout [d_divided] [div_out] dac_div
