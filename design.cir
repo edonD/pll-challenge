@@ -76,7 +76,7 @@ C_lf3 ctrl 0 {C3}
 
 * Bias ctrl toward Vco_center with very high impedance
 Vbias bias_node 0 dc {Vco_center}
-Rbias ctrl bias_node 10G
+Rbias ctrl bias_node 100G
 * Clamp control voltage to VCO input range
 Dclamp_hi ctrl vdd_node dmod
 Dclamp_lo gnd_node ctrl dmod
