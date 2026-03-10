@@ -811,3 +811,4 @@ f8daca2	0.884949	22.1	5.0	1.74	discard	remove clamp diodes
 6202773	0.884949	22.1	5.0	1.74	discard	IC on C3
 c52789f	0.871654	24.0	5.40	1.74	discard	C2 IC=Vco_center+10mV
 912d4de	0.884949	22.1	5.0	1.74	discard	lf_zero IC offset -10mV
+df4e6ef	0.884949	22.1	5.0	1.74	discard	.nodeset instead of .ic
