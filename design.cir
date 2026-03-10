@@ -117,7 +117,6 @@ abridge_divout [d_divided] [div_out] dac_div
 
 .control
 set filetype=ascii
-set wr_singlescale
 
 save ref div_out ctrl up_a dn_a
 
