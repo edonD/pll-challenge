@@ -62,8 +62,6 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
 Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
-* DC bias correction: pull ctrl toward Vco_center to fight drift
-Bcorr ctrl 0 I = -1e-9 * (v(ctrl) - {Vco_center})
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
