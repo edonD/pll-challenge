@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:58:39*
+*Auto-generated at 2026-03-10 08:01:05*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **747** |
+| Total experiments | **754** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 727 |
+| Regressions (discard) | 734 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (747 experiments)
+Score Progression (754 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │    ●  ●●● ●●●  ●● ●     ●          ●●●●    ● ●    ● ●  ●●● 
- 0.826 │●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●█●●●●█●█●●███ 
- 0.767 │────────────────────────●───────────────────────────────────
- 0.708 │███████████████████████████████████████████████████████████●
+ 0.885 │●●● ●●●  ●● ●     ●          ●●●●    ● ●    ● ●  ●●●      ●●
+ 0.826 │███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●█●●●●█●█●●███ ●●●●●██
+ 0.767 │─────────────────●──────────────────────────────────────────
+ 0.708 │████████████████████████████████████████████████████●███████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -817,6 +817,13 @@ Target: 0.8 ──────────────────────�
 | 745 | `366f5f9` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 2 control points 0-3.3V |
 | 746 | `08d9dd7` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tighter tolerances abstol=1e-14 vntol=1e-8 |
 | 747 | `da38076` | 0.7578 | 29.53 | 28.478 | 1.738 | ❌ discard | R3=1k in series with C3 |
+| 748 | `57106b7` | 0.8849 | 22.05 | 4.998 | 1.738 | ❌ discard | Icp_mismatch=0.00498 |
+| 749 | `948f9fb` | 0.8849 | 22.12 | 5.000 | 1.738 | ❌ discard | divider DAC slower transitions 0.5n |
+| 750 | `4b3ea0b` | 0.8846 | 22.17 | 5.010 | 1.738 | ❌ discard | R1=150.5k |
+| 751 | `4397892` | 0.8849 | 22.13 | 5.000 | 1.738 | ❌ discard | ref offset -0.1 to vdd+0.1 |
+| 752 | `3472173` | 0.8849 | 22.05 | 4.998 | 1.738 | ❌ discard | compensation current for CP mismatch |
+| 753 | `6216c7d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C2=198p C3=102p |
+| 754 | `69310dc` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | PFD DAC t_rise/fall=0.05n |
 
 ## Score History
 
@@ -1568,6 +1575,13 @@ Target: 0.8 ──────────────────────�
   #745  0.884949  discard   VCO 2 control points 0-3.3V
   #746  0.884949  discard   tighter tolerances abstol=1e-14 vntol=1e-8
   #747  0.757845  discard   R3=1k in series with C3
+  #748  0.884866  discard   Icp_mismatch=0.00498
+  #749  0.884935  discard   divider DAC slower transitions 0.5n
+  #750  0.884593  discard   R1=150.5k
+  #751  0.884944  discard   ref offset -0.1 to vdd+0.1
+  #752  0.884866  discard   compensation current for CP mismatch
+  #753  0.884949  discard   C2=198p C3=102p
+  #754  0.884949  discard   PFD DAC t_rise/fall=0.05n
 ```
 
 ---

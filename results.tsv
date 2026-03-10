@@ -746,3 +746,10 @@ fb0665a	0.884944	22.60	5.000	1.738	discard	Vco_center=1.616
 366f5f9	0.884949	22.14	5.000	1.738	discard	VCO 2 control points 0-3.3V
 08d9dd7	0.884949	22.14	5.000	1.738	discard	tighter tolerances abstol=1e-14 vntol=1e-8
 da38076	0.757845	29.53	28.478	1.738	discard	R3=1k in series with C3
+57106b7	0.884866	22.05	4.998	1.738	discard	Icp_mismatch=0.00498
+948f9fb	0.884935	22.12	5.000	1.738	discard	divider DAC slower transitions 0.5n
+4b3ea0b	0.884593	22.17	5.010	1.738	discard	R1=150.5k
+4397892	0.884944	22.13	5.000	1.738	discard	ref offset -0.1 to vdd+0.1
+3472173	0.884866	22.05	4.998	1.738	discard	compensation current for CP mismatch
+6216c7d	0.884949	22.14	5.000	1.738	discard	C2=198p C3=102p
+69310dc	0.884949	22.14	5.000	1.738	discard	PFD DAC t_rise/fall=0.05n
