@@ -12,20 +12,20 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 263.2e-6
+.param Icp = 500e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
 
 * Loop filter: reduced Kvco needs higher R1 to maintain bandwidth
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
-.param R1 = 150k
+.param R1 = 80k
 .param C1 = 1n
 .param C2 = 200p
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.005
+.param Icp_mismatch = 0.002
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
@@ -140,7 +140,7 @@ echo "ctrl_max: $&ctrl_max" >> metrics.txt
 echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
-echo "icp: 263.2e-6" >> metrics.txt
+echo "icp: 500e-6" >> metrics.txt
 echo "kvco: 1" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
