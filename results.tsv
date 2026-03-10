@@ -59,3 +59,8 @@ b6764d6	0.881332	20.02	4.233	1.74	discard	C2=100pF mismatch=0.004 — ripple 4.2
 a256fbb	0.884557	22.19	5.011	1.74	discard	feedforward CP 10uA — ripple 5.011mV marginal
 d7306b6	0.884949	22.14	5.000	1.74	discard	save only ctrl — no effect
 e7a4319	0.871064	5.80	2.638	1.74	discard	3-stage LF — ripple 2.64mV too low
+44a3808	0.849905	26.09	6.245	1.74	discard	voltage-dependent mismatch — amplifies drift, 6.2mV
+bd05d9e	0.856376	26.17	5.967	1.74	discard	adaptive R1 — ripple 5.97mV, B-source adds drift
+c106275	0.793225	49.94	684.351	1.74	discard	CP compliance — positive feedback, 684mV ripple
+24ae8a5	0.884940	22.13	4.998	1.74	discard	500Meg bias — ripple 4.998mV, marginal change
+556937e	0.884949	22.14	5.000	1.74	discard	larger DAC load 50pF — no effect on drift
