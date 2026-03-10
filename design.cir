@@ -76,6 +76,9 @@ C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
+* Noise source for dithering
+Vnoise_src noise_node 0 dc 0 trnoise(1e-6 1n 0 0)
+Rnoise noise_node ctrl 1Meg
 * Clamp control voltage to VCO input range
 Dclamp_hi ctrl vdd_node dmod
 Dclamp_lo gnd_node ctrl dmod
