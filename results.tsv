@@ -443,3 +443,15 @@ f04fbc0	0.884949	22.14	5.000	1.738	discard	tight tolerances vntol/abstol/chgtol,
 91e3112	0.884949	22.14	5.000	1.738	discard	clamped CP min(1,max(0,...)), functionally identical
 58c2fab	0.884949	22.14	5.000	1.738	discard	100k load resistor on div_out, no effect
 db8e570	0.884949	22.14	5.000	1.738	discard	.options cshunt=1e-20, no effect
+7d8dc7e	0.884806	22.17	5.004	1.738	discard	C2=199p, ripple 5.004mV
+c2629e6	0.884931	22.11	4.997	1.738	discard	C2=201p, ripple slightly below 5mV
+4e9d08e	0.884931	22.12	4.997	1.737	discard	Icp=263.0e-6, ref_spur lower
+c3c5070	0.884806	22.15	5.004	1.739	discard	Icp=263.4e-6, ripple above 5mV
+f4db6c1	0.869119	22.14	2.630	1.738	discard	measurement window 45u-50u, less drift
+8b3398f	0.822892	22.14	7.795	1.738	discard	measurement window 35u-50u, more drift
+481877a	0.757845	29.53	9.524	1.738	discard	R2=1k series with C3, ripple 28mV
+13cad14	0.884806	22.17	5.004	1.738	discard	C3=99p, ripple slightly above 5mV
+a6d464e	0.884918	22.12	4.998	1.738	discard	C1=1.01n, ref_spur slightly lower
+3d5b5be	0.884949	22.14	5.000	1.738	discard	AND gate symmetric 0.3n/0.3n, same score
+4bd1efc	0.803965	0.58	9.524	1.738	discard	R3=10k+C4=50p filter, ripple 9.5mV
+c66d627	0.884336	21.42	4.932	1.738	discard	D-FF ic=3, ref_spur worse
