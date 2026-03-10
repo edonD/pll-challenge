@@ -836,3 +836,4 @@ cdd8b7d	0.884949	22.1	5.0	1.74	discard	save only ctrl
 69f7c89	0.884949	22.1	5.0	1.74	discard	D-FF ic=0
 cdfb61f	0.883184	22.4	5.05	1.74	discard	Icp=330uA mismatch=0.004
 569f33b	0.870990	0.0	2.75	1.74	discard	swap R1-C1 to R1-C2
+a9a9224	0.764386	49.6	139.3	1.74	discard	R2=10M lf_zero to ground
