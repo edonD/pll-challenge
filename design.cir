@@ -74,6 +74,10 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
+* Feedforward: small fraction of CP current to smooth ctrl
+Bff_up ctrl 0 I = {Icp*0.01} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
+Bff_dn ctrl 0 I = -{Icp*0.01} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
