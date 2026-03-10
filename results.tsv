@@ -12,8 +12,7 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
 1a38a57	0.884949	22.110	5.000	0.00	discard	icp echo 1e-9 — no effect, power already capped
 ee70587	0.884949	22.110	5.000	1.74	discard	VCO Kvco=100Hz — same score, no effect
-1b34ffc	0.884949	22.1	5.000	1.74	discard	behavioral Rleak — same score
-70d9f69	0.884949	22.1	5.000	1.74	discard	nonlinear cubic leakage — same score
-ce3e844	0.884949	22.1	5.000	1.74	discard	slow AND 5ns — same score
-487a144	0.884949	22.1	5.000	1.74	discard	DFF reset_delay=5ns — same score
-fc616b2	0.884944	22.1	4.999	1.74	discard	two-stage divider 16x15 — ripple 4.999mV
+f1d3138	0.884842	22.1	5.003	1.74	discard	tmax=1n — ripple 5.003mV, 0.7s sim
+63e0843	0.884949	22.1	5.000	1.74	discard	fref=20MHz N=120 — same score
+29df1ee	0.884949	22.1	5.000	1.74	discard	0.5pF caps on up/dn — same score
+0de7c58	0.884949	22.1	5.000	1.74	discard	save all — same score
