@@ -120,6 +120,7 @@ set filetype=ascii
 
 save ref div_out ctrl up_a dn_a
 
+set noinit
 tran 0.1n 50u uic
 
 * === MEASUREMENTS ===
