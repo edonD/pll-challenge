@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:56:36*
+*Auto-generated at 2026-03-10 07:58:39*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **741** |
+| Total experiments | **747** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 721 |
+| Regressions (discard) | 727 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (741 experiments)
+Score Progression (747 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │● ●● ●    ●  ●●● ●●●  ●● ●     ●          ●●●●    ● ●    ● ●
- 0.826 │█●██ █●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●█●●●●█●█
- 0.767 │──────────────────────────────●─────────────────────────────
- 0.708 │████●███████████████████████████████████████████████████████
+ 0.885 │    ●  ●●● ●●●  ●● ●     ●          ●●●●    ● ●    ● ●  ●●● 
+ 0.826 │●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●█●●●●█●█●●███ 
+ 0.767 │────────────────────────●───────────────────────────────────
+ 0.708 │███████████████████████████████████████████████████████████●
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -811,6 +811,12 @@ Target: 0.8 ──────────────────────�
 | 739 | `be35efd` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | save lf_zero too |
 | 740 | `ca8b8ea` | 0.8690 | 2.15 | 4.835 | 1.738 | ❌ discard | CP soft switching clamped gain |
 | 741 | `ae30c4c` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | FF clk_delay=0.05n |
+| 742 | `260b631` | 0.8618 | 0.001 | 1.725 | 1.738 | ❌ discard | RC filter between CP and ctrl |
+| 743 | `fb0665a` | 0.8849 | 22.60 | 5.000 | 1.738 | ❌ discard | Vco_center=1.616 |
+| 744 | `5f3b2b3` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Kvco=1e6 |
+| 745 | `366f5f9` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 2 control points 0-3.3V |
+| 746 | `08d9dd7` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tighter tolerances abstol=1e-14 vntol=1e-8 |
+| 747 | `da38076` | 0.7578 | 29.53 | 28.478 | 1.738 | ❌ discard | R3=1k in series with C3 |
 
 ## Score History
 
@@ -1556,6 +1562,12 @@ Target: 0.8 ──────────────────────�
   #739  0.884949  discard   save lf_zero too
   #740  0.869029  discard   CP soft switching clamped gain
   #741  0.884949  discard   FF clk_delay=0.05n
+  #742  0.861839  discard   RC filter between CP and ctrl
+  #743  0.884944  discard   Vco_center=1.616
+  #744  0.884949  discard   Kvco=1e6
+  #745  0.884949  discard   VCO 2 control points 0-3.3V
+  #746  0.884949  discard   tighter tolerances abstol=1e-14 vntol=1e-8
+  #747  0.757845  discard   R3=1k in series with C3
 ```
 
 ---

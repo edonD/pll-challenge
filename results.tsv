@@ -740,3 +740,9 @@ cc2dfda	0.853411	22.14	6.091	1.738	discard	measure window 38u-50u
 be35efd	0.884949	22.14	5.000	1.738	discard	save lf_zero too
 ca8b8ea	0.869029	2.15	4.835	1.738	discard	CP soft switching clamped gain
 ae30c4c	0.884949	22.14	5.000	1.738	discard	FF clk_delay=0.05n
+260b631	0.861839	0.001	1.725	1.738	discard	RC filter between CP and ctrl
+fb0665a	0.884944	22.60	5.000	1.738	discard	Vco_center=1.616
+5f3b2b3	0.884949	22.14	5.000	1.738	discard	Kvco=1e6
+366f5f9	0.884949	22.14	5.000	1.738	discard	VCO 2 control points 0-3.3V
+08d9dd7	0.884949	22.14	5.000	1.738	discard	tighter tolerances abstol=1e-14 vntol=1e-8
+da38076	0.757845	29.53	28.478	1.738	discard	R3=1k in series with C3
