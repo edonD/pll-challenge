@@ -920,3 +920,8 @@ f6394e4	0.884949	22.1	5.0	1.74	discard	.options method=gear — same score
 122c046	0.884848	22.0	4.977	1.74	discard	Bias 100G to Vco_center — same
 6728076	0.741971	13.0	11.16	1.74	discard	LC notch — oscillation, stability=0
 e35684c	0.884949	22.1	5.0	1.74	discard	Linearized CP — same score
+e3ba043	0.884949	22.1	5.0	1.74	discard	.options trtol=7 — same score
+ba32d10	0.851180	55.2	3.122	1.74	discard	100u sim, 90u-100u window — lock_time and ripple worse
+6dbe426	0.884949	22.1	5.0	1.74	discard	Kvco=100MHz wider VCO — same score
+f1837a0	0.884949	22.1	5.0	1.74	discard	AND input_load=0.1pF — same score
+4865c5e	0.884949	22.1	5.0	1.74	discard	DFF reset_delay=1n — same score
