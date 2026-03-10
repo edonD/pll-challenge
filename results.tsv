@@ -920,3 +920,4 @@ f6394e4	0.884949	22.1	5.0	1.74	discard	.options method=gear — same score
 122c046	0.884848	22.0	4.977	1.74	discard	Bias 100G to Vco_center — same
 6728076	0.741971	13.0	11.16	1.74	discard	LC notch — oscillation, stability=0
 e35684c	0.884949	22.1	5.0	1.74	discard	Linearized CP — same score
+e3ba043	0.884949	22.1	5.0	1.74	discard	.options trtol=7 — same score
