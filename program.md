@@ -78,16 +78,29 @@ Append a row:
 ```
 Status is `keep`, `discard`, or `crash`.
 
-### 7. Update results.md
+### 7. Update results.md and push to main
 Run: `python3 update_results.py`
 This regenerates the leaderboard markdown with the latest data.
 
+**ALWAYS push results.md to main after EVERY experiment** (improvement, regression, or crash) so the leaderboard is always up to date on GitHub:
+```bash
+git add results.tsv results.md
+git stash
+git checkout main
+git checkout dev -- results.tsv results.md
+git add results.tsv results.md
+git commit -m "results: update leaderboard — exp #N (score: X.XXXX)"
+git push origin main
+git checkout dev
+git stash pop 2>/dev/null
+```
+
 ### 8. Decision
 
-- **If score improved**: KEEP. Create a PR to main:
+- **If score improved**: KEEP. Create a PR to merge the improvement into main:
   ```bash
-  # Commit results on dev
-  git add results.tsv results.md design.cir
+  # Commit improvement on dev
+  git add design.cir results.tsv results.md
   git commit -m "results: exp #N — <short title>"
   git push origin dev
 
@@ -134,9 +147,8 @@ This regenerates the leaderboard markdown with the latest data.
 - **If score decreased or equal**: DISCARD. Revert design.cir:
   ```bash
   git checkout HEAD~1 -- design.cir
-  git add results.tsv results.md design.cir
+  git add design.cir
   git commit -m "revert: <what failed and why>"
-  git push origin dev
   ```
 
 - **If crashed**: Log crash, revert, try something else.
