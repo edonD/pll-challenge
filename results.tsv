@@ -111,3 +111,9 @@ ca83fc0	0.884949	22.14	5.000	1.74	discard	reltol=1e-6 tight tolerances — no ef
 9ab45f9	0.870010	22.14	2.513	1.74	discard	clamped CP min/max — ripple 2.51mV
 1609567	0.883600	22.14	4.699	1.74	discard	DAC bridge 0.1V-3.2V — ripple 4.70mV
 87e7c98	0.878938	22.14	3.791	1.74	discard	anti-backlash CP — ripple 3.79mV
+2f07863	0.884831	22.14	4.973	1.74	discard	2ns delay buffer in feedback — ripple 4.97mV
+d2d76b7	0.884949	22.14	5.000	1.74	discard	Icp=263.15uA — no difference
+0e63185	0.834475	22.14	7.037	1.74	discard	time-dependent mismatch ramp — ripple 7.04mV
+5efa0a1	0.884949	22.14	5.000	1.74	discard	nodeset — no effect
+5364f96	0.882549	22.14	4.477	1.74	discard	R2-C2 snubber R2=50k — ripple 4.48mV
+5a3b65d	0.764273	22.14	138.3	1.74	discard	reltol=0.01 — 138mV numerical drift
