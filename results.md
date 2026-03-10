@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:02:31*
+*Auto-generated at 2026-03-10 06:26:21*
 
 ## Target Specifications
 
@@ -19,13 +19,13 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **600** |
+| Total experiments | **521** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 580 |
-| Crashes | 10 |
+| Regressions (discard) | 503 |
+| Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
 ### Progress to Target
@@ -37,25 +37,25 @@
 ## Score Progression
 
 ```
-Score Progression (600 experiments)
+Score Progression (521 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │● ●●● ●    ●●●●  ● ● ●●●     ● ●●● ●     ●● ●   ●    ●●    ●
- 0.826 │█ ███●█●●●●████●●█●█ ███●  ●●█●███●█●●●●●██●█●● █● ●●██●●●●█
- 0.767 │────────────────────●───────────────────────────────────────
- 0.708 │█●███████████████████████ ●████████████████████ ██ █████████
- 0.649 │█████████████████████████ █████████████████████ ██ █████████
- 0.590 │█████████████████████████ █████████████████████ ██ █████████
- 0.531 │█████████████████████████ █████████████████████ ██ █████████
- 0.472 │█████████████████████████ █████████████████████ ██ █████████
- 0.413 │█████████████████████████ █████████████████████ ██ █████████
- 0.354 │█████████████████████████ █████████████████████ ██ █████████
- 0.295 │█████████████████████████ █████████████████████ ██●█████████
- 0.236 │█████████████████████████ █████████████████████ ████████████
- 0.177 │█████████████████████████ █████████████████████ ████████████
- 0.118 │█████████████████████████ █████████████████████ ████████████
- 0.059 │█████████████████████████ █████████████████████ ████████████
- 0.000 │█████████████████████████●█████████████████████●████████████
+ 0.885 │●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●● 
+ 0.826 │█●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●███●
+ 0.767 │────────────────────────────────────────────────────────────
+ 0.708 │████████████████████████████████████████████████████████████
+ 0.649 │████████████████████████████████████████████████████████████
+ 0.590 │████████████████████████████████████████████████████████████
+ 0.531 │████████████████████████████████████████████████████████████
+ 0.472 │████████████████████████████████████████████████████████████
+ 0.413 │████████████████████████████████████████████████████████████
+ 0.354 │████████████████████████████████████████████████████████████
+ 0.295 │████████████████████████████████████████████████████████████
+ 0.236 │████████████████████████████████████████████████████████████
+ 0.177 │████████████████████████████████████████████████████████████
+ 0.118 │████████████████████████████████████████████████████████████
+ 0.059 │████████████████████████████████████████████████████████████
+ 0.000 │████████████████████████████████████████████████████████████
        └────────────────────────────────────────────────────────────
         Experiment #
 ```
@@ -591,85 +591,6 @@ Target: 0.8 ──────────────────────�
 | 519 | `ab68f8e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | D-FF reset_delay=0.15n, same score |
 | 520 | `e824d07` | 0.8849 | 23.43 | 5.000 | 1.738 | ❌ discard | sim 52u meas 40-50u, same score |
 | 521 | `a8fbb62` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | tran step 0.2n, slightly worse |
-| 522 | `4f2fca0` | 0.7606 | 22.14 | 105.000 | 1.738 | ❌ discard | C_lf1 ic=0, huge ripple from wrong initial condition |
-| 523 | `89ea74e` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | asymmetric mismatch (1+m) on up, 1 on dn |
-| 524 | `d1ef68f` | 0.8848 | 22.14 | 5.005 | 1.743 | ❌ discard | Icp=264uA R1=149.5k combined fine-tune |
-| 525 | `1b2ac34` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND gate reversed rise/fall delays, same score |
-| 526 | `79d2cb2` | 0.7654 | 42.23 | 19.790 | 1.738 | ❌ discard | CP with sgn() gating, much worse ripple |
-| 527 | `6e6f38d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C_lf2 ic removal, same score |
-| 528 | `4c8bdc5` | 0.8800 | 15.59 | 5.000 | 1.738 | ❌ discard | ic=1.6V, worse ref_spur |
-| 529 | `b0f2619` | 0.8553 | 26.28 | 6.014 | 1.738 | ❌ discard | ic=1.7V, worse ripple |
-| 530 | `2fade98` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | div DAC asymmetric rise/fall 0.05n/0.2n |
-| 531 | `f7957d6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options pivtol/pivrel, same score |
-| 532 | `840ebba` | 0.8818 | 18.24 | 5.000 | 1.738 | ❌ discard | divider i_count=120 half of Ndiv |
-| 533 | `cd3f0d2` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | save all instead of specific signals, same |
-| 534 | `69c62e2` | 0.8849 | 24.23 | 5.001 | 1.738 | ❌ discard | Vco_center=1.5V with matching VCO table |
-| 535 | `1c5ecca` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | D-FF ic=0 start reset, same score |
-| 536 | `91f69c2` | 0.8849 | 27.90 | 4.995 | 1.316 | ❌ discard | vdd=2.5V Vco_center=1.25V |
-| 537 | `7c60048` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options abstol/chgtol tighter tolerances, same |
-| 538 | `964256b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options maxord=3 third-order integration, same |
-| 539 | `dc2b98d` | 0.8500 | 22.14 | 0.047 | 1.738 | ❌ discard | narrow meas window 49.9u-50u, ref_spur=0 |
-| 540 | `b87c11a` | 0.7941 | 22.14 | 10.823 | 1.738 | ❌ discard | wider meas window 30u-50u, huge ripple |
-| 541 | `b285bb6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | CP with uramp(), same as max(0,...) |
-| 542 | `0ad5f34` | 0.7579 | 44.72 | 28.427 | 1.738 | ❌ discard | R3=1ohm series with C3, huge ripple |
-| 543 | `a2648d8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | remove clamp diodes, same score |
-| 544 | `22ef6d7` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCVS buffer between LF and VCO, same |
-| 545 | `10c0757` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Ndiv=239, same score |
-| 546 | `24e077b` | 0.8839 | 20.54 | 5.000 | 1.738 | ❌ discard | extra C4=50pF shunt cap, slightly worse |
-| 547 | `43e2312` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tran start-save at 10u, same score |
-| 548 | `af395ca` | 0.8849 | 22.09 | 5.003 | 1.738 | ❌ discard | anti-drift compensation -0.66nA |
-| 549 | `6d470ec` | 0.8849 | 22.11 | 5.002 | 1.738 | ❌ discard | anti-drift compensation -0.33nA |
-| 550 | `624a4b7` | 0.8803 | 22.14 | 4.000 | 1.738 | ❌ discard | Icp_mismatch=0.004, worse ref_spur |
-| 551 | `4466c4d` | 0.8564 | 22.14 | 5.967 | 1.738 | ❌ discard | Icp_mismatch=0.006, worse ripple |
-| 552 | `14cca66` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 10-point freq table, same score |
-| 553 | `58c1775` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO duty_cycle=0.45, same score |
-| 554 | `f30a5a4` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=20MHz Ndiv=120, same score |
-| 555 | `d2a88ab` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=5MHz Ndiv=480, same score |
-| 556 | `f675749` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | R1=150.05k ultra-fine tune, slightly worse |
-| 557 | `15b6f21` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | R1=149.95k ultra-fine tune below |
-| 558 | `947faf6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options trtol=5, same score |
-| 559 | `ca27f6d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | voltage-dependent CP mismatch |
-| 560 | `a648497` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options vntol=1e-8, same score |
-| 561 | `ab5cf15` | 0.7941 | 22.14 | 10.830 | 1.738 | ❌ discard | dual-path loop filter R2=100k C5=50pF, huge ripple |
-| 562 | `2228a42` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | complement CP 1% mismatch compensation, same |
-| 563 | `efe9134` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | complement CP 10% compensation, same |
-| 564 | `91ab011` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | complement CP 50% compensation, same |
-| 565 | `b78ebfe` | 0.8500 | 22.14 | 0.050 | 1.738 | ❌ discard | CP with limit() 95% saturation, ref_spur=0 |
-| 566 | `b59e0c1` | 0.0000 | 0.00 | 0.000 | 1.738 | 💥 crash | CP with table() not supported in ngspice |
-| 567 | `556bde4` | 0.7658 | 22.14 | 19.520 | 1.738 | ❌ discard | CP with tanh() smooth switching, huge ripple |
-| 568 | `9c87fa9` | 0.8839 | 22.14 | 5.010 | 1.738 | ❌ discard | C1=1.5nF larger series cap |
-| 569 | `f04b07a` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Icp=263uA fine tune, marginally worse |
-| 570 | `b89fc43` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options method=gear, same score |
-| 571 | `aa42ead` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | ref pulse asymmetric rise/fall 0.5n/2n |
-| 572 | `f5e2b76` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | ref 55% duty cycle, same score |
-| 573 | `0ea20de` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options xmu=0.5, same score |
-| 574 | `20817fe` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | set nobreak nopage, same score |
-| 575 | `c1ee8b9` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Rleak on lf_zero instead of ctrl, slightly worse |
-| 576 | `b89fc43` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options method=gear duplicate entry |
-| 577 | `62d8c8f` | 0.8816 | 22.14 | 5.097 | 1.738 | ❌ discard | Icp_mismatch=0.0051, worse ripple |
-| 578 | `a989533` | 0.8839 | 22.14 | 5.010 | 1.738 | ❌ discard | C2=250pF more shunt cap |
-| 579 | `501b911` | 0.8839 | 22.14 | 5.010 | 1.738 | ❌ discard | C3=150pF more HF filtering |
-| 580 | `f6f3780` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | cascade divider 12x20=240, marginally worse |
-| 581 | `a790082` | 0.8769 | 22.14 | 5.237 | 1.738 | ❌ discard | C3=1fF effectively removed, worse ripple |
-| 582 | `cf2a3e2` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tran step 0.05n double resolution, same |
-| 583 | `fd1c07d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND gate equal delays 0.1n/0.1n, same |
-| 584 | `0312369` | 0.8848 | 22.14 | 5.002 | 1.738 | ❌ discard | Icp=263.4uA micro-adjust, slightly worse |
-| 585 | `f37e2bd` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | adaptive mismatch coeff=0.01, same score |
-| 586 | `bc8e854` | 0.8548 | 22.14 | 6.032 | 1.738 | ❌ discard | strong adaptive mismatch coeff=100, worse |
-| 587 | `73632e7` | 0.8848 | 22.14 | 5.002 | 1.738 | ❌ discard | ddt() derivative feedback, slightly worse |
-| 588 | `eecdd9a` | 0.0000 | 0.00 | 0.000 | 1.738 | 💥 crash | idt() not supported in ngspice |
-| 589 | `f3a094a` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options noopalter, same score |
-| 590 | `2a9d481` | 0.8500 | 22.14 | 0.050 | 1.738 | ❌ discard | time-decaying mismatch exp(-t/20us), ref_spur=0 |
-| 591 | `d6cf1d6` | 0.3500 | 0.00 | 999.000 | 1.738 | ❌ discard | nonlinear R1 self-ref behavioral, stability issues |
-| 592 | `f7b36ca` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | ref delay td=9.9n, marginally worse |
-| 593 | `4e6408d` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | ref delay td=10.1n, slightly worse |
-| 594 | `aa374d7` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | CP dn min(1,...) clipping, same score |
-| 595 | `9019f8e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | 1uH inductor in filter, same score |
-| 596 | `6dad307` | 0.8849 | 22.14 | 5.003 | 1.738 | ❌ discard | Rleak=10G higher isolation, slightly worse |
-| 597 | `b21593b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | ADC bridge thresholds 1.0/2.0 |
-| 598 | `5040c1d` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | divider fast rise/fall 0.01n |
-| 599 | `2fad0cd` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO init_phase=180 |
-| 600 | `ebc7172` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Ndiv=241 slightly off-target |
 
 ## Score History
 
@@ -1195,85 +1116,6 @@ Target: 0.8 ──────────────────────�
   #519  0.884949  discard   D-FF reset_delay=0.15n, same score
   #520  0.884949  discard   sim 52u meas 40-50u, same score
   #521  0.884913  discard   tran step 0.2n, slightly worse
-  #522  0.760613  discard   C_lf1 ic=0, huge ripple from wrong initial conditi
-  #523  0.884913  discard   asymmetric mismatch (1+m) on up, 1 on dn
-  #524  0.884770  discard   Icp=264uA R1=149.5k combined fine-tune
-  #525  0.884949  discard   AND gate reversed rise/fall delays, same score
-  #526  0.765353  discard   CP with sgn() gating, much worse ripple
-  #527  0.884949  discard   C_lf2 ic removal, same score
-  #528  0.880032  discard   ic=1.6V, worse ref_spur
-  #529  0.855261  discard   ic=1.7V, worse ripple
-  #530  0.884877  discard   div DAC asymmetric rise/fall 0.05n/0.2n
-  #531  0.884949  discard   .options pivtol/pivrel, same score
-  #532  0.881849  discard   divider i_count=120 half of Ndiv
-  #533  0.884949  discard   save all instead of specific signals, same
-  #534  0.884940  discard   Vco_center=1.5V with matching VCO table
-  #535  0.884949  discard   D-FF ic=0 start reset, same score
-  #536  0.884927  discard   vdd=2.5V Vco_center=1.25V
-  #537  0.884949  discard   .options abstol/chgtol tighter tolerances, same
-  #538  0.884949  discard   .options maxord=3 third-order integration, same
-  #539  0.850000  discard   narrow meas window 49.9u-50u, ref_spur=0
-  #540  0.794107  discard   wider meas window 30u-50u, huge ripple
-  #541  0.884949  discard   CP with uramp(), same as max(0,...)
-  #542  0.757865  discard   R3=1ohm series with C3, huge ripple
-  #543  0.884949  discard   remove clamp diodes, same score
-  #544  0.884949  discard   VCVS buffer between LF and VCO, same
-  #545  0.884949  discard   Ndiv=239, same score
-  #546  0.883935  discard   extra C4=50pF shunt cap, slightly worse
-  #547  0.884949  discard   tran start-save at 10u, same score
-  #548  0.884909  discard   anti-drift compensation -0.66nA
-  #549  0.884927  discard   anti-drift compensation -0.33nA
-  #550  0.880281  discard   Icp_mismatch=0.004, worse ref_spur
-  #551  0.856376  discard   Icp_mismatch=0.006, worse ripple
-  #552  0.884949  discard   VCO 10-point freq table, same score
-  #553  0.884949  discard   VCO duty_cycle=0.45, same score
-  #554  0.884949  discard   fref=20MHz Ndiv=120, same score
-  #555  0.884949  discard   fref=5MHz Ndiv=480, same score
-  #556  0.884913  discard   R1=150.05k ultra-fine tune, slightly worse
-  #557  0.884944  discard   R1=149.95k ultra-fine tune below
-  #558  0.884949  discard   .options trtol=5, same score
-  #559  0.884857  discard   voltage-dependent CP mismatch
-  #560  0.884949  discard   .options vntol=1e-8, same score
-  #561  0.794054  discard   dual-path loop filter R2=100k C5=50pF, huge ripple
-  #562  0.884949  discard   complement CP 1% mismatch compensation, same
-  #563  0.884949  discard   complement CP 10% compensation, same
-  #564  0.884949  discard   complement CP 50% compensation, same
-  #565  0.850000  discard   CP with limit() 95% saturation, ref_spur=0
-  #566  0.000000  crash     CP with table() not supported in ngspice
-  #567  0.765758  discard   CP with tanh() smooth switching, huge ripple
-  #568  0.883899  discard   C1=1.5nF larger series cap
-  #569  0.884931  discard   Icp=263uA fine tune, marginally worse
-  #570  0.884949  discard   .options method=gear, same score
-  #571  0.884927  discard   ref pulse asymmetric rise/fall 0.5n/2n
-  #572  0.884949  discard   ref 55% duty cycle, same score
-  #573  0.884949  discard   .options xmu=0.5, same score
-  #574  0.884949  discard   set nobreak nopage, same score
-  #575  0.884888  discard   Rleak on lf_zero instead of ctrl, slightly worse
-  #576  0.884949  discard   .options method=gear duplicate entry
-  #577  0.881560  discard   Icp_mismatch=0.0051, worse ripple
-  #578  0.883935  discard   C2=250pF more shunt cap
-  #579  0.883935  discard   C3=150pF more HF filtering
-  #580  0.884944  discard   cascade divider 12x20=240, marginally worse
-  #581  0.876903  discard   C3=1fF effectively removed, worse ripple
-  #582  0.884949  discard   tran step 0.05n double resolution, same
-  #583  0.884949  discard   AND gate equal delays 0.1n/0.1n, same
-  #584  0.884806  discard   Icp=263.4uA micro-adjust, slightly worse
-  #585  0.884949  discard   adaptive mismatch coeff=0.01, same score
-  #586  0.854806  discard   strong adaptive mismatch coeff=100, worse
-  #587  0.884806  discard   ddt() derivative feedback, slightly worse
-  #588  0.000000  crash     idt() not supported in ngspice
-  #589  0.884949  discard   .options noopalter, same score
-  #590  0.850000  discard   time-decaying mismatch exp(-t/20us), ref_spur=0
-  #591  0.350000  discard   nonlinear R1 self-ref behavioral, stability issues
-  #592  0.884944  discard   ref delay td=9.9n, marginally worse
-  #593  0.884877  discard   ref delay td=10.1n, slightly worse
-  #594  0.884949  discard   CP dn min(1,...) clipping, same score
-  #595  0.884949  discard   1uH inductor in filter, same score
-  #596  0.884857  discard   Rleak=10G higher isolation, slightly worse
-  #597  0.884944  discard   ADC bridge thresholds 1.0/2.0
-  #598  0.884877  discard   divider fast rise/fall 0.01n
-  #599  0.884940  discard   VCO init_phase=180
-  #600  0.884949  discard   Ndiv=241 slightly off-target
 ```
 
 ---
