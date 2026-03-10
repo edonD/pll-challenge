@@ -784,3 +784,25 @@ bf782f8	0.884892	22.10	4.999	1.738	discard	C1=1.02n
 d67f609	0.884913	22.14	5.001	1.738	discard	R1=150.02k
 cafbd52	0.884949	22.14	5.000	1.738	discard	C1 no IC
 0cb07fd	0.884949	22.14	5.000	1.738	discard	.options trtol=1
+2e515d3	0.884949	22.13	5.000	1.738	discard	Icp=263.18e-6 R1=149.98k
+efe794a	0.884949	22.14	5.000	1.738	discard	C2=180p C3=120p ratio swap
+b42cc25	0.884949	22.14	5.000	1.738	discard	.options chgtol=1e-17
+4909be2	0.877154	15.68	4.907	1.738	discard	R1=100k C1=1.5n same RC
+710b829	0.884949	22.1	3.49	1.74	discard	AND gate fall_delay=0.4n
+0835f1b	0.884949	22.1	3.49	1.74	discard	AND gate fall_delay=0.6n
+ef32207	0.884914	22.1	3.50	1.74	discard	Rleak=1.5G
+4d631cf	0.884883	22.1	3.50	1.74	discard	Rleak=3G
+7b1b91f	0.881849	18.2	3.68	1.74	discard	divider i_count=120
+b6e6fdd	0.884949	22.1	3.49	1.74	discard	Icp=263.16e-6
+1ed167e	0.884949	22.3	3.49	1.74	discard	Vco_center=1.64
+513cfe0	0.884949	22.0	3.49	1.74	discard	Vco_center=1.66
+187df1f	0.884944	22.1	3.49	1.74	discard	tran step=0.08n
+f4fdd5a	0.882501	22.1	3.59	1.74	discard	measurement window 41u-50u
+8a0e131	0.884949	22.1	5.0	1.74	discard	fref=5MHz Ndiv=480
+e4d3da7	0.884949	22.1	5.0	1.74	discard	asymmetric FF reset_delay
+4a7ef3e	0.850000	0.0	0.16	1.74	discard	Icp_mismatch=0
+73e4f61	0.856376	25.9	5.97	1.74	discard	Icp_mismatch=0.006
+91525ae	0.879018	15.5	3.81	1.32	discard	Icp=200uA
+964acbf	0.884949	22.1	5.0	1.74	discard	diode n=0.5
+f8daca2	0.884949	22.1	5.0	1.74	discard	remove clamp diodes
+4e24625	0.883466	25.4	5.1	1.74	discard	55u sim, measure 45u-55u
