@@ -938,3 +938,4 @@ e428d44	0.792853	35.5	11.02	1.74	discard	No stabilizing zero — ripple 11mV, un
 a76024e	0.884877	22.1	5.002	1.74	discard	Icp=263.3uA — ripple 5.002mV
 2649956	0.884940	22.1	4.998	1.74	discard	Icp=263.1uA — ripple 4.998mV
 f1292e0	0.884949	22.1	5.0	1.74	discard	Icp=263.15uA — same score (within tolerance)
+1e8c25f	0.851156	48.3	6.189	1.74	discard	Voltage-mode CP — ctrl=0.1V, wrong operating point
