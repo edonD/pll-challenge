@@ -113,7 +113,6 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 * INITIAL CONDITIONS AND SIMULATION
 * ---------------------------------------------------------------------------
-.options abstol=1e-14 vntol=1e-8
 .ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
 
 .control
