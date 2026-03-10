@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:28:44*
+*Auto-generated at 2026-03-10 07:30:32*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **669** |
+| Total experiments | **674** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 649 |
+| Regressions (discard) | 654 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,12 +37,12 @@
 ## Score Progression
 
 ```
-Score Progression (669 experiments)
+Score Progression (674 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ●● ●         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●     
- 0.826 │●██●█●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●
- 0.767 │─────────●──────────────────────────────────────────────●───
+ 0.885 │         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●      ●   
+ 0.826 │●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●
+ 0.767 │────●──────────────────────────────────────────────●────────
  0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
@@ -739,6 +739,11 @@ Target: 0.8 ──────────────────────�
 | 667 | `d996eb9` | 0.8832 | 22.14 | 5.049 | 1.738 | ❌ discard | Icp_mismatch=0.00505 |
 | 668 | `0ab51a9` | 0.8847 | 22.14 | 4.950 | 1.738 | ❌ discard | Icp_mismatch=0.00495 |
 | 669 | `68e3d5c` | 0.8848 | 22.14 | 5.000 | 1.738 | ❌ discard | C3=110p |
+| 670 | `02125b5` | 0.8835 | 22.14 | 5.041 | 1.738 | ❌ discard | C3=90p |
+| 671 | `27fc5c2` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | ref td=9.95n |
+| 672 | `c099adf` | 0.8827 | 22.14 | 5.000 | 1.738 | ❌ discard | CP threshold 0.55*vdd dead zone |
+| 673 | `5c98e51` | 0.8849 | 22.14 | 5.000 | 1.730 | ❌ discard | Icp=262e-6 |
+| 674 | `8985adf` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | R1=149.95k |
 
 ## Score History
 
@@ -1412,6 +1417,11 @@ Target: 0.8 ──────────────────────�
   #667  0.883219  discard   Icp_mismatch=0.00505
   #668  0.884739  discard   Icp_mismatch=0.00495
   #669  0.884761  discard   C3=110p
+  #670  0.883499  discard   C3=90p
+  #671  0.884949  discard   ref td=9.95n
+  #672  0.882675  discard   CP threshold 0.55*vdd dead zone
+  #673  0.884853  discard   Icp=262e-6
+  #674  0.884944  discard   R1=149.95k
 ```
 
 ---
