@@ -910,3 +910,5 @@ a56588c	0.884949	22.1	5.0	1.74	discard	Remove clamp diodes — same score
 f8ee44c	0.880303	22.8	5.134	1.74	discard	Ref delay td=20n — ripple 5.13mV
 ddd57f9	0.884660	21.8	4.934	1.74	discard	Ref delay td=5n — ripple 4.93mV
 104294b	0.884949	22.1	5.0	1.74	discard	Icp=263.19uA — same score
+cba53df	0.884909	22.1	4.991	1.74	discard	Mismatch=0.00499 — ripple 4.991mV
+b162ce3	0.884593	22.2	5.01	1.74	discard	Mismatch=0.00501 — ripple 5.01mV
