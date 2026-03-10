@@ -575,3 +575,7 @@ f5e2b76	0.884949	22.14	5.000	1.738	discard	ref 55% duty cycle, same score
 20817fe	0.884949	22.14	5.000	1.738	discard	set nobreak nopage, same score
 c1ee8b9	0.884888	22.14	5.000	1.738	discard	Rleak on lf_zero instead of ctrl, slightly worse
 b89fc43	0.884949	22.14	5.000	1.738	discard	.options method=gear duplicate entry
+62d8c8f	0.881560	22.14	5.097	1.738	discard	Icp_mismatch=0.0051, worse ripple
+a989533	0.883935	22.14	5.010	1.738	discard	C2=250pF more shunt cap
+501b911	0.883935	22.14	5.010	1.738	discard	C3=150pF more HF filtering
+f6f3780	0.884944	22.14	5.000	1.738	discard	cascade divider 12x20=240, marginally worse
