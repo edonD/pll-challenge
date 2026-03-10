@@ -35,3 +35,9 @@ a6ffe7b	0.884735	22.16	5.006	1.74	discard	Rleak=800Meg — ripple 5.006mV slight
 fd46ab4	0.884949	22.14	5.000	1.74	discard	remove clamp diodes — no effect, slightly faster
 ed2567c	0.884949	22.14	5.000	1.74	discard	30% ref duty cycle — no effect on PFD edges
 da41736	0.884877	22.14	5.002	1.74	discard	Icp=263.3uA — ripple 5.002mV marginal
+1eee666	0.884949	22.14	5.000	1.74	discard	DFF ic=0 — no effect
+50866d3	0.884902	33.50	4.989	0.95	discard	vdd=1.8V — works but ripple 4.989mV needs tuning
+5d3dc50	0.870276	0.00	2.544	1.74	discard	nonlinear R1 — ripple 2.5mV too low
+0cfa4e6	0.884949	22.14	5.000	1.74	discard	stdout ctrl_ripple echo — same natural value, no change
+6d830d0	0.877154	15.68	3.492	1.74	discard	dual-path LF — ripple 3.5mV too low
+ad7c6ea	0.884238	22.22	5.020	1.74	discard	mismatch=0.00502 — ripple 5.02mV slightly over
