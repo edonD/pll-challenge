@@ -42,7 +42,9 @@ aff1 d_one ref_d d_reset d_zero d_up d_up_n flop1
 .model flop1 d_dff(clk_delay=0.1n set_delay=0.1n reset_delay=0.1n
 + ic=2 rise_delay=0.1n fall_delay=0.1n)
 
-aff2 d_one div_out_d d_reset d_zero d_dn d_dn_n flop1
+aff2 d_one div_out_d d_reset d_zero d_dn d_dn_n flop2
+.model flop2 d_dff(clk_delay=0.1n set_delay=0.1n reset_delay=0.15n
++ ic=2 rise_delay=0.1n fall_delay=0.1n)
 
 Vone one_a 0 dc {vdd}
 Vzero zero_a 0 dc 0
