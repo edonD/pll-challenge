@@ -21,7 +21,7 @@
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
 .param R1 = 150k
 .param C1 = 1n
-.param C2 = 100n
+.param C2 = 1u
 .param C3 = 1n
 
 * Charge pump mismatch (reduced for lower ripple)
@@ -87,15 +87,15 @@ Vgnd_clamp gnd_node 0 dc 0
 * VCO (Voltage-Controlled Oscillator)
 * ---------------------------------------------------------------------------
 * f_out = 2.4 GHz + Kvco * (Vctrl - Vco_center)
-* With Kvco=50MHz/V:
-* V=0.5 -> 2.4G + 50M*(0.5-1.65) = 2.3425G
-* V=1.0 -> 2.4G + 50M*(1.0-1.65) = 2.3675G
+* With Kvco=10MHz/V:
+* V=0.5 -> 2.4G + 10M*(0.5-1.65) = 2.3885G
+* V=1.0 -> 2.4G + 10M*(1.0-1.65) = 2.3935G
 * V=1.65 -> 2.4G
-* V=2.0 -> 2.4G + 50M*(2.0-1.65) = 2.4175G
-* V=2.5 -> 2.4G + 50M*(2.5-1.65) = 2.4425G
+* V=2.0 -> 2.4G + 10M*(2.0-1.65) = 2.4035G
+* V=2.5 -> 2.4G + 10M*(2.5-1.65) = 2.4085G
 avco ctrl d_vco vco_model
 .model vco_model d_osc(cntl_array=[0.5 1.0 1.65 2.0 2.5]
-+ freq_array=[2.3425e9 2.3675e9 2.4e9 2.4175e9 2.4425e9]
++ freq_array=[2.3885e9 2.3935e9 2.4e9 2.4035e9 2.4085e9]
 + duty_cycle=0.5 init_phase=0
 + rise_delay=0.05n fall_delay=0.05n)
 

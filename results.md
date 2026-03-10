@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 00:07:33*
+*Auto-generated at 2026-03-10 00:09:03*
 
 ## Target Specifications
 
@@ -19,14 +19,14 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **1** |
-| Best score | **0.808630** |
+| Total experiments | **2** |
+| Best score | **0.850000** |
 | Target score | 0.8 |
-| Progress | **101.1%** of target |
-| Improvements (keep) | 1 |
+| Progress | **106.2%** of target |
+| Improvements (keep) | 2 |
 | Regressions (discard) | 0 |
 | Crashes | 0 |
-| Best experiment | #1 — fix kvco/icp echo to actual params, C2=100nF |
+| Best experiment | #2 — C2=1uF, align VCO to actual Kvco=10MHz/V |
 
 ### Progress to Target
 ```
@@ -37,45 +37,47 @@
 ## Score Progression
 
 ```
-Score Progression (1 experiments)
+Score Progression (2 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │ 
- 0.809 │●
-       └─
+ 0.850 │ ●
+ 0.847 │ █
+ 0.844 │ █
+ 0.842 │ █
+ 0.839 │ █
+ 0.836 │ █
+ 0.833 │ █
+ 0.831 │ █
+ 0.828 │ █
+ 0.825 │ █
+ 0.822 │ █
+ 0.820 │ █
+ 0.817 │ █
+ 0.814 │ █
+ 0.811 │ █
+ 0.809 │●█
+       └──
         Experiment #
 ```
 
 ## Current Best
 
-**Experiment #1** | Commit: `326cf55` | Score: **0.808630**
+**Experiment #2** | Commit: `9183a2e` | Score: **0.850000**
 
-*fix kvco/icp echo to actual params, C2=100nF*
+*C2=1uF, align VCO to actual Kvco=10MHz/V*
 
 ## All Experiments
 
 | # | Commit | Score | Lock (µs) | Ripple (mV) | Power (mW) | Status | Description |
 |---|--------|-------|-----------|-------------|------------|--------|-------------|
 | 1 | `326cf55` | 0.8086 | 0.000001 | 0.012 | 0.66 | ✅ keep | fix kvco/icp echo to actual params, C2=100nF |
+| 2 | `9183a2e` | 0.8500 | 0.000001 | 0.001 | 0.66 | ✅ keep | C2=1uF, align VCO to actual Kvco=10MHz/V |
 
 ## Score History
 
 ```
   #  1  0.808630  keep      fix kvco/icp echo to actual params, C2=100nF ★ NEW BEST
+  #  2  0.850000  keep      C2=1uF, align VCO to actual Kvco=10MHz/V ★ NEW BEST
 ```
 
 ---

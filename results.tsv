@@ -1,2 +1,3 @@
 commit	score	lock_us	ripple_mv	power_mw	status	description
 326cf55	0.808630	0.000001	0.012	0.66	keep	fix kvco/icp echo to actual params, C2=100nF
+9183a2e	0.850000	0.000001	0.001	0.66	keep	C2=1uF, align VCO to actual Kvco=10MHz/V
