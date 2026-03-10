@@ -848,3 +848,13 @@ dd57578	0.884931	22.1	5.0	1.74	discard	C3=101p
 fab34b8	0.884949	22.1	5.0	1.74	discard	Icp=263.21uA
 d64e9e7	0.884949	22.1	5.0	0.53	discard	report vdd=1.0
 4473a22	0.884949	22.1	5.0	1.74	discard	add ref_spur to metrics
+d7e27a6	0.854543	25.6	6.04	1.74	discard	R1=200k C1=750p
+f182ddb	0.880976	18.8	3.85	1.74	discard	R1=120k C1=1.25n
+c78c442	0.884949	22.1	5.0	1.74	discard	print ctrl_ripple
+999e28a	0.884949	22.1	5.0	1.74	discard	AND rise_delay=0.2n
+303adb8	0.884949	22.1	5.0	1.74	discard	CP uramp
+c5a475d	0.884699	22.1	5.007	1.74	discard	C1=0.99n
+7a4ee99	0.884918	22.1	5.0	1.74	discard	C1=1.01n
+2102b16	0.884949	22.1	5.0	1.58	discard	vdd=3.0
+c974d73	0.884593	22.1	5.01	1.74	discard	Icp_mismatch=0.00501
+c92a366	0.884909	22.1	5.0	1.74	discard	Icp_mismatch=0.00499
