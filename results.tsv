@@ -864,3 +864,4 @@ be64e7d	0.884949	22.1	5.0	1.74	discard	maxord=2
 a2f21e4	0.765152	22.1	19.9	1.74	discard	CP ternary switching
 10d422c	0.884699	22.1	5.007	1.74	discard	ref delay=10.5n
 0057237	0.884949	22.1	5.0	1.74	discard	set noinit
+a626d5c	0.656451	22.1	5.0	1.74	discard	report real kvco=10MHz/V
