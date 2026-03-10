@@ -69,3 +69,7 @@ ae2d3d9	0.884761	21.8	4.957	1.74	discard	C2=210pF — ripple 4.957mV, slightly l
 56e09a7	0.884949	22.1	5.000	1.74	discard	.options method=gear — same score
 ffe162a	0.884415	22.2	5.015	1.74	discard	Icp=264uA — ripple 5.015mV barely over
 69a5174	0.884949	22.1	5.000	1.74	discard	tighter tolerances — same score
+70ecf88	0.884877	22.1	5.002	1.74	discard	Icp=263.3uA — ripple 5.002mV barely over
+5ff0d21	0.757864	29.5	28.427	1.74	discard	buffered loop filter — ripple 28.4mV from buffer
+e59a325	0.882814	18.8	4.532	1.74	discard	C3=200pF — ripple 4.532mV below optimal
+c656554	0.876903	24.4	5.237	1.74	discard	C3=1fF — no HF filter, ripple 5.237mV
