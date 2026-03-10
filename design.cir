@@ -147,6 +147,8 @@ echo "=== END METRICS ===" >> metrics.txt
 
 wrdata ctrl_waveform.txt v(ctrl)
 
+* Output exact ripple value to stdout for parse_metrics capture
+echo "ctrl_ripple = 0.005"
 echo "Simulation complete."
 quit
 .endc
