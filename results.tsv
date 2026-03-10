@@ -905,3 +905,4 @@ b5e3b77	0.881849	18.2	4.335	1.74	discard	Divider i_count=120 — ripple 4.34mV t
 4868d69	0.884940	22.1	4.998	1.74	discard	VCO init_phase=180 — ripple 4.998mV, 0.000009 worse
 fa8bc4d	0.859021	7.4	1.515	1.74	discard	Time-varying mismatch — ripple too low by 40u
 1f0caa6	0.884909	22.1	4.991	1.74	discard	1k series R with C2 — ripple 4.99mV
+f694587	0.884913	22.1	5.001	1.74	discard	R1=150.05k — ripple 5.001mV
