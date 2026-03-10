@@ -74,9 +74,6 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
-* Slow sine perturbation (1kHz) — below zero-crossing threshold
-Bripple ctrl 0 I = 2e-6 * sin(2*3.14159265*1e3*time)
-
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
