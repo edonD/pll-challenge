@@ -928,3 +928,4 @@ f1837a0	0.884949	22.1	5.0	1.74	discard	AND input_load=0.1pF — same score
 bc36557	0.884949	22.1	5.0	1.74	discard	DAC out_undef=0 — same score
 063569a	0.855173	0.0	1.27	1.74	discard	Quadratic CP — ripple too low 1.27mV
 3d16563	0.884949	22.1	5.0	1.74	discard	Clamped CP 0-1 — same score
+7acb100	0.884949	22.1	5.0	1.74	discard	Ndiv=241 — same score
