@@ -183,3 +183,8 @@ fd6b6db	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
 7c4a9a9	0.884682	21.82	4.939	1.738	discard	1mV bias in LF path
 e089364	0.884949	22.14	5.000	1.738	discard	single combined CP B-source, same score
 1c3c184	0.881560	22.57	5.097	1.738	discard	mismatch=0.0051, ripple 5.097mV
+fbdf692	0.765152	42.27	19.929	1.738	discard	binary switched CP, ripple 19.929mV
+4f9db0c	0.884572	21.70	4.914	0.660	discard	Icp=100uA mismatch=0.01316, ripple 4.914mV
+bcdfe23	0.883015	20.39	4.574	1.738	discard	R1=130k, ripple 4.574mV
+53dab5a	0.872260	23.56	5.385	1.738	discard	R1=170k, ripple 5.385mV
+f94b92e	0.870990	0.00	2.629	1.738	discard	swap C1/C2 roles in loop filter
