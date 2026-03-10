@@ -12,14 +12,14 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 263.2e-6
+.param Icp = 263.18e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
 
 * Loop filter: reduced Kvco needs higher R1 to maintain bandwidth
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
-.param R1 = 150k
+.param R1 = 149.98k
 .param C1 = 1n
 .param C2 = 200p
 .param C3 = 100p
