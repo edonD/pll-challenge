@@ -559,3 +559,7 @@ f675749	0.884913	22.14	5.001	1.738	discard	R1=150.05k ultra-fine tune, slightly 
 947faf6	0.884949	22.14	5.000	1.738	discard	.options trtol=5, same score
 ca27f6d	0.884857	22.14	5.000	1.738	discard	voltage-dependent CP mismatch
 a648497	0.884949	22.14	5.000	1.738	discard	.options vntol=1e-8, same score
+ab5cf15	0.794054	22.14	10.830	1.738	discard	dual-path loop filter R2=100k C5=50pF, huge ripple
+2228a42	0.884949	22.14	5.000	1.738	discard	complement CP 1% mismatch compensation, same
+efe9134	0.884949	22.14	5.000	1.738	discard	complement CP 10% compensation, same
+91ab011	0.884949	22.14	5.000	1.738	discard	complement CP 50% compensation, same

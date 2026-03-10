@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:45:04*
+*Auto-generated at 2026-03-10 06:46:55*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **560** |
+| Total experiments | **564** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 542 |
+| Regressions (discard) | 546 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (560 experiments)
+Score Progression (564 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │  ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●● ●    ●●●●  ● ●
- 0.826 │●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ███●█●●●●████●●█●█
- 0.767 │───────────────────────────────────────●────────────────────
- 0.708 │█████████████████████●███●███████████████●██████████████████
+ 0.885 │●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●● ●    ●●●●  ● ● ●●●
+ 0.826 │█████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ███●█●●●●████●●█●█ ███
+ 0.767 │───────────────────────────────────●────────────────────●───
+ 0.708 │█████████████████●███●███████████████●██████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -630,6 +630,10 @@ Target: 0.8 ──────────────────────�
 | 558 | `947faf6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options trtol=5, same score |
 | 559 | `ca27f6d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | voltage-dependent CP mismatch |
 | 560 | `a648497` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options vntol=1e-8, same score |
+| 561 | `ab5cf15` | 0.7941 | 22.14 | 10.830 | 1.738 | ❌ discard | dual-path loop filter R2=100k C5=50pF, huge ripple |
+| 562 | `2228a42` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | complement CP 1% mismatch compensation, same |
+| 563 | `efe9134` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | complement CP 10% compensation, same |
+| 564 | `91ab011` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | complement CP 50% compensation, same |
 
 ## Score History
 
@@ -1194,6 +1198,10 @@ Target: 0.8 ──────────────────────�
   #558  0.884949  discard   .options trtol=5, same score
   #559  0.884857  discard   voltage-dependent CP mismatch
   #560  0.884949  discard   .options vntol=1e-8, same score
+  #561  0.794054  discard   dual-path loop filter R2=100k C5=50pF, huge ripple
+  #562  0.884949  discard   complement CP 1% mismatch compensation, same
+  #563  0.884949  discard   complement CP 10% compensation, same
+  #564  0.884949  discard   complement CP 50% compensation, same
 ```
 
 ---
