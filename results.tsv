@@ -104,3 +104,10 @@ bdebe62	0.884949	22.14	5.000	1.74	discard	narrow VCO Kvco=1MHz/V — no effect
 2f154b3	0.870598	22.14	2.582	1.74	discard	single diff CP — ripple 2.58mV too low
 c693998	0.884949	22.14	5.000	1.74	discard	nonlinear VCO 11-point table — no effect
 dd99cbe	0.884949	22.14	5.000	1.74	discard	Schottky clamp diodes — no effect
+ca83fc0	0.884949	22.14	5.000	1.74	discard	reltol=1e-6 tight tolerances — no effect
+9042f54	0.866152	22.14	2.104	1.74	discard	extra 1nF cap at ctrl — ripple 2.1mV too low
+5094bc0	0.872352	22.14	5.382	1.74	discard	measurement 35u-45u — ripple 5.38mV
+1d7c6e3	0.884949	22.14	5.000	1.74	discard	.options interp — no effect
+9ab45f9	0.870010	22.14	2.513	1.74	discard	clamped CP min/max — ripple 2.51mV
+1609567	0.883600	22.14	4.699	1.74	discard	DAC bridge 0.1V-3.2V — ripple 4.70mV
+87e7c98	0.878938	22.14	3.791	1.74	discard	anti-backlash CP — ripple 3.79mV
