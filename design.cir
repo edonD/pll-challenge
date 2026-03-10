@@ -132,8 +132,6 @@ let lock_target = ctrl_final * 0.95
 meas tran lock_time trig at=0 targ v(ctrl) val=$&lock_target rise=1
 
 let ctrl_ripple = ctrl_max - ctrl_min
-let target_ripple = 0.005
-let ripple_diff = ctrl_ripple - target_ripple
 
 echo "=== PLL METRICS ===" > metrics.txt
 echo "lock_time: $&lock_time" >> metrics.txt
