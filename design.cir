@@ -83,6 +83,8 @@ Vvdd_clamp vdd_node 0 dc {vdd}
 Vgnd_clamp gnd_node 0 dc 0
 .model dmod d(is=1e-14 n=1)
 
+.options reltol=0.003
+
 * ---------------------------------------------------------------------------
 * VCO (Voltage-Controlled Oscillator)
 * ---------------------------------------------------------------------------
