@@ -875,3 +875,4 @@ ea96164	0.884877	22.1	5.002	1.74	discard	div DAC t_rise/fall=0.05n
 baa28bd	0.884949	22.1	5.0	1.74	discard	fref=20MHz Ndiv=120
 14e72b9	0.884203	22.2	5.02	1.74	discard	R1=151k
 f1a0e16	0.880607	22.7	5.125	3.30	discard	Icp=500uA mismatch=0.002632, ripple too high
+4d96d3f	0.869119	22.1	2.412	1.74	discard	Narrow measurement window 45u-50u, ripple too low
