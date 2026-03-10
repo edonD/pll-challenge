@@ -30,7 +30,8 @@
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
 * ---------------------------------------------------------------------------
-Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
+* Reference with slightly different rise/fall characteristics
+Vref ref 0 dc 0 pulse(0 {vdd} 10n 0.5n 0.5n {1/fref/2} {1/fref})
 
 * ---------------------------------------------------------------------------
 * PHASE-FREQUENCY DETECTOR
