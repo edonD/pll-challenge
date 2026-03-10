@@ -74,6 +74,8 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
+* Drift compensation: pulls ctrl back toward 1.616V with 10nA/mV
+Bcomp ctrl 0 I = -10e-9*(v(ctrl)-1.616)
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
