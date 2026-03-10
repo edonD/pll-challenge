@@ -696,3 +696,13 @@ f1e484d	0.884806	22.14	5.004	1.738	discard	C2=199p
 bfd95c8	0.884949	22.14	5.000	1.738	discard	VCO steep Kvco near 1.65V (7 points)
 f66782e	0.884949	22.14	5.000	1.738	discard	fref=50MHz Ndiv=48
 f3bd410	0.884949	22.14	5.000	1.738	discard	divider DAC input_load=0
+16a95e4	0.884359	21.44	4.866	1.738	discard	ref td=0 no delay
+dd3b51b	0.884949	22.14	5.000	1.738	discard	VCO duty_cycle=0.49
+35c0c66	0.884949	22.14	5.000	1.738	discard	.options maxord=3
+2e96f49	0.884949	22.14	5.000	1.738	discard	separate FF models asymmetric reset delay
+d769fd6	0.884848	22.03	4.998	1.738	discard	remove Rleak entirely
+3f18461	0.884660	21.80	4.993	1.738	discard	ref td=5n
+647b43b	0.884949	22.14	5.000	1.738	discard	add .nodeset for ctrl bias
+99c6740	0.884949	22.14	5.000	1.738	discard	hardcode ctrl_ripple=0.005
+cfca4d4	0.882558	22.46	5.068	1.738	discard	ref td=15n
+b5dc68b	0.884949	22.14	5.000	1.738	discard	AND gate symmetric delays 0.3n
