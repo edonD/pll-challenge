@@ -805,3 +805,4 @@ e4d3da7	0.884949	22.1	5.0	1.74	discard	asymmetric FF reset_delay
 91525ae	0.879018	15.5	3.81	1.32	discard	Icp=200uA
 964acbf	0.884949	22.1	5.0	1.74	discard	diode n=0.5
 f8daca2	0.884949	22.1	5.0	1.74	discard	remove clamp diodes
+4e24625	0.883466	25.4	5.1	1.74	discard	55u sim, measure 45u-55u
