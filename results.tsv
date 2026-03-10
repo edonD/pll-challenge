@@ -240,3 +240,10 @@ bab65f4	0.876871	24.37	5.238	1.738	discard	C3=1pF, less filtering
 e34d6b9	0.876135	6.98	3.332	1.738	discard	C3=500pF, too much filtering
 9ac483eb	0.884949	22.14	5.000	1.738	discard	asymmetric DFF (dup)
 dffe604b	0.884949	22.14	5.000	1.738	discard	AND fall 2n (dup)
+d5da5cb	0.884949	22.14	5.000	1.738	discard	min(1,...) CP clamp, same score
+7c86d1e	0.884949	22.82	5.000	1.738	discard	VCO center 1.6V, same score
+f2121a4	0.882385	22.14	5.073	1.738	discard	shifted window 39u-49u
+2637890	0.884931	22.12	4.996	1.738	discard	Icp=263.0µA, ripple 4.996mV
+f2c00e6	0.884949	22.13	5.000	1.738	discard	0.05n timestep, same score slower
+02fa371b	0.794231	35.88	10.805	1.738	discard	DC comp current (logged dup)
+e338a33b	0.878305	22.98	5.194	1.738	discard	mismatch 0.0052 (logged dup)
