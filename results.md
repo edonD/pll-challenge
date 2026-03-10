@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 00:09:03*
+*Auto-generated at 2026-03-10 00:19:03*
 
 ## Target Specifications
 
@@ -19,14 +19,14 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **2** |
-| Best score | **0.850000** |
+| Total experiments | **6** |
+| Best score | **0.884927** |
 | Target score | 0.8 |
-| Progress | **106.2%** of target |
-| Improvements (keep) | 2 |
-| Regressions (discard) | 0 |
+| Progress | **110.6%** of target |
+| Improvements (keep) | 5 |
+| Regressions (discard) | 1 |
 | Crashes | 0 |
-| Best experiment | #2 — C2=1uF, align VCO to actual Kvco=10MHz/V |
+| Best experiment | #6 — Icp=263uA fine-tuned ripple=4.995mV |
 
 ### Progress to Target
 ```
@@ -37,34 +37,34 @@
 ## Score Progression
 
 ```
-Score Progression (2 experiments)
+Score Progression (6 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.850 │ ●
- 0.847 │ █
- 0.844 │ █
- 0.842 │ █
- 0.839 │ █
- 0.836 │ █
- 0.833 │ █
- 0.831 │ █
- 0.828 │ █
- 0.825 │ █
- 0.822 │ █
- 0.820 │ █
- 0.817 │ █
- 0.814 │ █
- 0.811 │ █
- 0.809 │●█
-       └──
+ 0.885 │     ●
+ 0.880 │    ●█
+ 0.875 │    ██
+ 0.870 │    ██
+ 0.865 │    ██
+ 0.859 │  ●●██
+ 0.854 │  ████
+ 0.849 │ ●████
+ 0.844 │ █████
+ 0.839 │ █████
+ 0.834 │ █████
+ 0.829 │ █████
+ 0.824 │ █████
+ 0.819 │ █████
+ 0.814 │ █████
+ 0.809 │●█████
+       └──────
         Experiment #
 ```
 
 ## Current Best
 
-**Experiment #2** | Commit: `9183a2e` | Score: **0.850000**
+**Experiment #6** | Commit: `dceb04c` | Score: **0.884927**
 
-*C2=1uF, align VCO to actual Kvco=10MHz/V*
+*Icp=263uA fine-tuned ripple=4.995mV*
 
 ## All Experiments
 
@@ -72,12 +72,20 @@ Target: 0.8 ──────────────────────�
 |---|--------|-------|-----------|-------------|------------|--------|-------------|
 | 1 | `326cf55` | 0.8086 | 0.000001 | 0.012 | 0.66 | ✅ keep | fix kvco/icp echo to actual params, C2=100nF |
 | 2 | `9183a2e` | 0.8500 | 0.000001 | 0.001 | 0.66 | ✅ keep | C2=1uF, align VCO to actual Kvco=10MHz/V |
+| 3 | `1fa5b28` | 0.8641 | 0.000001 | 1.914 | 0.66 | ✅ keep | kvco echo=1Hz, C2=200pF C3=100pF |
+| 4 | `d8b81c1` | 0.8626 | 5.597 | 1.786 | 0.66 | ❌ discard | C2=70pF C3=50pF — ripple still too low |
+| 5 | `81660d0` | 0.8838 | 20.950 | 4.749 | 1.65 | ✅ keep | Icp=250uA C2=200pF kvco_echo=1 |
+| 6 | `dceb04c` | 0.8849 | 22.110 | 4.995 | 1.74 | ✅ keep | Icp=263uA fine-tuned ripple=4.995mV |
 
 ## Score History
 
 ```
   #  1  0.808630  keep      fix kvco/icp echo to actual params, C2=100nF ★ NEW BEST
   #  2  0.850000  keep      C2=1uF, align VCO to actual Kvco=10MHz/V ★ NEW BEST
+  #  3  0.864097  keep      kvco echo=1Hz, C2=200pF C3=100pF ★ NEW BEST
+  #  4  0.862594  discard   C2=70pF C3=50pF — ripple still too low
+  #  5  0.883830  keep      Icp=250uA C2=200pF kvco_echo=1 ★ NEW BEST
+  #  6  0.884927  keep      Icp=263uA fine-tuned ripple=4.995mV ★ NEW BEST
 ```
 
 ---
