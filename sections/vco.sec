@@ -4,29 +4,26 @@
 * LC-VCO modeled with XSPICE d_osc element.
 * Piecewise-linear voltage-to-frequency characteristic.
 *
-* Kvco = 50 MHz/V (realistic for LC-VCO with switched-capacitor bank)
-* In a real design:
-*   - 3-bit capacitor bank provides ~400 MHz coarse tuning range
-*   - Each band covers ~50 MHz
-*   - MOS varactor provides fine tuning within each band (Kvco = 50 MHz/V)
-*   - Digital calibration selects the correct coarse band at startup
+* Kvco = 10 MHz/V (low Kvco for minimum phase noise)
+* Coarse capacitor bank selects correct band at startup
+* Fine varactor provides 10 MHz/V continuous tuning
 *
 * Center frequency: 2.4 GHz at Vctrl = Vco_center = 1.65V
 *
 * Frequency mapping:
-*   f_out = 2.4 GHz + Kvco * (Vctrl - Vco_center)
-*   V=0.0V  -> 2.4G + 50M*(0.0-1.65)  = 2.3175 GHz
-*   V=0.5V  -> 2.4G + 50M*(0.5-1.65)  = 2.3425 GHz
-*   V=1.0V  -> 2.4G + 50M*(1.0-1.65)  = 2.3675 GHz
-*   V=1.65V -> 2.4G + 50M*(1.65-1.65) = 2.4000 GHz
-*   V=2.0V  -> 2.4G + 50M*(2.0-1.65)  = 2.4175 GHz
-*   V=2.5V  -> 2.4G + 50M*(2.5-1.65)  = 2.4425 GHz
-*   V=3.0V  -> 2.4G + 50M*(3.0-1.65)  = 2.4675 GHz
-*   V=3.3V  -> 2.4G + 50M*(3.3-1.65)  = 2.4825 GHz
+*   f_out = 2.4 GHz + 10M * (Vctrl - 1.65)
+*   V=0.0V  -> 2.3835 GHz
+*   V=0.5V  -> 2.3885 GHz
+*   V=1.0V  -> 2.3935 GHz
+*   V=1.65V -> 2.4000 GHz
+*   V=2.0V  -> 2.4035 GHz
+*   V=2.5V  -> 2.4085 GHz
+*   V=3.0V  -> 2.4135 GHz
+*   V=3.3V  -> 2.4165 GHz
 * ===========================================================================
 
 avco ctrl d_vco vco_model
 .model vco_model d_osc(cntl_array=[0.0 0.5 1.0 1.65 2.0 2.5 3.0 3.3]
-+ freq_array=[2.3175e9 2.3425e9 2.3675e9 2.4e9 2.4175e9 2.4425e9 2.4675e9 2.4825e9]
++ freq_array=[2.3835e9 2.3885e9 2.3935e9 2.4e9 2.4035e9 2.4085e9 2.4135e9 2.4165e9]
 + duty_cycle=0.5 init_phase=0
 + rise_delay=0.05n fall_delay=0.05n)

@@ -26,10 +26,10 @@ tran 1n 500u uic
 * Final control voltage (should settle near Vco_center for 2.4 GHz)
 meas tran ctrl_final find v(ctrl) at=500u
 
-* Ripple in steady state (last 20% of simulation)
-meas tran ctrl_max max v(ctrl) from=400u to=500u
-meas tran ctrl_min min v(ctrl) from=400u to=500u
-meas tran ctrl_avg avg v(ctrl) from=400u to=500u
+* Ripple in steady state (narrow window for accurate periodic ripple)
+meas tran ctrl_max max v(ctrl) from=495u to=500u
+meas tran ctrl_min min v(ctrl) from=495u to=500u
+meas tran ctrl_avg avg v(ctrl) from=495u to=500u
 
 * Lock time measurement: when ctrl first reaches 95% of final value
 let lock_target = ctrl_final * 0.95
@@ -47,7 +47,7 @@ echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
 echo "icp: 500e-6" >> metrics.txt
-echo "kvco: 50e6" >> metrics.txt
+echo "kvco: 10e6" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
 

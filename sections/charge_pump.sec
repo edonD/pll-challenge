@@ -6,11 +6,6 @@
 * Mismatch between UP and DN currents is modeled as a percentage offset
 * (Icp_mismatch = 0.02 means 2% total mismatch).
 *
-* In silicon, mismatch arises from:
-*   - PMOS vs NMOS current mirror offset
-*   - Channel length modulation differences
-*   - Threshold voltage mismatch
-*
 * SPICE convention: for B-source connected ctrl -> 0, positive I flows
 * from ctrl to ground (discharging). Negative I flows from ground to ctrl
 * (charging). So:
