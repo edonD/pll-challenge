@@ -73,6 +73,9 @@ R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
+* Parallel damping network
+R_damp ctrl lf_damp 300k
+C_damp lf_damp 0 500p
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
