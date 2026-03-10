@@ -73,11 +73,6 @@ R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
-* LC notch at reference frequency (10 MHz)
-* f = 1/(2*pi*sqrt(L*C)) = 10MHz -> LC = 2.533e-16
-* L=253.3nH, C_notch=1pF
-L_notch ctrl notch_mid 253.3n
-C_notch notch_mid 0 1p
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
