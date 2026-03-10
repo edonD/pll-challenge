@@ -17,3 +17,13 @@ a42c756	0.884678	21.72	4.938	1.65	discard	R1=160k Icp=250uA — ripple 4.938 sli
 b204c30	0.852922	26.74	6.112	1.74	discard	R1=100k mismatch=0.008 — ripple 6.1mV too high
 b86a39c	0.884949	22.14	5.000	1.74	discard	flat VCO near lock — same score, no effect on ripple
 70e7f94	0.850000	0.00	0.163	1.74	discard	dual CP inverted mismatch — ripple 0.16mV, spur=0
+40e13a2	0.850000	0.00	0.805	1.74	discard	60% DC compensation — ripple 0.8mV too low, spur=0
+8d567e2	0.884944	22.13	4.999	1.74	discard	two-stage divider 8*30 — same score, tiny ripple variation
+f5dd797	0.869862	24.50	5.465	1.74	discard	R1=200k C1=800p — ripple 5.47mV over target
+8dd2742	0.884949	22.14	5.000	1.74	discard	method=gear — same score, no effect
+8f0aa8b	0.765560	42.18	19.649	1.74	discard	tanh CP — ripple 19.6mV way too high
+4efbaf1	0.850000	48.55	0.638	1.74	discard	adaptive BW cap — broke ctrl voltage (9mV)
+cc12a15	0.884949	22.14	5.000	1.74	discard	PFD AND 0.1n/0.1n — no effect
+ef7b7de	0.884949	22.14	5.000	1.74	discard	3-point VCO — identical results, no effect
+215b77e	0.884877	22.13	5.002	1.74	discard	timestep 1n — 10x faster but ripple 5.002mV
+9c2f531	0.884940	22.13	4.998	1.74	discard	Icp=263.1uA — ripple 4.998mV marginal
