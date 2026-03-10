@@ -279,3 +279,6 @@ d6c27aeb	0.850000	10.40	0.363	1.738	discard	sine ref (logged dup)
 bcf02e1	0.884949	22.14	5.000	1.738	discard	AND input_load=1fF, same score
 0409f0a	0.878251	12.61	3.673	1.738	discard	dual divider /239+/241 XOR
 e9a2e49	0.801300	34.58	9.837	1.738	discard	zero mismatch + DC drift current
+edb39ec	0.884949	22.14	5.000	1.738	discard	two-phase alter mid-sim, no effect
+0a6774b	0.778331	39.27	14.115	1.738	discard	lf_zero IC=1.5V offset
+cb8ec5b	0.884761	21.83	4.957	1.738	discard	added C4=10pF shunt
