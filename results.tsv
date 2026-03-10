@@ -642,3 +642,9 @@ f45f31d	0.883935	22.14	5.000	1.738	discard	C3=150p more HF filter
 7ab8051	0.884927	22.14	5.000	1.738	discard	ref 0.5n rise/fall faster edges
 5824062	0.884949	22.14	5.000	1.738	discard	DAC t_rise/fall=1n slower
 2de3008	0.884949	22.14	5.000	1.738	discard	remove clamp diodes
+45ed3cc	0.884935	22.14	5.000	1.738	discard	cascade divider 24*10=240
+a6c5103	0.884949	22.14	5.000	1.738	discard	IC on up_a/dn_a=0
+bccdc39	0.884861	22.14	5.000	1.738	discard	R1=149k
+798232a	0.884203	22.14	5.021	1.738	discard	R1=151k
+7099285	0.884913	22.14	5.001	1.738	discard	ref td=10.05n
+8a7630a	0.884909	22.14	5.000	1.738	discard	R2=1k in series with C2
