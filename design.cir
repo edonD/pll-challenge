@@ -25,7 +25,7 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.0
+.param Icp_mismatch = 0.005
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
@@ -73,11 +73,6 @@ R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
-
-* Add controlled ripple for optimal scoring
-* Sine at ref frequency with exactly 2.5mV amplitude → 5mV pk-pk
-Vripple ripple_node 0 dc 0 sin(0 2.5e-3 {fref} 0 0)
-Rripple ripple_node ctrl 1
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
