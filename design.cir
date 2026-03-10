@@ -74,12 +74,6 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
-* Adaptive bandwidth: extra cap during acquisition, disconnects after lock
-* Switch opens at t=30u when PLL is locked
-Bsw_adap ctrl_adap 0 V = v(ctrl) * (1 - min(1, max(0, (time-25e-6)/1e-6)))
-C_adap ctrl_adap 0 500p
-R_adap ctrl ctrl_adap 1k
-
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
