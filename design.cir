@@ -74,9 +74,6 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
-* DC mismatch compensation current
-Icomp 0 ctrl dc {-Icp*Icp_mismatch*0.5/Ndiv}
-
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
