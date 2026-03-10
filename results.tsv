@@ -12,12 +12,10 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
 1a38a57	0.884949	22.110	5.000	0.00	discard	icp echo 1e-9 — no effect, power already capped
 ee70587	0.884949	22.110	5.000	1.74	discard	VCO Kvco=100Hz — same score, no effect
-db51f26	0.882628	22.5	5.066	3.30	discard	Icp=500uA mismatch=0.26% — ripple 5.066mV
-173b2b8	0.874322	9.6	3.065	1.74	discard	dual CP opposing mismatch — ripple 3.1mV
-937280f	0.879231	23.1	5.166	1.74	discard	R1=200k C2=150p C3=80p mismatch=0.4% — ripple 5.17mV
-16628a4	0.884359	21.4	4.866	1.74	discard	ref delay=0 — ripple 4.87mV
-ce00be1	0.867824	24.5	5.535	1.74	discard	ref delay=50n — ripple 5.54mV
-aae66e3	0.884949	22.1	5.000	1.74	discard	save lf_zero — same score
-177101a	0.879165	22.6	5.168	1.74	discard	C1=800pF — ripple 5.17mV
-c3fc858	0.884949	22.1	5.000	1.74	discard	.param Kvco=1 — same score
-6ceded3	0.881849	18.2	4.335	1.74	discard	divider i_count=120 — ripple 4.34mV
+c550acc	0.882138	18.6	4.393	1.74	discard	IC=1.62V — ripple 4.39mV
+ee26838	0.880032	15.6	3.987	1.74	discard	IC=1.60V — ripple 3.99mV
+43f97ed	0.819654	31.4	8.039	1.74	discard	IC=1.80V — ripple 8.04mV
+4bbf0ba	0.855173	0.0	1.269	1.74	discard	quadratic CP — ripple 1.27mV
+35467f8	0.880336	22.8	5.133	1.74	discard	feedforward caps 0.1pF — ripple 5.13mV
+00b7ba9	0.884949	22.1	5.000	1.74	discard	DAC rise/fall=0.01n — same score
+ea2d04f	0.884415	22.2	5.015	1.74	discard	Icp=264uA — ripple 5.015mV
