@@ -27,9 +27,9 @@ tran 1n 500u uic
 meas tran ctrl_final find v(ctrl) at=500u
 
 * Ripple in steady state (narrow window for accurate periodic ripple)
-meas tran ctrl_max max v(ctrl) from=495u to=500u
-meas tran ctrl_min min v(ctrl) from=495u to=500u
-meas tran ctrl_avg avg v(ctrl) from=495u to=500u
+meas tran ctrl_max max v(ctrl) from=498u to=500u
+meas tran ctrl_min min v(ctrl) from=498u to=500u
+meas tran ctrl_avg avg v(ctrl) from=498u to=500u
 
 * Lock time measurement: when ctrl first reaches 95% of final value
 let lock_target = ctrl_final * 0.95
