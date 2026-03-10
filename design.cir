@@ -53,9 +53,13 @@ abridge_ref [ref] [ref_d] adc1
 abridge_div [div_out] [div_out_d] adc1
 .model adc1 adc_bridge(in_low=0.5 in_high=2.5 rise_delay=0.1n fall_delay=0.1n)
 
-abridge_updn [d_up d_dn] [up_a dn_a] dac1
-.model dac1 dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
-+ input_load=5e-12 t_rise=0.1n t_fall=0.1n)
+* Separate DAC bridges for UP and DN with asymmetric timing
+abridge_up [d_up] [up_a] dac_up
+.model dac_up dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
++ input_load=5e-12 t_rise=0.2n t_fall=0.05n)
+abridge_dn [d_dn] [dn_a] dac_dn
+.model dac_dn dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
++ input_load=5e-12 t_rise=0.05n t_fall=0.2n)
 
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
