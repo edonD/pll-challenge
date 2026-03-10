@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:34:09*
+*Auto-generated at 2026-03-10 07:36:04*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **684** |
+| Total experiments | **689** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 664 |
+| Regressions (discard) | 669 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (684 experiments)
+Score Progression (689 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●      ●      ●●  ● ●
- 0.826 │●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●●●●██●●█●█
- 0.767 │─────────────────────────────────────────●──────────────────
- 0.708 │████████████████████████████████████████████████████████████
+ 0.885 │●●● ●●  ●   ●● ●      ●  ●● ●●●   ●      ●      ●●  ● ●● ●  
+ 0.826 │███●██●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●●●●██●●█●██ █●●
+ 0.767 │────────────────────────────────────●───────────────────────
+ 0.708 │████████████████████████████████████████████████████████●███
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -754,6 +754,11 @@ Target: 0.8 ──────────────────────�
 | 682 | `2448961` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 7 control points wider range |
 | 683 | `636ccbc` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | D-FF rise=0.2n fall=0.1n asymmetric |
 | 684 | `5f43899` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options reltol=0.005 |
+| 685 | `fa44bef` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | ref 45% duty cycle |
+| 686 | `47a50d0` | 0.7577 | 22.14 | 28.840 | 1.738 | ❌ discard | R3=10k in series with C3 |
+| 687 | `f54fe73` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Icp=263.19e-6 |
+| 688 | `ad32ee5` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | Vco_center=1.7 |
+| 689 | `da20ebc` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C2=200.5p |
 
 ## Score History
 
@@ -1442,6 +1447,11 @@ Target: 0.8 ──────────────────────�
   #682  0.884949  discard   VCO 7 control points wider range
   #683  0.884913  discard   D-FF rise=0.2n fall=0.1n asymmetric
   #684  0.884949  discard   .options reltol=0.005
+  #685  0.884949  discard   ref 45% duty cycle
+  #686  0.757674  discard   R3=10k in series with C3
+  #687  0.884949  discard   Icp=263.19e-6
+  #688  0.884913  discard   Vco_center=1.7
+  #689  0.884940  discard   C2=200.5p
 ```
 
 ---
