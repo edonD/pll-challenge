@@ -895,3 +895,5 @@ f404e69	0.884857	22.0	4.979	1.74	discard	Rleak=10G — ripple drops to 4.98mV
 9e2e661	0.884097	22.2	5.024	1.74	discard	Rleak=500Meg — ripple 5.024mV, score drops
 7c2d4cb	0.765152	42.3	19.93	1.74	discard	Hard-switched CP — ripple 19.9mV, too high
 8022555	0.884949	22.1	5.0	1.74	discard	DAC t_rise/fall=5n — same score
+11eb03e	0.884877	22.1	5.002	1.74	discard	Timestep 0.5n — ripple 5.002mV
+cd41e96	0.884913	22.1	5.001	1.74	discard	Timestep 0.2n — ripple 5.001mV
