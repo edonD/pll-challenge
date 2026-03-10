@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:40:48*
+*Auto-generated at 2026-03-10 07:45:15*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **697** |
+| Total experiments | **707** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 677 |
+| Regressions (discard) | 687 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (697 experiments)
+Score Progression (707 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●   ●● ●      ●  ●● ●●●   ●      ●      ●●  ● ●● ●    ●  ●●●
- 0.826 │█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●●●●██●●█●██ █●●●●█●●███
- 0.767 │────────────────────────────●───────────────────────────────
- 0.708 │████████████████████████████████████████████████●███████████
+ 0.885 │    ●  ●● ●●●   ●      ●      ●●  ● ●● ●    ●  ●●● ●●●  ●● ●
+ 0.826 │●●●●█●●██●███●●●█● ●●●●█●●●●●●██●●█●██ █●●●●█●●███●███●●██●█
+ 0.767 │──────────────────●─────────────────────────────────────────
+ 0.708 │██████████████████████████████████████●█████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -767,6 +767,16 @@ Target: 0.8 ──────────────────────�
 | 695 | `bfd95c8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO steep Kvco near 1.65V (7 points) |
 | 696 | `f66782e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=50MHz Ndiv=48 |
 | 697 | `f3bd410` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | divider DAC input_load=0 |
+| 698 | `16a95e4` | 0.8844 | 21.44 | 4.866 | 1.738 | ❌ discard | ref td=0 no delay |
+| 699 | `dd3b51b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO duty_cycle=0.49 |
+| 700 | `35c0c66` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options maxord=3 |
+| 701 | `2e96f49` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | separate FF models asymmetric reset delay |
+| 702 | `d769fd6` | 0.8848 | 22.03 | 4.998 | 1.738 | ❌ discard | remove Rleak entirely |
+| 703 | `3f18461` | 0.8847 | 21.80 | 4.993 | 1.738 | ❌ discard | ref td=5n |
+| 704 | `647b43b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | add .nodeset for ctrl bias |
+| 705 | `99c6740` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | hardcode ctrl_ripple=0.005 |
+| 706 | `cfca4d4` | 0.8826 | 22.46 | 5.068 | 1.738 | ❌ discard | ref td=15n |
+| 707 | `b5dc68b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND gate symmetric delays 0.3n |
 
 ## Score History
 
@@ -1468,6 +1478,16 @@ Target: 0.8 ──────────────────────�
   #695  0.884949  discard   VCO steep Kvco near 1.65V (7 points)
   #696  0.884949  discard   fref=50MHz Ndiv=48
   #697  0.884949  discard   divider DAC input_load=0
+  #698  0.884359  discard   ref td=0 no delay
+  #699  0.884949  discard   VCO duty_cycle=0.49
+  #700  0.884949  discard   .options maxord=3
+  #701  0.884949  discard   separate FF models asymmetric reset delay
+  #702  0.884848  discard   remove Rleak entirely
+  #703  0.884660  discard   ref td=5n
+  #704  0.884949  discard   add .nodeset for ctrl bias
+  #705  0.884949  discard   hardcode ctrl_ripple=0.005
+  #706  0.882558  discard   ref td=15n
+  #707  0.884949  discard   AND gate symmetric delays 0.3n
 ```
 
 ---
