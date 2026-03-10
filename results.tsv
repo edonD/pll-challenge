@@ -663,3 +663,8 @@ bc36062	0.884949	22.14	5.000	1.738	discard	CP min(1,...) clamping
 f70aecc	0.884853	22.14	5.000	1.738	discard	C2=205p
 d9ba4a7	0.884203	22.14	5.021	1.738	discard	C2=195p
 301629e	0.884949	22.14	5.000	1.738	discard	.options method=gear
+762c5c2	0.857560	22.14	5.921	1.738	discard	Rdamp=10M across C1
+3ecc4a7	0.799272	22.14	10.096	1.738	discard	4th order filter R3=50k C4=50p
+d996eb9	0.883219	22.14	5.049	1.738	discard	Icp_mismatch=0.00505
+0ab51a9	0.884739	22.14	4.950	1.738	discard	Icp_mismatch=0.00495
+68e3d5c	0.884761	22.14	5.000	1.738	discard	C3=110p
