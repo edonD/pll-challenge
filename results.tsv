@@ -225,3 +225,10 @@ cd43778	0.879205	13.41	3.838	1.738	discard	dual-path aux integrator R2=50k C5=20
 e338a33	0.878305	22.98	5.194	1.738	discard	mismatch 0.0052, ripple 5.194mV
 02fa371	0.794231	35.88	10.805	1.738	discard	DC compensation current, ripple 10.805mV
 f9fa9c8	0.877715	23.07	5.212	1.738	discard	Rleak 100M, ripple 5.212mV
+13508df	0.877780	21.96	5.210	1.738	discard	voltage-dependent mismatch cancellation
+d1ac337	0.884842	22.14	5.003	1.738	discard	drift comp 10nA/mV, ripple 5.003mV
+d5f3008	0.884913	22.14	5.001	1.738	discard	drift comp 5nA/mV, ripple 5.001mV
+78383a6	0.884913	22.14	5.001	1.738	discard	drift comp 3nA/mV, ripple 5.001mV
+3d1b206	0.884949	22.14	5.000	1.738	discard	drift comp 0.5nA/mV, same score
+dffe604	0.884949	22.14	5.000	1.738	discard	AND fall_delay 2n, no change
+9ac483e	0.884949	22.14	5.000	1.738	discard	asymmetric DFF reset, no effect

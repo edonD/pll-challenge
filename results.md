@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 04:12:43*
+*Auto-generated at 2026-03-10 04:15:40*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **226** |
+| Total experiments | **233** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 7 |
-| Regressions (discard) | 216 |
+| Regressions (discard) | 223 |
 | Crashes | 3 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,14 +37,14 @@
 ## Score Progression
 
 ```
-Score Progression (226 experiments)
+Score Progression (233 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●  ●         ●● ●            ●●           ●     ●●    ●●    
- 0.826 │█●●█●●●●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●●● ██●● ●
- 0.767 │─────────────────────────────────────────────────────●────●─
- 0.708 │██████████████████●████████████████ ████████████████████████
- 0.649 │███████████████████████████████████●████████████████████████
+ 0.885 │      ●● ●            ●●           ●     ●●    ●●        ●●●
+ 0.826 │●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●●● ██●● ●●●●●███
+ 0.767 │──────────────────────────────────────────────●────●────────
+ 0.708 │███████████●████████████████ ███████████████████████████████
+ 0.649 │████████████████████████████●███████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
  0.472 │████████████████████████████████████████████████████████████
@@ -296,6 +296,13 @@ Target: 0.8 ──────────────────────�
 | 224 | `e338a33` | 0.8783 | 22.98 | 5.194 | 1.738 | ❌ discard | mismatch 0.0052, ripple 5.194mV |
 | 225 | `02fa371` | 0.7942 | 35.88 | 10.805 | 1.738 | ❌ discard | DC compensation current, ripple 10.805mV |
 | 226 | `f9fa9c8` | 0.8777 | 23.07 | 5.212 | 1.738 | ❌ discard | Rleak 100M, ripple 5.212mV |
+| 227 | `13508df` | 0.8778 | 21.96 | 5.210 | 1.738 | ❌ discard | voltage-dependent mismatch cancellation |
+| 228 | `d1ac337` | 0.8848 | 22.14 | 5.003 | 1.738 | ❌ discard | drift comp 10nA/mV, ripple 5.003mV |
+| 229 | `d5f3008` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | drift comp 5nA/mV, ripple 5.001mV |
+| 230 | `78383a6` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | drift comp 3nA/mV, ripple 5.001mV |
+| 231 | `3d1b206` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | drift comp 0.5nA/mV, same score |
+| 232 | `dffe604` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND fall_delay 2n, no change |
+| 233 | `9ac483e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | asymmetric DFF reset, no effect |
 
 ## Score History
 
@@ -526,6 +533,13 @@ Target: 0.8 ──────────────────────�
   #224  0.878305  discard   mismatch 0.0052, ripple 5.194mV
   #225  0.794231  discard   DC compensation current, ripple 10.805mV
   #226  0.877715  discard   Rleak 100M, ripple 5.212mV
+  #227  0.877780  discard   voltage-dependent mismatch cancellation
+  #228  0.884842  discard   drift comp 10nA/mV, ripple 5.003mV
+  #229  0.884913  discard   drift comp 5nA/mV, ripple 5.001mV
+  #230  0.884913  discard   drift comp 3nA/mV, ripple 5.001mV
+  #231  0.884949  discard   drift comp 0.5nA/mV, same score
+  #232  0.884949  discard   AND fall_delay 2n, no change
+  #233  0.884949  discard   asymmetric DFF reset, no effect
 ```
 
 ---
