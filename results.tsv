@@ -941,3 +941,4 @@ f1292e0	0.884949	22.1	5.0	1.74	discard	Icp=263.15uA — same score (within toler
 1e8c25f	0.851156	48.3	6.189	1.74	discard	Voltage-mode CP — ctrl=0.1V, wrong operating point
 273c3d4	0.884842	22.1	5.003	1.74	discard	C2=199.5p — ripple 5.003mV
 e55c528	0.884940	22.1	4.998	1.74	discard	C2=200.5p — ripple 4.998mV
+782073d	0.884949	22.1	5.0	1.74	discard	VCVS buffer — same score (VCO doesn't load ctrl)
