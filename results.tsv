@@ -852,3 +852,4 @@ d7e27a6	0.854543	25.6	6.04	1.74	discard	R1=200k C1=750p
 f182ddb	0.880976	18.8	3.85	1.74	discard	R1=120k C1=1.25n
 c78c442	0.884949	22.1	5.0	1.74	discard	print ctrl_ripple
 999e28a	0.884949	22.1	5.0	1.74	discard	AND rise_delay=0.2n
+303adb8	0.884949	22.1	5.0	1.74	discard	CP uramp
