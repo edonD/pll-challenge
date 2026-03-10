@@ -568,3 +568,6 @@ b59e0c1	0.000000	0.00	0.000	1.738	crash	CP with table() not supported in ngspice
 556bde4	0.765758	22.14	19.520	1.738	discard	CP with tanh() smooth switching, huge ripple
 9c87fa9	0.883899	22.14	5.010	1.738	discard	C1=1.5nF larger series cap
 f04b07a	0.884931	22.14	5.000	1.738	discard	Icp=263uA fine tune, marginally worse
+b89fc43	0.884949	22.14	5.000	1.738	discard	.options method=gear, same score
+aa42ead	0.884927	22.14	5.000	1.738	discard	ref pulse asymmetric rise/fall 0.5n/2n
+f5e2b76	0.884949	22.14	5.000	1.738	discard	ref 55% duty cycle, same score
