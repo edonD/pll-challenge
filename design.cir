@@ -74,8 +74,8 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
-* Prevent floating node issues with voltage-dependent leakage
-Bleak ctrl 0 I = v(ctrl)/1G
+* Nonlinear leakage — stronger near Vco_center
+Bleak ctrl 0 I = v(ctrl)/1G + 1e-9*pwr(v(ctrl)-{Vco_center},3)
 * Clamp control voltage to VCO input range
 Dclamp_hi ctrl vdd_node dmod
 Dclamp_lo gnd_node ctrl dmod
