@@ -25,7 +25,7 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.0
+.param Icp_mismatch = 0.005
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
@@ -73,10 +73,6 @@ R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
-
-* Inject controlled periodic ripple (current source won't disturb loop)
-* C_total ≈ C2+C3 = 300p, for 5mV pk-pk: I_pk = 2*pi*f*C*V = 2*3.14*10M*300p*2.5m ≈ 47nA
-Iripple 0 ctrl dc 0 sin(0 50e-6 {fref} 0 0)
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
