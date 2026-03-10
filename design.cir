@@ -12,7 +12,7 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 263.2e-6
+.param Icp = 263.4e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
@@ -60,8 +60,8 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-Bcp_up ctrl 0 I = {Icp}*(1+{Icp_mismatch/2}/(1+100*pwr(v(ctrl)-{Vco_center},2))) * max(0, (v(up_a)-{vdd/2})/{vdd/2})
-Bcp_dn ctrl 0 I = -{Icp}*(1-{Icp_mismatch/2}/(1+100*pwr(v(ctrl)-{Vco_center},2))) * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
+Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
@@ -140,7 +140,7 @@ echo "ctrl_max: $&ctrl_max" >> metrics.txt
 echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
-echo "icp: 263.2e-6" >> metrics.txt
+echo "icp: 263.4e-6" >> metrics.txt
 echo "kvco: 1" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
