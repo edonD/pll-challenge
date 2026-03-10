@@ -915,3 +915,8 @@ b162ce3	0.884593	22.2	5.01	1.74	discard	Mismatch=0.00501 — ripple 5.01mV
 82cff4d	0.884877	22.1	5.002	1.74	discard	Div DAC faster edges — ripple 5.002mV
 364567f	0.884949	22.1	5.0	1.74	discard	.options interp — same score
 f6394e4	0.884949	22.1	5.0	1.74	discard	.options method=gear — same score
+571bce6	0.871064	5.8	2.638	1.74	discard	Dual-path filter — ripple 2.64mV too low
+6555da4	0.884848	22.0	4.977	1.74	discard	Bias 10G to Vco_center — ripple 4.98mV
+122c046	0.884848	22.0	4.977	1.74	discard	Bias 100G to Vco_center — same
+6728076	0.741971	13.0	11.16	1.74	discard	LC notch — oscillation, stability=0
+e35684c	0.884949	22.1	5.0	1.74	discard	Linearized CP — same score
