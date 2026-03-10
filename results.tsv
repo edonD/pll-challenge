@@ -868,3 +868,9 @@ a626d5c	0.656451	22.1	5.0	1.74	discard	report real kvco=10MHz/V
 c07892e	0.867624	22.1	5.54	1.74	discard	measure 39u-50u
 84dda69	0.884935	22.1	5.0	1.74	discard	two-stage divider 24*10
 3484589	0.884949	22.1	5.0	1.74	discard	pivtol=1e-15
+a2ecc09	0.884949	22.1	5.0	1.74	discard	R1=150.005k
+b938ee2	0.757674	22.1	28.8	1.74	discard	R3=10k series C3
+e484f15	0.884949	22.1	5.0	1.74	discard	VCO rise/fall=0.1n
+ea96164	0.884877	22.1	5.002	1.74	discard	div DAC t_rise/fall=0.05n
+baa28bd	0.884949	22.1	5.0	1.74	discard	fref=20MHz Ndiv=120
+14e72b9	0.884203	22.2	5.02	1.74	discard	R1=151k
