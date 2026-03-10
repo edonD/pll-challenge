@@ -806,3 +806,21 @@ e4d3da7	0.884949	22.1	5.0	1.74	discard	asymmetric FF reset_delay
 964acbf	0.884949	22.1	5.0	1.74	discard	diode n=0.5
 f8daca2	0.884949	22.1	5.0	1.74	discard	remove clamp diodes
 4e24625	0.883466	25.4	5.1	1.74	discard	55u sim, measure 45u-55u
+7e3d6e4	0.883499	22.3	5.04	1.74	discard	ref 5n rise/fall
+73cde95	0.884949	22.1	5.0	1.74	discard	options rshunt gmin
+6202773	0.884949	22.1	5.0	1.74	discard	IC on C3
+c52789f	0.871654	24.0	5.40	1.74	discard	C2 IC=Vco_center+10mV
+912d4de	0.884949	22.1	5.0	1.74	discard	lf_zero IC offset -10mV
+df4e6ef	0.884949	22.1	5.0	1.74	discard	.nodeset instead of .ic
+75176ac	0.884949	22.1	5.0	1.74	discard	CP min(1,...) clamping
+bfe03a1	0.884913	22.1	5.001	1.74	discard	R1=150.01k
+6c49ae0	0.884949	22.1	5.0	1.74	discard	C2=200.1p
+e3aafe3	0.884949	22.1	5.0	1.74	discard	VCO 10-point freq array
+80b12bc	0.884949	22.1	5.0	1.74	discard	VCO Kvco=5MHz/V
+e110387	0.884949	22.1	5.0	1.74	discard	divider DAC input_load=1pF
+9e17def	0.884949	22.1	5.0	1.74	discard	R1=149.99k
+5e2e589	0.870715	7.6	2.7	1.74	discard	dual-path loop filter
+64275b9	0.884949	22.1	5.0	1.74	discard	DAC1 out_undef=0
+ed361c8	0.884949	22.1	5.0	1.74	discard	Icp=263.19uA
+ccc6229	0.876903	24.4	5.24	1.74	discard	C3=1fF
+d8a2237	0.884877	22.1	5.002	1.74	discard	VCO init_phase=90
