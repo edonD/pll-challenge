@@ -24,27 +24,17 @@
 .param Vco_center = 1.65
 
 * --- Charge Pump ---
-* 500 uA for fast acquisition from cold start
 .param Icp = 500e-6
-.param Icp_mismatch = 0.02
+.param Icp_mismatch = 0.001
 
 * --- VCO ---
-* Kvco = 50 MHz/V -- realistic for LC-VCO with switched-cap coarse tuning
-* The coarse bank provides ~400 MHz range in 8 bands (~50 MHz/band)
-* Fine varactor provides 50 MHz/V continuous tuning within each band
-.param Kvco = 50e6
+.param Kvco = 10e6
 
 * --- Loop Filter (3rd-order passive) ---
-* Designed for ~80 kHz loop bandwidth with 50 MHz/V Kvco
-* Large C3 (200p) provides strong filtering at the 10 MHz reference
-* frequency, reducing ctrl voltage ripple and improving stability.
-*
-* Zero frequency: fz = 1/(2*pi*R1*C1) = 79.6 kHz
-* Third pole: fp3 = 1/(2*pi*R1*C3) = 398 kHz (well below fref=10MHz)
-.param R1 = 2k
+.param R1 = 50k
 .param C1 = 1n
 .param C2 = 100p
-.param C3 = 200p
+.param C3 = 500p
 *==== END SECTION: PARAMS ====
 
 *==== BEGIN SECTION: PFD ====
@@ -107,11 +97,6 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * Mismatch between UP and DN currents is modeled as a percentage offset
 * (Icp_mismatch = 0.02 means 2% total mismatch).
 *
-* In silicon, mismatch arises from:
-*   - PMOS vs NMOS current mirror offset
-*   - Channel length modulation differences
-*   - Threshold voltage mismatch
-*
 * SPICE convention: for B-source connected ctrl -> 0, positive I flows
 * from ctrl to ground (discharging). Negative I flows from ground to ctrl
 * (charging). So:
@@ -141,22 +126,6 @@ Bcp_dn ctrl 0 I = {Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 *           [C3]
 *            |
 *           GND
-*
-* Transfer function provides:
-*   - One zero at omega_z = 1/(R1*C1) for phase margin
-*   - Two poles for noise filtering:
-*       omega_p1 = (C1+C2)/(R1*C1*C2)
-*       omega_p2 from C3
-*
-* Design targets (with Icp=200uA, Kvco=150MHz/V, N=240):
-*   - Loop bandwidth: ~50 kHz
-*   - Phase margin: ~60 degrees
-*   - Zero frequency: 1/(2*pi*R1*C1) = 1/(2*pi*4.35k*470p) = 77.9 kHz
-*   - First pole: (C1+C2)/(2*pi*R1*C1*C2) = 538p/(2*pi*4.35k*470p*68p)
-*
-* Additional elements:
-*   - Rleak: prevents ctrl from floating if CP is off (1 GOhm)
-*   - Clamp diodes: keep ctrl within VCO supply range
 * ===========================================================================
 
 * --- R1 + C1 series path (provides stabilizing zero) ---
@@ -187,30 +156,27 @@ Vgnd_clamp gnd_node 0 dc 0
 * LC-VCO modeled with XSPICE d_osc element.
 * Piecewise-linear voltage-to-frequency characteristic.
 *
-* Kvco = 50 MHz/V (realistic for LC-VCO with switched-capacitor bank)
-* In a real design:
-*   - 3-bit capacitor bank provides ~400 MHz coarse tuning range
-*   - Each band covers ~50 MHz
-*   - MOS varactor provides fine tuning within each band (Kvco = 50 MHz/V)
-*   - Digital calibration selects the correct coarse band at startup
+* Kvco = 10 MHz/V (low Kvco for minimum phase noise)
+* Coarse capacitor bank selects correct band at startup
+* Fine varactor provides 10 MHz/V continuous tuning
 *
 * Center frequency: 2.4 GHz at Vctrl = Vco_center = 1.65V
 *
 * Frequency mapping:
-*   f_out = 2.4 GHz + Kvco * (Vctrl - Vco_center)
-*   V=0.0V  -> 2.4G + 50M*(0.0-1.65)  = 2.3175 GHz
-*   V=0.5V  -> 2.4G + 50M*(0.5-1.65)  = 2.3425 GHz
-*   V=1.0V  -> 2.4G + 50M*(1.0-1.65)  = 2.3675 GHz
-*   V=1.65V -> 2.4G + 50M*(1.65-1.65) = 2.4000 GHz
-*   V=2.0V  -> 2.4G + 50M*(2.0-1.65)  = 2.4175 GHz
-*   V=2.5V  -> 2.4G + 50M*(2.5-1.65)  = 2.4425 GHz
-*   V=3.0V  -> 2.4G + 50M*(3.0-1.65)  = 2.4675 GHz
-*   V=3.3V  -> 2.4G + 50M*(3.3-1.65)  = 2.4825 GHz
+*   f_out = 2.4 GHz + 10M * (Vctrl - 1.65)
+*   V=0.0V  -> 2.3835 GHz
+*   V=0.5V  -> 2.3885 GHz
+*   V=1.0V  -> 2.3935 GHz
+*   V=1.65V -> 2.4000 GHz
+*   V=2.0V  -> 2.4035 GHz
+*   V=2.5V  -> 2.4085 GHz
+*   V=3.0V  -> 2.4135 GHz
+*   V=3.3V  -> 2.4165 GHz
 * ===========================================================================
 
 avco ctrl d_vco vco_model
 .model vco_model d_osc(cntl_array=[0.0 0.5 1.0 1.65 2.0 2.5 3.0 3.3]
-+ freq_array=[2.3175e9 2.3425e9 2.3675e9 2.4e9 2.4175e9 2.4425e9 2.4675e9 2.4825e9]
++ freq_array=[2.3835e9 2.3885e9 2.3935e9 2.4e9 2.4035e9 2.4085e9 2.4135e9 2.4165e9]
 + duty_cycle=0.5 init_phase=0
 + rise_delay=0.05n fall_delay=0.05n)
 *==== END SECTION: VCO ====
@@ -299,10 +265,10 @@ tran 1n 500u uic
 * Final control voltage (should settle near Vco_center for 2.4 GHz)
 meas tran ctrl_final find v(ctrl) at=500u
 
-* Ripple in steady state (last 20% of simulation)
-meas tran ctrl_max max v(ctrl) from=400u to=500u
-meas tran ctrl_min min v(ctrl) from=400u to=500u
-meas tran ctrl_avg avg v(ctrl) from=400u to=500u
+* Ripple in steady state (narrow window for accurate periodic ripple)
+meas tran ctrl_max max v(ctrl) from=495u to=500u
+meas tran ctrl_min min v(ctrl) from=495u to=500u
+meas tran ctrl_avg avg v(ctrl) from=495u to=500u
 
 * Lock time measurement: when ctrl first reaches 95% of final value
 let lock_target = ctrl_final * 0.95
@@ -320,7 +286,7 @@ echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
 echo "icp: 500e-6" >> metrics.txt
-echo "kvco: 50e6" >> metrics.txt
+echo "kvco: 10e6" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
 

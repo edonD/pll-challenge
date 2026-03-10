@@ -12,22 +12,6 @@
 *           [C3]
 *            |
 *           GND
-*
-* Transfer function provides:
-*   - One zero at omega_z = 1/(R1*C1) for phase margin
-*   - Two poles for noise filtering:
-*       omega_p1 = (C1+C2)/(R1*C1*C2)
-*       omega_p2 from C3
-*
-* Design targets (with Icp=200uA, Kvco=150MHz/V, N=240):
-*   - Loop bandwidth: ~50 kHz
-*   - Phase margin: ~60 degrees
-*   - Zero frequency: 1/(2*pi*R1*C1) = 1/(2*pi*4.35k*470p) = 77.9 kHz
-*   - First pole: (C1+C2)/(2*pi*R1*C1*C2) = 538p/(2*pi*4.35k*470p*68p)
-*
-* Additional elements:
-*   - Rleak: prevents ctrl from floating if CP is off (1 GOhm)
-*   - Clamp diodes: keep ctrl within VCO supply range
 * ===========================================================================
 
 * --- R1 + C1 series path (provides stabilizing zero) ---

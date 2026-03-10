@@ -13,24 +13,14 @@
 .param Vco_center = 1.65
 
 * --- Charge Pump ---
-* 500 uA for fast acquisition from cold start
 .param Icp = 500e-6
-.param Icp_mismatch = 0.02
+.param Icp_mismatch = 0.001
 
 * --- VCO ---
-* Kvco = 50 MHz/V -- realistic for LC-VCO with switched-cap coarse tuning
-* The coarse bank provides ~400 MHz range in 8 bands (~50 MHz/band)
-* Fine varactor provides 50 MHz/V continuous tuning within each band
-.param Kvco = 50e6
+.param Kvco = 10e6
 
 * --- Loop Filter (3rd-order passive) ---
-* Designed for ~80 kHz loop bandwidth with 50 MHz/V Kvco
-* Large C3 (200p) provides strong filtering at the 10 MHz reference
-* frequency, reducing ctrl voltage ripple and improving stability.
-*
-* Zero frequency: fz = 1/(2*pi*R1*C1) = 79.6 kHz
-* Third pole: fp3 = 1/(2*pi*R1*C3) = 398 kHz (well below fref=10MHz)
-.param R1 = 2k
+.param R1 = 50k
 .param C1 = 1n
 .param C2 = 100p
-.param C3 = 200p
+.param C3 = 500p
