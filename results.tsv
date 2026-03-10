@@ -523,3 +523,11 @@ a8fbb62	0.884913	22.14	5.001	1.738	discard	tran step 0.2n, slightly worse
 4f2fca0	0.760613	22.14	105.000	1.738	discard	C_lf1 ic=0, huge ripple from wrong initial condition
 89ea74e	0.884913	22.14	5.001	1.738	discard	asymmetric mismatch (1+m) on up, 1 on dn
 d1ef68f	0.884770	22.14	5.005	1.743	discard	Icp=264uA R1=149.5k combined fine-tune
+1b2ac34	0.884949	22.14	5.000	1.738	discard	AND gate reversed rise/fall delays, same score
+79d2cb2	0.765353	42.23	19.790	1.738	discard	CP with sgn() gating, much worse ripple
+6e6f38d	0.884949	22.14	5.000	1.738	discard	C_lf2 ic removal, same score
+4c8bdc5	0.880032	15.59	5.000	1.738	discard	ic=1.6V, worse ref_spur
+b0f2619	0.855261	26.28	6.014	1.738	discard	ic=1.7V, worse ripple
+2fade98	0.884877	22.14	5.002	1.738	discard	div DAC asymmetric rise/fall 0.05n/0.2n
+f7957d6	0.884949	22.14	5.000	1.738	discard	.options pivtol/pivrel, same score
+840ebba	0.881849	18.24	5.000	1.738	discard	divider i_count=120 half of Ndiv

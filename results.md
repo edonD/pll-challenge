@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:29:51*
+*Auto-generated at 2026-03-10 06:32:47*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **524** |
+| Total experiments | **532** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 506 |
+| Regressions (discard) | 514 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (524 experiments)
+Score Progression (532 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    
- 0.826 │●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●███● ●●
+ 0.885 │ ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● 
+ 0.826 │●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●
  0.767 │────────────────────────────────────────────────────────────
- 0.708 │█████████████████████████████████████████████████████████●██
+ 0.708 │█████████████████████████████████████████████████●███●██████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -594,6 +594,14 @@ Target: 0.8 ──────────────────────�
 | 522 | `4f2fca0` | 0.7606 | 22.14 | 105.000 | 1.738 | ❌ discard | C_lf1 ic=0, huge ripple from wrong initial condition |
 | 523 | `89ea74e` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | asymmetric mismatch (1+m) on up, 1 on dn |
 | 524 | `d1ef68f` | 0.8848 | 22.14 | 5.005 | 1.743 | ❌ discard | Icp=264uA R1=149.5k combined fine-tune |
+| 525 | `1b2ac34` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND gate reversed rise/fall delays, same score |
+| 526 | `79d2cb2` | 0.7654 | 42.23 | 19.790 | 1.738 | ❌ discard | CP with sgn() gating, much worse ripple |
+| 527 | `6e6f38d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C_lf2 ic removal, same score |
+| 528 | `4c8bdc5` | 0.8800 | 15.59 | 5.000 | 1.738 | ❌ discard | ic=1.6V, worse ref_spur |
+| 529 | `b0f2619` | 0.8553 | 26.28 | 6.014 | 1.738 | ❌ discard | ic=1.7V, worse ripple |
+| 530 | `2fade98` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | div DAC asymmetric rise/fall 0.05n/0.2n |
+| 531 | `f7957d6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options pivtol/pivrel, same score |
+| 532 | `840ebba` | 0.8818 | 18.24 | 5.000 | 1.738 | ❌ discard | divider i_count=120 half of Ndiv |
 
 ## Score History
 
@@ -1122,6 +1130,14 @@ Target: 0.8 ──────────────────────�
   #522  0.760613  discard   C_lf1 ic=0, huge ripple from wrong initial conditi
   #523  0.884913  discard   asymmetric mismatch (1+m) on up, 1 on dn
   #524  0.884770  discard   Icp=264uA R1=149.5k combined fine-tune
+  #525  0.884949  discard   AND gate reversed rise/fall delays, same score
+  #526  0.765353  discard   CP with sgn() gating, much worse ripple
+  #527  0.884949  discard   C_lf2 ic removal, same score
+  #528  0.880032  discard   ic=1.6V, worse ref_spur
+  #529  0.855261  discard   ic=1.7V, worse ripple
+  #530  0.884877  discard   div DAC asymmetric rise/fall 0.05n/0.2n
+  #531  0.884949  discard   .options pivtol/pivrel, same score
+  #532  0.881849  discard   divider i_count=120 half of Ndiv
 ```
 
 ---
