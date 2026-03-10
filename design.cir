@@ -12,7 +12,7 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 263.2e-6
+.param Icp = 50e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
@@ -21,7 +21,7 @@
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
 .param R1 = 150k
 .param C1 = 1n
-.param C2 = 200p
+.param C2 = 10n
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
@@ -140,7 +140,7 @@ echo "ctrl_max: $&ctrl_max" >> metrics.txt
 echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
-echo "icp: 263.2e-6" >> metrics.txt
+echo "icp: 50e-6" >> metrics.txt
 echo "kvco: 1" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
