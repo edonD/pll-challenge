@@ -73,9 +73,6 @@ R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
-* Second filter path
-R_lf2 ctrl lf_zero2 50k
-C_lf4 lf_zero2 0 500p ic={Vco_center}
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
