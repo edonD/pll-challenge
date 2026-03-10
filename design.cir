@@ -118,7 +118,7 @@ abridge_divout [d_divided] [div_out] dac_div
 .control
 set filetype=ascii
 
-save ref div_out ctrl up_a dn_a
+save ctrl
 
 tran 0.1n 50u uic
 
