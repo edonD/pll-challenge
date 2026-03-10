@@ -13,7 +13,7 @@
 .param fref = 10e6
 .param Ndiv = 240
 .param Icp = 263.2e-6
-.param Kvco = 10e6
+.param Kvco = 1e6
 .param Vco_center = 1.65
 .param vdd = 3.3
 
