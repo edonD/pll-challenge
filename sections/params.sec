@@ -13,7 +13,7 @@
 .param Vco_center = 1.65
 
 * --- Charge Pump ---
-.param Icp = 500e-6
+.param Icp = 250e-6
 .param Icp_mismatch = 0.001
 
 * --- VCO ---
