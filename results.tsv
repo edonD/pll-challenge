@@ -76,3 +76,6 @@ c656554	0.876903	24.4	5.237	1.74	discard	C3=1fF — no HF filter, ripple 5.237mV
 4406997	0.884944	22.1	4.999	1.74	discard	ADC 1.0/2.0 thresholds — ripple 4.999mV marginally worse
 7b2855b	0.884949	22.1	5.000	1.74	discard	save lf_zero — same score
 0c4ca2a	0.884359	21.4	4.866	1.74	discard	zero ref delay — ripple 4.866mV slightly low
+16fff79	0.884909	22.1	4.991	1.74	discard	fast ref edges 0.1ns — ripple 4.991mV
+3d194cf	0.884949	22.1	5.000	1.74	discard	AND input_load=5pF — same score
+c915091	0.884949	22.1	5.000	1.74	discard	div DAC input_load=50pF — same score
