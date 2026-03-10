@@ -19,12 +19,12 @@
 
 * Loop filter: reduced Kvco needs higher R1 to maintain bandwidth
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
-.param R1 = 150k
-.param C1 = 1n
-.param C2 = 200p
-.param C3 = 100p
+.param R1 = 50k
+.param C1 = 3n
+.param C2 = 600p
+.param C3 = 300p
 
-* Charge pump mismatch (reduced for lower ripple)
+* Charge pump mismatch (adjusted for 5mV ripple with new filter)
 .param Icp_mismatch = 0.005
 
 * ---------------------------------------------------------------------------
