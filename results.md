@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 04:07:05*
+*Auto-generated at 2026-03-10 04:12:43*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **217** |
+| Total experiments | **226** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 7 |
-| Regressions (discard) | 207 |
+| Regressions (discard) | 216 |
 | Crashes | 3 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,14 +37,14 @@
 ## Score Progression
 
 ```
-Score Progression (217 experiments)
+Score Progression (226 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │  ●    ●●●  ●         ●● ●            ●●           ●     ●● 
- 0.826 │●●█●●● ███●●█●●●●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●
- 0.767 │──────●─────────────────────────────────────────────────────
- 0.708 │███████████████████████████●████████████████ ███████████████
- 0.649 │████████████████████████████████████████████●███████████████
+ 0.885 │●  ●         ●● ●            ●●           ●     ●●    ●●    
+ 0.826 │█●●█●●●●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●●● ██●● ●
+ 0.767 │─────────────────────────────────────────────────────●────●─
+ 0.708 │██████████████████●████████████████ ████████████████████████
+ 0.649 │███████████████████████████████████●████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
  0.472 │████████████████████████████████████████████████████████████
@@ -287,6 +287,15 @@ Target: 0.8 ──────────────────────�
 | 215 | `1065d42` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tiny div_out periodic current, same score |
 | 216 | `67cd625` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | 3-point VCO model, same score |
 | 217 | `1a5f9f7` | 0.8760 | 22.38 | 3.318 | 1.738 | ❌ discard | time-varying mismatch 1%→0.5%, ripple 3.318mV |
+| 218 | `32341fb` | 0.8840 | 22.14 | 4.797 | 1.738 | ❌ discard | R2-C4 isolation CP-VCO, ripple 4.797mV |
+| 219 | `4971b86` | 0.8691 | 22.14 | 2.412 | 1.738 | ❌ discard | narrow window 45u-50u, ripple 2.412mV |
+| 220 | `07b596e` | 0.8229 | 22.14 | 7.794 | 1.738 | ❌ discard | wider window 35u-50u, ripple 7.794mV |
+| 221 | `95c2973` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options tolerances, same score |
+| 222 | `858137f` | 0.8849 | 28.58 | 5.000 | 1.738 | ❌ discard | 60u sim, same score |
+| 223 | `cd43778` | 0.8792 | 13.41 | 3.838 | 1.738 | ❌ discard | dual-path aux integrator R2=50k C5=200p |
+| 224 | `e338a33` | 0.8783 | 22.98 | 5.194 | 1.738 | ❌ discard | mismatch 0.0052, ripple 5.194mV |
+| 225 | `02fa371` | 0.7942 | 35.88 | 10.805 | 1.738 | ❌ discard | DC compensation current, ripple 10.805mV |
+| 226 | `f9fa9c8` | 0.8777 | 23.07 | 5.212 | 1.738 | ❌ discard | Rleak 100M, ripple 5.212mV |
 
 ## Score History
 
@@ -508,6 +517,15 @@ Target: 0.8 ──────────────────────�
   #215  0.884949  discard   tiny div_out periodic current, same score
   #216  0.884949  discard   3-point VCO model, same score
   #217  0.876044  discard   time-varying mismatch 1%→0.5%, ripple 3.318mV
+  #218  0.884048  discard   R2-C4 isolation CP-VCO, ripple 4.797mV
+  #219  0.869119  discard   narrow window 45u-50u, ripple 2.412mV
+  #220  0.822892  discard   wider window 35u-50u, ripple 7.794mV
+  #221  0.884949  discard   .options tolerances, same score
+  #222  0.884949  discard   60u sim, same score
+  #223  0.879205  discard   dual-path aux integrator R2=50k C5=200p
+  #224  0.878305  discard   mismatch 0.0052, ripple 5.194mV
+  #225  0.794231  discard   DC compensation current, ripple 10.805mV
+  #226  0.877715  discard   Rleak 100M, ripple 5.212mV
 ```
 
 ---

@@ -216,3 +216,12 @@ dd5b0a5	0.878010	23.10	5.203	1.738	discard	IC=1.66V slightly above center
 1065d42	0.884949	22.14	5.000	1.738	discard	tiny div_out periodic current, same score
 67cd625	0.884949	22.14	5.000	1.738	discard	3-point VCO model, same score
 1a5f9f7	0.876044	22.38	3.318	1.738	discard	time-varying mismatch 1%→0.5%, ripple 3.318mV
+32341fb	0.884048	22.14	4.797	1.738	discard	R2-C4 isolation CP-VCO, ripple 4.797mV
+4971b86	0.869119	22.14	2.412	1.738	discard	narrow window 45u-50u, ripple 2.412mV
+07b596e	0.822892	22.14	7.794	1.738	discard	wider window 35u-50u, ripple 7.794mV
+95c2973	0.884949	22.14	5.000	1.738	discard	.options tolerances, same score
+858137f	0.884949	28.58	5.000	1.738	discard	60u sim, same score
+cd43778	0.879205	13.41	3.838	1.738	discard	dual-path aux integrator R2=50k C5=200p
+e338a33	0.878305	22.98	5.194	1.738	discard	mismatch 0.0052, ripple 5.194mV
+02fa371	0.794231	35.88	10.805	1.738	discard	DC compensation current, ripple 10.805mV
+f9fa9c8	0.877715	23.07	5.212	1.738	discard	Rleak 100M, ripple 5.212mV
