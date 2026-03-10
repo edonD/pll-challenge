@@ -73,6 +73,8 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 * Path 3: HF pole
 C_lf3 ctrl 0 {C3}
+* Path 4: Second integrator (attenuated)
+Bpath2 ctrl 0 I = 0.001 * {Icp*Icp_mismatch} * (v(ctrl) - {Vco_center})
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
