@@ -887,3 +887,4 @@ e5b3037	0.876871	24.4	5.238	1.74	discard	C3=1p — ripple increased to 5.24mV
 07be2a4	0.876135	7.0	3.332	1.74	discard	C3=500p — ripple too low 3.33mV
 53f87b9	0.881496	18.4	4.265	1.74	discard	Icomp 0.05uA pushing up — ripple too low
 567bf5a	0.862268	25.1	5.736	1.74	discard	Icomp 0.05uA pulling down — ripple too high
+9fda07d	0.884949	22.1	5.0	1.74	discard	DFF ic=0 — same score
