@@ -901,3 +901,4 @@ cd41e96	0.884913	22.1	5.001	1.74	discard	Timestep 0.2n — ripple 5.001mV
 ceadfb8	0.884949	22.1	5.0	1.74	discard	C3 IC=Vco_center — same score
 f32d6c7	0.884944	22.1	4.999	1.74	discard	ADC 1.0/2.0 — ripple 4.999mV, 0.000005 worse
 bbe4e44	0.884949	22.1	5.0	1.74	discard	10-point VCO — same score
+b5e3b77	0.881849	18.2	4.335	1.74	discard	Divider i_count=120 — ripple 4.34mV too low
