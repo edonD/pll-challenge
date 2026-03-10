@@ -839,3 +839,4 @@ cdfb61f	0.883184	22.4	5.05	1.74	discard	Icp=330uA mismatch=0.004
 a9a9224	0.764386	49.6	139.3	1.74	discard	R2=10M lf_zero to ground
 27db0d0	0.884949	22.1	5.0	1.74	discard	DAC1 t_rise/fall=0.5n
 9fc9d5d	0.884949	22.1	5.0	1.74	discard	Ndiv=239
+93783c1	0.884949	22.1	5.0	1.74	discard	kvco=0.5 report
