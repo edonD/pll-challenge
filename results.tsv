@@ -531,3 +531,9 @@ b0f2619	0.855261	26.28	6.014	1.738	discard	ic=1.7V, worse ripple
 2fade98	0.884877	22.14	5.002	1.738	discard	div DAC asymmetric rise/fall 0.05n/0.2n
 f7957d6	0.884949	22.14	5.000	1.738	discard	.options pivtol/pivrel, same score
 840ebba	0.881849	18.24	5.000	1.738	discard	divider i_count=120 half of Ndiv
+cd3f0d2	0.884949	22.14	5.000	1.738	discard	save all instead of specific signals, same
+69c62e2	0.884940	24.23	5.001	1.738	discard	Vco_center=1.5V with matching VCO table
+1c5ecca	0.884949	22.14	5.000	1.738	discard	D-FF ic=0 start reset, same score
+91f69c2	0.884927	27.90	4.995	1.316	discard	vdd=2.5V Vco_center=1.25V
+7c60048	0.884949	22.14	5.000	1.738	discard	.options abstol/chgtol tighter tolerances, same
+964256b	0.884949	22.14	5.000	1.738	discard	.options maxord=3 third-order integration, same

@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:32:47*
+*Auto-generated at 2026-03-10 06:35:44*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **532** |
+| Total experiments | **538** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 514 |
+| Regressions (discard) | 520 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (532 experiments)
+Score Progression (538 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● 
- 0.826 │●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●
+ 0.885 │   ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●
+ 0.826 │●●●███●█●█●██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██
  0.767 │────────────────────────────────────────────────────────────
- 0.708 │█████████████████████████████████████████████████●███●██████
+ 0.708 │███████████████████████████████████████████●███●████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -602,6 +602,12 @@ Target: 0.8 ──────────────────────�
 | 530 | `2fade98` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | div DAC asymmetric rise/fall 0.05n/0.2n |
 | 531 | `f7957d6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options pivtol/pivrel, same score |
 | 532 | `840ebba` | 0.8818 | 18.24 | 5.000 | 1.738 | ❌ discard | divider i_count=120 half of Ndiv |
+| 533 | `cd3f0d2` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | save all instead of specific signals, same |
+| 534 | `69c62e2` | 0.8849 | 24.23 | 5.001 | 1.738 | ❌ discard | Vco_center=1.5V with matching VCO table |
+| 535 | `1c5ecca` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | D-FF ic=0 start reset, same score |
+| 536 | `91f69c2` | 0.8849 | 27.90 | 4.995 | 1.316 | ❌ discard | vdd=2.5V Vco_center=1.25V |
+| 537 | `7c60048` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options abstol/chgtol tighter tolerances, same |
+| 538 | `964256b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options maxord=3 third-order integration, same |
 
 ## Score History
 
@@ -1138,6 +1144,12 @@ Target: 0.8 ──────────────────────�
   #530  0.884877  discard   div DAC asymmetric rise/fall 0.05n/0.2n
   #531  0.884949  discard   .options pivtol/pivrel, same score
   #532  0.881849  discard   divider i_count=120 half of Ndiv
+  #533  0.884949  discard   save all instead of specific signals, same
+  #534  0.884940  discard   Vco_center=1.5V with matching VCO table
+  #535  0.884949  discard   D-FF ic=0 start reset, same score
+  #536  0.884927  discard   vdd=2.5V Vco_center=1.25V
+  #537  0.884949  discard   .options abstol/chgtol tighter tolerances, same
+  #538  0.884949  discard   .options maxord=3 third-order integration, same
 ```
 
 ---
