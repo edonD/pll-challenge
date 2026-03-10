@@ -933,3 +933,4 @@ c32a33a	0.861839	0.0	1.73	1.74	discard	RC pre-filter — ripple too low 1.73mV
 fc560a3	0.884949	22.1	5.0	1.74	discard	Ref 25% duty — same score (PFD is edge-triggered)
 4340dcc	0.884949	22.1	5.0	1.74	discard	AND rise/fall swapped — same score
 1a3a3c5	0.881729	18.1	4.311	1.74	discard	IC=1.616 — different settling, ripple 4.31mV
+e428d44	0.792853	35.5	11.02	1.74	discard	No stabilizing zero — ripple 11mV, underdamped
