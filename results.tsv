@@ -809,3 +809,4 @@ f8daca2	0.884949	22.1	5.0	1.74	discard	remove clamp diodes
 7e3d6e4	0.883499	22.3	5.04	1.74	discard	ref 5n rise/fall
 73cde95	0.884949	22.1	5.0	1.74	discard	options rshunt gmin
 6202773	0.884949	22.1	5.0	1.74	discard	IC on C3
+c52789f	0.871654	24.0	5.40	1.74	discard	C2 IC=Vco_center+10mV
