@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:22:34*
+*Auto-generated at 2026-03-10 06:24:53*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **512** |
+| Total experiments | **518** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 494 |
+| Regressions (discard) | 500 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,12 +37,12 @@
 ## Score Progression
 
 ```
-Score Progression (512 experiments)
+Score Progression (518 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ●    ●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ● 
- 0.826 │●█ ●●●████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●
- 0.767 │──●─────────────────────────────────────────────────────────
+ 0.885 │●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●
+ 0.826 │████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●█
+ 0.767 │────────────────────────────────────────────────────────────
  0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
@@ -582,6 +582,12 @@ Target: 0.8 ──────────────────────�
 | 510 | `66646db` | 0.8475 | 27.46 | 6.356 | 3.300 | ❌ discard | Icp=500uA R1=79k, ripple 6.4mV |
 | 511 | `4f90f6b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | IC up_a=dn_a=0, same score |
 | 512 | `0914c5c` | 0.8500 | 48.57 | 0.200 | 1.738 | ❌ discard | Rleak=500M, ref_spur=0 |
+| 513 | `285f5cc` | 0.8552 | 0.00 | 1.200 | 1.738 | ❌ discard | quadratic CP v^2, ripple too low |
+| 514 | `cb3bd70` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options maxord=2, same score |
+| 515 | `7c74308` | 0.8848 | 21.83 | 4.980 | 1.738 | ❌ discard | extra 10p parallel C2, slightly worse |
+| 516 | `6153336` | 0.8846 | 22.18 | 5.010 | 1.738 | ❌ discard | ref 2n rise/fall, slightly worse |
+| 517 | `b5c0ea7` | 0.8846 | 22.17 | 5.010 | 1.738 | ❌ discard | Rleak2=1G on lf_zero, worse |
+| 518 | `4a6b654` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options gmin=1e-15, same score |
 
 ## Score History
 
@@ -1098,6 +1104,12 @@ Target: 0.8 ──────────────────────�
   #510  0.847491  discard   Icp=500uA R1=79k, ripple 6.4mV
   #511  0.884949  discard   IC up_a=dn_a=0, same score
   #512  0.850000  discard   Rleak=500M, ref_spur=0
+  #513  0.855173  discard   quadratic CP v^2, ripple too low
+  #514  0.884949  discard   .options maxord=2, same score
+  #515  0.884761  discard   extra 10p parallel C2, slightly worse
+  #516  0.884593  discard   ref 2n rise/fall, slightly worse
+  #517  0.884593  discard   Rleak2=1G on lf_zero, worse
+  #518  0.884949  discard   .options gmin=1e-15, same score
 ```
 
 ---
