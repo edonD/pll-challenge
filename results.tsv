@@ -505,3 +505,9 @@ deb77de	0.878767	23.48	5.180	1.738	discard	C3=50p, ripple 5.18mV
 57b0fca	0.884949	22.14	5.000	1.738	discard	div DAC out_undef=0, same score
 b4e977a	0.884949	22.14	5.000	1.738	discard	.options interp, same score
 9a58709	0.884949	22.14	5.000	1.738	discard	VCO 3-point table, same score
+b026c8e	0.884949	22.14	5.000	1.738	discard	100ohm CP isolation, same score
+b8b1a4a	0.884949	22.13	5.000	1.738	discard	VCO duty_cycle=0.45, same score
+af9954e	0.884949	22.14	5.000	1.738	discard	DAC1 input_load=0, same score
+66646db	0.847491	27.46	6.356	3.300	discard	Icp=500uA R1=79k, ripple 6.4mV
+4f90f6b	0.884949	22.14	5.000	1.738	discard	IC up_a=dn_a=0, same score
+0914c5c	0.850000	48.57	0.200	1.738	discard	Rleak=500M, ref_spur=0
