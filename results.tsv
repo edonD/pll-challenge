@@ -289,3 +289,6 @@ a411d7a	0.884949	22.14	5.000	1.738	discard	B-source soft clamp, same score
 a0bd69c	0.765758	42.13	19.517	1.738	discard	tanh CP switching, ripple 19.5mV
 f2c41c4	0.884949	22.14	5.000	1.738	discard	Icp=263.21µA, same score
 1cd7180	0.884909	22.09	4.991	1.738	discard	mismatch=0.00499, ripple 4.991mV
+ce39eb9	0.884877	22.14	5.002	1.738	discard	0.5n timestep, ripple 5.002mV
+9729edc	0.884913	22.14	5.001	1.738	discard	0.2n timestep, ripple 5.001mV
+ba0556b	0.884913	22.14	5.001	1.738	discard	separate DAC UP/DN, ripple 5.001mV
