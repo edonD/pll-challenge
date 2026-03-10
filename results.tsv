@@ -455,3 +455,10 @@ a6d464e	0.884918	22.12	4.998	1.738	discard	C1=1.01n, ref_spur slightly lower
 3d5b5be	0.884949	22.14	5.000	1.738	discard	AND gate symmetric 0.3n/0.3n, same score
 4bd1efc	0.803965	0.58	9.524	1.738	discard	R3=10k+C4=50p filter, ripple 9.5mV
 c66d627	0.884336	21.42	4.932	1.738	discard	D-FF ic=3, ref_spur worse
+42e5fce	0.870001	3.60	2.700	1.738	discard	CP pwr(v,1.5) transfer function, ripple too low
+3879869	0.884593	22.18	5.010	1.738	discard	Icp_mismatch=0.00501, ripple above 5mV
+140f424	0.884949	22.82	5.000	1.738	discard	Vco_center=1.6, same score
+7ab27ce	0.884949	22.14	5.000	1.738	discard	VCO 10 freq points, same score
+c187672	0.884949	22.14	5.000	1.738	discard	.options numdgt=10, same score
+0a9cbbe	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
+d9178f5	0.884848	22.03	4.980	1.738	discard	remove Rleak, ripple slightly below 5mV
