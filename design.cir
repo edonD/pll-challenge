@@ -74,9 +74,8 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
-* Bias toward Vco_center
-Vbias bias_node 0 dc {Vco_center}
-Rleak ctrl bias_node 100Meg
+* Prevent floating node issues
+Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
 Dclamp_hi ctrl vdd_node dmod
 Dclamp_lo gnd_node ctrl dmod
