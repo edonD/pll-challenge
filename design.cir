@@ -117,7 +117,6 @@ abridge_divout [d_divided] [div_out] dac_div
 
 .control
 set filetype=ascii
-set maxdata=1000000
 
 save ref div_out ctrl up_a dn_a
 
