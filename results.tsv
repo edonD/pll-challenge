@@ -96,3 +96,11 @@ a4ba69d	0.877715	23.07	5.212	1.74	discard	Rleak=100Meg — ripple 5.21mV too hig
 938ce94	0.765289	22.18	19.84	1.74	discard	CP isolation R=10k C=100p — ripple 19.8mV
 bdebe62	0.884949	22.14	5.000	1.74	discard	narrow VCO Kvco=1MHz/V — no effect
 4d2f382	0.878010	23.10	5.203	1.74	discard	IC v(ctrl)=1.66V — ripple 5.2mV
+937dd49	0.884717	24.10	4.947	1.74	discard	R1=100k C1=1.5n mismatch=0.0075 — ripple 4.947mV
+3fd171f	0.884132	24.10	5.023	1.74	discard	R1=100k mismatch=0.00762 — ripple 5.023mV
+1a66260	0.884935	24.10	4.997	1.74	discard	R1=100k mismatch=0.00758 — ripple 4.997mV
+8c5a879	0.884806	24.10	5.004	1.74	discard	R1=100k mismatch=0.00759 — ripple 5.004mV
+788fed8	0.884935	22.14	4.997	1.74	discard	Gaussian mismatch profile — ripple 4.997mV
+2f154b3	0.870598	22.14	2.582	1.74	discard	single diff CP — ripple 2.58mV too low
+c693998	0.884949	22.14	5.000	1.74	discard	nonlinear VCO 11-point table — no effect
+dd99cbe	0.884949	22.14	5.000	1.74	discard	Schottky clamp diodes — no effect
