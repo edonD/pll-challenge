@@ -120,7 +120,7 @@ set filetype=ascii
 
 save ref div_out ctrl up_a dn_a
 
-tran 0.5n 50u uic
+tran 0.2n 50u uic
 
 * === MEASUREMENTS ===
 meas tran ctrl_final find v(ctrl) at=50u
