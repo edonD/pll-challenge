@@ -21,7 +21,7 @@
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
 .param R1 = 150k
 .param C1 = 1n
-.param C2 = 200p
+.param C2 = 190p
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
