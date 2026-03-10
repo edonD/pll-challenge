@@ -1,0 +1,26 @@
+* ===========================================================================
+* FREQUENCY DIVIDER
+* ===========================================================================
+* Integer-N frequency divider using XSPICE d_fdiv element.
+* Divides VCO output by Ndiv=240 to produce the feedback signal.
+*
+* f_div = f_vco / Ndiv = 2.4 GHz / 240 = 10 MHz (matches fref)
+*
+* In a real design, this would be implemented as:
+*   - Prescaler (divide by 2/3, current-mode logic for speed)
+*   - Programmable counter (CMOS logic)
+*   - Swallow counter for fractional-N operation
+*
+* The divider output is converted back to analog domain via a DAC bridge
+* so it can drive the PFD's analog-side D flip-flop clock input.
+* ===========================================================================
+
+* --- Frequency divider (VCO digital output -> divided digital output) ---
+adiv1 d_vco d_divided fdiv1
+.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
++ rise_delay=0.1n fall_delay=0.1n)
+
+* --- DAC bridge: divider digital output -> analog for PFD feedback ---
+abridge_divout [d_divided] [div_out] dac_div
+.model dac_div dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
++ input_load=5e-12 t_rise=0.1n t_fall=0.1n)

@@ -1,0 +1,25 @@
+* ===========================================================================
+* CHARGE PUMP
+* ===========================================================================
+* Current-steering charge pump with configurable mismatch.
+* UP current sources charge (increase Vctrl), DN current sinks discharge.
+* Mismatch between UP and DN currents is modeled as a percentage offset
+* (Icp_mismatch = 0.02 means 2% total mismatch).
+*
+* In silicon, mismatch arises from:
+*   - PMOS vs NMOS current mirror offset
+*   - Channel length modulation differences
+*   - Threshold voltage mismatch
+*
+* SPICE convention: for B-source connected ctrl -> 0, positive I flows
+* from ctrl to ground (discharging). Negative I flows from ground to ctrl
+* (charging). So:
+*   - UP asserted: negative I charges ctrl (increases voltage)
+*   - DN asserted: positive I discharges ctrl (decreases voltage)
+* ===========================================================================
+
+* --- UP current source (charges ctrl node -- current flows into ctrl) ---
+Bcp_up ctrl 0 I = -{Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
+
+* --- DN current source (discharges ctrl node -- current flows out of ctrl) ---
+Bcp_dn ctrl 0 I = {Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})

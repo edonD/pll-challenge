@@ -1,0 +1,51 @@
+* ===========================================================================
+* LOOP FILTER (3rd-order passive)
+* ===========================================================================
+* Topology: Standard CP-PLL passive loop filter
+*
+*   ctrl ----+----[R1]----+---- lf_zero
+*            |            |
+*           [C2]         [C1]
+*            |            |
+*           GND          GND
+*            |
+*           [C3]
+*            |
+*           GND
+*
+* Transfer function provides:
+*   - One zero at omega_z = 1/(R1*C1) for phase margin
+*   - Two poles for noise filtering:
+*       omega_p1 = (C1+C2)/(R1*C1*C2)
+*       omega_p2 from C3
+*
+* Design targets (with Icp=200uA, Kvco=150MHz/V, N=240):
+*   - Loop bandwidth: ~50 kHz
+*   - Phase margin: ~60 degrees
+*   - Zero frequency: 1/(2*pi*R1*C1) = 1/(2*pi*4.35k*470p) = 77.9 kHz
+*   - First pole: (C1+C2)/(2*pi*R1*C1*C2) = 538p/(2*pi*4.35k*470p*68p)
+*
+* Additional elements:
+*   - Rleak: prevents ctrl from floating if CP is off (1 GOhm)
+*   - Clamp diodes: keep ctrl within VCO supply range
+* ===========================================================================
+
+* --- R1 + C1 series path (provides stabilizing zero) ---
+R_lf1 ctrl lf_zero {R1}
+C_lf1 lf_zero 0 {C1}
+
+* --- C2 shunt from ctrl to ground (main integration) ---
+C_lf2 ctrl 0 {C2}
+
+* --- C3 for additional high-frequency pole ---
+C_lf3 ctrl 0 {C3}
+
+* --- Leakage resistor to prevent floating node ---
+Rleak ctrl 0 1G
+
+* --- Voltage clamps to keep ctrl within VCO input range ---
+Dclamp_hi ctrl vdd_node dmod
+Dclamp_lo gnd_node ctrl dmod
+Vvdd_clamp vdd_node 0 dc {vdd}
+Vgnd_clamp gnd_node 0 dc 0
+.model dmod d(is=1e-14 n=1)

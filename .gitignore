@@ -1,0 +1,10 @@
+# Backup directories (created by backup_history.sh / backup_to_remote.sh)
+backups/
+
+# Simulation artifacts
+*_waveform.txt
+metrics.txt
+results.jsonl
+*.log
+__pycache__/
+experiment_history.json

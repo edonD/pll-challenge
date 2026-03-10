@@ -1,0 +1,48 @@
+* ===========================================================================
+* PHASE-FREQUENCY DETECTOR (PFD)
+* ===========================================================================
+* Standard tri-state PFD using two D flip-flops and an AND reset gate.
+* When ref leads div_out: UP pulse is asserted.
+* When div_out leads ref: DN pulse is asserted.
+* Both asserted simultaneously triggers reset via AND gate.
+*
+* IMPORTANT: ngspice-45 d_dff pin order is:
+*   a_name data clk SET RESET Q Qbar model
+* Pin 3 = SET (active HIGH, forces Q HIGH)
+* Pin 4 = RESET/CLEAR (active HIGH, forces Q LOW)
+*
+* We connect:
+*   - Pin 3 (SET) = d_zero (always LOW, inactive)
+*   - Pin 4 (RESET) = d_reset (AND gate output, clears on both UP+DN)
+* ===========================================================================
+
+* --- Reference clock source ---
+Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
+
+* --- AND reset gate (detects both UP and DN high) ---
+aand1 [d_up d_dn] d_reset and1
+.model and1 d_and(rise_delay=0.1n fall_delay=0.5n input_load=0.5e-12)
+
+* --- D flip-flop for UP path (clocked by ref) ---
+* Pin order: data clk SET RESET Q Qbar
+aff1 d_one ref_d d_zero d_reset d_up d_up_n flop1
+.model flop1 d_dff(clk_delay=0.1n set_delay=0.1n reset_delay=0.1n
++ ic=0 rise_delay=0.1n fall_delay=0.1n)
+
+* --- D flip-flop for DN path (clocked by div_out) ---
+aff2 d_one div_out_d d_zero d_reset d_dn d_dn_n flop1
+
+* --- DC constant sources ---
+Vone one_a 0 dc {vdd}
+Vzero zero_a 0 dc 0
+
+* --- ADC bridges: analog to digital domain ---
+abridge_const [one_a zero_a] [d_one d_zero] adc1
+abridge_ref [ref] [ref_d] adc1
+abridge_div [div_out] [div_out_d] adc1
+.model adc1 adc_bridge(in_low=0.5 in_high=2.5 rise_delay=0.1n fall_delay=0.1n)
+
+* --- DAC bridges: digital to analog ---
+abridge_updn [d_up d_dn] [up_a dn_a] dac1
+.model dac1 dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
++ input_load=5e-12 t_rise=0.1n t_fall=0.1n)
