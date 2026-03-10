@@ -62,6 +62,8 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
 Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+* Anti-drift compensation: tiny constant current to offset CP mismatch
+Bcp_comp ctrl 0 I = -6.6e-10
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
