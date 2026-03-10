@@ -945,3 +945,11 @@ e55c528	0.884940	22.1	4.998	1.74	discard	C2=200.5p — ripple 4.998mV
 8afacff	0.759569	44.1	25.46	1.74	discard	Trnoise dithering — massive ripple 25.5mV
 206930b	0.884927	22.1	4.995	1.74	discard	Divider delay=0.5n — ripple 4.995mV
 a5865dd	0.884949	22.1	5.0	1.74	discard	ternary_reltol — same score
+9c38d9e	0.765152	22.1	19.9	1.74	discard	Hard-switched CP ternary — 19.9mV ripple
+270e1bf	0.884949	22.1	5.0	1.74	discard	AND input_load=5e-12 — same score
+0f00515	0.884944	22.1	5.0	1.74	discard	ADC narrow thresholds — marginally worse
+0d69c4c	0.884949	22.1	5.0	1.74	discard	maxord=2 — same score
+546137d	0.884944	22.6	5.0	1.74	discard	Vco_center=1.616 — marginally worse
+441d651	0.884545	22.1	4.9	1.74	discard	Ref-synced comp -0.05uA — ripple too low
+d3e08f3	0.883639	22.1	5.04	1.74	discard	Additive +0.02uA — ripple 5.04mV
+4c1d915	0.884949	22.1	5.0	1.74	discard	Ndiv=241 — same score
