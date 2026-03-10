@@ -196,3 +196,6 @@ c7c8e99	0.884927	22.11	4.995	1.738	discard	ref 0.5n edges, ripple 4.995mV
 6973405	0.884877	22.14	5.002	1.738	discard	ref 1.2n edges, ripple 5.002mV
 ec1e18b	0.884949	22.14	5.000	1.738	discard	ref 1.1n edges, same score as 1.0n
 fe9cca0	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
+6978d17	0.882138	18.64	4.393	1.738	discard	IC=1.62V closer to final, less drift
+16d6296	0.865729	24.81	5.609	1.738	discard	IC=1.68V above center, more drift
+5fd9dbb	0.876871	24.38	5.238	1.738	discard	remove C3, ripple 5.238mV
