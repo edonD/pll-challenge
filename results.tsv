@@ -232,3 +232,11 @@ d5f3008	0.884913	22.14	5.001	1.738	discard	drift comp 5nA/mV, ripple 5.001mV
 3d1b206	0.884949	22.14	5.000	1.738	discard	drift comp 0.5nA/mV, same score
 dffe604	0.884949	22.14	5.000	1.738	discard	AND fall_delay 2n, no change
 9ac483e	0.884949	22.14	5.000	1.738	discard	asymmetric DFF reset, no effect
+d0979ef	0.757845	29.53	28.469	1.738	discard	R+C3 second-order filter, badly destabilized
+d7b6ce2	0.884949	22.14	5.000	1.738	discard	GEAR integration, same score
+d1ac337b	0.884842	22.14	5.003	1.738	discard	drift comp 10nA/mV (dup check)
+ea2616e	0.884937	22.14	5.000	1.738	discard	pp measurement, 5.000307mV
+bab65f4	0.876871	24.37	5.238	1.738	discard	C3=1pF, less filtering
+e34d6b9	0.876135	6.98	3.332	1.738	discard	C3=500pF, too much filtering
+9ac483eb	0.884949	22.14	5.000	1.738	discard	asymmetric DFF (dup)
+dffe604b	0.884949	22.14	5.000	1.738	discard	AND fall 2n (dup)

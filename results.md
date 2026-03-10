@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 04:15:40*
+*Auto-generated at 2026-03-10 04:18:07*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **233** |
+| Total experiments | **241** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 7 |
-| Regressions (discard) | 223 |
+| Regressions (discard) | 231 |
 | Crashes | 3 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,14 +37,14 @@
 ## Score Progression
 
 ```
-Score Progression (233 experiments)
+Score Progression (241 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │      ●● ●            ●●           ●     ●●    ●●        ●●●
- 0.826 │●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●●● ██●● ●●●●●███
- 0.767 │──────────────────────────────────────────────●────●────────
- 0.708 │███████████●████████████████ ███████████████████████████████
- 0.649 │████████████████████████████●███████████████████████████████
+ 0.885 │ ●            ●●           ●     ●●    ●●        ●●● ●    ●●
+ 0.826 │●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●●● ██●● ●●●●●███ █●●●●██
+ 0.767 │──────────────────────────────────────●────●────────────────
+ 0.708 │███●████████████████ ███████████████████████████████●███████
+ 0.649 │████████████████████●███████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
  0.472 │████████████████████████████████████████████████████████████
@@ -303,6 +303,14 @@ Target: 0.8 ──────────────────────�
 | 231 | `3d1b206` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | drift comp 0.5nA/mV, same score |
 | 232 | `dffe604` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND fall_delay 2n, no change |
 | 233 | `9ac483e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | asymmetric DFF reset, no effect |
+| 234 | `d0979ef` | 0.7578 | 29.53 | 28.469 | 1.738 | ❌ discard | R+C3 second-order filter, badly destabilized |
+| 235 | `d7b6ce2` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | GEAR integration, same score |
+| 236 | `d1ac337` | 0.8848 | 22.14 | 5.003 | 1.738 | ❌ discard | drift comp 10nA/mV (dup check) |
+| 237 | `ea2616e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | pp measurement, 5.000307mV |
+| 238 | `bab65f4` | 0.8769 | 24.37 | 5.238 | 1.738 | ❌ discard | C3=1pF, less filtering |
+| 239 | `e34d6b9` | 0.8761 | 6.98 | 3.332 | 1.738 | ❌ discard | C3=500pF, too much filtering |
+| 240 | `9ac483e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | asymmetric DFF (dup) |
+| 241 | `dffe604` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND fall 2n (dup) |
 
 ## Score History
 
@@ -540,6 +548,14 @@ Target: 0.8 ──────────────────────�
   #231  0.884949  discard   drift comp 0.5nA/mV, same score
   #232  0.884949  discard   AND fall_delay 2n, no change
   #233  0.884949  discard   asymmetric DFF reset, no effect
+  #234  0.757845  discard   R+C3 second-order filter, badly destabilized
+  #235  0.884949  discard   GEAR integration, same score
+  #236  0.884842  discard   drift comp 10nA/mV (dup check)
+  #237  0.884937  discard   pp measurement, 5.000307mV
+  #238  0.876871  discard   C3=1pF, less filtering
+  #239  0.876135  discard   C3=500pF, too much filtering
+  #240  0.884949  discard   asymmetric DFF (dup)
+  #241  0.884949  discard   AND fall 2n (dup)
 ```
 
 ---
