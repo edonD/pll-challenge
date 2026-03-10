@@ -758,3 +758,9 @@ fe5d004	0.884853	21.99	4.998	1.738	discard	extra C4=5p on ctrl
 59a2366	0.884949	22.14	5.000	1.738	discard	.options method=trap
 b30383e	0.884949	22.14	5.000	1.738	discard	FF ic=0
 e414595	0.884949	22.14	5.000	1.738	discard	AND input_load=1e-12
+c23678f	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120
+4fb0283	0.884877	22.15	5.002	1.316	discard	vdd=2.5V
+f827bb8	0.884451	22.18	5.014	1.738	discard	C1=0.98n
+088f566	0.884949	22.14	5.000	1.738	discard	ADC rise/fall=0.05n
+daae73f	0.884949	22.13	5.000	1.738	discard	Icp=263.17e-6
+9ed222a	0.884944	22.13	5.000	2.106	discard	vdd=4.0
