@@ -931,3 +931,4 @@ bc36557	0.884949	22.1	5.0	1.74	discard	DAC out_undef=0 — same score
 7acb100	0.884949	22.1	5.0	1.74	discard	Ndiv=241 — same score
 c32a33a	0.861839	0.0	1.73	1.74	discard	RC pre-filter — ripple too low 1.73mV
 fc560a3	0.884949	22.1	5.0	1.74	discard	Ref 25% duty — same score (PFD is edge-triggered)
+4340dcc	0.884949	22.1	5.0	1.74	discard	AND rise/fall swapped — same score
