@@ -32,3 +32,9 @@ sweep	0.884949	22	5.000	1.74	keep	2D sweep Icp×C2: 263.2uA/200pF confirmed glob
 b5ff20c	0.823901	30.2	7.721	3.30	discard	Icp=500uA C2=400pF — ripple too high (7.7mV)
 bec6333	0.865062	23.9	5.633	1.74	discard	C1=500pF — ripple 5.633mV too high
 e3c503f	0.850000	0	0.163	1.74	discard	zero CP mismatch — ripple 0.163mV, ref_spur=0
+8b90b73	0.806127	33.9	9.281	1.74	discard	R1=300k C2=100p C3=50p — ripple 9.281mV too high
+4d68e72	0.801292	34.6	9.838	1.74	discard	Icp_mismatch=1% — ripple 9.838mV too high
+9db8f10	0.874322	9.6	3.065	1.74	discard	Icp_mismatch=0.3% — ripple 3.065mV, ref_spur too low
+b43014c	0.856376	25.9	5.967	1.74	discard	Icp_mismatch=0.6% — ripple 5.967mV slightly over target
+24525b1	0.757767	29.6	28.635	1.74	discard	R3=5k series with C3 — ripple 28.6mV, unstable path
+f34724c	0.884877	22.1	5.002	1.74	discard	tran 0.5n — ripple 5.002mV barely over target
