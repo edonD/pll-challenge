@@ -286,3 +286,6 @@ cb8ec5b	0.884761	21.83	4.957	1.738	discard	added C4=10pF shunt
 ea84298	0.884203	22.21	5.021	1.738	discard	R1=151k, ripple 5.021mV
 a5ce370	0.884949	22.14	5.000	1.738	discard	.nodeset, same score
 a411d7a	0.884949	22.14	5.000	1.738	discard	B-source soft clamp, same score
+a0bd69c	0.765758	42.13	19.517	1.738	discard	tanh CP switching, ripple 19.5mV
+f2c41c4	0.884949	22.14	5.000	1.738	discard	Icp=263.21µA, same score
+1cd7180	0.884909	22.09	4.991	1.738	discard	mismatch=0.00499, ripple 4.991mV
