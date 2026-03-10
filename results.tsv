@@ -867,3 +867,4 @@ a2f21e4	0.765152	22.1	19.9	1.74	discard	CP ternary switching
 a626d5c	0.656451	22.1	5.0	1.74	discard	report real kvco=10MHz/V
 c07892e	0.867624	22.1	5.54	1.74	discard	measure 39u-50u
 84dda69	0.884935	22.1	5.0	1.74	discard	two-stage divider 24*10
+3484589	0.884949	22.1	5.0	1.74	discard	pivtol=1e-15
