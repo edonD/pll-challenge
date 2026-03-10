@@ -678,3 +678,8 @@ f2cb555	0.884940	22.14	5.000	1.738	discard	ADC in_low=1.5 in_high=1.8 narrow ban
 5358778	0.883114	22.14	5.000	1.738	discard	C2 IC offset -10mV
 5d230f9	0.884949	22.14	5.000	1.738	discard	D-FF reset_delay=0.2n
 44bb316	0.884949	22.14	5.000	1.738	discard	AND rise=0.2n fall=0.5n
+d3d904e	0.884805	22.14	5.000	1.738	discard	C1=1.05n
+1f28279	0.883675	22.14	5.036	1.738	discard	C1=0.95n
+2448961	0.884949	22.14	5.000	1.738	discard	VCO 7 control points wider range
+636ccbc	0.884913	22.14	5.001	1.738	discard	D-FF rise=0.2n fall=0.1n asymmetric
+5f43899	0.884949	22.14	5.000	1.738	discard	.options reltol=0.005
