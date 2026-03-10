@@ -897,3 +897,4 @@ f404e69	0.884857	22.0	4.979	1.74	discard	Rleak=10G — ripple drops to 4.98mV
 8022555	0.884949	22.1	5.0	1.74	discard	DAC t_rise/fall=5n — same score
 11eb03e	0.884877	22.1	5.002	1.74	discard	Timestep 0.5n — ripple 5.002mV
 cd41e96	0.884913	22.1	5.001	1.74	discard	Timestep 0.2n — ripple 5.001mV
+39878c2	0.884949	22.1	5.0	1.74	discard	Save only ctrl — same score
