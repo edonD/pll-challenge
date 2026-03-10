@@ -17,14 +17,15 @@
 .param Vco_center = 1.65
 .param vdd = 3.3
 
-* Loop filter: reduced Kvco needs higher R1 to maintain bandwidth
-* Lower Icp + larger C2 for minimal ripple → better phase noise score
-.param R1 = 150k
+* Loop filter: T-network topology
+* R1a-C1-R1b series path with shunt caps
+.param R1a = 75k
+.param R1b = 75k
 .param C1 = 1n
 .param C2 = 200p
 .param C3 = 100p
 
-* Charge pump mismatch (reduced for lower ripple)
+* Charge pump mismatch
 .param Icp_mismatch = 0.005
 
 * ---------------------------------------------------------------------------
@@ -69,10 +70,11 @@ Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * R1 + C1 in series from ctrl to ground (provides stabilizing zero)
 * C2 shunt from ctrl to ground (integration)
 * C3 for additional high-freq filtering
-R_lf1 ctrl lf_zero {R1}
+R_lf1a ctrl lf_mid {R1a}
+R_lf1b lf_mid lf_zero {R1b}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
-C_lf3 ctrl 0 {C3}
+C_lf3 lf_mid 0 {C3}
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
