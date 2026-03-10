@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 08:09:30*
+*Auto-generated at 2026-03-10 08:10:44*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **777** |
+| Total experiments | **780** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 757 |
+| Regressions (discard) | 760 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (777 experiments)
+Score Progression (780 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │      ●●●●    ● ●    ● ●  ●●●      ●●  ●●●●  ●● ●  ●●   ● ●●
- 0.826 │●●●●●●████●●●●█●█●●●●█●█●●███ ●●●●●██●●████●●██●█●●██●●●█●██
+ 0.885 │   ●●●●    ● ●    ● ●  ●●●      ●●  ●●●●  ●● ●  ●●   ● ●●  ●
+ 0.826 │●●●████●●●●█●█●●●●█●█●●███ ●●●●●██●●████●●██●█●●██●●●█●██●●█
  0.767 │────────────────────────────────────────────────────────────
- 0.708 │█████████████████████████████●██████████████████████████████
+ 0.708 │██████████████████████████●█████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -847,6 +847,9 @@ Target: 0.8 ──────────────────────�
 | 775 | `66d24a7` | 0.8849 | 22.13 | 5.000 | 1.738 | ❌ discard | ref td=9.9n |
 | 776 | `d98ffe2` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | FF set_delay=0.05n |
 | 777 | `6e214d8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | set maxdata=1000000 |
+| 778 | `c12d919` | 0.8500 | 48.57 | 1.410 | 1.738 | ❌ discard | Rleak=500M |
+| 779 | `bf782f8` | 0.8849 | 22.10 | 4.999 | 1.738 | ❌ discard | C1=1.02n |
+| 780 | `83844ee` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | compute ripple_diff for analysis |
 
 ## Score History
 
@@ -1628,6 +1631,9 @@ Target: 0.8 ──────────────────────�
   #775  0.884944  discard   ref td=9.9n
   #776  0.884949  discard   FF set_delay=0.05n
   #777  0.884949  discard   set maxdata=1000000
+  #778  0.850000  discard   Rleak=500M
+  #779  0.884892  discard   C1=1.02n
+  #780  0.884949  discard   compute ripple_diff for analysis
 ```
 
 ---
