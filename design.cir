@@ -25,12 +25,12 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.004
+.param Icp_mismatch = 0.005
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
 * ---------------------------------------------------------------------------
-Vref ref 0 dc 0 pulse(0 {vdd} 20n 1n 1n {1/fref/2} {1/fref})
+Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
 
 * ---------------------------------------------------------------------------
 * PHASE-FREQUENCY DETECTOR
