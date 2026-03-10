@@ -63,7 +63,7 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
 Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * Small DC bias to fine-tune ctrl ripple
-Ibias ctrl 0 dc 0.15n
+Ibias ctrl 0 dc -0.1n
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
