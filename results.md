@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 00:33:54*
+*Auto-generated at 2026-03-10 00:39:45*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **18** |
+| Total experiments | **22** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
-| Improvements (keep) | 8 |
-| Regressions (discard) | 10 |
+| Improvements (keep) | 10 |
+| Regressions (discard) | 12 |
 | Crashes | 0 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,26 +37,26 @@
 ## Score Progression
 
 ```
-Score Progression (18 experiments)
+Score Progression (22 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │          ●●●●●●  
- 0.880 │    ●● ●  ██████●●
- 0.875 │    ██ █  ████████
- 0.870 │    ██ █● ████████
- 0.865 │    ██ ██ ████████
- 0.860 │  ●●██ ██ ████████
- 0.854 │  ████●██ ████████
- 0.849 │ ●███████ ████████
- 0.844 │ ████████ ████████
- 0.839 │ ████████●████████
- 0.834 │ █████████████████
- 0.829 │ █████████████████
- 0.824 │ █████████████████
- 0.819 │ █████████████████
- 0.814 │ █████████████████
- 0.809 │●█████████████████
-       └──────────────────
+ 0.885 │          ●●●●●●  ●●  
+ 0.880 │    ●● ●  ██████●●██●●
+ 0.875 │    ██ █  ████████████
+ 0.870 │    ██ █● ████████████
+ 0.865 │    ██ ██ ████████████
+ 0.860 │  ●●██ ██ ████████████
+ 0.854 │  ████●██ ████████████
+ 0.849 │ ●███████ ████████████
+ 0.844 │ ████████ ████████████
+ 0.839 │ ████████●████████████
+ 0.834 │ █████████████████████
+ 0.829 │ █████████████████████
+ 0.824 │ █████████████████████
+ 0.819 │ █████████████████████
+ 0.814 │ █████████████████████
+ 0.809 │●█████████████████████
+       └──────────────────────
         Experiment #
 ```
 
@@ -88,6 +88,10 @@ Target: 0.8 ──────────────────────�
 | 16 | `58d533e` | 0.8849 | 15.551 | 5.000 | 1.74 | ❌ discard | IC=1.60V — same score, different lock path |
 | 17 | `b9b785c` | 0.8849 | 22.119 | 4.997 | 1.74 | ✅ keep | Icp=263.1uA natural ripple=4.997mV |
 | 18 | `2864cbe` | 0.8849 | 22.127 | 4.999 | 1.74 | ✅ keep | Icp=263.2uA natural ripple=4.999mV — best natural |
+| 19 | `e494f19` | 0.8849 | 0 | 5.000 | 1.74 | ❌ discard | AND fall_delay=0.1ns — same score |
+| 20 | `5bd4b81` | 0.8849 | 0 | 5.000 | 1.74 | ❌ discard | DAC t_rise/fall=1ns — same score |
+| 21 | `sweep` | 0.8849 | 22 | 4.999 | 1.74 | ✅ keep | R1 sweep: 150k optimal (4.999mV natural ripple) |
+| 22 | `sweep` | 0.8849 | 22 | 4.999 | 1.74 | ✅ keep | Icp sweep: 263.2uA optimal (4.999mV natural ripple) |
 
 ## Score History
 
@@ -110,6 +114,10 @@ Target: 0.8 ──────────────────────�
   # 16  0.884949  discard   IC=1.60V — same score, different lock path
   # 17  0.884935  keep      Icp=263.1uA natural ripple=4.997mV
   # 18  0.884944  keep      Icp=263.2uA natural ripple=4.999mV — best natural
+  # 19  0.884949  discard   AND fall_delay=0.1ns — same score
+  # 20  0.884949  discard   DAC t_rise/fall=1ns — same score
+  # 21  0.884944  keep      R1 sweep: 150k optimal (4.999mV natural ripple)
+  # 22  0.884944  keep      Icp sweep: 263.2uA optimal (4.999mV natural ripple
 ```
 
 ---
