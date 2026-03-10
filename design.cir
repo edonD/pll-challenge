@@ -74,6 +74,10 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
+* Additional R-C snubber for ripple control
+R_snub ctrl snub_node 1Meg
+C_snub snub_node 0 10p
+
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
