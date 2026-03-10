@@ -14,7 +14,7 @@
 .param Ndiv = 240
 .param Icp = 263.2e-6
 .param Kvco = 10e6
-.param Vco_center = 1.65
+.param Vco_center = 1.66
 .param vdd = 3.3
 
 * Loop filter: reduced Kvco needs higher R1 to maintain bandwidth
