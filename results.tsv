@@ -673,3 +673,8 @@ d996eb9	0.883219	22.14	5.049	1.738	discard	Icp_mismatch=0.00505
 c099adf	0.882675	22.14	5.000	1.738	discard	CP threshold 0.55*vdd dead zone
 5c98e51	0.884853	22.14	5.000	1.730	discard	Icp=262e-6
 8985adf	0.884944	22.14	5.000	1.738	discard	R1=149.95k
+70a3a72	0.884593	22.14	5.010	1.738	discard	ref 2n rise/fall
+f2cb555	0.884940	22.14	5.000	1.738	discard	ADC in_low=1.5 in_high=1.8 narrow band
+5358778	0.883114	22.14	5.000	1.738	discard	C2 IC offset -10mV
+5d230f9	0.884949	22.14	5.000	1.738	discard	D-FF reset_delay=0.2n
+44bb316	0.884949	22.14	5.000	1.738	discard	AND rise=0.2n fall=0.5n

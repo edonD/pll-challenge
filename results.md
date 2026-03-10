@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:30:32*
+*Auto-generated at 2026-03-10 07:32:22*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **674** |
+| Total experiments | **679** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 654 |
+| Regressions (discard) | 659 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,12 +37,12 @@
 ## Score Progression
 
 ```
-Score Progression (674 experiments)
+Score Progression (679 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●      ●   
- 0.826 │●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●
- 0.767 │────●──────────────────────────────────────────────●────────
+ 0.885 │    ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●      ●      ●●
+ 0.826 │●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●●●●██
+ 0.767 │──────────────────────────────────────────────●─────────────
  0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
@@ -744,6 +744,11 @@ Target: 0.8 ──────────────────────�
 | 672 | `c099adf` | 0.8827 | 22.14 | 5.000 | 1.738 | ❌ discard | CP threshold 0.55*vdd dead zone |
 | 673 | `5c98e51` | 0.8849 | 22.14 | 5.000 | 1.730 | ❌ discard | Icp=262e-6 |
 | 674 | `8985adf` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | R1=149.95k |
+| 675 | `70a3a72` | 0.8846 | 22.14 | 5.010 | 1.738 | ❌ discard | ref 2n rise/fall |
+| 676 | `f2cb555` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | ADC in_low=1.5 in_high=1.8 narrow band |
+| 677 | `5358778` | 0.8831 | 22.14 | 5.000 | 1.738 | ❌ discard | C2 IC offset -10mV |
+| 678 | `5d230f9` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | D-FF reset_delay=0.2n |
+| 679 | `44bb316` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND rise=0.2n fall=0.5n |
 
 ## Score History
 
@@ -1422,6 +1427,11 @@ Target: 0.8 ──────────────────────�
   #672  0.882675  discard   CP threshold 0.55*vdd dead zone
   #673  0.884853  discard   Icp=262e-6
   #674  0.884944  discard   R1=149.95k
+  #675  0.884593  discard   ref 2n rise/fall
+  #676  0.884940  discard   ADC in_low=1.5 in_high=1.8 narrow band
+  #677  0.883114  discard   C2 IC offset -10mV
+  #678  0.884949  discard   D-FF reset_delay=0.2n
+  #679  0.884949  discard   AND rise=0.2n fall=0.5n
 ```
 
 ---
