@@ -595,3 +595,7 @@ f7b36ca	0.884944	22.14	5.000	1.738	discard	ref delay td=9.9n, marginally worse
 aa374d7	0.884949	22.14	5.000	1.738	discard	CP dn min(1,...) clipping, same score
 9019f8e	0.884949	22.14	5.000	1.738	discard	1uH inductor in filter, same score
 6dad307	0.884857	22.14	5.003	1.738	discard	Rleak=10G higher isolation, slightly worse
+b21593b	0.884944	22.14	5.000	1.738	discard	ADC bridge thresholds 1.0/2.0
+5040c1d	0.884877	22.14	5.002	1.738	discard	divider fast rise/fall 0.01n
+2fad0cd	0.884940	22.14	5.000	1.738	discard	VCO init_phase=180
+ebc7172	0.884949	22.14	5.000	1.738	discard	Ndiv=241 slightly off-target
