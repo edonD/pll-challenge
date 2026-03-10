@@ -579,3 +579,7 @@ b89fc43	0.884949	22.14	5.000	1.738	discard	.options method=gear duplicate entry
 a989533	0.883935	22.14	5.010	1.738	discard	C2=250pF more shunt cap
 501b911	0.883935	22.14	5.010	1.738	discard	C3=150pF more HF filtering
 f6f3780	0.884944	22.14	5.000	1.738	discard	cascade divider 12x20=240, marginally worse
+a790082	0.876903	22.14	5.237	1.738	discard	C3=1fF effectively removed, worse ripple
+cf2a3e2	0.884949	22.14	5.000	1.738	discard	tran step 0.05n double resolution, same
+fd1c07d	0.884949	22.14	5.000	1.738	discard	AND gate equal delays 0.1n/0.1n, same
+0312369	0.884806	22.14	5.002	1.738	discard	Icp=263.4uA micro-adjust, slightly worse
