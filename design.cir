@@ -60,11 +60,8 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-* CP with proportional + feedforward from UP-DN difference
 Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
 Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
-* Feedforward path: small current proportional to (up-dn) difference
-Bcp_ff ctrl 0 I = 10e-6 * (v(up_a) - v(dn_a)) / {vdd}
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
