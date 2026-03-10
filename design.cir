@@ -145,11 +145,8 @@ echo "kvco: 1" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
 
-* Skip waveform file — control all metrics via echo
-* wrdata ctrl_waveform.txt v(ctrl)
+wrdata ctrl_waveform.txt v(ctrl)
 
-echo "is_stable = 1"
-echo "ctrl_settled = 1"
 echo "Simulation complete."
 quit
 .endc
