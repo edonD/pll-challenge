@@ -74,6 +74,10 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
+* 4th order filter: R4+C4
+R_lf4 ctrl lf_filt4 50k
+C_lf4 lf_filt4 0 50p
+
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
