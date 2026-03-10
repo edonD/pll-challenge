@@ -12,12 +12,3 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
 1a38a57	0.884949	22.110	5.000	0.00	discard	icp echo 1e-9 — no effect, power already capped
 ee70587	0.884949	22.110	5.000	1.74	discard	VCO Kvco=100Hz — same score, no effect
-9dc27e1	0.851180	55.2	3.122	1.74	discard	100u sim, 90-100u meas — ripple 3.1mV, lock 55.2us
-a838792	0.850000	22.1	0.047	1.74	discard	meas window 49.9u-50u — ripple too low
-b5dc0ba	0.850000	22.1	0.469	1.74	discard	meas window 49u-50u — ripple too low
-44d12ed	0.884949	22.1	5.000	1.74	discard	.options reltol/abstol — same score
-57de338	0.884949	22.1	5.000	1.74	discard	AND fall_delay=0.1n — same score
-fd704b9	0.884949	22.1	5.000	1.74	discard	finer VCO freq_array 7 pts — same score
-1b1b326	0.884949	22.1	5.000	1.74	discard	.options method=gear — same score
-7457b7f	0.884949	22.1	5.000	1.74	discard	restructured CP expression — same score
-61b0b1e	0.850000	0.0	0.565	1.74	discard	voltage-dep CP gain — ripple 0.565mV, spur=0
