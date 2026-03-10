@@ -462,3 +462,10 @@ c66d627	0.884336	21.42	4.932	1.738	discard	D-FF ic=3, ref_spur worse
 c187672	0.884949	22.14	5.000	1.738	discard	.options numdgt=10, same score
 0a9cbbe	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
 d9178f5	0.884848	22.03	4.980	1.738	discard	remove Rleak, ripple slightly below 5mV
+e6511b7	0.883489	19.39	4.670	1.738	discard	negative Icp_mismatch=-0.005
+7be9c2c	0.884940	22.13	4.999	1.738	discard	0.1nA compensation current, almost same
+37dc3b7	0.884949	22.13	5.000	1.738	discard	tran step 0.05n, same score slower
+c590951	0.884949	22.14	5.000	1.738	discard	.options method=gear, same score
+b51ea63	0.884922	22.10	4.997	1.738	discard	d_buffer 0.5n in divider feedback
+c9f4761	0.881849	18.24	4.530	1.738	discard	divider i_count=120, different drift
+fce7c90	0.884949	22.14	5.000	1.738	discard	.nodeset alongside .ic, same score
