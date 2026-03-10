@@ -779,3 +779,8 @@ d98ffe2	0.884949	22.14	5.000	1.738	discard	FF set_delay=0.05n
 c12d919	0.850000	48.57	1.410	1.738	discard	Rleak=500M
 bf782f8	0.884892	22.10	4.999	1.738	discard	C1=1.02n
 83844ee	0.884949	22.14	5.000	1.738	discard	compute ripple_diff for analysis
+39542dc	0.883815	22.28	5.032	1.738	discard	C2=199.5p Icp_mismatch=0.00503
+38e892a	0.884949	22.14	5.000	1.738	discard	VCO 3-point flat Kvco ~5MHz/V
+d67f609	0.884913	22.14	5.001	1.738	discard	R1=150.02k
+cafbd52	0.884949	22.14	5.000	1.738	discard	C1 no IC
+0cb07fd	0.884949	22.14	5.000	1.738	discard	.options trtol=1
