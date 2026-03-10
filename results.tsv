@@ -883,3 +883,4 @@ fdd906b	0.853411	22.1	6.091	1.74	discard	Measurement window 38u-50u, ripple too 
 e50f4c2	0.884949	22.1	5.0	1.74	discard	Tighter tolerances reltol=0.001 — same score
 820dfdb	0.884949	22.1	5.0	1.74	discard	fref=20MHz Ndiv=120 — same score
 d4e8df6	0.884949	22.1	5.0	1.74	discard	Diode is=1e-18 — same score
+e5b3037	0.876871	24.4	5.238	1.74	discard	C3=1p — ripple increased to 5.24mV
