@@ -571,3 +571,7 @@ f04b07a	0.884931	22.14	5.000	1.738	discard	Icp=263uA fine tune, marginally worse
 b89fc43	0.884949	22.14	5.000	1.738	discard	.options method=gear, same score
 aa42ead	0.884927	22.14	5.000	1.738	discard	ref pulse asymmetric rise/fall 0.5n/2n
 f5e2b76	0.884949	22.14	5.000	1.738	discard	ref 55% duty cycle, same score
+0ea20de	0.884949	22.14	5.000	1.738	discard	.options xmu=0.5, same score
+20817fe	0.884949	22.14	5.000	1.738	discard	set nobreak nopage, same score
+c1ee8b9	0.884888	22.14	5.000	1.738	discard	Rleak on lf_zero instead of ctrl, slightly worse
+b89fc43	0.884949	22.14	5.000	1.738	discard	.options method=gear duplicate entry
