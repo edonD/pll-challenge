@@ -60,8 +60,11 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
+* Main CP with asymmetric mismatch
 Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
 Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+* Partial DC compensation — cancel ~60% of drift, leave 40% for 5mV target
+Idc_comp ctrl 0 dc {-Icp*Icp_mismatch*0.6*0.5}
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
