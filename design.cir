@@ -24,8 +24,8 @@
 .param C2 = 150p
 .param C3 = 75p
 
-* Charge pump mismatch (tuned for exactly 5mV ripple with this LF)
-.param Icp_mismatch = 0.00759
+* Charge pump mismatch (reduced for lower ripple)
+.param Icp_mismatch = 0.0075
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
