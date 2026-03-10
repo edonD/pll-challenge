@@ -62,3 +62,7 @@ b59542c	0.882743	19.8	4.517	1.74	discard	Icp_mismatch=0.45% — ripple 4.517mV s
 c41f2c6	0.884949	22.1	5.000	1.74	discard	ref 10% duty cycle — identical (edge-triggered PFD)
 85b0402	0.880336	22.8	5.133	1.74	discard	feedforward caps 0.1pF — ripple 5.133mV slightly over
 ccfa2c9	0.765152	42.3	19.929	1.74	discard	step function CP — ripple 19.9mV from hard switching
+d6b4d00	0.869304	24.2	5.484	1.74	discard	Icp_mismatch=0.55% — ripple 5.484mV over target
+9d1e0ba	0.884940	22.1	4.998	1.74	discard	VCO duty=0.1 — ripple 4.998mV, marginally worse
+47d8cb1	0.883499	22.4	5.041	1.74	discard	C2=190pF — ripple 5.041mV barely over target
+ae2d3d9	0.884761	21.8	4.957	1.74	discard	C2=210pF — ripple 4.957mV, slightly lower ref_spur
