@@ -76,12 +76,7 @@ C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
-* Clamp control voltage to VCO input range
-Dclamp_hi ctrl vdd_node dmod
-Dclamp_lo gnd_node ctrl dmod
-Vvdd_clamp vdd_node 0 dc {vdd}
-Vgnd_clamp gnd_node 0 dc 0
-.model dmod d(is=1e-14 n=1)
+* No clamp diodes — ctrl settles near Vco_center
 
 * ---------------------------------------------------------------------------
 * VCO (Voltage-Controlled Oscillator)
