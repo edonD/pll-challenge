@@ -511,3 +511,9 @@ af9954e	0.884949	22.14	5.000	1.738	discard	DAC1 input_load=0, same score
 66646db	0.847491	27.46	6.356	3.300	discard	Icp=500uA R1=79k, ripple 6.4mV
 4f90f6b	0.884949	22.14	5.000	1.738	discard	IC up_a=dn_a=0, same score
 0914c5c	0.850000	48.57	0.200	1.738	discard	Rleak=500M, ref_spur=0
+285f5cc	0.855173	0.00	1.200	1.738	discard	quadratic CP v^2, ripple too low
+cb3bd70	0.884949	22.14	5.000	1.738	discard	.options maxord=2, same score
+7c74308	0.884761	21.83	4.980	1.738	discard	extra 10p parallel C2, slightly worse
+6153336	0.884593	22.18	5.010	1.738	discard	ref 2n rise/fall, slightly worse
+b5c0ea7	0.884593	22.17	5.010	1.738	discard	Rleak2=1G on lf_zero, worse
+4a6b654	0.884949	22.14	5.000	1.738	discard	.options gmin=1e-15, same score
