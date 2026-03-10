@@ -54,3 +54,8 @@ a3c2b7f	0.878503	23.3	5.188	1.74	discard	R1=120k mismatch=0.6% — ripple 5.188m
 1b65cdc	0.884949	22.1	5.000	1.74	discard	Ndiv=239 — identical result, VCO adjusts
 2541269	0.850000	0	0.062	0.33	discard	Icp=50uA C2=10nF — ripple 0.062mV, ref_spur=0
 dbf215d	0.870640	4.5	2.587	1.74	discard	DAC 0.8/2.5V swing — ripple 2.587mV too low
+2c0067d	0.850000	0	0.025	0.95	discard	vdd=1.8V — PFD can't switch, ADC threshold 2.5V > vdd
+c98b223	0.884949	22.1	5.000	1.74	discard	DAC t_rise/fall=5ns — same score
+fdb1cc1	0.884949	22.1	5.000	1.74	discard	fref=5MHz Ndiv=480 — identical result
+0705efb	0.793086	35.5	10.983	1.74	discard	pure integrating filter — no zero, ripple 11mV
+b59542c	0.882743	19.8	4.517	1.74	discard	Icp_mismatch=0.45% — ripple 4.517mV suboptimal
