@@ -1,0 +1,65 @@
+* ===========================================================================
+* INITIAL CONDITIONS AND SIMULATION CONTROL
+* ===========================================================================
+* Starting from V(ctrl)=0V to demonstrate genuine locking behavior.
+* With Kvco=150MHz/V and Icp=500uA, the PLL must slew ctrl from
+* 0V to ~1.65V and then settle. This requires several hundred
+* microseconds of simulation.
+*
+* Using 500 us simulation to capture full lock and steady-state.
+* Timestep increased to 1ns to keep memory and runtime manageable.
+* ===========================================================================
+
+* --- Initial conditions: start from 0V (realistic cold start) ---
+.ic v(ctrl)=0 v(lf_zero)=0
+
+.control
+set filetype=ascii
+
+* Save only needed signals to keep memory manageable
+save ref div_out ctrl up_a dn_a
+
+* Transient simulation: 500 us total, 1 ns timestep
+tran 1n 500u uic
+
+* === MEASUREMENTS ===
+* Final control voltage (should settle near Vco_center for 2.4 GHz)
+meas tran ctrl_final find v(ctrl) at=500u
+
+* Ripple in steady state (last 20% of simulation)
+meas tran ctrl_max max v(ctrl) from=400u to=500u
+meas tran ctrl_min min v(ctrl) from=400u to=500u
+meas tran ctrl_avg avg v(ctrl) from=400u to=500u
+
+* Lock time measurement: when ctrl first reaches 95% of final value
+let lock_target = ctrl_final * 0.95
+meas tran lock_time trig at=0 targ v(ctrl) val=$&lock_target rise=1
+
+* Compute ripple
+let ctrl_ripple = ctrl_max - ctrl_min
+
+* === WRITE METRICS FILE ===
+echo "=== PLL METRICS ===" > metrics.txt
+echo "lock_time: $&lock_time" >> metrics.txt
+echo "ctrl_final: $&ctrl_final" >> metrics.txt
+echo "ctrl_max: $&ctrl_max" >> metrics.txt
+echo "ctrl_min: $&ctrl_min" >> metrics.txt
+echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
+echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
+echo "icp: 500e-6" >> metrics.txt
+echo "kvco: 50e6" >> metrics.txt
+echo "vdd: 3.3" >> metrics.txt
+echo "=== END METRICS ===" >> metrics.txt
+
+* === EXPORT WAVEFORMS ===
+wrdata ctrl_waveform.txt v(ctrl)
+wrdata ref_waveform.txt v(ref)
+wrdata divout_waveform.txt v(div_out)
+wrdata up_waveform.txt v(up_a)
+wrdata dn_waveform.txt v(dn_a)
+
+echo "Simulation complete."
+quit
+.endc
+
+.end

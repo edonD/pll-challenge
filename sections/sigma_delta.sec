@@ -1,0 +1,23 @@
+* ===========================================================================
+* SIGMA-DELTA MODULATOR (placeholder)
+* ===========================================================================
+* For fractional-N operation, a sigma-delta modulator dynamically
+* varies the divider ratio between N and N+1 such that the average
+* division ratio equals the desired fractional value.
+*
+* Benefits:
+*   - Pushes quantization noise to high frequencies (noise shaping)
+*   - Enables fine frequency resolution without fractional spurs
+*   - Combined with the loop filter, quantization noise is suppressed
+*
+* Implementation would require:
+*   - MASH 1-1-1 (3rd order) sigma-delta modulator
+*   - Digital accumulator chain
+*   - Modulus control of the prescaler
+*
+* Currently operating as integer-N (Ndiv=240 fixed).
+* To enable fractional-N, the d_fdiv div_factor would need to be
+* dynamically modulated, which requires behavioral Verilog-A or
+* a more complex XSPICE implementation.
+* ===========================================================================
+* (No active circuit elements -- integer-N mode)
