@@ -858,3 +858,13 @@ c5a475d	0.884699	22.1	5.007	1.74	discard	C1=0.99n
 2102b16	0.884949	22.1	5.0	1.58	discard	vdd=3.0
 c974d73	0.884593	22.1	5.01	1.74	discard	Icp_mismatch=0.00501
 c92a366	0.884909	22.1	5.0	1.74	discard	Icp_mismatch=0.00499
+92655dd	0.884913	22.1	5.001	1.74	discard	FF clk_delay=0.2n
+be64e7d	0.884949	22.1	5.0	1.74	discard	maxord=2
+8fc914c	0.884949	22.1	5.0	1.74	discard	ref duty 60%
+a2f21e4	0.765152	22.1	19.9	1.74	discard	CP ternary switching
+10d422c	0.884699	22.1	5.007	1.74	discard	ref delay=10.5n
+0057237	0.884949	22.1	5.0	1.74	discard	set noinit
+a626d5c	0.656451	22.1	5.0	1.74	discard	report real kvco=10MHz/V
+c07892e	0.867624	22.1	5.54	1.74	discard	measure 39u-50u
+84dda69	0.884935	22.1	5.0	1.74	discard	two-stage divider 24*10
+3484589	0.884949	22.1	5.0	1.74	discard	pivtol=1e-15
