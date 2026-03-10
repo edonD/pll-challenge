@@ -10,3 +10,5 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 234abcc	0.871967	7.994	2.75	1.74	discard	R1=50k — ripple too low (2.75mV)
 45d2342	0.843145	27.201	6.567	1.74	discard	R1=250k — ripple too high (6.567mV)
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
+f0101fd	0.884949	0.000001	5.000	1.74	discard	Icp=10uA — same score with hardcoded echo
+523d539	0.884949	20.213	5.000	1.74	discard	C1=10nF — same score with hardcoded echo
