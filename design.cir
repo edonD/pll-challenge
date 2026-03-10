@@ -75,7 +75,7 @@ C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
 * Active drift compensation: pulls ctrl toward Vco_center
-Bcomp ctrl 0 I = -1e-9 * (v(ctrl) - {Vco_center})
+Bcomp ctrl 0 I = -0.5e-9 * (v(ctrl) - {Vco_center})
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
