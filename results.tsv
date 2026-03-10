@@ -846,3 +846,4 @@ c551069	0.884949	22.1	5.0	0.66	discard	report icp=100uA
 0af3e8f	0.884806	22.2	5.004	1.74	discard	C3=99p
 dd57578	0.884931	22.1	5.0	1.74	discard	C3=101p
 fab34b8	0.884949	22.1	5.0	1.74	discard	Icp=263.21uA
+d64e9e7	0.884949	22.1	5.0	0.53	discard	report vdd=1.0

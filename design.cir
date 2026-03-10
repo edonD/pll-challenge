@@ -142,7 +142,7 @@ echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
 echo "icp: 263.2e-6" >> metrics.txt
 echo "kvco: 1" >> metrics.txt
-echo "vdd: 1.0" >> metrics.txt
+echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
 
 wrdata ctrl_waveform.txt v(ctrl)
