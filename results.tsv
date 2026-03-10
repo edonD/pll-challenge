@@ -520,3 +520,6 @@ b5c0ea7	0.884593	22.17	5.010	1.738	discard	Rleak2=1G on lf_zero, worse
 ab68f8e	0.884949	22.14	5.000	1.738	discard	D-FF reset_delay=0.15n, same score
 e824d07	0.884949	23.43	5.000	1.738	discard	sim 52u meas 40-50u, same score
 a8fbb62	0.884913	22.14	5.001	1.738	discard	tran step 0.2n, slightly worse
+4f2fca0	0.760613	22.14	105.000	1.738	discard	C_lf1 ic=0, huge ripple from wrong initial condition
+89ea74e	0.884913	22.14	5.001	1.738	discard	asymmetric mismatch (1+m) on up, 1 on dn
+d1ef68f	0.884770	22.14	5.005	1.743	discard	Icp=264uA R1=149.5k combined fine-tune

@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:26:21*
+*Auto-generated at 2026-03-10 06:29:51*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **521** |
+| Total experiments | **524** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 503 |
+| Regressions (discard) | 506 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (521 experiments)
+Score Progression (524 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●● 
- 0.826 │█●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●███●
+ 0.885 │ ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    
+ 0.826 │●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●███● ●●
  0.767 │────────────────────────────────────────────────────────────
- 0.708 │████████████████████████████████████████████████████████████
+ 0.708 │█████████████████████████████████████████████████████████●██
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -591,6 +591,9 @@ Target: 0.8 ──────────────────────�
 | 519 | `ab68f8e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | D-FF reset_delay=0.15n, same score |
 | 520 | `e824d07` | 0.8849 | 23.43 | 5.000 | 1.738 | ❌ discard | sim 52u meas 40-50u, same score |
 | 521 | `a8fbb62` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | tran step 0.2n, slightly worse |
+| 522 | `4f2fca0` | 0.7606 | 22.14 | 105.000 | 1.738 | ❌ discard | C_lf1 ic=0, huge ripple from wrong initial condition |
+| 523 | `89ea74e` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | asymmetric mismatch (1+m) on up, 1 on dn |
+| 524 | `d1ef68f` | 0.8848 | 22.14 | 5.005 | 1.743 | ❌ discard | Icp=264uA R1=149.5k combined fine-tune |
 
 ## Score History
 
@@ -1116,6 +1119,9 @@ Target: 0.8 ──────────────────────�
   #519  0.884949  discard   D-FF reset_delay=0.15n, same score
   #520  0.884949  discard   sim 52u meas 40-50u, same score
   #521  0.884913  discard   tran step 0.2n, slightly worse
+  #522  0.760613  discard   C_lf1 ic=0, huge ripple from wrong initial conditi
+  #523  0.884913  discard   asymmetric mismatch (1+m) on up, 1 on dn
+  #524  0.884770  discard   Icp=264uA R1=149.5k combined fine-tune
 ```
 
 ---
