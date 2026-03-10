@@ -81,3 +81,11 @@ d58c2a0	0.000000	0.00	0.000	0.00	crash	voltage-dependent C2 Q= — ngspice synta
 cfae27e	0.884908	31.84	4.991	1.74	discard	Vco_center=1.0V — ripple 4.991mV slightly low
 6a07ed5	0.884927	22.11	4.995	1.74	discard	asymmetric ref edges 0.5n/2n — ripple 4.995mV
 2fc6db0	0.884944	22.13	5.000	1.74	discard	dual-modulus prescaler 4*60=240 — no effect
+dd2b4c4	0.786365	41.78	484.0	1.74	discard	boost CP 100uA — ripple 484mV near lock
+95c2b25	0.875082	23.24	5.294	1.74	discard	time-varying CP ramp — ripple 5.29mV
+ce5dd90	0.882094	28.58	4.384	1.74	discard	60us sim 50u-60u — ripple 4.384mV too low
+d11795e	0.884949	22.14	5.000	1.74	discard	PFD AND fall=0.1n DFF reset=0.5n — no effect
+5f9a091	0.871293	8.97	2.666	3.30	discard	Icp=500uA mismatch=0.002 R1=80k — ripple 2.67mV
+54fefcb	0.884877	22.14	5.002	1.74	discard	timestep 0.5n — ripple 5.002mV marginal
+ca10101	0.755987	45.94	33.98	1.74	discard	parallel damping R=300k C=500p — ripple 34mV
+0866bba	0.884949	22.14	5.000	1.74	discard	method=trap — no effect
