@@ -904,3 +904,4 @@ bbe4e44	0.884949	22.1	5.0	1.74	discard	10-point VCO — same score
 b5e3b77	0.881849	18.2	4.335	1.74	discard	Divider i_count=120 — ripple 4.34mV too low
 4868d69	0.884940	22.1	4.998	1.74	discard	VCO init_phase=180 — ripple 4.998mV, 0.000009 worse
 fa8bc4d	0.859021	7.4	1.515	1.74	discard	Time-varying mismatch — ripple too low by 40u
+1f0caa6	0.884909	22.1	4.991	1.74	discard	1k series R with C2 — ripple 4.99mV
