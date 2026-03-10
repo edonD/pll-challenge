@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:23:36*
+*Auto-generated at 2026-03-10 07:25:21*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **654** |
+| Total experiments | **659** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 634 |
+| Regressions (discard) | 639 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,12 +37,12 @@
 ## Score Progression
 
 ```
-Score Progression (654 experiments)
+Score Progression (659 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●    ●●●●   ●●  ●● ●         ●   ●●●●● ●●  ●   ●● ●      ●  
- 0.826 │█●●●●████●●●██●●██●█●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●
- 0.767 │────────────────────────●───────────────────────────────────
+ 0.885 │●●●●   ●●  ●● ●         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●
+ 0.826 │████●●●██●●██●█●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●██
+ 0.767 │───────────────────●────────────────────────────────────────
  0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
@@ -724,6 +724,11 @@ Target: 0.8 ──────────────────────�
 | 652 | `8ed0b84` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | divider DAC out_low=0.1 out_high=vdd-0.1 |
 | 653 | `6799188` | 0.8803 | 22.14 | 4.000 | 1.738 | ❌ discard | Icp_mismatch=0.004 |
 | 654 | `80a759f` | 0.8693 | 22.14 | 5.485 | 1.738 | ❌ discard | Icp_mismatch=0.0055 |
+| 655 | `39d895f` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND gate swap rise/fall delays |
+| 656 | `90b05db` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO rise/fall=0.1n |
+| 657 | `8b48ab6` | 0.8818 | 22.14 | 5.000 | 1.738 | ❌ discard | divider i_count=120 |
+| 658 | `ee35e86` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | IC v(div_out)=0 |
+| 659 | `3e723f6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | save all |
 
 ## Score History
 
@@ -1382,6 +1387,11 @@ Target: 0.8 ──────────────────────�
   #652  0.884949  discard   divider DAC out_low=0.1 out_high=vdd-0.1
   #653  0.880281  discard   Icp_mismatch=0.004
   #654  0.869304  discard   Icp_mismatch=0.0055
+  #655  0.884949  discard   AND gate swap rise/fall delays
+  #656  0.884949  discard   VCO rise/fall=0.1n
+  #657  0.881849  discard   divider i_count=120
+  #658  0.884949  discard   IC v(div_out)=0
+  #659  0.884949  discard   save all
 ```
 
 ---

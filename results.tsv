@@ -653,3 +653,8 @@ cf1cc7c	0.884896	22.14	5.000	1.738	discard	Rleak=2G
 8ed0b84	0.884949	22.14	5.000	1.738	discard	divider DAC out_low=0.1 out_high=vdd-0.1
 6799188	0.880281	22.14	4.000	1.738	discard	Icp_mismatch=0.004
 80a759f	0.869304	22.14	5.485	1.738	discard	Icp_mismatch=0.0055
+39d895f	0.884949	22.14	5.000	1.738	discard	AND gate swap rise/fall delays
+90b05db	0.884949	22.14	5.000	1.738	discard	VCO rise/fall=0.1n
+8b48ab6	0.881849	22.14	5.000	1.738	discard	divider i_count=120
+ee35e86	0.884949	22.14	5.000	1.738	discard	IC v(div_out)=0
+3e723f6	0.884949	22.14	5.000	1.738	discard	save all
