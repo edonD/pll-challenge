@@ -51,3 +51,6 @@ df19d3a	0.860689	25.7	5.796	2.61	discard	Icp=395uA R1=100k — ripple 5.8mV over
 642f9eb	0.800000	0	0.317	1.74	discard	sinusoidal ripple injection — stability=0 from oscillation
 25b3e8d	0.883227	19.7	4.619	1.74	discard	R1=190k mismatch=0.4% — ripple 4.619mV suboptimal
 a3c2b7f	0.878503	23.3	5.188	1.74	discard	R1=120k mismatch=0.6% — ripple 5.188mV slightly over
+1b65cdc	0.884949	22.1	5.000	1.74	discard	Ndiv=239 — identical result, VCO adjusts
+2541269	0.850000	0	0.062	0.33	discard	Icp=50uA C2=10nF — ripple 0.062mV, ref_spur=0
+dbf215d	0.870640	4.5	2.587	1.74	discard	DAC 0.8/2.5V swing — ripple 2.587mV too low
