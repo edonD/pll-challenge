@@ -147,7 +147,6 @@ echo "=== END METRICS ===" >> metrics.txt
 
 wrdata ctrl_waveform.txt v(ctrl)
 
-print ctrl_ripple
 echo "Simulation complete."
 quit
 .endc
