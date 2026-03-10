@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:37:41*
+*Auto-generated at 2026-03-10 07:40:48*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **694** |
+| Total experiments | **697** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 674 |
+| Regressions (discard) | 677 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (694 experiments)
+Score Progression (697 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●  ●   ●● ●      ●  ●● ●●●   ●      ●      ●●  ● ●● ●    ●  
- 0.826 │█●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●●●●██●●█●██ █●●●●█●●
- 0.767 │───────────────────────────────●────────────────────────────
- 0.708 │███████████████████████████████████████████████████●████████
+ 0.885 │●   ●● ●      ●  ●● ●●●   ●      ●      ●●  ● ●● ●    ●  ●●●
+ 0.826 │█●●●██●█●●●●●●█●●██●███●●●█● ●●●●█●●●●●●██●●█●██ █●●●●█●●███
+ 0.767 │────────────────────────────●───────────────────────────────
+ 0.708 │████████████████████████████████████████████████●███████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -764,6 +764,9 @@ Target: 0.8 ──────────────────────�
 | 692 | `e240ca3` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options interp |
 | 693 | `f1e484d` | 0.8848 | 22.14 | 5.004 | 1.738 | ❌ discard | C2=199p |
 | 694 | `964981e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C2=201p |
+| 695 | `bfd95c8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO steep Kvco near 1.65V (7 points) |
+| 696 | `f66782e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=50MHz Ndiv=48 |
+| 697 | `f3bd410` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | divider DAC input_load=0 |
 
 ## Score History
 
@@ -1462,6 +1465,9 @@ Target: 0.8 ──────────────────────�
   #692  0.884949  discard   .options interp
   #693  0.884806  discard   C2=199p
   #694  0.884931  discard   C2=201p
+  #695  0.884949  discard   VCO steep Kvco near 1.65V (7 points)
+  #696  0.884949  discard   fref=50MHz Ndiv=48
+  #697  0.884949  discard   divider DAC input_load=0
 ```
 
 ---

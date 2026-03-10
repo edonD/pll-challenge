@@ -693,3 +693,6 @@ be8fd61	0.884842	22.14	5.003	1.738	discard	C3=99.5p
 e240ca3	0.884949	22.14	5.000	1.738	discard	.options interp
 f1e484d	0.884806	22.14	5.004	1.738	discard	C2=199p
 964981e	0.884931	22.14	5.000	1.738	discard	C2=201p
+bfd95c8	0.884949	22.14	5.000	1.738	discard	VCO steep Kvco near 1.65V (7 points)
+f66782e	0.884949	22.14	5.000	1.738	discard	fref=50MHz Ndiv=48
+f3bd410	0.884949	22.14	5.000	1.738	discard	divider DAC input_load=0
