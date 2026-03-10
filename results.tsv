@@ -212,3 +212,7 @@ eee3f21	0.884913	22.14	5.001	1.738	discard	Icp=263.25uA, ripple 5.001mV
 3ac80b6	0.884806	22.17	5.004	1.738	discard	derivative feedforward, ripple 5.004mV
 c18cd3f	0.873373	0.00	2.934	1.738	discard	IC=1.616V near final, less drift
 dd5b0a5	0.878010	23.10	5.203	1.738	discard	IC=1.66V slightly above center
+75e133f	0.884944	22.13	4.999	1.738	discard	dual-path filter 100R with C2
+1065d42	0.884949	22.14	5.000	1.738	discard	tiny div_out periodic current, same score
+67cd625	0.884949	22.14	5.000	1.738	discard	3-point VCO model, same score
+1a5f9f7	0.876044	22.38	3.318	1.738	discard	time-varying mismatch 1%→0.5%, ripple 3.318mV

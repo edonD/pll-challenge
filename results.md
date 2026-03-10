@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 04:03:08*
+*Auto-generated at 2026-03-10 04:07:05*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **213** |
+| Total experiments | **217** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 7 |
-| Regressions (discard) | 203 |
+| Regressions (discard) | 207 |
 | Crashes | 3 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,14 +37,14 @@
 ## Score Progression
 
 ```
-Score Progression (213 experiments)
+Score Progression (217 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │      ●    ●●●  ●         ●● ●            ●●           ●    
- 0.826 │●●●●●●█●●● ███●●█●●●●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●
- 0.767 │──────────●─────────────────────────────────────────────────
- 0.708 │███████████████████████████████●████████████████ ███████████
- 0.649 │████████████████████████████████████████████████●███████████
+ 0.885 │  ●    ●●●  ●         ●● ●            ●●           ●     ●● 
+ 0.826 │●●█●●● ███●●█●●●●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●
+ 0.767 │──────●─────────────────────────────────────────────────────
+ 0.708 │███████████████████████████●████████████████ ███████████████
+ 0.649 │████████████████████████████████████████████●███████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
  0.472 │████████████████████████████████████████████████████████████
@@ -283,6 +283,10 @@ Target: 0.8 ──────────────────────�
 | 211 | `3ac80b6` | 0.8848 | 22.17 | 5.004 | 1.738 | ❌ discard | derivative feedforward, ripple 5.004mV |
 | 212 | `c18cd3f` | 0.8734 | 0.00 | 2.934 | 1.738 | ❌ discard | IC=1.616V near final, less drift |
 | 213 | `dd5b0a5` | 0.8780 | 23.10 | 5.203 | 1.738 | ❌ discard | IC=1.66V slightly above center |
+| 214 | `75e133f` | 0.8849 | 22.13 | 4.999 | 1.738 | ❌ discard | dual-path filter 100R with C2 |
+| 215 | `1065d42` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tiny div_out periodic current, same score |
+| 216 | `67cd625` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | 3-point VCO model, same score |
+| 217 | `1a5f9f7` | 0.8760 | 22.38 | 3.318 | 1.738 | ❌ discard | time-varying mismatch 1%→0.5%, ripple 3.318mV |
 
 ## Score History
 
@@ -500,6 +504,10 @@ Target: 0.8 ──────────────────────�
   #211  0.884806  discard   derivative feedforward, ripple 5.004mV
   #212  0.873373  discard   IC=1.616V near final, less drift
   #213  0.878010  discard   IC=1.66V slightly above center
+  #214  0.884944  discard   dual-path filter 100R with C2
+  #215  0.884949  discard   tiny div_out periodic current, same score
+  #216  0.884949  discard   3-point VCO model, same score
+  #217  0.876044  discard   time-varying mismatch 1%→0.5%, ripple 3.318mV
 ```
 
 ---
