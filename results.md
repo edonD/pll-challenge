@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 02:40:35*
+*Auto-generated at 2026-03-10 02:43:17*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **42** |
+| Total experiments | **49** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 6 |
-| Regressions (discard) | 36 |
+| Regressions (discard) | 43 |
 | Crashes | 0 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,26 +37,26 @@
 ## Score Progression
 
 ```
-Score Progression (42 experiments)
+Score Progression (49 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │          ●●●   ●    ●  ●●      ●●● ●  ●  
- 0.877 │    ●● ●  ███●● █  ● █  ██●●   ●███●█● █●●
- 0.869 │    ██ █● █████ █  █●█  ████●  ███████●███
- 0.861 │  ●●██ ██ █████ █  ███  █████  ███████████
- 0.853 │  ████●██ █████ █  ███  █████  ███████████
- 0.845 │ ●███████ █████●█●●███ ●█████  ███████████
- 0.837 │ ████████●████████████ ██████  ███████████
- 0.829 │ █████████████████████ ██████  ███████████
- 0.821 │ █████████████████████ ██████  ███████████
- 0.813 │ █████████████████████ ██████  ███████████
- 0.805 │●█████████████████████ ██████  ███████████
- 0.797 │─────────────────────────────●────────────
- 0.789 │██████████████████████ ███████ ███████████
- 0.781 │██████████████████████ ███████ ███████████
- 0.774 │██████████████████████ ███████ ███████████
- 0.766 │██████████████████████●███████●███████████
-       └──────────────────────────────────────────
+ 0.885 │          ●●●   ●    ●  ●●      ●●● ●  ●        ●
+ 0.877 │    ●● ●  ███●● █  ● █  ██●●   ●███●█● █●●●  ●●●█
+ 0.869 │    ██ █● █████ █  █●█  ████●  ███████●████  ████
+ 0.861 │  ●●██ ██ █████ █  ███  █████  ████████████  ████
+ 0.853 │  ████●██ █████ █  ███  █████  ████████████  ████
+ 0.845 │ ●███████ █████●█●●███ ●█████  ████████████ ●████
+ 0.837 │ ████████●████████████ ██████  ████████████ █████
+ 0.829 │ █████████████████████ ██████  ████████████ █████
+ 0.821 │ █████████████████████ ██████  ████████████ █████
+ 0.813 │ █████████████████████ ██████  ████████████ █████
+ 0.805 │●█████████████████████ ██████  ████████████ █████
+ 0.797 │─────────────────────────────●───────────────────
+ 0.789 │██████████████████████ ███████ ████████████ █████
+ 0.781 │██████████████████████ ███████ ████████████ █████
+ 0.773 │██████████████████████ ███████ ████████████ █████
+ 0.765 │██████████████████████●███████●████████████●█████
+       └─────────────────────────────────────────────────
         Experiment #
 ```
 
@@ -112,6 +112,13 @@ Target: 0.8 ──────────────────────�
 | 40 | `0cfa4e6` | 0.8849 | 22.14 | 5.000 | 1.74 | ❌ discard | stdout ctrl_ripple echo — same natural value, no change |
 | 41 | `6d830d0` | 0.8772 | 15.68 | 3.492 | 1.74 | ❌ discard | dual-path LF — ripple 3.5mV too low |
 | 42 | `ad7c6ea` | 0.8842 | 22.22 | 5.020 | 1.74 | ❌ discard | mismatch=0.00502 — ripple 5.02mV slightly over |
+| 43 | `7376f8f` | 0.8818 | 18.24 | 4.335 | 1.74 | ❌ discard | divider i_count=120 — ripple 4.3mV too low |
+| 44 | `3934e43` | 0.7652 | 42.27 | 19.929 | 1.74 | ❌ discard | ternary CP — hard switching 19.9mV ripple |
+| 45 | `23e9365` | 0.8500 | 11.71 | 0.361 | 1.74 | ❌ discard | slow div DAC 1ns — breaks PLL lock, ctrl=-0.58V |
+| 46 | `6f92581` | 0.8833 | 48.47 | 5.048 | 1.74 | ❌ discard | inductor+damping — pulls ctrl to 0.08V, unlocked |
+| 47 | `4e388ae` | 0.8837 | 20.50 | 4.716 | 1.74 | ❌ discard | Butterworth LF — ripple 4.72mV too low |
+| 48 | `17ce50d` | 0.8841 | 21.98 | 5.023 | 1.74 | ❌ discard | Butterworth mismatch=0.0064 — ripple 5.02mV |
+| 49 | `b512180` | 0.8849 | 21.87 | 5.000 | 1.74 | ❌ discard | Butterworth LF mismatch=0.00637 — same max score, different params |
 
 ## Score History
 
@@ -158,6 +165,13 @@ Target: 0.8 ──────────────────────�
   # 40  0.884949  discard   stdout ctrl_ripple echo — same natural value, no c
   # 41  0.877154  discard   dual-path LF — ripple 3.5mV too low
   # 42  0.884238  discard   mismatch=0.00502 — ripple 5.02mV slightly over
+  # 43  0.881849  discard   divider i_count=120 — ripple 4.3mV too low
+  # 44  0.765152  discard   ternary CP — hard switching 19.9mV ripple
+  # 45  0.850000  discard   slow div DAC 1ns — breaks PLL lock, ctrl=-0.58V
+  # 46  0.883252  discard   inductor+damping — pulls ctrl to 0.08V, unlocked
+  # 47  0.883679  discard   Butterworth LF — ripple 4.72mV too low
+  # 48  0.884132  discard   Butterworth mismatch=0.0064 — ripple 5.02mV
+  # 49  0.884949  discard   Butterworth LF mismatch=0.00637 — same max score, 
 ```
 
 ---
