@@ -64,3 +64,9 @@ bd05d9e	0.856376	26.17	5.967	1.74	discard	adaptive R1 — ripple 5.97mV, B-sourc
 c106275	0.793225	49.94	684.351	1.74	discard	CP compliance — positive feedback, 684mV ripple
 24ae8a5	0.884940	22.13	4.998	1.74	discard	500Meg bias — ripple 4.998mV, marginal change
 556937e	0.884949	22.14	5.000	1.74	discard	larger DAC load 50pF — no effect on drift
+7987925	0.856083	26.44	5.979	1.74	discard	C1=2nF mismatch=0.0065 — ripple 5.98mV
+54f18bd	0.794107	22.14	10.824	1.74	discard	30u-50u window — 10.8mV ripple, drift doubles
+2443ab9	0.883489	19.39	4.675	1.74	discard	negative mismatch — upward drift 4.68mV
+10997e9	0.884486	21.01	5.013	1.74	discard	neg mismatch -0.00535 — ripple 5.013mV marginal
+cf681b6	0.884842	20.97	5.003	1.74	discard	neg mismatch -0.00534 — ripple 5.003mV
+6220dd2	0.884922	20.92	4.994	1.74	discard	neg mismatch -0.00533 — ripple 4.994mV close
