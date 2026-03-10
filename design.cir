@@ -69,7 +69,8 @@ Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * R1 + C1 in series from ctrl to ground (provides stabilizing zero)
 * C2 shunt from ctrl to ground (integration)
 * C3 for additional high-freq filtering
-R_lf1 ctrl lf_zero {R1}
+* Adaptive R1: 50k during acquisition (t<25u), 150k during lock
+Br_lf1 ctrl lf_zero I = (v(ctrl)-v(lf_zero)) / (50e3 + 100e3*min(1,max(0,(time-25e-6)/1e-6)))
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
