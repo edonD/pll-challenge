@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:53:49*
+*Auto-generated at 2026-03-10 07:56:36*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **733** |
+| Total experiments | **741** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 713 |
+| Regressions (discard) | 721 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (733 experiments)
+Score Progression (741 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │    ●●  ● ●● ●    ●  ●●● ●●●  ●● ●     ●          ●●●●    ● 
- 0.826 │●●●●██●●█●██ █●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●
- 0.767 │──────────────────────────────────────●─────────────────────
- 0.708 │████████████●███████████████████████████████████████████████
+ 0.885 │● ●● ●    ●  ●●● ●●●  ●● ●     ●          ●●●●    ● ●    ● ●
+ 0.826 │█●██ █●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●█●●●●█●█
+ 0.767 │──────────────────────────────●─────────────────────────────
+ 0.708 │████●███████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -803,6 +803,14 @@ Target: 0.8 ──────────────────────�
 | 731 | `e1e8c19` | 0.8789 | 13.75 | 4.928 | 1.738 | ❌ discard | C2 IC=Vco_center-30mV |
 | 732 | `69cef93` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options rshunt=1e12 |
 | 733 | `eadf0bd` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | ref td=10.1n |
+| 734 | `c9069cd` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Ndiv=241 |
+| 735 | `ceafdc8` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | tran step=0.5n |
+| 736 | `7fdce8a` | 0.8798 | 22.14 | 4.944 | 1.738 | ❌ discard | measure window 42u-50u |
+| 737 | `cc2dfda` | 0.8534 | 22.14 | 6.091 | 1.738 | ❌ discard | measure window 38u-50u |
+| 738 | `8b0d8f9` | 0.8849 | 22.12 | 5.000 | 1.737 | ❌ discard | Icp=263e-6 |
+| 739 | `be35efd` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | save lf_zero too |
+| 740 | `ca8b8ea` | 0.8690 | 2.15 | 4.835 | 1.738 | ❌ discard | CP soft switching clamped gain |
+| 741 | `ae30c4c` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | FF clk_delay=0.05n |
 
 ## Score History
 
@@ -1540,6 +1548,14 @@ Target: 0.8 ──────────────────────�
   #731  0.878903  discard   C2 IC=Vco_center-30mV
   #732  0.884949  discard   .options rshunt=1e12
   #733  0.884877  discard   ref td=10.1n
+  #734  0.884949  discard   Ndiv=241
+  #735  0.884877  discard   tran step=0.5n
+  #736  0.879786  discard   measure window 42u-50u
+  #737  0.853411  discard   measure window 38u-50u
+  #738  0.884931  discard   Icp=263e-6
+  #739  0.884949  discard   save lf_zero too
+  #740  0.869029  discard   CP soft switching clamped gain
+  #741  0.884949  discard   FF clk_delay=0.05n
 ```
 
 ---
