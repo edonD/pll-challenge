@@ -188,3 +188,11 @@ fbdf692	0.765152	42.27	19.929	1.738	discard	binary switched CP, ripple 19.929mV
 bcdfe23	0.883015	20.39	4.574	1.738	discard	R1=130k, ripple 4.574mV
 53dab5a	0.872260	23.56	5.385	1.738	discard	R1=170k, ripple 5.385mV
 f94b92e	0.870990	0.00	2.629	1.738	discard	swap C1/C2 roles in loop filter
+40efd90	0.882558	22.37	5.068	1.738	discard	mismatch feedback CP, ripple 5.068mV
+b3a6182	0.884927	22.11	4.995	1.738	discard	ref pulse 0.5n edges, ripple 4.995mV
+c7c8e99	0.884927	22.11	4.995	1.738	discard	ref 0.5n edges, ripple 4.995mV
+4581de1	0.884593	22.18	5.010	1.738	discard	ref 2n edges, ripple 5.010mV
+7e629a0	0.884806	22.16	5.004	1.738	discard	ref 1.5n edges, ripple 5.004mV
+6973405	0.884877	22.14	5.002	1.738	discard	ref 1.2n edges, ripple 5.002mV
+ec1e18b	0.884949	22.14	5.000	1.738	discard	ref 1.1n edges, same score as 1.0n
+fe9cca0	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
