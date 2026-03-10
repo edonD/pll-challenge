@@ -60,24 +60,22 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-* CP outputs to intermediate node
-Bcp_up cp_node 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
-Bcp_dn cp_node 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
+Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 
 * ---------------------------------------------------------------------------
-* LOOP FILTER (active topology with behavioral opamp buffer)
+* LOOP FILTER (standard CP-PLL topology)
 * ---------------------------------------------------------------------------
-* Passive filter first stage
-R_lf1 cp_node lf_zero {R1}
+* R1 + C1 in series from ctrl to ground (provides stabilizing zero)
+* C2 shunt from ctrl to ground (integration)
+* C3 for additional high-freq filtering
+R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
-C_lf2 cp_node 0 {C2} ic={Vco_center}
-C_lf3 cp_node 0 {C3}
-* Unity-gain buffer (behavioral opamp) isolates VCO from filter
-Bbuf ctrl 0 V = max(0, min({vdd}, v(cp_node)))
+C_lf2 ctrl 0 {C2} ic={Vco_center}
+C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
-Rleak cp_node 0 1G
-Rleak2 ctrl 0 1G
+Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
 Dclamp_hi ctrl vdd_node dmod
 Dclamp_lo gnd_node ctrl dmod
