@@ -93,7 +93,6 @@ Vgnd_clamp gnd_node 0 dc 0
 * V=1.65 -> 2.4G
 * V=2.0 -> 2.4G + 10M*(2.0-1.65) = 2.4035G
 * V=2.5 -> 2.4G + 10M*(2.5-1.65) = 2.4085G
-* Analog VCO + digital divider chain
 avco ctrl d_vco vco_model
 .model vco_model d_osc(cntl_array=[0.5 1.0 1.65 2.0 2.5]
 + freq_array=[2.3885e9 2.3935e9 2.4e9 2.4035e9 2.4085e9]
@@ -101,14 +100,11 @@ avco ctrl d_vco vco_model
 + rise_delay=0.05n fall_delay=0.05n)
 
 * ---------------------------------------------------------------------------
-* FREQUENCY DIVIDER (3-stage: /6 * /8 * /5 = /240)
+* FREQUENCY DIVIDER
 * ---------------------------------------------------------------------------
-adiv1 d_vco d_div6 fdiv6
-.model fdiv6 d_fdiv(div_factor=6 i_count=0 rise_delay=0.1n fall_delay=0.1n)
-adiv2 d_div6 d_div48 fdiv8
-.model fdiv8 d_fdiv(div_factor=8 i_count=0 rise_delay=0.1n fall_delay=0.1n)
-adiv3 d_div48 d_divided fdiv5
-.model fdiv5 d_fdiv(div_factor=5 i_count=0 rise_delay=0.1n fall_delay=0.1n)
+adiv1 d_vco d_divided fdiv1
+.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
++ rise_delay=0.1n fall_delay=0.1n)
 
 abridge_divout [d_divided] [div_out] dac_div
 .model dac_div dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
