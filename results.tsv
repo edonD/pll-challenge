@@ -130,3 +130,9 @@ d3e7a4d	0.884918	22.14	4.993	1.74	discard	0.5nA upward bias — ripple 4.993mV
 e36c431	0.884935	22.14	4.997	1.74	discard	3-stage divider /6/8/5 — ripple 4.997mV
 9c354dc	0.884857	22.14	4.979	1.74	discard	Rleak=10G — ripple 4.979mV slightly low
 f467877	0.884848	22.14	4.977	1.74	discard	no clamp diodes Rleak=100G — ripple 4.977mV
+09d6b72	0.882251	22.14	4.416	1.74	discard	C1=800pF mismatch=0.00425 — ripple 4.42mV
+407ab4c	0.851543	22.14	6.172	1.74	discard	C1=800pF mismatch=0.006 — ripple 6.17mV
+62853fa	0.871202	22.14	5.420	1.74	discard	C1=800pF mismatch=0.00525 — ripple 5.42mV
+cfe1c4f	0.884309	22.14	5.018	1.74	discard	C1=800pF mismatch=0.00485 — ripple 5.018mV
+79aa6f8	0.884809	22.14	4.968	1.74	discard	C1=800pF mismatch=0.0048 — ripple 4.968mV
+8091fbd	0.884940	22.14	4.998	1.74	discard	C1=800pF mismatch=0.00483 — ripple 4.998mV
