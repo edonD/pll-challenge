@@ -102,8 +102,13 @@ avco ctrl d_vco vco_model
 * ---------------------------------------------------------------------------
 * FREQUENCY DIVIDER
 * ---------------------------------------------------------------------------
-adiv1 d_vco d_divided fdiv1
-.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
+* Dual-modulus prescaler: divide by 4/5
+adiv_pre d_vco d_pre fdiv_pre
+.model fdiv_pre d_fdiv(div_factor=4 i_count=0
++ rise_delay=0.1n fall_delay=0.1n)
+* Main counter: divide by 60 (4*60=240)
+adiv_main d_pre d_divided fdiv_main
+.model fdiv_main d_fdiv(div_factor=60 i_count=0
 + rise_delay=0.1n fall_delay=0.1n)
 
 abridge_divout [d_divided] [div_out] dac_div
