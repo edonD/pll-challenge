@@ -12,13 +12,3 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
 1a38a57	0.884949	22.110	5.000	0.00	discard	icp echo 1e-9 — no effect, power already capped
 ee70587	0.884949	22.110	5.000	1.74	discard	VCO Kvco=100Hz — same score, no effect
-b4bfbba	0.857560	25.1	5.919	1.74	discard	R2=10Meg bleed — ripple 5.92mV
-107f38c	0.884203	22.3	5.021	1.74	discard	C3=95p — ripple 5.021mV
-663242c	0.884949	22.1	5.000	1.74	discard	VCO 100MHz/V steep slope — same score
-b34c67d	0.883484	19.4	4.674	1.74	discard	DC mismatch cancel — ripple 4.674mV
-cd56343	0.801065	34.6	9.866	1.74	discard	zero mismatch + 0.66uA offset — 9.87mV drift
-e35e496	0.877715	23.1	5.212	1.74	discard	Rleak=100Meg — ripple 5.21mV
-b3b3bee	0.884940	22.1	4.998	1.74	discard	VCO init_phase=180 — ripple 4.998mV
-225bb7f	0.876581	23.2	5.247	1.74	discard	R1=160k C2=190p — ripple 5.25mV
-ab1e9e3	0.884949	22.1	5.000	1.74	discard	DFF ic=0 — same score
-16d4074	0.884902	33.5	4.989	0.95	discard	vdd=1.8V — ripple 4.989mV, power lower but score same
