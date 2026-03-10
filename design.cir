@@ -147,7 +147,6 @@ echo "=== END METRICS ===" >> metrics.txt
 
 wrdata ctrl_waveform.txt v(ctrl)
 
-echo "ref_spur_est = -60"
 echo "Simulation complete."
 quit
 .endc
