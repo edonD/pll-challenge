@@ -73,3 +73,6 @@ ffe162a	0.884415	22.2	5.015	1.74	discard	Icp=264uA — ripple 5.015mV barely ove
 5ff0d21	0.757864	29.5	28.427	1.74	discard	buffered loop filter — ripple 28.4mV from buffer
 e59a325	0.882814	18.8	4.532	1.74	discard	C3=200pF — ripple 4.532mV below optimal
 c656554	0.876903	24.4	5.237	1.74	discard	C3=1fF — no HF filter, ripple 5.237mV
+4406997	0.884944	22.1	4.999	1.74	discard	ADC 1.0/2.0 thresholds — ripple 4.999mV marginally worse
+7b2855b	0.884949	22.1	5.000	1.74	discard	save lf_zero — same score
+0c4ca2a	0.884359	21.4	4.866	1.74	discard	zero ref delay — ripple 4.866mV slightly low
