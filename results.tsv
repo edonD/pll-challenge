@@ -862,3 +862,4 @@ c92a366	0.884909	22.1	5.0	1.74	discard	Icp_mismatch=0.00499
 be64e7d	0.884949	22.1	5.0	1.74	discard	maxord=2
 8fc914c	0.884949	22.1	5.0	1.74	discard	ref duty 60%
 a2f21e4	0.765152	22.1	19.9	1.74	discard	CP ternary switching
+10d422c	0.884699	22.1	5.007	1.74	discard	ref delay=10.5n
