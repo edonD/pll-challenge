@@ -60,14 +60,8 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-* CP with complementary mismatch: up slightly stronger, dn slightly weaker
-* Add a small feed-forward term from rate of change of ctrl
 Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
 Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
-* Derivative feedback: oppose ctrl voltage rate of change
-Rcf ctrl ctrl_deriv 1Meg
-Ccf ctrl_deriv 0 1p
-Bderiv ctrl 0 I = -1e-9 * (v(ctrl) - v(ctrl_deriv)) * 1e6
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
