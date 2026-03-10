@@ -94,8 +94,8 @@ Vgnd_clamp gnd_node 0 dc 0
 * V=2.0 -> 2.4G + 10M*(2.0-1.65) = 2.4035G
 * V=2.5 -> 2.4G + 10M*(2.5-1.65) = 2.4085G
 avco ctrl d_vco vco_model
-.model vco_model d_osc(cntl_array=[0.5 1.0 1.65 2.0 2.5]
-+ freq_array=[2.3885e9 2.3935e9 2.4e9 2.4035e9 2.4085e9]
+.model vco_model d_osc(cntl_array=[0.5 1.0 1.5 1.65 1.8 2.0 2.5]
++ freq_array=[2.3885e9 2.3935e9 2.399e9 2.4e9 2.401e9 2.4035e9 2.4085e9]
 + duty_cycle=0.5 init_phase=0
 + rise_delay=0.05n fall_delay=0.05n)
 
