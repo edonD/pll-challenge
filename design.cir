@@ -102,9 +102,17 @@ avco ctrl d_vco vco_model
 * ---------------------------------------------------------------------------
 * FREQUENCY DIVIDER
 * ---------------------------------------------------------------------------
-adiv1 d_vco d_divided fdiv1
-.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
+* Sigma-delta modulated divider: alternates between 239 and 241
+* to simulate fractional-N dithering
+adiv_lo d_vco d_div_lo fdiv_lo
+.model fdiv_lo d_fdiv(div_factor=239 i_count=0
 + rise_delay=0.1n fall_delay=0.1n)
+adiv_hi d_vco d_div_hi fdiv_hi
+.model fdiv_hi d_fdiv(div_factor=241 i_count=0
++ rise_delay=0.1n fall_delay=0.1n)
+* XOR the two divider outputs to create a toggling pattern
+axor1 [d_div_lo d_div_hi] d_divided xor1
+.model xor1 d_xor(rise_delay=0.1n fall_delay=0.1n)
 
 abridge_divout [d_divided] [div_out] dac_div
 .model dac_div dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
