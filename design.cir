@@ -39,7 +39,7 @@ aand1 [d_up d_dn] d_reset and1
 .model and1 d_and(rise_delay=0.1n fall_delay=0.5n input_load=0.5e-12)
 
 aff1 d_one ref_d d_reset d_zero d_up d_up_n flop1
-.model flop1 d_dff(clk_delay=0.1n set_delay=0.1n reset_delay=0.1n
+.model flop1 d_dff(clk_delay=0.05n set_delay=0.1n reset_delay=0.1n
 + ic=2 rise_delay=0.1n fall_delay=0.1n)
 
 aff2 d_one div_out_d d_reset d_zero d_dn d_dn_n flop1
