@@ -936,3 +936,4 @@ fc560a3	0.884949	22.1	5.0	1.74	discard	Ref 25% duty — same score (PFD is edge-
 e428d44	0.792853	35.5	11.02	1.74	discard	No stabilizing zero — ripple 11mV, underdamped
 11621bb	0.871888	4.8	2.74	1.74	discard	Feedforward 80% mismatch cancel — ripple too low
 a76024e	0.884877	22.1	5.002	1.74	discard	Icp=263.3uA — ripple 5.002mV
+2649956	0.884940	22.1	4.998	1.74	discard	Icp=263.1uA — ripple 4.998mV
