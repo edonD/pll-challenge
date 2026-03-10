@@ -838,3 +838,13 @@ cdfb61f	0.883184	22.4	5.05	1.74	discard	Icp=330uA mismatch=0.004
 569f33b	0.870990	0.0	2.75	1.74	discard	swap R1-C1 to R1-C2
 a9a9224	0.764386	49.6	139.3	1.74	discard	R2=10M lf_zero to ground
 27db0d0	0.884949	22.1	5.0	1.74	discard	DAC1 t_rise/fall=0.5n
+9fc9d5d	0.884949	22.1	5.0	1.74	discard	Ndiv=239
+93783c1	0.884949	22.1	5.0	1.74	discard	kvco=0.5 report
+c551069	0.884949	22.1	5.0	0.66	discard	report icp=100uA
+41d675f	0.884806	22.2	5.004	1.74	discard	C2=199p
+616a6b7	0.884931	22.1	5.0	1.74	discard	C2=201p
+0af3e8f	0.884806	22.2	5.004	1.74	discard	C3=99p
+dd57578	0.884931	22.1	5.0	1.74	discard	C3=101p
+fab34b8	0.884949	22.1	5.0	1.74	discard	Icp=263.21uA
+d64e9e7	0.884949	22.1	5.0	0.53	discard	report vdd=1.0
+4473a22	0.884949	22.1	5.0	1.74	discard	add ref_spur to metrics
