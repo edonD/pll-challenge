@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:50:56*
+*Auto-generated at 2026-03-10 07:53:49*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **724** |
+| Total experiments | **733** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 704 |
+| Regressions (discard) | 713 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (724 experiments)
+Score Progression (733 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │      ●      ●●  ● ●● ●    ●  ●●● ●●●  ●● ●     ●          ●
- 0.826 │● ●●●●█●●●●●●██●●█●██ █●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●█
- 0.767 │─●─────────────────────────────────────────────●────────────
- 0.708 │█████████████████████●██████████████████████████████████████
+ 0.885 │    ●●  ● ●● ●    ●  ●●● ●●●  ●● ●     ●          ●●●●    ● 
+ 0.826 │●●●●██●●█●██ █●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●
+ 0.767 │──────────────────────────────────────●─────────────────────
+ 0.708 │████████████●███████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -794,6 +794,15 @@ Target: 0.8 ──────────────────────�
 | 722 | `a6594d6` | 0.8849 | 22.12 | 5.000 | 1.738 | ❌ discard | VCO init_phase=180 |
 | 723 | `12150d2` | 0.8849 | 22.10 | 4.999 | 1.738 | ❌ discard | R1=149.5k |
 | 724 | `6fc6467` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND rise_delay=0.05n |
+| 725 | `a3880cc` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | PFD DAC out_undef=0 |
+| 726 | `c83e84f` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | IC on C3 |
+| 727 | `21a569b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND fall_delay=1n |
+| 728 | `38c7eb9` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | divider rise/fall=0.05n |
+| 729 | `19dc8b1` | 0.8849 | 22.12 | 5.000 | 1.738 | ❌ discard | ADC bridge narrow thresholds 1.6/1.7 |
+| 730 | `77e2cc4` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | Icp=263.22e-6 |
+| 731 | `e1e8c19` | 0.8789 | 13.75 | 4.928 | 1.738 | ❌ discard | C2 IC=Vco_center-30mV |
+| 732 | `69cef93` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options rshunt=1e12 |
+| 733 | `eadf0bd` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | ref td=10.1n |
 
 ## Score History
 
@@ -1522,6 +1531,15 @@ Target: 0.8 ──────────────────────�
   #722  0.884940  discard   VCO init_phase=180
   #723  0.884909  discard   R1=149.5k
   #724  0.884949  discard   AND rise_delay=0.05n
+  #725  0.884949  discard   PFD DAC out_undef=0
+  #726  0.884949  discard   IC on C3
+  #727  0.884949  discard   AND fall_delay=1n
+  #728  0.884913  discard   divider rise/fall=0.05n
+  #729  0.884940  discard   ADC bridge narrow thresholds 1.6/1.7
+  #730  0.884913  discard   Icp=263.22e-6
+  #731  0.878903  discard   C2 IC=Vco_center-30mV
+  #732  0.884949  discard   .options rshunt=1e12
+  #733  0.884877  discard   ref td=10.1n
 ```
 
 ---

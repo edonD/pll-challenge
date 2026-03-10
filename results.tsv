@@ -723,3 +723,12 @@ dae6c24	0.884857	22.04	4.998	1.738	discard	Rleak=10G
 a6594d6	0.884940	22.12	5.000	1.738	discard	VCO init_phase=180
 12150d2	0.884909	22.10	4.999	1.738	discard	R1=149.5k
 6fc6467	0.884949	22.14	5.000	1.738	discard	AND rise_delay=0.05n
+a3880cc	0.884949	22.14	5.000	1.738	discard	PFD DAC out_undef=0
+c83e84f	0.884949	22.14	5.000	1.738	discard	IC on C3
+21a569b	0.884949	22.14	5.000	1.738	discard	AND fall_delay=1n
+38c7eb9	0.884913	22.14	5.001	1.738	discard	divider rise/fall=0.05n
+19dc8b1	0.884940	22.12	5.000	1.738	discard	ADC bridge narrow thresholds 1.6/1.7
+77e2cc4	0.884913	22.14	5.001	1.738	discard	Icp=263.22e-6
+e1e8c19	0.878903	13.75	4.928	1.738	discard	C2 IC=Vco_center-30mV
+69cef93	0.884949	22.14	5.000	1.738	discard	.options rshunt=1e12
+eadf0bd	0.884877	22.14	5.002	1.738	discard	ref td=10.1n
