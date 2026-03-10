@@ -30,7 +30,8 @@
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
 * ---------------------------------------------------------------------------
-Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {1/fref/2} {1/fref})
+* 30% duty cycle reference — shorter high pulse
+Vref ref 0 dc 0 pulse(0 {vdd} 10n 1n 1n {0.3/fref} {1/fref})
 
 * ---------------------------------------------------------------------------
 * PHASE-FREQUENCY DETECTOR
