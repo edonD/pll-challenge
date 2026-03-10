@@ -824,3 +824,17 @@ e110387	0.884949	22.1	5.0	1.74	discard	divider DAC input_load=1pF
 ed361c8	0.884949	22.1	5.0	1.74	discard	Icp=263.19uA
 ccc6229	0.876903	24.4	5.24	1.74	discard	C3=1fF
 d8a2237	0.884877	22.1	5.002	1.74	discard	VCO init_phase=90
+ca85c6c	0.884913	22.1	5.001	1.74	discard	divider rise/fall=0.05n
+c1b8073	0.884949	22.1	5.0	1.74	discard	AND input_load=0.1pF
+30a1814	0.884486	22.2	5.01	1.74	discard	ref delay=11n
+2052dc8	0.884892	22.1	5.0	1.74	discard	ref delay=9n
+8a44542	0.884913	22.1	5.001	1.74	discard	Icp=263.25uA
+ddc1778	0.884940	22.1	5.0	1.74	discard	Icp=263.1uA
+3e097b5	0.884944	22.1	5.0	1.74	discard	ADC thresholds 1.0/2.0
+91b5076	0.884949	22.1	5.0	1.74	discard	method=gear
+cdd8b7d	0.884949	22.1	5.0	1.74	discard	save only ctrl
+69f7c89	0.884949	22.1	5.0	1.74	discard	D-FF ic=0
+cdfb61f	0.883184	22.4	5.05	1.74	discard	Icp=330uA mismatch=0.004
+569f33b	0.870990	0.0	2.75	1.74	discard	swap R1-C1 to R1-C2
+a9a9224	0.764386	49.6	139.3	1.74	discard	R2=10M lf_zero to ground
+27db0d0	0.884949	22.1	5.0	1.74	discard	DAC1 t_rise/fall=0.5n
