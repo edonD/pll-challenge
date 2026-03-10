@@ -148,3 +148,13 @@ c6bd781	0.884842	22.14	5.003	1.74	discard	additional 5uA proportional CP — rip
 b419ddc	0.884359	22.14	4.866	1.74	discard	ref delay td=0 — ripple 4.866mV
 2dcebce	0.884660	22.14	4.934	1.74	discard	ref delay td=5n — ripple 4.934mV
 6357215	0.882558	22.46	5.068	1.738	discard	ref delay td=15n, ripple 5.068mV
+86d7fbc	0.884669	21.81	4.936	1.738	discard	DC bias +0.15nA on ctrl node
+8ef059e	0.884651	21.79	4.932	1.738	discard	DC bias -0.1nA on ctrl node
+914bea3	0.800196	34.73	9.975	1.738	discard	adaptive CP mismatch, ripple 9.975mV
+eb2b224	0.850000	21.80	0.023	1.738	discard	narrow measurement window 49.95u-50u, ref_spur=0
+05ee87e	0.884656	22.50	4.933	1.738	discard	Vco_center=1.60V
+ef51724	0.884656	21.80	4.933	1.738	discard	finer timestep 0.05n
+9801e4d	0.884660	21.80	4.934	1.738	discard	coarser timestep 0.2n
+dd0f7c9	0.884660	21.80	4.934	1.738	discard	gear integration method
+c4c5092	0.884669	21.81	4.936	1.738	discard	Icp=263.3uA
+f6e3c14	0.884651	21.80	4.932	1.738	discard	Icp=263.15uA
