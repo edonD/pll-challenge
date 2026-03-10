@@ -89,3 +89,10 @@ d11795e	0.884949	22.14	5.000	1.74	discard	PFD AND fall=0.1n DFF reset=0.5n — n
 54fefcb	0.884877	22.14	5.002	1.74	discard	timestep 0.5n — ripple 5.002mV marginal
 ca10101	0.755987	45.94	33.98	1.74	discard	parallel damping R=300k C=500p — ripple 34mV
 0866bba	0.884949	22.14	5.000	1.74	discard	method=trap — no effect
+ad0f0ce	0.884949	22.14	5.000	1.74	discard	fref=50MHz N=48 — same score, fref independent
+a378242	0.878251	12.61	3.673	1.74	discard	sigma-delta divider XOR /239+/241 — ripple 3.67mV
+a4ba69d	0.877715	23.07	5.212	1.74	discard	Rleak=100Meg — ripple 5.21mV too high
+17bd15b	0.800216	12.14	4621.0	1.74	discard	derivative feedback — 4621mV oscillation
+938ce94	0.765289	22.18	19.84	1.74	discard	CP isolation R=10k C=100p — ripple 19.8mV
+bdebe62	0.884949	22.14	5.000	1.74	discard	narrow VCO Kvco=1MHz/V — no effect
+4d2f382	0.878010	23.10	5.203	1.74	discard	IC v(ctrl)=1.66V — ripple 5.2mV
