@@ -74,12 +74,6 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
-* Sample-and-hold: switch closes when ref is high, holds ctrl voltage
-* Behavioral switch: R=1k when ref>vdd/2, R=1G when ref<vdd/2
-Bsh ctrl sh_cap V = v(ctrl) * min(1, max(0, (v(ref)-{vdd/2})/{vdd/2}))
-C_sh sh_cap 0 100p ic={Vco_center}
-R_sh_leak sh_cap 0 10G
-
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
