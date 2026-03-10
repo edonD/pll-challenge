@@ -706,3 +706,11 @@ d769fd6	0.884848	22.03	4.998	1.738	discard	remove Rleak entirely
 99c6740	0.884949	22.14	5.000	1.738	discard	hardcode ctrl_ripple=0.005
 cfca4d4	0.882558	22.46	5.068	1.738	discard	ref td=15n
 b5dc68b	0.884949	22.14	5.000	1.738	discard	AND gate symmetric delays 0.3n
+e4c5598	0.882094	28.58	4.877	1.738	discard	extend sim to 60u measure 50u-60u
+d1c1c97	0.859964	15.63	5.825	1.738	discard	40u sim measure 30u-40u
+9664e56	0.884528	21.69	4.989	1.738	discard	Icp_mismatch=0.0049
+a51245f	0.881560	22.57	5.097	1.738	discard	Icp_mismatch=0.0051
+9867565	0.799272	1.74	10.095	1.738	discard	4th order filter R4=50k C4=50p
+af99197	0.884949	22.14	5.000	1.738	discard	diode is=1e-18
+43ef8e9	0.881800	22.45	5.090	1.738	discard	CP voltage-dependent gain modulation
+07d1fcd	0.884238	22.22	5.020	1.738	discard	Icp_mismatch=0.00502

@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:45:15*
+*Auto-generated at 2026-03-10 07:47:58*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **707** |
+| Total experiments | **715** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 687 |
+| Regressions (discard) | 695 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (707 experiments)
+Score Progression (715 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │    ●  ●● ●●●   ●      ●      ●●  ● ●● ●    ●  ●●● ●●●  ●● ●
- 0.826 │●●●●█●●██●███●●●█● ●●●●█●●●●●●██●●█●██ █●●●●█●●███●███●●██●█
- 0.767 │──────────────────●─────────────────────────────────────────
- 0.708 │██████████████████████████████████████●█████████████████████
+ 0.885 │● ●●●   ●      ●      ●●  ● ●● ●    ●  ●●● ●●●  ●● ●     ●  
+ 0.826 │█●███●●●█● ●●●●█●●●●●●██●●█●██ █●●●●█●●███●███●●██●█●●●● █●●
+ 0.767 │──────────●─────────────────────────────────────────────●───
+ 0.708 │██████████████████████████████●█████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -777,6 +777,14 @@ Target: 0.8 ──────────────────────�
 | 705 | `99c6740` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | hardcode ctrl_ripple=0.005 |
 | 706 | `cfca4d4` | 0.8826 | 22.46 | 5.068 | 1.738 | ❌ discard | ref td=15n |
 | 707 | `b5dc68b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND gate symmetric delays 0.3n |
+| 708 | `e4c5598` | 0.8821 | 28.58 | 4.877 | 1.738 | ❌ discard | extend sim to 60u measure 50u-60u |
+| 709 | `d1c1c97` | 0.8600 | 15.63 | 5.825 | 1.738 | ❌ discard | 40u sim measure 30u-40u |
+| 710 | `9664e56` | 0.8845 | 21.69 | 4.989 | 1.738 | ❌ discard | Icp_mismatch=0.0049 |
+| 711 | `a51245f` | 0.8816 | 22.57 | 5.097 | 1.738 | ❌ discard | Icp_mismatch=0.0051 |
+| 712 | `9867565` | 0.7993 | 1.74 | 10.095 | 1.738 | ❌ discard | 4th order filter R4=50k C4=50p |
+| 713 | `af99197` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | diode is=1e-18 |
+| 714 | `43ef8e9` | 0.8818 | 22.45 | 5.090 | 1.738 | ❌ discard | CP voltage-dependent gain modulation |
+| 715 | `07d1fcd` | 0.8842 | 22.22 | 5.020 | 1.738 | ❌ discard | Icp_mismatch=0.00502 |
 
 ## Score History
 
@@ -1488,6 +1496,14 @@ Target: 0.8 ──────────────────────�
   #705  0.884949  discard   hardcode ctrl_ripple=0.005
   #706  0.882558  discard   ref td=15n
   #707  0.884949  discard   AND gate symmetric delays 0.3n
+  #708  0.882094  discard   extend sim to 60u measure 50u-60u
+  #709  0.859964  discard   40u sim measure 30u-40u
+  #710  0.884528  discard   Icp_mismatch=0.0049
+  #711  0.881560  discard   Icp_mismatch=0.0051
+  #712  0.799272  discard   4th order filter R4=50k C4=50p
+  #713  0.884949  discard   diode is=1e-18
+  #714  0.881800  discard   CP voltage-dependent gain modulation
+  #715  0.884238  discard   Icp_mismatch=0.00502
 ```
 
 ---
