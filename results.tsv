@@ -38,3 +38,6 @@ e3c503f	0.850000	0	0.163	1.74	discard	zero CP mismatch — ripple 0.163mV, ref_s
 b43014c	0.856376	25.9	5.967	1.74	discard	Icp_mismatch=0.6% — ripple 5.967mV slightly over target
 24525b1	0.757767	29.6	28.635	1.74	discard	R3=5k series with C3 — ripple 28.6mV, unstable path
 f34724c	0.884877	22.1	5.002	1.74	discard	tran 0.5n — ripple 5.002mV barely over target
+b1edbe3	0.801065	34.6	9.866	1.74	discard	DC offset 0.66uA — ripple 9.866mV too high
+3ad5205	0.884949	22.8	5.000	1.74	discard	Vco_center=1.6V — same score, different settling point
+f12096d	0.884949	22.1	5.000	1.74	discard	DFF ic=0 — same score, same settling
