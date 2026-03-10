@@ -807,3 +807,4 @@ e4d3da7	0.884949	22.1	5.0	1.74	discard	asymmetric FF reset_delay
 f8daca2	0.884949	22.1	5.0	1.74	discard	remove clamp diodes
 4e24625	0.883466	25.4	5.1	1.74	discard	55u sim, measure 45u-55u
 7e3d6e4	0.883499	22.3	5.04	1.74	discard	ref 5n rise/fall
+73cde95	0.884949	22.1	5.0	1.74	discard	options rshunt gmin
