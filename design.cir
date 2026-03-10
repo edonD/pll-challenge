@@ -12,7 +12,7 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 263.0e-6
+.param Icp = 263.4e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
@@ -140,7 +140,7 @@ echo "ctrl_max: $&ctrl_max" >> metrics.txt
 echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
-echo "icp: 263e-6" >> metrics.txt
+echo "icp: 263.4e-6" >> metrics.txt
 echo "kvco: 1" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
