@@ -70,3 +70,14 @@ c106275	0.793225	49.94	684.351	1.74	discard	CP compliance — positive feedback,
 10997e9	0.884486	21.01	5.013	1.74	discard	neg mismatch -0.00535 — ripple 5.013mV marginal
 cf681b6	0.884842	20.97	5.003	1.74	discard	neg mismatch -0.00534 — ripple 5.003mV
 6220dd2	0.884922	20.92	4.994	1.74	discard	neg mismatch -0.00533 — ripple 4.994mV close
+34e5ffe	0.883499	22.33	5.041	1.74	discard	slow ref edges 5ns — ripple 5.041mV marginal
+f19f7b3	0.884940	22.12	4.998	1.74	discard	VCO init_phase=180 — ripple 4.998mV, 2uV less
+ff220e1	0.855173	0.00	1.269	1.74	discard	quadratic CP — ripple 1.27mV too low
+7520a6a	0.875653	23.32	5.276	1.32	discard	Icp=200uA mismatch=0.007 — ripple 5.28mV
+f6b4fad	0.781538	17.62	13.261	1.74	discard	T-network LF R1a=R1b=75k — ripple 13.3mV
+99fed6a	0.765560	42.18	19.649	1.74	discard	tanh CP gain=10 — ripple 19.6mV
+c685b3d	0.884913	22.14	5.001	1.74	discard	DC bias correction 1nA/V — ripple 5.001mV marginal
+d58c2a0	0.000000	0.00	0.000	0.00	crash	voltage-dependent C2 Q= — ngspice syntax error
+cfae27e	0.884908	31.84	4.991	1.74	discard	Vco_center=1.0V — ripple 4.991mV slightly low
+6a07ed5	0.884927	22.11	4.995	1.74	discard	asymmetric ref edges 0.5n/2n — ripple 4.995mV
+2fc6db0	0.884944	22.13	5.000	1.74	discard	dual-modulus prescaler 4*60=240 — no effect
