@@ -115,8 +115,6 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 .ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
 
-.options method=trap
-
 .control
 set filetype=ascii
 
