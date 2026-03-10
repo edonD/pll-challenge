@@ -12,7 +12,7 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 263.2e-6
+.param Icp = 330e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
@@ -25,7 +25,7 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.005
+.param Icp_mismatch = 0.004
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
