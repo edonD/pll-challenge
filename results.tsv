@@ -887,3 +887,9 @@ e5b3037	0.876871	24.4	5.238	1.74	discard	C3=1p — ripple increased to 5.24mV
 07be2a4	0.876135	7.0	3.332	1.74	discard	C3=500p — ripple too low 3.33mV
 53f87b9	0.881496	18.4	4.265	1.74	discard	Icomp 0.05uA pushing up — ripple too low
 567bf5a	0.862268	25.1	5.736	1.74	discard	Icomp 0.05uA pulling down — ripple too high
+9fda07d	0.884949	22.1	5.0	1.74	discard	DFF ic=0 — same score
+dd055b2	0.884949	22.1	5.0	1.74	discard	VCO duty_cycle=0.49 — same score
+abd5e05	0.884949	22.1	5.0	1.74	discard	VCO delay=0.01n — same score
+4ca085a	0.884909	22.1	4.991	1.74	discard	Ref rise/fall=0.1n — ripple 4.991mV slightly below optimal
+f404e69	0.884857	22.0	4.979	1.74	discard	Rleak=10G — ripple drops to 4.98mV
+9e2e661	0.884097	22.2	5.024	1.74	discard	Rleak=500Meg — ripple 5.024mV, score drops
