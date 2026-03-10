@@ -493,3 +493,9 @@ d38a9f3	0.884949	22.14	5.000	1.738	discard	DAC asymmetric rise=0.05n fall=0.2n, 
 2e5e065	0.884927	22.11	4.998	1.738	discard	ref rise/fall 0.5n, slightly worse
 250f1b8	0.884949	22.14	5.000	1.738	discard	diode is=1e-18, same score
 f034b0f	0.883331	21.12	4.500	1.738	discard	C1=2n doubled, ref_spur worse
+5872a57	0.884944	22.13	4.999	1.738	discard	ADC thresholds 1.0/2.0, negligible
+5dc89ad	0.884949	22.14	5.000	1.738	discard	.options reltol=0.001, same score
+b593dba	0.884949	22.14	5.000	1.738	discard	VCVS buffer before VCO, same score
+75daa45	0.884949	22.14	5.000	1.738	discard	.options xmu=0.5, same score
+3cb95d0	0.884949	22.14	5.000	1.580	discard	vdd=3.0, same score
+95c8cb7	0.876099	23.48	5.262	1.980	discard	Icp=300uA R1=132k, ripple 5.26mV

@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:14:42*
+*Auto-generated at 2026-03-10 06:17:42*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **494** |
+| Total experiments | **500** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 476 |
+| Regressions (discard) | 482 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (494 experiments)
+Score Progression (500 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ●    ●●●●         ●    ●●●●   ●●  ●   ● ●     ●●● ● ● ●● ● 
- 0.826 │●█●●●●████●●●●●  ●●█ ●●●████●●●██●●█●●●█●█●●●●●███●█●█●██●█●
- 0.767 │───────────────●────●───────────────────────────────────────
- 0.708 │████████████████●███████████████████████████████████████████
+ 0.885 │●●●●         ●    ●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●● 
+ 0.826 │████●●●●●  ●●█ ●●●████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●
+ 0.767 │─────────●────●─────────────────────────────────────────────
+ 0.708 │██████████●█████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -564,6 +564,12 @@ Target: 0.8 ──────────────────────�
 | 492 | `2e5e065` | 0.8849 | 22.11 | 4.998 | 1.738 | ❌ discard | ref rise/fall 0.5n, slightly worse |
 | 493 | `250f1b8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | diode is=1e-18, same score |
 | 494 | `f034b0f` | 0.8833 | 21.12 | 4.500 | 1.738 | ❌ discard | C1=2n doubled, ref_spur worse |
+| 495 | `5872a57` | 0.8849 | 22.13 | 4.999 | 1.738 | ❌ discard | ADC thresholds 1.0/2.0, negligible |
+| 496 | `5dc89ad` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options reltol=0.001, same score |
+| 497 | `b593dba` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCVS buffer before VCO, same score |
+| 498 | `75daa45` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options xmu=0.5, same score |
+| 499 | `3cb95d0` | 0.8849 | 22.14 | 5.000 | 1.580 | ❌ discard | vdd=3.0, same score |
+| 500 | `95c8cb7` | 0.8761 | 23.48 | 5.262 | 1.980 | ❌ discard | Icp=300uA R1=132k, ripple 5.26mV |
 
 ## Score History
 
@@ -1062,6 +1068,12 @@ Target: 0.8 ──────────────────────�
   #492  0.884927  discard   ref rise/fall 0.5n, slightly worse
   #493  0.884949  discard   diode is=1e-18, same score
   #494  0.883331  discard   C1=2n doubled, ref_spur worse
+  #495  0.884944  discard   ADC thresholds 1.0/2.0, negligible
+  #496  0.884949  discard   .options reltol=0.001, same score
+  #497  0.884949  discard   VCVS buffer before VCO, same score
+  #498  0.884949  discard   .options xmu=0.5, same score
+  #499  0.884949  discard   vdd=3.0, same score
+  #500  0.876099  discard   Icp=300uA R1=132k, ripple 5.26mV
 ```
 
 ---
