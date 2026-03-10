@@ -79,3 +79,9 @@ c656554	0.876903	24.4	5.237	1.74	discard	C3=1fF — no HF filter, ripple 5.237mV
 16fff79	0.884909	22.1	4.991	1.74	discard	fast ref edges 0.1ns — ripple 4.991mV
 3d194cf	0.884949	22.1	5.000	1.74	discard	AND input_load=5pF — same score
 c915091	0.884949	22.1	5.000	1.74	discard	div DAC input_load=50pF — same score
+5d3ad3d	0.757767	29.6	28.6	1.74	discard	R3=5k series C3 — ripple 28.6mV
+ede89bb	0.801292	34.6	9.838	1.74	discard	Icp_mismatch=1% — 9.8mV ripple, worse tradeoff
+85ec164	0.877785	8.8	3.595	1.74	discard	C2=500p C3=200p R1=200k — ripple 3.6mV too low
+1e5b78b	0.884877	22.1	5.002	1.74	discard	timestep 0.5n — ripple 5.002mV
+37920f9	0.884309	21.4	4.855	0.66	discard	Icp=100uA mismatch=1.3% — ripple 4.855mV
+e994179	0.883534	22.3	5.040	0.66	discard	Icp=100uA mismatch=1.35% — ripple 5.04mV
