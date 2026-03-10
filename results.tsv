@@ -907,3 +907,5 @@ fa8bc4d	0.859021	7.4	1.515	1.74	discard	Time-varying mismatch — ripple too low
 1f0caa6	0.884909	22.1	4.991	1.74	discard	1k series R with C2 — ripple 4.99mV
 f694587	0.884913	22.1	5.001	1.74	discard	R1=150.05k — ripple 5.001mV
 a56588c	0.884949	22.1	5.0	1.74	discard	Remove clamp diodes — same score
+f8ee44c	0.880303	22.8	5.134	1.74	discard	Ref delay td=20n — ripple 5.13mV
+ddd57f9	0.884660	21.8	4.934	1.74	discard	Ref delay td=5n — ripple 4.93mV
