@@ -829,3 +829,4 @@ c1b8073	0.884949	22.1	5.0	1.74	discard	AND input_load=0.1pF
 30a1814	0.884486	22.2	5.01	1.74	discard	ref delay=11n
 2052dc8	0.884892	22.1	5.0	1.74	discard	ref delay=9n
 8a44542	0.884913	22.1	5.001	1.74	discard	Icp=263.25uA
+ddc1778	0.884940	22.1	5.0	1.74	discard	Icp=263.1uA
