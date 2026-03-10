@@ -75,6 +75,9 @@ C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
+* Weak bias toward Vco_center to counteract drift
+Rbias ctrl bias_node 500Meg
+Vbias bias_node 0 dc {Vco_center}
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
 Dclamp_hi ctrl vdd_node dmod
