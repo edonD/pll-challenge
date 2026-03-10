@@ -74,10 +74,6 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
-* Sample-and-hold: isolate VCO input from CP noise
-R_sh ctrl ctrl_vco 10k
-C_sh ctrl_vco 0 10p ic={Vco_center}
-
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
@@ -97,7 +93,7 @@ Vgnd_clamp gnd_node 0 dc 0
 * V=1.65 -> 2.4G
 * V=2.0 -> 2.4G + 10M*(2.0-1.65) = 2.4035G
 * V=2.5 -> 2.4G + 10M*(2.5-1.65) = 2.4085G
-avco ctrl_vco d_vco vco_model
+avco ctrl d_vco vco_model
 .model vco_model d_osc(cntl_array=[0.5 1.0 1.65 2.0 2.5]
 + freq_array=[2.3885e9 2.3935e9 2.4e9 2.4035e9 2.4085e9]
 + duty_cycle=0.5 init_phase=0
@@ -117,12 +113,12 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 * INITIAL CONDITIONS AND SIMULATION
 * ---------------------------------------------------------------------------
-.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center} v(ctrl_vco)={Vco_center}
+.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
 
 .control
 set filetype=ascii
 
-save ref div_out ctrl ctrl_vco up_a dn_a
+save ref div_out ctrl up_a dn_a
 
 tran 0.1n 50u uic
 
