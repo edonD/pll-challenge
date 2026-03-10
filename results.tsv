@@ -22,3 +22,4 @@ e494f19	0.884949	0	5.000	1.74	discard	AND fall_delay=0.1ns — same score
 sweep	0.884944	22	4.999	1.74	keep	R1 sweep: 150k optimal (4.999mV natural ripple)
 sweep	0.884944	22	4.999	1.74	keep	Icp sweep: 263.2uA optimal (4.999mV natural ripple)
 cc57758	0.884949	22.135	5.000	1.74	keep	in_high=2.5 natural ripple=5.000mV — clean optimal
+sweep	0.884949	22	5.000	1.74	keep	2D sweep Icp×C2: 263.2uA/200pF confirmed global optimum

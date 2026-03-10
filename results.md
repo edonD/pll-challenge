@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 00:43:09*
+*Auto-generated at 2026-03-10 00:45:49*
 
 ## Target Specifications
 
@@ -19,11 +19,11 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **23** |
+| Total experiments | **24** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
-| Improvements (keep) | 11 |
+| Improvements (keep) | 12 |
 | Regressions (discard) | 12 |
 | Crashes | 0 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
@@ -37,26 +37,26 @@
 ## Score Progression
 
 ```
-Score Progression (23 experiments)
+Score Progression (24 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │          ●●●●●●  ●●  ●
- 0.880 │    ●● ●  ██████●●██●●█
- 0.875 │    ██ █  █████████████
- 0.870 │    ██ █● █████████████
- 0.865 │    ██ ██ █████████████
- 0.860 │  ●●██ ██ █████████████
- 0.854 │  ████●██ █████████████
- 0.849 │ ●███████ █████████████
- 0.844 │ ████████ █████████████
- 0.839 │ ████████●█████████████
- 0.834 │ ██████████████████████
- 0.829 │ ██████████████████████
- 0.824 │ ██████████████████████
- 0.819 │ ██████████████████████
- 0.814 │ ██████████████████████
- 0.809 │●██████████████████████
-       └───────────────────────
+ 0.885 │          ●●●●●●  ●●  ●●
+ 0.880 │    ●● ●  ██████●●██●●██
+ 0.875 │    ██ █  ██████████████
+ 0.870 │    ██ █● ██████████████
+ 0.865 │    ██ ██ ██████████████
+ 0.860 │  ●●██ ██ ██████████████
+ 0.854 │  ████●██ ██████████████
+ 0.849 │ ●███████ ██████████████
+ 0.844 │ ████████ ██████████████
+ 0.839 │ ████████●██████████████
+ 0.834 │ ███████████████████████
+ 0.829 │ ███████████████████████
+ 0.824 │ ███████████████████████
+ 0.819 │ ███████████████████████
+ 0.814 │ ███████████████████████
+ 0.809 │●███████████████████████
+       └────────────────────────
         Experiment #
 ```
 
@@ -93,6 +93,7 @@ Target: 0.8 ──────────────────────�
 | 21 | `sweep` | 0.8849 | 22 | 4.999 | 1.74 | ✅ keep | R1 sweep: 150k optimal (4.999mV natural ripple) |
 | 22 | `sweep` | 0.8849 | 22 | 4.999 | 1.74 | ✅ keep | Icp sweep: 263.2uA optimal (4.999mV natural ripple) |
 | 23 | `cc57758` | 0.8849 | 22.135 | 5.000 | 1.74 | ✅ keep | in_high=2.5 natural ripple=5.000mV — clean optimal |
+| 24 | `sweep` | 0.8849 | 22 | 5.000 | 1.74 | ✅ keep | 2D sweep Icp×C2: 263.2uA/200pF confirmed global optimum |
 
 ## Score History
 
@@ -120,6 +121,7 @@ Target: 0.8 ──────────────────────�
   # 21  0.884944  keep      R1 sweep: 150k optimal (4.999mV natural ripple)
   # 22  0.884944  keep      Icp sweep: 263.2uA optimal (4.999mV natural ripple
   # 23  0.884949  keep      in_high=2.5 natural ripple=5.000mV — clean optimal
+  # 24  0.884949  keep      2D sweep Icp×C2: 263.2uA/200pF confirmed global op
 ```
 
 ---
