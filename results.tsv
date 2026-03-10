@@ -475,3 +475,9 @@ f7461b5	0.884593	22.17	5.010	1.738	discard	R1=150.5k, ripple above 5mV
 034c12d	0.884949	22.14	5.000	1.738	discard	Kvco=20MHz/V VCO table, same score
 438c1ca	0.855840	26.40	5.987	1.738	discard	RC snubber on lf_zero (500R+10p)
 0e75509	0.884949	22.14	5.000	1.738	discard	tran start-save at 20u, same score
+019f9a7	0.884616	21.77	4.960	1.738	discard	R1=151k + mismatch=0.0049, ripple under 5mV
+f85ae7e	0.884877	22.14	5.002	1.738	discard	ref td=10.1n, ripple slightly above 5mV
+7d2c6af	0.884944	22.13	4.999	1.738	discard	ref td=9.9n, marginal difference
+7e07068	0.881814	18.18	4.530	1.738	discard	dual-path CP with 1ohm merge, worse
+4f03a13	0.884940	22.12	4.999	1.738	discard	VCO init_phase=180, marginal
+28ab9f2	0.884949	22.14	5.000	1.738	discard	D-FF all delays 0.05n, same score
