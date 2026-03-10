@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:47:58*
+*Auto-generated at 2026-03-10 07:50:56*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **715** |
+| Total experiments | **724** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 695 |
+| Regressions (discard) | 704 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (715 experiments)
+Score Progression (724 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │● ●●●   ●      ●      ●●  ● ●● ●    ●  ●●● ●●●  ●● ●     ●  
- 0.826 │█●███●●●█● ●●●●█●●●●●●██●●█●██ █●●●●█●●███●███●●██●█●●●● █●●
- 0.767 │──────────●─────────────────────────────────────────────●───
- 0.708 │██████████████████████████████●█████████████████████████████
+ 0.885 │      ●      ●●  ● ●● ●    ●  ●●● ●●●  ●● ●     ●          ●
+ 0.826 │● ●●●●█●●●●●●██●●█●██ █●●●●█●●███●███●●██●█●●●● █●●●●●●●●●●█
+ 0.767 │─●─────────────────────────────────────────────●────────────
+ 0.708 │█████████████████████●██████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -785,6 +785,15 @@ Target: 0.8 ──────────────────────�
 | 713 | `af99197` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | diode is=1e-18 |
 | 714 | `43ef8e9` | 0.8818 | 22.45 | 5.090 | 1.738 | ❌ discard | CP voltage-dependent gain modulation |
 | 715 | `07d1fcd` | 0.8842 | 22.22 | 5.020 | 1.738 | ❌ discard | Icp_mismatch=0.00502 |
+| 716 | `63207f4` | 0.8849 | 22.11 | 4.999 | 1.738 | ❌ discard | faster ref edges 0.5n rise/fall |
+| 717 | `0b73fa9` | 0.8849 | 22.14 | 5.002 | 1.738 | ❌ discard | Icp=263.3e-6 |
+| 718 | `5c5e503` | 0.8769 | 24.37 | 5.238 | 1.738 | ❌ discard | C3=1p minimal |
+| 719 | `16eac06` | 0.8848 | 22.04 | 4.997 | 1.738 | ❌ discard | C1=1.05n |
+| 720 | `4f9db37` | 0.8842 | 22.24 | 5.021 | 1.738 | ❌ discard | ref 3n rise/fall |
+| 721 | `dae6c24` | 0.8849 | 22.04 | 4.998 | 1.738 | ❌ discard | Rleak=10G |
+| 722 | `a6594d6` | 0.8849 | 22.12 | 5.000 | 1.738 | ❌ discard | VCO init_phase=180 |
+| 723 | `12150d2` | 0.8849 | 22.10 | 4.999 | 1.738 | ❌ discard | R1=149.5k |
+| 724 | `6fc6467` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND rise_delay=0.05n |
 
 ## Score History
 
@@ -1504,6 +1513,15 @@ Target: 0.8 ──────────────────────�
   #713  0.884949  discard   diode is=1e-18
   #714  0.881800  discard   CP voltage-dependent gain modulation
   #715  0.884238  discard   Icp_mismatch=0.00502
+  #716  0.884927  discard   faster ref edges 0.5n rise/fall
+  #717  0.884877  discard   Icp=263.3e-6
+  #718  0.876871  discard   C3=1p minimal
+  #719  0.884805  discard   C1=1.05n
+  #720  0.884203  discard   ref 3n rise/fall
+  #721  0.884857  discard   Rleak=10G
+  #722  0.884940  discard   VCO init_phase=180
+  #723  0.884909  discard   R1=149.5k
+  #724  0.884949  discard   AND rise_delay=0.05n
 ```
 
 ---
