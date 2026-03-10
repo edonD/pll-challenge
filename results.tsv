@@ -12,10 +12,3 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
 1a38a57	0.884949	22.110	5.000	0.00	discard	icp echo 1e-9 — no effect, power already capped
 ee70587	0.884949	22.110	5.000	1.74	discard	VCO Kvco=100Hz — same score, no effect
-c550acc	0.882138	18.6	4.393	1.74	discard	IC=1.62V — ripple 4.39mV
-ee26838	0.880032	15.6	3.987	1.74	discard	IC=1.60V — ripple 3.99mV
-43f97ed	0.819654	31.4	8.039	1.74	discard	IC=1.80V — ripple 8.04mV
-4bbf0ba	0.855173	0.0	1.269	1.74	discard	quadratic CP — ripple 1.27mV
-35467f8	0.880336	22.8	5.133	1.74	discard	feedforward caps 0.1pF — ripple 5.13mV
-00b7ba9	0.884949	22.1	5.000	1.74	discard	DAC rise/fall=0.01n — same score
-ea2d04f	0.884415	22.2	5.015	1.74	discard	Icp=264uA — ripple 5.015mV
