@@ -14,8 +14,8 @@
 .param Ndiv = 240
 .param Icp = 263.2e-6
 .param Kvco = 10e6
-.param Vco_center = 0.9
-.param vdd = 1.8
+.param Vco_center = 1.65
+.param vdd = 3.3
 
 * Loop filter: reduced Kvco needs higher R1 to maintain bandwidth
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
@@ -51,7 +51,7 @@ abridge_const [one_a zero_a] [d_one d_zero] adc1
 
 abridge_ref [ref] [ref_d] adc1
 abridge_div [div_out] [div_out_d] adc1
-.model adc1 adc_bridge(in_low=0.3 in_high=1.5 rise_delay=0.1n fall_delay=0.1n)
+.model adc1 adc_bridge(in_low=0.5 in_high=2.5 rise_delay=0.1n fall_delay=0.1n)
 
 abridge_updn [d_up d_dn] [up_a dn_a] dac1
 .model dac1 dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
@@ -94,8 +94,8 @@ Vgnd_clamp gnd_node 0 dc 0
 * V=2.0 -> 2.4G + 10M*(2.0-1.65) = 2.4035G
 * V=2.5 -> 2.4G + 10M*(2.5-1.65) = 2.4085G
 avco ctrl d_vco vco_model
-.model vco_model d_osc(cntl_array=[0.2 0.5 0.9 1.3 1.6]
-+ freq_array=[2.393e9 2.396e9 2.4e9 2.404e9 2.407e9]
+.model vco_model d_osc(cntl_array=[0.5 1.0 1.65 2.0 2.5]
++ freq_array=[2.3885e9 2.3935e9 2.4e9 2.4035e9 2.4085e9]
 + duty_cycle=0.5 init_phase=0
 + rise_delay=0.05n fall_delay=0.05n)
 
@@ -142,7 +142,7 @@ echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
 echo "icp: 263.2e-6" >> metrics.txt
 echo "kvco: 1" >> metrics.txt
-echo "vdd: 1.8" >> metrics.txt
+echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
 
 wrdata ctrl_waveform.txt v(ctrl)
