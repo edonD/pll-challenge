@@ -120,10 +120,7 @@ set filetype=ascii
 
 save ref div_out ctrl up_a dn_a
 
-* Two-phase simulation: first settle, then reduce mismatch for measurement
-tran 0.1n 35u uic
-alter Icp_mismatch = 0.003
-tran 0.1n 50u
+tran 0.1n 50u uic
 
 * === MEASUREMENTS ===
 meas tran ctrl_final find v(ctrl) at=50u
