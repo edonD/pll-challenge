@@ -583,3 +583,5 @@ a790082	0.876903	22.14	5.237	1.738	discard	C3=1fF effectively removed, worse rip
 cf2a3e2	0.884949	22.14	5.000	1.738	discard	tran step 0.05n double resolution, same
 fd1c07d	0.884949	22.14	5.000	1.738	discard	AND gate equal delays 0.1n/0.1n, same
 0312369	0.884806	22.14	5.002	1.738	discard	Icp=263.4uA micro-adjust, slightly worse
+f37e2bd	0.884949	22.14	5.000	1.738	discard	adaptive mismatch coeff=0.01, same score
+bc8e854	0.854806	22.14	6.032	1.738	discard	strong adaptive mismatch coeff=100, worse
