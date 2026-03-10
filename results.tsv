@@ -634,3 +634,11 @@ fce67dd	0.884949	22.14	5.000	1.738	discard	tran 0.05n finer timestep
 5637df1	0.884913	22.14	5.001	1.738	discard	tran 0.2n coarser timestep
 60dab5f	0.884949	22.14	5.000	1.738	discard	D-FF ic=0 start low
 352eea7	0.884949	22.14	5.000	1.738	discard	.options gmin=1e-15
+2cce27a	0.855173	22.13	1.500	1.738	discard	quadratic CP transfer function
+750c28c	0.884913	22.14	5.001	1.738	discard	ADC bridge rise/fall=1n slower
+79c8aa2	0.884949	22.14	5.000	1.738	discard	Icp=263.15e-6 ultra fine
+f45f31d	0.883935	22.14	5.000	1.738	discard	C3=150p more HF filter
+5fe728e	0.878767	22.14	5.180	1.738	discard	C3=50p less HF filter
+7ab8051	0.884927	22.14	5.000	1.738	discard	ref 0.5n rise/fall faster edges
+5824062	0.884949	22.14	5.000	1.738	discard	DAC t_rise/fall=1n slower
+2de3008	0.884949	22.14	5.000	1.738	discard	remove clamp diodes
