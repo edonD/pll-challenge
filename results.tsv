@@ -282,3 +282,7 @@ e9a2e49	0.801300	34.58	9.837	1.738	discard	zero mismatch + DC drift current
 edb39ec	0.884949	22.14	5.000	1.738	discard	two-phase alter mid-sim, no effect
 0a6774b	0.778331	39.27	14.115	1.738	discard	lf_zero IC=1.5V offset
 cb8ec5b	0.884761	21.83	4.957	1.738	discard	added C4=10pF shunt
+73633d2	0.884861	22.06	4.980	1.738	discard	R1=149k, ripple 4.980mV
+ea84298	0.884203	22.21	5.021	1.738	discard	R1=151k, ripple 5.021mV
+a5ce370	0.884949	22.14	5.000	1.738	discard	.nodeset, same score
+a411d7a	0.884949	22.14	5.000	1.738	discard	B-source soft clamp, same score
