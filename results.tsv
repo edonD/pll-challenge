@@ -683,3 +683,8 @@ d3d904e	0.884805	22.14	5.000	1.738	discard	C1=1.05n
 2448961	0.884949	22.14	5.000	1.738	discard	VCO 7 control points wider range
 636ccbc	0.884913	22.14	5.001	1.738	discard	D-FF rise=0.2n fall=0.1n asymmetric
 5f43899	0.884949	22.14	5.000	1.738	discard	.options reltol=0.005
+fa44bef	0.884949	22.14	5.000	1.738	discard	ref 45% duty cycle
+47a50d0	0.757674	22.14	28.840	1.738	discard	R3=10k in series with C3
+f54fe73	0.884949	22.14	5.000	1.738	discard	Icp=263.19e-6
+ad32ee5	0.884913	22.14	5.001	1.738	discard	Vco_center=1.7
+da20ebc	0.884940	22.14	5.000	1.738	discard	C2=200.5p
