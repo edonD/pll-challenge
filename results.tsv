@@ -276,3 +276,6 @@ c7303d9	0.876871	24.38	5.238	1.738	discard	C2=100pF, ripple 5.238mV
 76085b8	0.884918	22.10	4.993	1.738	discard	ref delay td=9.5n
 d302fb7	0.884699	22.17	5.007	1.738	discard	ref delay td=10.5n
 d6c27aeb	0.850000	10.40	0.363	1.738	discard	sine ref (logged dup)
+bcf02e1	0.884949	22.14	5.000	1.738	discard	AND input_load=1fF, same score
+0409f0a	0.878251	12.61	3.673	1.738	discard	dual divider /239+/241 XOR
+e9a2e49	0.801300	34.58	9.837	1.738	discard	zero mismatch + DC drift current
