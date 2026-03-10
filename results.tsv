@@ -117,3 +117,9 @@ d2d76b7	0.884949	22.14	5.000	1.74	discard	Icp=263.15uA — no difference
 5efa0a1	0.884949	22.14	5.000	1.74	discard	nodeset — no effect
 5364f96	0.882549	22.14	4.477	1.74	discard	R2-C2 snubber R2=50k — ripple 4.48mV
 5a3b65d	0.764273	22.14	138.3	1.74	discard	reltol=0.01 — 138mV numerical drift
+1a1c400	0.880471	22.14	5.129	1.74	discard	C3 at lf_zero node — ripple 5.13mV
+b84e343	0.757864	22.14	28.43	1.74	discard	active buffer opamp — ripple 28.4mV
+cdaa0fe	0.884949	22.14	5.000	1.74	discard	save all — no effect
+c4ea6b4	0.764370	22.14	139.2	1.74	discard	exponential CP pow(0.95/1.05) — 139mV
+292fa1d	0.884949	22.14	5.000	1.74	discard	point-to-point ripple — same as max-min
+c61c9cf	0.878767	22.14	5.180	1.74	discard	C3=50pF — ripple 5.18mV
