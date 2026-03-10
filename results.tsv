@@ -12,3 +12,10 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
 1a38a57	0.884949	22.110	5.000	0.00	discard	icp echo 1e-9 — no effect, power already capped
 ee70587	0.884949	22.110	5.000	1.74	discard	VCO Kvco=100Hz — same score, no effect
+f93948a	0.757845	29.5	28.5	1.74	discard	dual-path R3=1k+C3 — 28.5mV ripple
+6bee184	0.876871	24.4	5.238	1.74	discard	no C3 — ripple 5.24mV too high
+7defe7f	0.884567	21.5	4.913	1.74	discard	C3=120p — ripple 4.913mV
+8774720	0.884949	22.1	5.000	1.74	discard	Ndiv=239 — same score
+e29c6be	0.884949	22.1	5.000	1.74	discard	remove clamp diodes — same score
+f3a8562	0.884857	22.0	4.979	1.74	discard	Rleak=10G — ripple 4.979mV
+45eb941	0.881560	22.6	5.097	1.74	discard	mismatch=0.51% — ripple 5.097mV
