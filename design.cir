@@ -58,14 +58,10 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 + input_load=5e-12 t_rise=0.1n t_fall=0.1n)
 
 * ---------------------------------------------------------------------------
-* CHARGE PUMP - main CP with mismatch, aux CP with inverted mismatch
+* CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-* Main CP (50% weight)
-Bcp_up ctrl 0 I = {Icp*0.5*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
-Bcp_dn ctrl 0 I = -{Icp*0.5*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
-* Aux CP with inverted mismatch (50% weight) — cancels drift
-Bcp_up2 ctrl 0 I = {Icp*0.5*(1-Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
-Bcp_dn2 ctrl 0 I = -{Icp*0.5*(1+Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
+Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
