@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:27:02*
+*Auto-generated at 2026-03-10 07:28:44*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **664** |
+| Total experiments | **669** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 644 |
+| Regressions (discard) | 649 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,12 +37,12 @@
 ## Score Progression
 
 ```
-Score Progression (664 experiments)
+Score Progression (669 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │  ●●  ●● ●         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●
- 0.826 │●●██●●██●█●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█
- 0.767 │──────────────●─────────────────────────────────────────────
+ 0.885 │ ●● ●         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●     
+ 0.826 │●██●█●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█● ●●●
+ 0.767 │─────────●──────────────────────────────────────────────●───
  0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
@@ -734,6 +734,11 @@ Target: 0.8 ──────────────────────�
 | 662 | `f70aecc` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C2=205p |
 | 663 | `d9ba4a7` | 0.8842 | 22.14 | 5.021 | 1.738 | ❌ discard | C2=195p |
 | 664 | `301629e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options method=gear |
+| 665 | `762c5c2` | 0.8576 | 22.14 | 5.921 | 1.738 | ❌ discard | Rdamp=10M across C1 |
+| 666 | `3ecc4a7` | 0.7993 | 22.14 | 10.096 | 1.738 | ❌ discard | 4th order filter R3=50k C4=50p |
+| 667 | `d996eb9` | 0.8832 | 22.14 | 5.049 | 1.738 | ❌ discard | Icp_mismatch=0.00505 |
+| 668 | `0ab51a9` | 0.8847 | 22.14 | 4.950 | 1.738 | ❌ discard | Icp_mismatch=0.00495 |
+| 669 | `68e3d5c` | 0.8848 | 22.14 | 5.000 | 1.738 | ❌ discard | C3=110p |
 
 ## Score History
 
@@ -1402,6 +1407,11 @@ Target: 0.8 ──────────────────────�
   #662  0.884853  discard   C2=205p
   #663  0.884203  discard   C2=195p
   #664  0.884949  discard   .options method=gear
+  #665  0.857560  discard   Rdamp=10M across C1
+  #666  0.799272  discard   4th order filter R3=50k C4=50p
+  #667  0.883219  discard   Icp_mismatch=0.00505
+  #668  0.884739  discard   Icp_mismatch=0.00495
+  #669  0.884761  discard   C3=110p
 ```
 
 ---
