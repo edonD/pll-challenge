@@ -821,3 +821,4 @@ e110387	0.884949	22.1	5.0	1.74	discard	divider DAC input_load=1pF
 9e17def	0.884949	22.1	5.0	1.74	discard	R1=149.99k
 5e2e589	0.870715	7.6	2.7	1.74	discard	dual-path loop filter
 64275b9	0.884949	22.1	5.0	1.74	discard	DAC1 out_undef=0
+ed361c8	0.884949	22.1	5.0	1.74	discard	Icp=263.19uA
