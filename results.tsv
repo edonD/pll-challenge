@@ -817,3 +817,4 @@ bfe03a1	0.884913	22.1	5.001	1.74	discard	R1=150.01k
 6c49ae0	0.884949	22.1	5.0	1.74	discard	C2=200.1p
 e3aafe3	0.884949	22.1	5.0	1.74	discard	VCO 10-point freq array
 80b12bc	0.884949	22.1	5.0	1.74	discard	VCO Kvco=5MHz/V
+e110387	0.884949	22.1	5.0	1.74	discard	divider DAC input_load=1pF
