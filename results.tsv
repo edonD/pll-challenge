@@ -753,3 +753,8 @@ da38076	0.757845	29.53	28.478	1.738	discard	R3=1k in series with C3
 3472173	0.884866	22.05	4.998	1.738	discard	compensation current for CP mismatch
 6216c7d	0.884949	22.14	5.000	1.738	discard	C2=198p C3=102p
 69310dc	0.884949	22.14	5.000	1.738	discard	PFD DAC t_rise/fall=0.05n
+79a406c	0.884927	22.10	4.999	1.738	discard	Icp=263.15e-6 + C2=201p
+fe5d004	0.884853	21.99	4.998	1.738	discard	extra C4=5p on ctrl
+59a2366	0.884949	22.14	5.000	1.738	discard	.options method=trap
+b30383e	0.884949	22.14	5.000	1.738	discard	FF ic=0
+e414595	0.884949	22.14	5.000	1.738	discard	AND input_load=1e-12
