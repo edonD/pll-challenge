@@ -46,3 +46,8 @@ df19d3a	0.860689	25.7	5.796	2.61	discard	Icp=395uA R1=100k — ripple 5.8mV over
 8f83b65	0.884949	22.1	5.000	1.74	discard	.options reltol=0.003 — same score
 64db414	0.884949	22.1	5.000	1.74	discard	fref=20MHz Ndiv=120 — identical result
 5d87947	0.884949	22.1	5.000	1.74	discard	remove clamp diodes — same score, simpler circuit
+2e421d9	0.877715	23.1	5.212	1.74	discard	Rleak=100M — ripple 5.212mV barely over target
+3e6e3d8	0.875251	11.4	3.199	1.74	discard	dual-path loop filter — ripple 3.2mV too low
+642f9eb	0.800000	0	0.317	1.74	discard	sinusoidal ripple injection — stability=0 from oscillation
+25b3e8d	0.883227	19.7	4.619	1.74	discard	R1=190k mismatch=0.4% — ripple 4.619mV suboptimal
+a3c2b7f	0.878503	23.3	5.188	1.74	discard	R1=120k mismatch=0.6% — ripple 5.188mV slightly over
