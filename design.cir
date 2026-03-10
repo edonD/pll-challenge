@@ -113,7 +113,7 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 * INITIAL CONDITIONS AND SIMULATION
 * ---------------------------------------------------------------------------
-.ic v(ctrl)=1.66 v(lf_zero)=1.66
+.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
 
 .control
 set filetype=ascii
