@@ -41,3 +41,8 @@ f34724c	0.884877	22.1	5.002	1.74	discard	tran 0.5n — ripple 5.002mV barely ove
 b1edbe3	0.801065	34.6	9.866	1.74	discard	DC offset 0.66uA — ripple 9.866mV too high
 3ad5205	0.884949	22.8	5.000	1.74	discard	Vco_center=1.6V — same score, different settling point
 f12096d	0.884949	22.1	5.000	1.74	discard	DFF ic=0 — same score, same settling
+a2fa710	0.860409	0	1.615	1.74	discard	adaptive CP — ripple 1.6mV too low near lock
+df19d3a	0.860689	25.7	5.796	2.61	discard	Icp=395uA R1=100k — ripple 5.8mV over target
+8f83b65	0.884949	22.1	5.000	1.74	discard	.options reltol=0.003 — same score
+64db414	0.884949	22.1	5.000	1.74	discard	fref=20MHz Ndiv=120 — identical result
+5d87947	0.884949	22.1	5.000	1.74	discard	remove clamp diodes — same score, simpler circuit
