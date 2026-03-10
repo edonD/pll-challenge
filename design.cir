@@ -22,7 +22,7 @@
 .param R1 = 150k
 .param C1 = 1n
 .param C2 = 200p
-.param C3 = 100p
+.param C3 = 1n
 
 * Charge pump mismatch (reduced for lower ripple)
 .param Icp_mismatch = 0.005
