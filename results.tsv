@@ -165,3 +165,10 @@ f6e3c14	0.884651	21.80	4.932	1.738	discard	Icp=263.15uA
 b9e0771	0.804158	5.78	9.499	1.738	discard	4th-order filter with extra R-C on ctrl
 44e61ce	0.884949	22.14	5.000	1.738	discard	AND gate fall_delay=0.1n symmetric, same score
 6eafeb3	0.884949	22.14	5.000	1.738	discard	DFF ic=0 reset initial state, same score
+ac21abb	0.884949	22.14	5.000	1.738	discard	wider VCO 100MHz/V, same score
+e78a3f3	0.880986	17.92	4.166	1.738	discard	mismatch=0.004 td=20n, ripple 4.166mV
+77bd5c4	0.859759	25.43	5.832	1.738	discard	mismatch=0.006 td=0, ripple 5.832mV
+8f8aee6	0.884949	22.14	5.000	1.738	discard	DAC bridge t_rise=1n t_fall=1n, same score
+0d77875	0.884935	22.12	4.997	1.738	discard	div DAC bridge t_rise=0.5n, ripple 4.997mV
+d56ceac	0.884944	22.13	4.999	1.738	discard	div DAC 0.2n, ripple 4.999mV
+8cf12e7	0.851180	55.20	3.122	1.738	discard	100us sim, measure 90-100us, continued drift
