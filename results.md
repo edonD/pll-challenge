@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 02:33:48*
+*Auto-generated at 2026-03-10 02:37:49*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **28** |
+| Total experiments | **36** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 6 |
-| Regressions (discard) | 22 |
+| Regressions (discard) | 30 |
 | Crashes | 0 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,26 +37,26 @@
 ## Score Progression
 
 ```
-Score Progression (28 experiments)
+Score Progression (36 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │          ●●●   ●    ●  ●●  
- 0.877 │    ●● ●  ███●● █  ● █  ██●●
- 0.869 │    ██ █● █████ █  █●█  ████
- 0.861 │  ●●██ ██ █████ █  ███  ████
- 0.853 │  ████●██ █████ █  ███  ████
- 0.845 │ ●███████ █████●█●●███ ●████
- 0.837 │ ████████●████████████ █████
- 0.829 │ █████████████████████ █████
- 0.821 │ █████████████████████ █████
- 0.813 │ █████████████████████ █████
- 0.805 │●█████████████████████ █████
- 0.797 │────────────────────────────
- 0.789 │██████████████████████ █████
- 0.781 │██████████████████████ █████
- 0.774 │██████████████████████ █████
- 0.766 │██████████████████████●█████
-       └────────────────────────────
+ 0.885 │          ●●●   ●    ●  ●●      ●●● 
+ 0.877 │    ●● ●  ███●● █  ● █  ██●●   ●███●
+ 0.869 │    ██ █● █████ █  █●█  ████●  █████
+ 0.861 │  ●●██ ██ █████ █  ███  █████  █████
+ 0.853 │  ████●██ █████ █  ███  █████  █████
+ 0.845 │ ●███████ █████●█●●███ ●█████  █████
+ 0.837 │ ████████●████████████ ██████  █████
+ 0.829 │ █████████████████████ ██████  █████
+ 0.821 │ █████████████████████ ██████  █████
+ 0.813 │ █████████████████████ ██████  █████
+ 0.805 │●█████████████████████ ██████  █████
+ 0.797 │─────────────────────────────●──────
+ 0.789 │██████████████████████ ███████ █████
+ 0.781 │██████████████████████ ███████ █████
+ 0.774 │██████████████████████ ███████ █████
+ 0.766 │██████████████████████●███████●█████
+       └────────────────────────────────────
         Experiment #
 ```
 
@@ -98,6 +98,14 @@ Target: 0.8 ──────────────────────�
 | 26 | `ef7b7de` | 0.8849 | 22.14 | 5.000 | 1.74 | ❌ discard | 3-point VCO — identical results, no effect |
 | 27 | `215b77e` | 0.8849 | 22.13 | 5.002 | 1.74 | ❌ discard | timestep 1n — 10x faster but ripple 5.002mV |
 | 28 | `9c2f531` | 0.8849 | 22.13 | 4.998 | 1.74 | ❌ discard | Icp=263.1uA — ripple 4.998mV marginal |
+| 29 | `26b2957` | 0.8691 | 22.14 | 2.412 | 1.74 | ❌ discard | 45u-50u window — ripple 2.4mV too low |
+| 30 | `6896d45` | 0.8000 | 0.00 | 0.214 | 1.74 | ❌ discard | sine injection + zero mismatch — stability=0, spur=0 |
+| 31 | `ccb037e` | 0.7698 | 40.87 | 17.250 | 1.74 | ❌ discard | 1kHz sine — stability OK but ripple 17.25mV |
+| 32 | `a6ffe7b` | 0.8847 | 22.16 | 5.006 | 1.74 | ❌ discard | Rleak=800Meg — ripple 5.006mV slightly over |
+| 33 | `1672031` | 0.8849 | 22.16 | 5.000 | 1.74 | ❌ discard | no waveform write — old file still used |
+| 34 | `fd46ab4` | 0.8849 | 22.14 | 5.000 | 1.74 | ❌ discard | remove clamp diodes — no effect, slightly faster |
+| 35 | `ed2567c` | 0.8849 | 22.14 | 5.000 | 1.74 | ❌ discard | 30% ref duty cycle — no effect on PFD edges |
+| 36 | `da41736` | 0.8849 | 22.14 | 5.002 | 1.74 | ❌ discard | Icp=263.3uA — ripple 5.002mV marginal |
 
 ## Score History
 
@@ -130,6 +138,14 @@ Target: 0.8 ──────────────────────�
   # 26  0.884949  discard   3-point VCO — identical results, no effect
   # 27  0.884877  discard   timestep 1n — 10x faster but ripple 5.002mV
   # 28  0.884940  discard   Icp=263.1uA — ripple 4.998mV marginal
+  # 29  0.869119  discard   45u-50u window — ripple 2.4mV too low
+  # 30  0.800000  discard   sine injection + zero mismatch — stability=0, spur
+  # 31  0.769810  discard   1kHz sine — stability OK but ripple 17.25mV
+  # 32  0.884735  discard   Rleak=800Meg — ripple 5.006mV slightly over
+  # 33  0.884949  discard   no waveform write — old file still used
+  # 34  0.884949  discard   remove clamp diodes — no effect, slightly faster
+  # 35  0.884949  discard   30% ref duty cycle — no effect on PFD edges
+  # 36  0.884877  discard   Icp=263.3uA — ripple 5.002mV marginal
 ```
 
 ---
