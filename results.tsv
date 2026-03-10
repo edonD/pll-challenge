@@ -543,3 +543,8 @@ b285bb6	0.884949	22.14	5.000	1.738	discard	CP with uramp(), same as max(0,...)
 0ad5f34	0.757865	44.72	28.427	1.738	discard	R3=1ohm series with C3, huge ripple
 a2648d8	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
 22ef6d7	0.884949	22.14	5.000	1.738	discard	VCVS buffer between LF and VCO, same
+10c0757	0.884949	22.14	5.000	1.738	discard	Ndiv=239, same score
+24e077b	0.883935	20.54	5.000	1.738	discard	extra C4=50pF shunt cap, slightly worse
+43e2312	0.884949	22.14	5.000	1.738	discard	tran start-save at 10u, same score
+af395ca	0.884909	22.09	5.003	1.738	discard	anti-drift compensation -0.66nA
+6d470ec	0.884927	22.11	5.002	1.738	discard	anti-drift compensation -0.33nA

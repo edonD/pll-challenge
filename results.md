@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:38:45*
+*Auto-generated at 2026-03-10 06:40:52*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **544** |
+| Total experiments | **549** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 526 |
+| Regressions (discard) | 531 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (544 experiments)
+Score Progression (549 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●
- 0.826 │●█●█●██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ██
- 0.767 │───────────────────────────────────────────────────────●────
- 0.708 │█████████████████████████████████████●███●███████████████●██
+ 0.885 │●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●● ●  
+ 0.826 │██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ███●█●●
+ 0.767 │──────────────────────────────────────────────────●─────────
+ 0.708 │████████████████████████████████●███●███████████████●███████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -614,6 +614,11 @@ Target: 0.8 ──────────────────────�
 | 542 | `0ad5f34` | 0.7579 | 44.72 | 28.427 | 1.738 | ❌ discard | R3=1ohm series with C3, huge ripple |
 | 543 | `a2648d8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | remove clamp diodes, same score |
 | 544 | `22ef6d7` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCVS buffer between LF and VCO, same |
+| 545 | `10c0757` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | Ndiv=239, same score |
+| 546 | `24e077b` | 0.8839 | 20.54 | 5.000 | 1.738 | ❌ discard | extra C4=50pF shunt cap, slightly worse |
+| 547 | `43e2312` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tran start-save at 10u, same score |
+| 548 | `af395ca` | 0.8849 | 22.09 | 5.003 | 1.738 | ❌ discard | anti-drift compensation -0.66nA |
+| 549 | `6d470ec` | 0.8849 | 22.11 | 5.002 | 1.738 | ❌ discard | anti-drift compensation -0.33nA |
 
 ## Score History
 
@@ -1162,6 +1167,11 @@ Target: 0.8 ──────────────────────�
   #542  0.757865  discard   R3=1ohm series with C3, huge ripple
   #543  0.884949  discard   remove clamp diodes, same score
   #544  0.884949  discard   VCVS buffer between LF and VCO, same
+  #545  0.884949  discard   Ndiv=239, same score
+  #546  0.883935  discard   extra C4=50pF shunt cap, slightly worse
+  #547  0.884949  discard   tran start-save at 10u, same score
+  #548  0.884909  discard   anti-drift compensation -0.66nA
+  #549  0.884927  discard   anti-drift compensation -0.33nA
 ```
 
 ---
