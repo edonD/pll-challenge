@@ -900,3 +900,4 @@ cd41e96	0.884913	22.1	5.001	1.74	discard	Timestep 0.2n — ripple 5.001mV
 39878c2	0.884949	22.1	5.0	1.74	discard	Save only ctrl — same score
 ceadfb8	0.884949	22.1	5.0	1.74	discard	C3 IC=Vco_center — same score
 f32d6c7	0.884944	22.1	4.999	1.74	discard	ADC 1.0/2.0 — ripple 4.999mV, 0.000005 worse
+bbe4e44	0.884949	22.1	5.0	1.74	discard	10-point VCO — same score
