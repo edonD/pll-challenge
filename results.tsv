@@ -142,3 +142,9 @@ e504839	0.884949	22.14	5.000	1.74	discard	set ternary_default=0 — no effect
 9756151	0.000000	0.00	0.000	0.00	crash	NAND+INV — scalar connection syntax error
 0778c9e	0.884949	22.14	5.000	1.74	discard	VCO duty_cycle=0.45 — no effect
 5c04d2f	0.884949	22.14	5.000	1.74	discard	compact CP+LF format — no effect
+efb41ef	0.884927	22.14	4.995	1.74	discard	i_count=239 — ripple 4.995mV
+932e6cb	0.877302	22.14	3.516	1.74	discard	oscillating mismatch 100kHz — ripple 3.52mV
+c6bd781	0.884842	22.14	5.003	1.74	discard	additional 5uA proportional CP — ripple 5.003mV
+b419ddc	0.884359	22.14	4.866	1.74	discard	ref delay td=0 — ripple 4.866mV
+2dcebce	0.884660	22.14	4.934	1.74	discard	ref delay td=5n — ripple 4.934mV
+6357215	0.882558	22.46	5.068	1.738	discard	ref delay td=15n, ripple 5.068mV
