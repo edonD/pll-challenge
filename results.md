@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 04:01:08*
+*Auto-generated at 2026-03-10 04:03:08*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **209** |
+| Total experiments | **213** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 7 |
-| Regressions (discard) | 199 |
+| Regressions (discard) | 203 |
 | Crashes | 3 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,14 +37,14 @@
 ## Score Progression
 
 ```
-Score Progression (209 experiments)
+Score Progression (213 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │          ●    ●●●  ●         ●● ●            ●●           ●
- 0.826 │●● ●●●●●●●█●●● ███●●█●●●●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█
- 0.767 │──●───────────●─────────────────────────────────────────────
- 0.708 │███████████████████████████████████●████████████████ ███████
- 0.649 │████████████████████████████████████████████████████●███████
+ 0.885 │      ●    ●●●  ●         ●● ●            ●●           ●    
+ 0.826 │●●●●●●█●●● ███●●█●●●●●●●●●██●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●
+ 0.767 │──────────●─────────────────────────────────────────────────
+ 0.708 │███████████████████████████████●████████████████ ███████████
+ 0.649 │████████████████████████████████████████████████●███████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
  0.472 │████████████████████████████████████████████████████████████
@@ -279,6 +279,10 @@ Target: 0.8 ──────────────────────�
 | 207 | `8a95492` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | ADC bridge 0.5n delays, ripple 5.001mV |
 | 208 | `c66f630` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | ADC bridge 0.3n delays, ripple 5.001mV |
 | 209 | `163e233` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | minimal save (ctrl only), same score |
+| 210 | `eee3f21` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | Icp=263.25uA, ripple 5.001mV |
+| 211 | `3ac80b6` | 0.8848 | 22.17 | 5.004 | 1.738 | ❌ discard | derivative feedforward, ripple 5.004mV |
+| 212 | `c18cd3f` | 0.8734 | 0.00 | 2.934 | 1.738 | ❌ discard | IC=1.616V near final, less drift |
+| 213 | `dd5b0a5` | 0.8780 | 23.10 | 5.203 | 1.738 | ❌ discard | IC=1.66V slightly above center |
 
 ## Score History
 
@@ -492,6 +496,10 @@ Target: 0.8 ──────────────────────�
   #207  0.884913  discard   ADC bridge 0.5n delays, ripple 5.001mV
   #208  0.884913  discard   ADC bridge 0.3n delays, ripple 5.001mV
   #209  0.884949  discard   minimal save (ctrl only), same score
+  #210  0.884913  discard   Icp=263.25uA, ripple 5.001mV
+  #211  0.884806  discard   derivative feedforward, ripple 5.004mV
+  #212  0.873373  discard   IC=1.616V near final, less drift
+  #213  0.878010  discard   IC=1.66V slightly above center
 ```
 
 ---
