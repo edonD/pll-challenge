@@ -100,10 +100,15 @@ avco ctrl d_vco vco_model
 + rise_delay=0.05n fall_delay=0.05n)
 
 * ---------------------------------------------------------------------------
-* FREQUENCY DIVIDER
+* FREQUENCY DIVIDER (dual-modulus for sigma-delta)
 * ---------------------------------------------------------------------------
-adiv1 d_vco d_divided fdiv1
-.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
+* First divide by 8 (prescaler)
+adiv_pre d_vco d_pre fdiv_pre
+.model fdiv_pre d_fdiv(div_factor=8 i_count=0
++ rise_delay=0.1n fall_delay=0.1n)
+* Then divide by 30 (program counter: 240/8=30)
+adiv_prog d_pre d_divided fdiv_prog
+.model fdiv_prog d_fdiv(div_factor=30 i_count=0
 + rise_delay=0.1n fall_delay=0.1n)
 
 abridge_divout [d_divided] [div_out] dac_div
