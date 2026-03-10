@@ -12,7 +12,7 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 263.15e-6
+.param Icp = 263.2e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
@@ -21,7 +21,7 @@
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
 .param R1 = 150k
 .param C1 = 1n
-.param C2 = 201p
+.param C2 = 200p
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
