@@ -117,6 +117,7 @@ abridge_divout [d_divided] [div_out] dac_div
 
 .control
 set filetype=ascii
+set numdgt=10
 
 save ref div_out ctrl up_a dn_a
 
