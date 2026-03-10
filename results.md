@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 08:01:05*
+*Auto-generated at 2026-03-10 08:03:07*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **754** |
+| Total experiments | **759** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 734 |
+| Regressions (discard) | 739 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (754 experiments)
+Score Progression (759 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●●● ●●●  ●● ●     ●          ●●●●    ● ●    ● ●  ●●●      ●●
- 0.826 │███●███●●██●█●●●● █●●●●●●●●●●████●●●●█●█●●●●█●█●●███ ●●●●●██
- 0.767 │─────────────────●──────────────────────────────────────────
- 0.708 │████████████████████████████████████████████████████●███████
+ 0.885 │●●  ●● ●     ●          ●●●●    ● ●    ● ●  ●●●      ●●  ●●●
+ 0.826 │██●●██●█●●●● █●●●●●●●●●●████●●●●█●█●●●●█●█●●███ ●●●●●██●●███
+ 0.767 │────────────●───────────────────────────────────────────────
+ 0.708 │███████████████████████████████████████████████●████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -824,6 +824,11 @@ Target: 0.8 ──────────────────────�
 | 752 | `3472173` | 0.8849 | 22.05 | 4.998 | 1.738 | ❌ discard | compensation current for CP mismatch |
 | 753 | `6216c7d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C2=198p C3=102p |
 | 754 | `69310dc` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | PFD DAC t_rise/fall=0.05n |
+| 755 | `79a406c` | 0.8849 | 22.10 | 4.999 | 1.738 | ❌ discard | Icp=263.15e-6 + C2=201p |
+| 756 | `fe5d004` | 0.8849 | 21.99 | 4.998 | 1.738 | ❌ discard | extra C4=5p on ctrl |
+| 757 | `59a2366` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options method=trap |
+| 758 | `b30383e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | FF ic=0 |
+| 759 | `e414595` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND input_load=1e-12 |
 
 ## Score History
 
@@ -1582,6 +1587,11 @@ Target: 0.8 ──────────────────────�
   #752  0.884866  discard   compensation current for CP mismatch
   #753  0.884949  discard   C2=198p C3=102p
   #754  0.884949  discard   PFD DAC t_rise/fall=0.05n
+  #755  0.884927  discard   Icp=263.15e-6 + C2=201p
+  #756  0.884853  discard   extra C4=5p on ctrl
+  #757  0.884949  discard   .options method=trap
+  #758  0.884949  discard   FF ic=0
+  #759  0.884949  discard   AND input_load=1e-12
 ```
 
 ---
