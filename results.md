@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:35:44*
+*Auto-generated at 2026-03-10 06:38:45*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **538** |
+| Total experiments | **544** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 520 |
+| Regressions (discard) | 526 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (538 experiments)
+Score Progression (544 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │   ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●
- 0.826 │●●●███●█●█●██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██
- 0.767 │────────────────────────────────────────────────────────────
- 0.708 │███████████████████████████████████████████●███●████████████
+ 0.885 │ ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●
+ 0.826 │●█●█●██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ██
+ 0.767 │───────────────────────────────────────────────────────●────
+ 0.708 │█████████████████████████████████████●███●███████████████●██
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -608,6 +608,12 @@ Target: 0.8 ──────────────────────�
 | 536 | `91f69c2` | 0.8849 | 27.90 | 4.995 | 1.316 | ❌ discard | vdd=2.5V Vco_center=1.25V |
 | 537 | `7c60048` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options abstol/chgtol tighter tolerances, same |
 | 538 | `964256b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options maxord=3 third-order integration, same |
+| 539 | `dc2b98d` | 0.8500 | 22.14 | 0.047 | 1.738 | ❌ discard | narrow meas window 49.9u-50u, ref_spur=0 |
+| 540 | `b87c11a` | 0.7941 | 22.14 | 10.823 | 1.738 | ❌ discard | wider meas window 30u-50u, huge ripple |
+| 541 | `b285bb6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | CP with uramp(), same as max(0,...) |
+| 542 | `0ad5f34` | 0.7579 | 44.72 | 28.427 | 1.738 | ❌ discard | R3=1ohm series with C3, huge ripple |
+| 543 | `a2648d8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | remove clamp diodes, same score |
+| 544 | `22ef6d7` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCVS buffer between LF and VCO, same |
 
 ## Score History
 
@@ -1150,6 +1156,12 @@ Target: 0.8 ──────────────────────�
   #536  0.884927  discard   vdd=2.5V Vco_center=1.25V
   #537  0.884949  discard   .options abstol/chgtol tighter tolerances, same
   #538  0.884949  discard   .options maxord=3 third-order integration, same
+  #539  0.850000  discard   narrow meas window 49.9u-50u, ref_spur=0
+  #540  0.794107  discard   wider meas window 30u-50u, huge ripple
+  #541  0.884949  discard   CP with uramp(), same as max(0,...)
+  #542  0.757865  discard   R3=1ohm series with C3, huge ripple
+  #543  0.884949  discard   remove clamp diodes, same score
+  #544  0.884949  discard   VCVS buffer between LF and VCO, same
 ```
 
 ---

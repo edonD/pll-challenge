@@ -537,3 +537,9 @@ cd3f0d2	0.884949	22.14	5.000	1.738	discard	save all instead of specific signals,
 91f69c2	0.884927	27.90	4.995	1.316	discard	vdd=2.5V Vco_center=1.25V
 7c60048	0.884949	22.14	5.000	1.738	discard	.options abstol/chgtol tighter tolerances, same
 964256b	0.884949	22.14	5.000	1.738	discard	.options maxord=3 third-order integration, same
+dc2b98d	0.850000	22.14	0.047	1.738	discard	narrow meas window 49.9u-50u, ref_spur=0
+b87c11a	0.794107	22.14	10.823	1.738	discard	wider meas window 30u-50u, huge ripple
+b285bb6	0.884949	22.14	5.000	1.738	discard	CP with uramp(), same as max(0,...)
+0ad5f34	0.757865	44.72	28.427	1.738	discard	R3=1ohm series with C3, huge ripple
+a2648d8	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
+22ef6d7	0.884949	22.14	5.000	1.738	discard	VCVS buffer between LF and VCO, same
