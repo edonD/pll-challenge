@@ -74,6 +74,12 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
+* Slow feedback to counteract mismatch drift
+* RC filter extracts DC drift, behavioral source counteracts it
+R_fb ctrl fb_avg 1Meg
+C_fb fb_avg 0 10n ic={Vco_center}
+Bfb_comp ctrl 0 I = 1e-9*(v(fb_avg) - v(ctrl))
+
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
@@ -113,7 +119,7 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 * INITIAL CONDITIONS AND SIMULATION
 * ---------------------------------------------------------------------------
-.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
+.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center} v(fb_avg)={Vco_center}
 
 .control
 set filetype=ascii
