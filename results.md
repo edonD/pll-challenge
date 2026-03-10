@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 00:55:43*
+*Auto-generated at 2026-03-10 00:57:54*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **33** |
+| Total experiments | **39** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 12 |
-| Regressions (discard) | 21 |
+| Regressions (discard) | 27 |
 | Crashes | 0 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,26 +37,26 @@
 ## Score Progression
 
 ```
-Score Progression (33 experiments)
+Score Progression (39 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │          ●●●●●●  ●●  ●●  ●  ●   
- 0.880 │    ●● ●  ██████●●██●●██ ●█  █   
- 0.875 │    ██ █  ██████████████ ██  █   
- 0.870 │    ██ █● ██████████████ ██  █   
- 0.865 │    ██ ██ ██████████████ ██  █ ● 
- 0.860 │  ●●██ ██ ██████████████ ██  █ █ 
- 0.854 │  ████●██ ██████████████●██  █ █ 
- 0.849 │ ●███████ █████████████████● █ █●
- 0.844 │ ████████ ██████████████████ █ ██
- 0.839 │ ████████●██████████████████ █ ██
- 0.834 │ ███████████████████████████ █ ██
- 0.829 │ ███████████████████████████ █ ██
- 0.824 │ ███████████████████████████ █●██
- 0.819 │ ███████████████████████████●████
- 0.814 │ ████████████████████████████████
- 0.809 │●████████████████████████████████
-       └─────────────────────────────────
+ 0.885 │          ●●●●●●  ●●  ●●  ●  ●         
+ 0.876 │    ●● ●  ██████●●██●●██ ●█  █        ●
+ 0.868 │    ██ █● ██████████████ ██  █     ●  █
+ 0.860 │  ●●██ ██ ██████████████ ██  █ ●   █  █
+ 0.851 │  ████●██ ██████████████●██  █ █   █● █
+ 0.843 │ ●███████●█████████████████● █ █●  ██ █
+ 0.834 │ ███████████████████████████ █ ██  ██ █
+ 0.826 │ ███████████████████████████ █ ██  ██ █
+ 0.817 │ ███████████████████████████●█●██  ██ █
+ 0.809 │ ████████████████████████████████  ██ █
+ 0.800 │●████████████████████████████████●●██ █
+ 0.792 │───────────────────────────────────────
+ 0.783 │█████████████████████████████████████ █
+ 0.775 │█████████████████████████████████████ █
+ 0.766 │█████████████████████████████████████ █
+ 0.758 │█████████████████████████████████████●█
+       └───────────────────────────────────────
         Experiment #
 ```
 
@@ -103,6 +103,12 @@ Target: 0.8 ──────────────────────�
 | 31 | `b5ff20c` | 0.8239 | 30.2 | 7.721 | 3.30 | ❌ discard | Icp=500uA C2=400pF — ripple too high (7.7mV) |
 | 32 | `bec6333` | 0.8651 | 23.9 | 5.633 | 1.74 | ❌ discard | C1=500pF — ripple 5.633mV too high |
 | 33 | `e3c503f` | 0.8500 | 0 | 0.163 | 1.74 | ❌ discard | zero CP mismatch — ripple 0.163mV, ref_spur=0 |
+| 34 | `8b90b73` | 0.8061 | 33.9 | 9.281 | 1.74 | ❌ discard | R1=300k C2=100p C3=50p — ripple 9.281mV too high |
+| 35 | `4d68e72` | 0.8013 | 34.6 | 9.838 | 1.74 | ❌ discard | Icp_mismatch=1% — ripple 9.838mV too high |
+| 36 | `9db8f10` | 0.8743 | 9.6 | 3.065 | 1.74 | ❌ discard | Icp_mismatch=0.3% — ripple 3.065mV, ref_spur too low |
+| 37 | `b43014c` | 0.8564 | 25.9 | 5.967 | 1.74 | ❌ discard | Icp_mismatch=0.6% — ripple 5.967mV slightly over target |
+| 38 | `24525b1` | 0.7578 | 29.6 | 28.635 | 1.74 | ❌ discard | R3=5k series with C3 — ripple 28.6mV, unstable path |
+| 39 | `f34724c` | 0.8849 | 22.1 | 5.002 | 1.74 | ❌ discard | tran 0.5n — ripple 5.002mV barely over target |
 
 ## Score History
 
@@ -140,6 +146,12 @@ Target: 0.8 ──────────────────────�
   # 31  0.823901  discard   Icp=500uA C2=400pF — ripple too high (7.7mV)
   # 32  0.865062  discard   C1=500pF — ripple 5.633mV too high
   # 33  0.850000  discard   zero CP mismatch — ripple 0.163mV, ref_spur=0
+  # 34  0.806127  discard   R1=300k C2=100p C3=50p — ripple 9.281mV too high
+  # 35  0.801292  discard   Icp_mismatch=1% — ripple 9.838mV too high
+  # 36  0.874322  discard   Icp_mismatch=0.3% — ripple 3.065mV, ref_spur too l
+  # 37  0.856376  discard   Icp_mismatch=0.6% — ripple 5.967mV slightly over t
+  # 38  0.757767  discard   R3=5k series with C3 — ripple 28.6mV, unstable pat
+  # 39  0.884877  discard   tran 0.5n — ripple 5.002mV barely over target
 ```
 
 ---
