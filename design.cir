@@ -120,10 +120,10 @@ set filetype=ascii
 
 save ref div_out ctrl up_a dn_a
 
-tran 0.1n 50u uic
+tran 0.1n 52u uic
 
 * === MEASUREMENTS ===
-meas tran ctrl_final find v(ctrl) at=50u
+meas tran ctrl_final find v(ctrl) at=52u
 meas tran ctrl_max max v(ctrl) from=40u to=50u
 meas tran ctrl_min min v(ctrl) from=40u to=50u
 meas tran ctrl_avg avg v(ctrl) from=40u to=50u
