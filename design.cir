@@ -66,13 +66,8 @@ Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
 * ---------------------------------------------------------------------------
-* R1 + C1 in series from ctrl to ground (provides stabilizing zero)
-* C2 shunt from ctrl to ground (integration)
-* C3 for additional high-freq filtering
-R_lf1 ctrl lf_zero {R1}
-C_lf1 lf_zero 0 {C1} ic={Vco_center}
-C_lf2 ctrl 0 {C2} ic={Vco_center}
-C_lf3 ctrl 0 {C3}
+* Pure integrator: single large cap, no zero
+C_lf_main ctrl 0 1.3n ic={Vco_center}
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
@@ -113,7 +108,7 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 * INITIAL CONDITIONS AND SIMULATION
 * ---------------------------------------------------------------------------
-.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
+.ic v(ctrl)={Vco_center}
 
 .control
 set filetype=ascii
