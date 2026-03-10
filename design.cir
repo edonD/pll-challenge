@@ -73,6 +73,9 @@ R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
+* Small inductor for resonant peaking at specific frequency
+L_lf1 ctrl ctrl_l 10u
+R_ldamp ctrl_l 0 10k
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
