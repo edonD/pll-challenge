@@ -106,7 +106,11 @@ adiv1 d_vco d_divided fdiv1
 .model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
 + rise_delay=0.1n fall_delay=0.1n)
 
-abridge_divout [d_divided] [div_out] dac_div
+* Add propagation delay to divider output
+adly d_divided d_divided_dly dly_model
+.model dly_model d_buffer(rise_delay=2n fall_delay=2n input_load=0.5e-12)
+
+abridge_divout [d_divided_dly] [div_out] dac_div
 .model dac_div dac_bridge(out_low=0 out_high={vdd} out_undef={vdd/2}
 + input_load=5e-12 t_rise=0.1n t_fall=0.1n)
 
