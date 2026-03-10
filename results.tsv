@@ -770,3 +770,9 @@ e9a541b	0.884949	22.14	5.000	1.738	discard	AND fall_delay=0.2n
 f68cb9e	0.884949	22.14	5.000	1.738	discard	C2=205p C3=95p
 49caf6e	0.884949	22.14	5.000	1.738	discard	VCO rise/fall=0.01n
 2013781	0.853763	26.50	6.076	1.738	discard	time-varying CP mismatch ramp
+e2e683c	0.884940	22.12	5.000	1.738	discard	Icp=263.05e-6
+795cf54	0.884735	22.17	5.006	1.738	discard	divider i_count=1
+915e205	0.884949	22.14	5.000	1.738	discard	diode is=1e-12
+66d24a7	0.884944	22.13	5.000	1.738	discard	ref td=9.9n
+d98ffe2	0.884949	22.14	5.000	1.738	discard	FF set_delay=0.05n
+6e214d8	0.884949	22.14	5.000	1.738	discard	set maxdata=1000000

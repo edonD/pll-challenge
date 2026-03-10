@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 08:07:26*
+*Auto-generated at 2026-03-10 08:09:30*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **771** |
+| Total experiments | **777** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 751 |
+| Regressions (discard) | 757 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (771 experiments)
+Score Progression (777 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ●          ●●●●    ● ●    ● ●  ●●●      ●●  ●●●●  ●● ●  ●● 
- 0.826 │ █●●●●●●●●●●████●●●●█●█●●●●█●█●●███ ●●●●●██●●████●●██●█●●██●
- 0.767 │●───────────────────────────────────────────────────────────
- 0.708 │███████████████████████████████████●████████████████████████
+ 0.885 │      ●●●●    ● ●    ● ●  ●●●      ●●  ●●●●  ●● ●  ●●   ● ●●
+ 0.826 │●●●●●●████●●●●█●█●●●●█●█●●███ ●●●●●██●●████●●██●█●●██●●●█●██
+ 0.767 │────────────────────────────────────────────────────────────
+ 0.708 │█████████████████████████████●██████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -841,6 +841,12 @@ Target: 0.8 ──────────────────────�
 | 769 | `f68cb9e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C2=205p C3=95p |
 | 770 | `49caf6e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO rise/fall=0.01n |
 | 771 | `2013781` | 0.8538 | 26.50 | 6.076 | 1.738 | ❌ discard | time-varying CP mismatch ramp |
+| 772 | `e2e683c` | 0.8849 | 22.12 | 5.000 | 1.738 | ❌ discard | Icp=263.05e-6 |
+| 773 | `795cf54` | 0.8847 | 22.17 | 5.006 | 1.738 | ❌ discard | divider i_count=1 |
+| 774 | `915e205` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | diode is=1e-12 |
+| 775 | `66d24a7` | 0.8849 | 22.13 | 5.000 | 1.738 | ❌ discard | ref td=9.9n |
+| 776 | `d98ffe2` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | FF set_delay=0.05n |
+| 777 | `6e214d8` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | set maxdata=1000000 |
 
 ## Score History
 
@@ -1616,6 +1622,12 @@ Target: 0.8 ──────────────────────�
   #769  0.884949  discard   C2=205p C3=95p
   #770  0.884949  discard   VCO rise/fall=0.01n
   #771  0.853763  discard   time-varying CP mismatch ramp
+  #772  0.884940  discard   Icp=263.05e-6
+  #773  0.884735  discard   divider i_count=1
+  #774  0.884949  discard   diode is=1e-12
+  #775  0.884944  discard   ref td=9.9n
+  #776  0.884949  discard   FF set_delay=0.05n
+  #777  0.884949  discard   set maxdata=1000000
 ```
 
 ---
