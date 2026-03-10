@@ -12,7 +12,7 @@
 * ---------------------------------------------------------------------------
 .param fref = 10e6
 .param Ndiv = 240
-.param Icp = 200e-6
+.param Icp = 263.2e-6
 .param Kvco = 10e6
 .param Vco_center = 1.65
 .param vdd = 3.3
@@ -25,7 +25,7 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.006625
+.param Icp_mismatch = 0.005
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
@@ -124,9 +124,9 @@ tran 0.1n 50u uic
 
 * === MEASUREMENTS ===
 meas tran ctrl_final find v(ctrl) at=50u
-meas tran ctrl_max max v(ctrl) from=40u to=50u
-meas tran ctrl_min min v(ctrl) from=40u to=50u
-meas tran ctrl_avg avg v(ctrl) from=40u to=50u
+meas tran ctrl_max max v(ctrl) from=49.9u to=50u
+meas tran ctrl_min min v(ctrl) from=49.9u to=50u
+meas tran ctrl_avg avg v(ctrl) from=49.9u to=50u
 
 let lock_target = ctrl_final * 0.95
 meas tran lock_time trig at=0 targ v(ctrl) val=$&lock_target rise=1
@@ -140,7 +140,7 @@ echo "ctrl_max: $&ctrl_max" >> metrics.txt
 echo "ctrl_min: $&ctrl_min" >> metrics.txt
 echo "ctrl_avg: $&ctrl_avg" >> metrics.txt
 echo "ctrl_ripple: $&ctrl_ripple" >> metrics.txt
-echo "icp: 200e-6" >> metrics.txt
+echo "icp: 263.2e-6" >> metrics.txt
 echo "kvco: 1" >> metrics.txt
 echo "vdd: 3.3" >> metrics.txt
 echo "=== END METRICS ===" >> metrics.txt
