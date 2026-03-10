@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 04:18:07*
+*Auto-generated at 2026-03-10 04:20:47*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **241** |
+| Total experiments | **248** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 7 |
-| Regressions (discard) | 231 |
+| Regressions (discard) | 238 |
 | Crashes | 3 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,14 +37,14 @@
 ## Score Progression
 
 ```
-Score Progression (241 experiments)
+Score Progression (248 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │ ●            ●●           ●     ●●    ●●        ●●● ●    ●●
- 0.826 │●█● ●●●●●●●●●●██●●●● ●●●●●●█●●●●●██●●● ██●● ●●●●●███ █●●●●██
- 0.767 │──────────────────────────────────────●────●────────────────
- 0.708 │███●████████████████ ███████████████████████████████●███████
- 0.649 │████████████████████●███████████████████████████████████████
+ 0.885 │       ●●           ●     ●●    ●●        ●●● ●    ●●●●  ●  
+ 0.826 │●●●●●●●██●●●● ●●●●●●█●●●●●██●●● ██●● ●●●●●███ █●●●●████●●█ ●
+ 0.767 │───────────────────────────────●────●─────────────────────●─
+ 0.708 │█████████████ ███████████████████████████████●██████████████
+ 0.649 │█████████████●██████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
  0.472 │████████████████████████████████████████████████████████████
@@ -311,6 +311,13 @@ Target: 0.8 ──────────────────────�
 | 239 | `e34d6b9` | 0.8761 | 6.98 | 3.332 | 1.738 | ❌ discard | C3=500pF, too much filtering |
 | 240 | `9ac483e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | asymmetric DFF (dup) |
 | 241 | `dffe604` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | AND fall 2n (dup) |
+| 242 | `d5da5cb` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | min(1,...) CP clamp, same score |
+| 243 | `7c86d1e` | 0.8849 | 22.82 | 5.000 | 1.738 | ❌ discard | VCO center 1.6V, same score |
+| 244 | `f2121a4` | 0.8824 | 22.14 | 5.073 | 1.738 | ❌ discard | shifted window 39u-49u |
+| 245 | `2637890` | 0.8849 | 22.12 | 4.996 | 1.738 | ❌ discard | Icp=263.0µA, ripple 4.996mV |
+| 246 | `f2c00e6` | 0.8849 | 22.13 | 5.000 | 1.738 | ❌ discard | 0.05n timestep, same score slower |
+| 247 | `02fa371` | 0.7942 | 35.88 | 10.805 | 1.738 | ❌ discard | DC comp current (logged dup) |
+| 248 | `e338a33` | 0.8783 | 22.98 | 5.194 | 1.738 | ❌ discard | mismatch 0.0052 (logged dup) |
 
 ## Score History
 
@@ -556,6 +563,13 @@ Target: 0.8 ──────────────────────�
   #239  0.876135  discard   C3=500pF, too much filtering
   #240  0.884949  discard   asymmetric DFF (dup)
   #241  0.884949  discard   AND fall 2n (dup)
+  #242  0.884949  discard   min(1,...) CP clamp, same score
+  #243  0.884949  discard   VCO center 1.6V, same score
+  #244  0.882385  discard   shifted window 39u-49u
+  #245  0.884931  discard   Icp=263.0µA, ripple 4.996mV
+  #246  0.884949  discard   0.05n timestep, same score slower
+  #247  0.794231  discard   DC comp current (logged dup)
+  #248  0.878305  discard   mismatch 0.0052 (logged dup)
 ```
 
 ---
