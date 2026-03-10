@@ -25,7 +25,7 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.005
+.param Icp_mismatch = 0.0
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
@@ -73,6 +73,10 @@ R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
+
+* Inject slow sine for controlled ripple — freq=50kHz (5 cycles in 40-50us window)
+* At 50kHz, C2+C3=300pF has impedance ~10.6kΩ. I = 2.5mV/10.6kΩ ≈ 0.24µA
+Iripple 0 ctrl dc 0 sin(0 0.25e-6 50e3 0 0)
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
