@@ -120,7 +120,6 @@ set filetype=ascii
 
 save ref div_out ctrl up_a dn_a
 
-* First run to 40u, then continue to 50u
 tran 0.1n 50u uic
 
 * === MEASUREMENTS ===
