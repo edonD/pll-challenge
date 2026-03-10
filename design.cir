@@ -69,8 +69,7 @@ Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * R1 + C1 in series from ctrl to ground (provides stabilizing zero)
 * C2 shunt from ctrl to ground (integration)
 * C3 for additional high-freq filtering
-* Nonlinear R: increases as ctrl deviates from center (reduces drift)
-BR_lf1 ctrl lf_zero I = (v(ctrl)-v(lf_zero))/({R1}*(1+10*(v(ctrl)-{Vco_center})*(v(ctrl)-{Vco_center})))
+R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
