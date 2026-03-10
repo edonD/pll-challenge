@@ -824,3 +824,4 @@ e110387	0.884949	22.1	5.0	1.74	discard	divider DAC input_load=1pF
 ed361c8	0.884949	22.1	5.0	1.74	discard	Icp=263.19uA
 ccc6229	0.876903	24.4	5.24	1.74	discard	C3=1fF
 d8a2237	0.884877	22.1	5.002	1.74	discard	VCO init_phase=90
+ca85c6c	0.884913	22.1	5.001	1.74	discard	divider rise/fall=0.05n
