@@ -199,3 +199,12 @@ fe9cca0	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
 6978d17	0.882138	18.64	4.393	1.738	discard	IC=1.62V closer to final, less drift
 16d6296	0.865729	24.81	5.609	1.738	discard	IC=1.68V above center, more drift
 5fd9dbb	0.876871	24.38	5.238	1.738	discard	remove C3, ripple 5.238mV
+37f317a	0.884944	22.13	4.999	1.738	discard	ADC bridge in_low=1.0 in_high=2.0, ripple 4.999mV
+84da116	0.692889	22.13	999	1.738	crash	CP pwr(0.5) sim failure
+9ee0a32	0.884909	22.07	4.991	1.738	discard	1k in series C2, ripple 4.991mV
+36fa2d1	0.884761	21.83	4.957	1.738	discard	C3=110pF, ripple 4.957mV
+0f76584	0.883499	22.43	5.041	1.738	discard	C3=90pF, ripple 5.041mV
+e132c0a	0.881849	18.24	4.335	1.738	discard	divider i_count=120, different initial phase
+8a95492	0.884913	22.14	5.001	1.738	discard	ADC bridge 0.5n delays, ripple 5.001mV
+c66f630	0.884913	22.14	5.001	1.738	discard	ADC bridge 0.3n delays, ripple 5.001mV
+163e233	0.884949	22.14	5.000	1.738	discard	minimal save (ctrl only), same score
