@@ -554,3 +554,8 @@ af395ca	0.884909	22.09	5.003	1.738	discard	anti-drift compensation -0.66nA
 58c1775	0.884949	22.14	5.000	1.738	discard	VCO duty_cycle=0.45, same score
 f30a5a4	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
 d2a88ab	0.884949	22.14	5.000	1.738	discard	fref=5MHz Ndiv=480, same score
+f675749	0.884913	22.14	5.001	1.738	discard	R1=150.05k ultra-fine tune, slightly worse
+15b6f21	0.884944	22.14	5.000	1.738	discard	R1=149.95k ultra-fine tune below
+947faf6	0.884949	22.14	5.000	1.738	discard	.options trtol=5, same score
+ca27f6d	0.884857	22.14	5.000	1.738	discard	voltage-dependent CP mismatch
+a648497	0.884949	22.14	5.000	1.738	discard	.options vntol=1e-8, same score

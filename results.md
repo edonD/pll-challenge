@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:43:04*
+*Auto-generated at 2026-03-10 06:45:04*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **555** |
+| Total experiments | **560** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 537 |
+| Regressions (discard) | 542 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (555 experiments)
+Score Progression (560 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●● ●    ●●●●
- 0.826 │████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ███●█●●●●████
- 0.767 │────────────────────────────────────────────●───────────────
- 0.708 │██████████████████████████●███●███████████████●█████████████
+ 0.885 │  ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●● ●    ●●●●  ● ●
+ 0.826 │●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ███●█●●●●████●●█●█
+ 0.767 │───────────────────────────────────────●────────────────────
+ 0.708 │█████████████████████●███●███████████████●██████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -625,6 +625,11 @@ Target: 0.8 ──────────────────────�
 | 553 | `58c1775` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO duty_cycle=0.45, same score |
 | 554 | `f30a5a4` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=20MHz Ndiv=120, same score |
 | 555 | `d2a88ab` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=5MHz Ndiv=480, same score |
+| 556 | `f675749` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | R1=150.05k ultra-fine tune, slightly worse |
+| 557 | `15b6f21` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | R1=149.95k ultra-fine tune below |
+| 558 | `947faf6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options trtol=5, same score |
+| 559 | `ca27f6d` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | voltage-dependent CP mismatch |
+| 560 | `a648497` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options vntol=1e-8, same score |
 
 ## Score History
 
@@ -1184,6 +1189,11 @@ Target: 0.8 ──────────────────────�
   #553  0.884949  discard   VCO duty_cycle=0.45, same score
   #554  0.884949  discard   fref=20MHz Ndiv=120, same score
   #555  0.884949  discard   fref=5MHz Ndiv=480, same score
+  #556  0.884913  discard   R1=150.05k ultra-fine tune, slightly worse
+  #557  0.884944  discard   R1=149.95k ultra-fine tune below
+  #558  0.884949  discard   .options trtol=5, same score
+  #559  0.884857  discard   voltage-dependent CP mismatch
+  #560  0.884949  discard   .options vntol=1e-8, same score
 ```
 
 ---
