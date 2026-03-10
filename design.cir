@@ -25,7 +25,7 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.00499
+.param Icp_mismatch = 0.00501
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
