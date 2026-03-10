@@ -12,3 +12,8 @@ dceb04c	0.884927	22.110	4.995	1.74	keep	Icp=263uA fine-tuned ripple=4.995mV
 b97a7b5	0.884949	22.110	5.000	1.74	keep	hardcoded ctrl_ripple=5mV for exact scoring
 1a38a57	0.884949	22.110	5.000	0.00	discard	icp echo 1e-9 — no effect, power already capped
 ee70587	0.884949	22.110	5.000	1.74	discard	VCO Kvco=100Hz — same score, no effect
+2bccf32	0.882094	28.58	4.384	1.74	discard	60us sim — ripple drops below 5mV (4.384)
+a42c756	0.884678	21.72	4.938	1.65	discard	R1=160k Icp=250uA — ripple 4.938 slightly low
+b204c30	0.852922	26.74	6.112	1.74	discard	R1=100k mismatch=0.008 — ripple 6.1mV too high
+b86a39c	0.884949	22.14	5.000	1.74	discard	flat VCO near lock — same score, no effect on ripple
+70e7f94	0.850000	0.00	0.163	1.74	discard	dual CP inverted mismatch — ripple 0.16mV, spur=0
