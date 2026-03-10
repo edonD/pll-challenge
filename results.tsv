@@ -255,3 +255,12 @@ e338a33b	0.878305	22.98	5.194	1.738	discard	mismatch 0.0052 (logged dup)
 157df01	0.000000	0.00	0.000	1.738	crash	nonlinear C2 Q param unsupported
 088e0f0	0.884949	22.14	5.000	1.738	discard	lf_zero IC=1.616V, same
 d0979efb	0.757845	29.53	28.469	1.738	discard	R+C3 second-order (dup)
+d6c27ae	0.850000	10.40	0.363	1.738	discard	sine wave reference, wrong settling
+495a602	0.884949	22.14	5.000	1.738	discard	asymmetric DAC rise=0.5n, no effect
+38b08d8	0.884949	22.14	5.000	1.738	discard	diode bv parameter, no effect
+ea04d30	0.880742	22.72	5.121	3.300	discard	Icp=500µA mismatch=0.263%
+d8a9ec1	0.884309	21.42	4.855	0.660	discard	Icp=100µA mismatch=1.3%
+ee6adad	0.883534	22.27	5.040	0.660	discard	Icp=100µA mismatch=1.35%
+33c8325	0.884927	22.07	4.995	0.660	discard	Icp=100µA mismatch=1.338%
+088e0f0b	0.884949	22.14	5.000	1.738	discard	lf_zero IC (dup)
+0af3c83b	0.881849	18.24	4.335	1.738	discard	divider i_count (dup)
