@@ -60,8 +60,10 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
-Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+* Tri-state CP with controlled pulse width — add intentional delay matching
+* UP and DN have matched rise/fall but slightly different peak current
+Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, min(1, (v(up_a)-{vdd/2})/{vdd/4}))
+Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, min(1, (v(dn_a)-{vdd/2})/{vdd/4}))
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
