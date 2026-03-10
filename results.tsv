@@ -123,3 +123,10 @@ cdaa0fe	0.884949	22.14	5.000	1.74	discard	save all — no effect
 c4ea6b4	0.764370	22.14	139.2	1.74	discard	exponential CP pow(0.95/1.05) — 139mV
 292fa1d	0.884949	22.14	5.000	1.74	discard	point-to-point ripple — same as max-min
 c61c9cf	0.878767	22.14	5.180	1.74	discard	C3=50pF — ripple 5.18mV
+10fa212	0.857039	22.14	5.940	1.74	discard	dual-loop CP coarse+fine — ripple 5.94mV
+d3e7a4d	0.884918	22.14	4.993	1.74	discard	0.5nA upward bias — ripple 4.993mV
+0151a74	0.884877	22.14	5.002	1.74	discard	0.1nA downward bias — ripple 5.002mV
+373c0a5	0.884949	22.14	5.000	1.74	discard	AND 1n/1n — no effect
+e36c431	0.884935	22.14	4.997	1.74	discard	3-stage divider /6/8/5 — ripple 4.997mV
+9c354dc	0.884857	22.14	4.979	1.74	discard	Rleak=10G — ripple 4.979mV slightly low
+f467877	0.884848	22.14	4.977	1.74	discard	no clamp diodes Rleak=100G — ripple 4.977mV
