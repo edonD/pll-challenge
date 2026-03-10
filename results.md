@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 08:10:44*
+*Auto-generated at 2026-03-10 08:12:42*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **780** |
+| Total experiments | **785** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 760 |
+| Regressions (discard) | 765 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (780 experiments)
+Score Progression (785 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │   ●●●●    ● ●    ● ●  ●●●      ●●  ●●●●  ●● ●  ●●   ● ●●  ●
- 0.826 │●●●████●●●●█●█●●●●█●█●●███ ●●●●●██●●████●●██●█●●██●●●█●██●●█
+ 0.885 │●●    ● ●    ● ●  ●●●      ●●  ●●●●  ●● ●  ●●   ● ●●  ● ● ●●
+ 0.826 │██●●●●█●█●●●●█●█●●███ ●●●●●██●●████●●██●█●●██●●●█●██●●█●█●██
  0.767 │────────────────────────────────────────────────────────────
- 0.708 │██████████████████████████●█████████████████████████████████
+ 0.708 │█████████████████████●██████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -850,6 +850,11 @@ Target: 0.8 ──────────────────────�
 | 778 | `c12d919` | 0.8500 | 48.57 | 1.410 | 1.738 | ❌ discard | Rleak=500M |
 | 779 | `bf782f8` | 0.8849 | 22.10 | 4.999 | 1.738 | ❌ discard | C1=1.02n |
 | 780 | `83844ee` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | compute ripple_diff for analysis |
+| 781 | `39542dc` | 0.8838 | 22.28 | 5.032 | 1.738 | ❌ discard | C2=199.5p Icp_mismatch=0.00503 |
+| 782 | `38e892a` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 3-point flat Kvco ~5MHz/V |
+| 783 | `d67f609` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | R1=150.02k |
+| 784 | `cafbd52` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C1 no IC |
+| 785 | `0cb07fd` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options trtol=1 |
 
 ## Score History
 
@@ -1634,6 +1639,11 @@ Target: 0.8 ──────────────────────�
   #778  0.850000  discard   Rleak=500M
   #779  0.884892  discard   C1=1.02n
   #780  0.884949  discard   compute ripple_diff for analysis
+  #781  0.883815  discard   C2=199.5p Icp_mismatch=0.00503
+  #782  0.884949  discard   VCO 3-point flat Kvco ~5MHz/V
+  #783  0.884913  discard   R1=150.02k
+  #784  0.884949  discard   C1 no IC
+  #785  0.884949  discard   .options trtol=1
 ```
 
 ---
