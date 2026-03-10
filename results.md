@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:24:53*
+*Auto-generated at 2026-03-10 06:26:21*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **518** |
+| Total experiments | **521** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 500 |
+| Regressions (discard) | 503 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,11 +37,11 @@
 ## Score Progression
 
 ```
-Score Progression (518 experiments)
+Score Progression (521 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●
- 0.826 │████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●█
+ 0.885 │●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ●  ●   ●●● 
+ 0.826 │█●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●●█●●●███●
  0.767 │────────────────────────────────────────────────────────────
  0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
@@ -588,6 +588,9 @@ Target: 0.8 ──────────────────────�
 | 516 | `6153336` | 0.8846 | 22.18 | 5.010 | 1.738 | ❌ discard | ref 2n rise/fall, slightly worse |
 | 517 | `b5c0ea7` | 0.8846 | 22.17 | 5.010 | 1.738 | ❌ discard | Rleak2=1G on lf_zero, worse |
 | 518 | `4a6b654` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options gmin=1e-15, same score |
+| 519 | `ab68f8e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | D-FF reset_delay=0.15n, same score |
+| 520 | `e824d07` | 0.8849 | 23.43 | 5.000 | 1.738 | ❌ discard | sim 52u meas 40-50u, same score |
+| 521 | `a8fbb62` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | tran step 0.2n, slightly worse |
 
 ## Score History
 
@@ -1110,6 +1113,9 @@ Target: 0.8 ──────────────────────�
   #516  0.884593  discard   ref 2n rise/fall, slightly worse
   #517  0.884593  discard   Rleak2=1G on lf_zero, worse
   #518  0.884949  discard   .options gmin=1e-15, same score
+  #519  0.884949  discard   D-FF reset_delay=0.15n, same score
+  #520  0.884949  discard   sim 52u meas 40-50u, same score
+  #521  0.884913  discard   tran step 0.2n, slightly worse
 ```
 
 ---
