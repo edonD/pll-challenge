@@ -19,7 +19,7 @@
 
 * Loop filter: reduced Kvco needs higher R1 to maintain bandwidth
 * Lower Icp + larger C2 for minimal ripple → better phase noise score
-.param R1 = 150.5k
+.param R1 = 150k
 .param C1 = 1n
 .param C2 = 200p
 .param C3 = 100p
