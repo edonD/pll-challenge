@@ -804,3 +804,4 @@ e4d3da7	0.884949	22.1	5.0	1.74	discard	asymmetric FF reset_delay
 73e4f61	0.856376	25.9	5.97	1.74	discard	Icp_mismatch=0.006
 91525ae	0.879018	15.5	3.81	1.32	discard	Icp=200uA
 964acbf	0.884949	22.1	5.0	1.74	discard	diode n=0.5
+f8daca2	0.884949	22.1	5.0	1.74	discard	remove clamp diodes
