@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:20:00*
+*Auto-generated at 2026-03-10 06:22:34*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **506** |
+| Total experiments | **512** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 488 |
+| Regressions (discard) | 494 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (506 experiments)
+Score Progression (512 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │       ●    ●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●
- 0.826 │●●●  ●●█ ●●●████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●████
- 0.767 │───●────●───────────────────────────────────────────────────
- 0.708 │████●███████████████████████████████████████████████████████
+ 0.885 │ ●    ●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●●●● ● 
+ 0.826 │●█ ●●●████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●███████●█●
+ 0.767 │──●─────────────────────────────────────────────────────────
+ 0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -576,6 +576,12 @@ Target: 0.8 ──────────────────────�
 | 504 | `57b0fca` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | div DAC out_undef=0, same score |
 | 505 | `b4e977a` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options interp, same score |
 | 506 | `9a58709` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 3-point table, same score |
+| 507 | `b026c8e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | 100ohm CP isolation, same score |
+| 508 | `b8b1a4a` | 0.8849 | 22.13 | 5.000 | 1.738 | ❌ discard | VCO duty_cycle=0.45, same score |
+| 509 | `af9954e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | DAC1 input_load=0, same score |
+| 510 | `66646db` | 0.8475 | 27.46 | 6.356 | 3.300 | ❌ discard | Icp=500uA R1=79k, ripple 6.4mV |
+| 511 | `4f90f6b` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | IC up_a=dn_a=0, same score |
+| 512 | `0914c5c` | 0.8500 | 48.57 | 0.200 | 1.738 | ❌ discard | Rleak=500M, ref_spur=0 |
 
 ## Score History
 
@@ -1086,6 +1092,12 @@ Target: 0.8 ──────────────────────�
   #504  0.884949  discard   div DAC out_undef=0, same score
   #505  0.884949  discard   .options interp, same score
   #506  0.884949  discard   VCO 3-point table, same score
+  #507  0.884949  discard   100ohm CP isolation, same score
+  #508  0.884949  discard   VCO duty_cycle=0.45, same score
+  #509  0.884949  discard   DAC1 input_load=0, same score
+  #510  0.847491  discard   Icp=500uA R1=79k, ripple 6.4mV
+  #511  0.884949  discard   IC up_a=dn_a=0, same score
+  #512  0.850000  discard   Rleak=500M, ref_spur=0
 ```
 
 ---
