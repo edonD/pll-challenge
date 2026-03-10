@@ -178,3 +178,8 @@ d56ceac	0.884944	22.13	4.999	1.738	discard	div DAC 0.2n, ripple 4.999mV
 76b44a7	0.882094	28.58	4.384	1.738	discard	60us sim measure 50-60us, ripple 4.384mV
 96e6e46	0.884567	21.52	4.913	1.738	discard	C2=220pF, ripple 4.913mV
 24c06e0	0.882109	22.71	5.081	1.738	discard	C2=180pF, ripple 5.081mV
+a99732c	0.884949	22.14	5.000	1.738	discard	clamp diode is=1e-18, same score
+fd6b6db	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
+7c4a9a9	0.884682	21.82	4.939	1.738	discard	1mV bias in LF path
+e089364	0.884949	22.14	5.000	1.738	discard	single combined CP B-source, same score
+1c3c184	0.881560	22.57	5.097	1.738	discard	mismatch=0.0051, ripple 5.097mV
