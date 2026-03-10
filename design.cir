@@ -102,9 +102,6 @@ avco ctrl d_vco vco_model
 * ---------------------------------------------------------------------------
 * FREQUENCY DIVIDER
 * ---------------------------------------------------------------------------
-* Active load on VCO output
-Rload_vco div_out 0 100k
-
 adiv1 d_vco d_divided fdiv1
 .model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
 + rise_delay=0.1n fall_delay=0.1n)
