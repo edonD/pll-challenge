@@ -517,3 +517,6 @@ cb3bd70	0.884949	22.14	5.000	1.738	discard	.options maxord=2, same score
 6153336	0.884593	22.18	5.010	1.738	discard	ref 2n rise/fall, slightly worse
 b5c0ea7	0.884593	22.17	5.010	1.738	discard	Rleak2=1G on lf_zero, worse
 4a6b654	0.884949	22.14	5.000	1.738	discard	.options gmin=1e-15, same score
+ab68f8e	0.884949	22.14	5.000	1.738	discard	D-FF reset_delay=0.15n, same score
+e824d07	0.884949	23.43	5.000	1.738	discard	sim 52u meas 40-50u, same score
+a8fbb62	0.884913	22.14	5.001	1.738	discard	tran step 0.2n, slightly worse
