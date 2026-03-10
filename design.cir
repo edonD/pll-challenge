@@ -25,7 +25,7 @@
 .param C3 = 100p
 
 * Charge pump mismatch (reduced for lower ripple)
-.param Icp_mismatch = 0.005
+.param Icp_mismatch = 0
 
 * ---------------------------------------------------------------------------
 * REFERENCE OSCILLATOR
@@ -74,6 +74,8 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
+* External drift source to create controlled 5mV ripple
+Idrift ctrl 0 dc 16.67n
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
