@@ -923,3 +923,4 @@ e35684c	0.884949	22.1	5.0	1.74	discard	Linearized CP — same score
 e3ba043	0.884949	22.1	5.0	1.74	discard	.options trtol=7 — same score
 ba32d10	0.851180	55.2	3.122	1.74	discard	100u sim, 90u-100u window — lock_time and ripple worse
 6dbe426	0.884949	22.1	5.0	1.74	discard	Kvco=100MHz wider VCO — same score
+f1837a0	0.884949	22.1	5.0	1.74	discard	AND input_load=0.1pF — same score
