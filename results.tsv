@@ -585,3 +585,7 @@ fd1c07d	0.884949	22.14	5.000	1.738	discard	AND gate equal delays 0.1n/0.1n, same
 0312369	0.884806	22.14	5.002	1.738	discard	Icp=263.4uA micro-adjust, slightly worse
 f37e2bd	0.884949	22.14	5.000	1.738	discard	adaptive mismatch coeff=0.01, same score
 bc8e854	0.854806	22.14	6.032	1.738	discard	strong adaptive mismatch coeff=100, worse
+73632e7	0.884806	22.14	5.002	1.738	discard	ddt() derivative feedback, slightly worse
+eecdd9a	0.000000	0.00	0.000	1.738	crash	idt() not supported in ngspice
+f3a094a	0.884949	22.14	5.000	1.738	discard	.options noopalter, same score
+2a9d481	0.850000	22.14	0.050	1.738	discard	time-decaying mismatch exp(-t/20us), ref_spur=0
