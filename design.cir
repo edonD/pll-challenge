@@ -71,7 +71,7 @@ Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * C3 for additional high-freq filtering
 R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
-C_lf2 ctrl 0 {C2} ic=1.616
+C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
@@ -113,7 +113,7 @@ abridge_divout [d_divided] [div_out] dac_div
 * ---------------------------------------------------------------------------
 * INITIAL CONDITIONS AND SIMULATION
 * ---------------------------------------------------------------------------
-.ic v(ctrl)=1.616 v(lf_zero)=1.616
+.ic v(ctrl)={Vco_center} v(lf_zero)={Vco_center}
 
 .control
 set filetype=ascii
