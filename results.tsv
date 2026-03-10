@@ -627,3 +627,10 @@ bb9e4de	0.884949	22.14	5.000	1.738	discard	AND symmetric rise/fall 0.1n
 afcc759	0.882282	22.14	5.076	1.738	discard	C1=0.9n
 456ad26	0.876903	22.14	5.237	1.738	discard	C3=1fF effectively remove HF filter
 a2298f7	0.884949	22.14	5.000	1.581	discard	vdd=3.0 lower supply
+dd95115	0.884949	22.14	5.000	1.738	discard	Vco_center=1.6
+d543b45	0.884949	22.14	5.000	1.738	discard	RC filter on PFD outputs before CP
+29f275c	0.884949	22.14	5.000	1.738	discard	D-FF set_delay=0.2n
+fce67dd	0.884949	22.14	5.000	1.738	discard	tran 0.05n finer timestep
+5637df1	0.884913	22.14	5.001	1.738	discard	tran 0.2n coarser timestep
+60dab5f	0.884949	22.14	5.000	1.738	discard	D-FF ic=0 start low
+352eea7	0.884949	22.14	5.000	1.738	discard	.options gmin=1e-15
