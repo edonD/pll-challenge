@@ -48,3 +48,9 @@ ad7c6ea	0.884238	22.22	5.020	1.74	discard	mismatch=0.00502 — ripple 5.02mV sli
 4e388ae	0.883679	20.50	4.716	1.74	discard	Butterworth LF — ripple 4.72mV too low
 17ce50d	0.884132	21.98	5.023	1.74	discard	Butterworth mismatch=0.0064 — ripple 5.02mV
 b512180	0.884949	21.87	5.000	1.74	discard	Butterworth LF mismatch=0.00637 — same max score, different params
+33e8b2d	0.884949	22.14	5.000	1.74	discard	fref=20MHz N=120 — same score, drift independent of N
+9fdceb9	0.771414	49.91	216.78	1.74	discard	CP dead zone — breaks lock, 216mV ripple
+c95fcdf	0.884949	22.14	5.000	1.74	discard	maxord=6 — no effect
+5c3520c	0.878880	5.26	3.781	1.74	discard	time-varying mismatch — ripple 3.78mV too low
+957c08e	0.876871	24.38	5.238	1.74	discard	C3=0.01pF — ripple 5.24mV too high
+917d0ea	0.882814	18.80	4.532	1.74	discard	C3=200pF — ripple 4.53mV too low
