@@ -469,3 +469,9 @@ c590951	0.884949	22.14	5.000	1.738	discard	.options method=gear, same score
 b51ea63	0.884922	22.10	4.997	1.738	discard	d_buffer 0.5n in divider feedback
 c9f4761	0.881849	18.24	4.530	1.738	discard	divider i_count=120, different drift
 fce7c90	0.884949	22.14	5.000	1.738	discard	.nodeset alongside .ic, same score
+891cfc8	0.884909	22.10	4.990	1.738	discard	R1=149.5k, ripple below 5mV
+f7461b5	0.884593	22.17	5.010	1.738	discard	R1=150.5k, ripple above 5mV
+32c75df	0.884368	21.66	4.910	1.738	discard	voltage-dependent CP mismatch
+034c12d	0.884949	22.14	5.000	1.738	discard	Kvco=20MHz/V VCO table, same score
+438c1ca	0.855840	26.40	5.987	1.738	discard	RC snubber on lf_zero (500R+10p)
+0e75509	0.884949	22.14	5.000	1.738	discard	tran start-save at 20u, same score
