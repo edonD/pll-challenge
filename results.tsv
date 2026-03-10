@@ -860,3 +860,4 @@ c974d73	0.884593	22.1	5.01	1.74	discard	Icp_mismatch=0.00501
 c92a366	0.884909	22.1	5.0	1.74	discard	Icp_mismatch=0.00499
 92655dd	0.884913	22.1	5.001	1.74	discard	FF clk_delay=0.2n
 be64e7d	0.884949	22.1	5.0	1.74	discard	maxord=2
+8fc914c	0.884949	22.1	5.0	1.74	discard	ref duty 60%
