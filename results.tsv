@@ -136,3 +136,9 @@ f467877	0.884848	22.14	4.977	1.74	discard	no clamp diodes Rleak=100G — ripple 
 cfe1c4f	0.884309	22.14	5.018	1.74	discard	C1=800pF mismatch=0.00485 — ripple 5.018mV
 79aa6f8	0.884809	22.14	4.968	1.74	discard	C1=800pF mismatch=0.0048 — ripple 4.968mV
 8091fbd	0.884940	22.14	4.998	1.74	discard	C1=800pF mismatch=0.00483 — ripple 4.998mV
+14b6fac	0.884944	22.14	4.999	1.74	discard	ADC bridge 1.0V/2.0V — ripple 4.999mV
+8e67df0	0.884876	22.14	4.983	0.53	discard	VDD=1.0V Vco_center=0.5V — ripple 4.983mV
+e504839	0.884949	22.14	5.000	1.74	discard	set ternary_default=0 — no effect
+9756151	0.000000	0.00	0.000	0.00	crash	NAND+INV — scalar connection syntax error
+0778c9e	0.884949	22.14	5.000	1.74	discard	VCO duty_cycle=0.45 — no effect
+5c04d2f	0.884949	22.14	5.000	1.74	discard	compact CP+LF format — no effect
