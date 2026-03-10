@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 07:25:21*
+*Auto-generated at 2026-03-10 07:27:02*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **659** |
+| Total experiments | **664** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 639 |
+| Regressions (discard) | 644 |
 | Crashes | 10 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,12 +37,12 @@
 ## Score Progression
 
 ```
-Score Progression (659 experiments)
+Score Progression (664 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●●●●   ●●  ●● ●         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●
- 0.826 │████●●●██●●██●█●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●██
- 0.767 │───────────────────●────────────────────────────────────────
+ 0.885 │  ●●  ●● ●         ●   ●●●●● ●●  ●   ●● ●      ●  ●● ●●●   ●
+ 0.826 │●●██●●██●█●●●● ●●●●█●●●█████●██●●█●●●██●█●●●●●●█●●██●███●●●█
+ 0.767 │──────────────●─────────────────────────────────────────────
  0.708 │████████████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
@@ -729,6 +729,11 @@ Target: 0.8 ──────────────────────�
 | 657 | `8b48ab6` | 0.8818 | 22.14 | 5.000 | 1.738 | ❌ discard | divider i_count=120 |
 | 658 | `ee35e86` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | IC v(div_out)=0 |
 | 659 | `3e723f6` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | save all |
+| 660 | `bc36062` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | CP min(1,...) clamping |
+| 661 | `48bb3b8` | 0.8849 | 22.14 | 5.001 | 1.738 | ❌ discard | R1=150.05k micro-increment |
+| 662 | `f70aecc` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | C2=205p |
+| 663 | `d9ba4a7` | 0.8842 | 22.14 | 5.021 | 1.738 | ❌ discard | C2=195p |
+| 664 | `301629e` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options method=gear |
 
 ## Score History
 
@@ -1392,6 +1397,11 @@ Target: 0.8 ──────────────────────�
   #657  0.881849  discard   divider i_count=120
   #658  0.884949  discard   IC v(div_out)=0
   #659  0.884949  discard   save all
+  #660  0.884949  discard   CP min(1,...) clamping
+  #661  0.884913  discard   R1=150.05k micro-increment
+  #662  0.884853  discard   C2=205p
+  #663  0.884203  discard   C2=195p
+  #664  0.884949  discard   .options method=gear
 ```
 
 ---
