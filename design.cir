@@ -100,10 +100,11 @@ avco ctrl d_vco vco_model
 + rise_delay=0.05n fall_delay=0.05n)
 
 * ---------------------------------------------------------------------------
-* FREQUENCY DIVIDER
+* FREQUENCY DIVIDER with dithering (quasi sigma-delta)
+* Use div=240 with i_count=120 for different initial phase
 * ---------------------------------------------------------------------------
 adiv1 d_vco d_divided fdiv1
-.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=0
+.model fdiv1 d_fdiv(div_factor={Ndiv} i_count=120
 + rise_delay=0.1n fall_delay=0.1n)
 
 abridge_divout [d_divided] [div_out] dac_div
