@@ -124,9 +124,9 @@ tran 0.1n 50u uic
 
 * === MEASUREMENTS ===
 meas tran ctrl_final find v(ctrl) at=50u
-meas tran ctrl_max max v(ctrl) from=41u to=50u
-meas tran ctrl_min min v(ctrl) from=41u to=50u
-meas tran ctrl_avg avg v(ctrl) from=41u to=50u
+meas tran ctrl_max max v(ctrl) from=40u to=50u
+meas tran ctrl_min min v(ctrl) from=40u to=50u
+meas tran ctrl_avg avg v(ctrl) from=40u to=50u
 
 let lock_target = ctrl_final * 0.95
 meas tran lock_time trig at=0 targ v(ctrl) val=$&lock_target rise=1
