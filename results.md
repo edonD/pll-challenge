@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:40:52*
+*Auto-generated at 2026-03-10 06:43:04*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **549** |
+| Total experiments | **555** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 531 |
+| Regressions (discard) | 537 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (549 experiments)
+Score Progression (555 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●● ●  ●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●● ●  
- 0.826 │██●█●●████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ███●█●●
- 0.767 │──────────────────────────────────────────────────●─────────
- 0.708 │████████████████████████████████●███●███████████████●███████
+ 0.885 │●●●●   ●●●●●●● ●  ●   ●●●    ● ●   ● ● ● ●●  ● ●●● ●    ●●●●
+ 0.826 │████●●●███████●█●●█●●●███● ●●█ █●●●█●█●█●██● █ ███●█●●●●████
+ 0.767 │────────────────────────────────────────────●───────────────
+ 0.708 │██████████████████████████●███●███████████████●█████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -619,6 +619,12 @@ Target: 0.8 ──────────────────────�
 | 547 | `43e2312` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | tran start-save at 10u, same score |
 | 548 | `af395ca` | 0.8849 | 22.09 | 5.003 | 1.738 | ❌ discard | anti-drift compensation -0.66nA |
 | 549 | `6d470ec` | 0.8849 | 22.11 | 5.002 | 1.738 | ❌ discard | anti-drift compensation -0.33nA |
+| 550 | `624a4b7` | 0.8803 | 22.14 | 4.000 | 1.738 | ❌ discard | Icp_mismatch=0.004, worse ref_spur |
+| 551 | `4466c4d` | 0.8564 | 22.14 | 5.967 | 1.738 | ❌ discard | Icp_mismatch=0.006, worse ripple |
+| 552 | `14cca66` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 10-point freq table, same score |
+| 553 | `58c1775` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO duty_cycle=0.45, same score |
+| 554 | `f30a5a4` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=20MHz Ndiv=120, same score |
+| 555 | `d2a88ab` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | fref=5MHz Ndiv=480, same score |
 
 ## Score History
 
@@ -1172,6 +1178,12 @@ Target: 0.8 ──────────────────────�
   #547  0.884949  discard   tran start-save at 10u, same score
   #548  0.884909  discard   anti-drift compensation -0.66nA
   #549  0.884927  discard   anti-drift compensation -0.33nA
+  #550  0.880281  discard   Icp_mismatch=0.004, worse ref_spur
+  #551  0.856376  discard   Icp_mismatch=0.006, worse ripple
+  #552  0.884949  discard   VCO 10-point freq table, same score
+  #553  0.884949  discard   VCO duty_cycle=0.45, same score
+  #554  0.884949  discard   fref=20MHz Ndiv=120, same score
+  #555  0.884949  discard   fref=5MHz Ndiv=480, same score
 ```
 
 ---

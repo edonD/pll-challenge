@@ -548,3 +548,9 @@ a2648d8	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
 43e2312	0.884949	22.14	5.000	1.738	discard	tran start-save at 10u, same score
 af395ca	0.884909	22.09	5.003	1.738	discard	anti-drift compensation -0.66nA
 6d470ec	0.884927	22.11	5.002	1.738	discard	anti-drift compensation -0.33nA
+624a4b7	0.880281	22.14	4.000	1.738	discard	Icp_mismatch=0.004, worse ref_spur
+4466c4d	0.856376	22.14	5.967	1.738	discard	Icp_mismatch=0.006, worse ripple
+14cca66	0.884949	22.14	5.000	1.738	discard	VCO 10-point freq table, same score
+58c1775	0.884949	22.14	5.000	1.738	discard	VCO duty_cycle=0.45, same score
+f30a5a4	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
+d2a88ab	0.884949	22.14	5.000	1.738	discard	fref=5MHz Ndiv=480, same score
