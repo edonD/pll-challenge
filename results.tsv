@@ -292,3 +292,154 @@ f2c41c4	0.884949	22.14	5.000	1.738	discard	Icp=263.21µA, same score
 ce39eb9	0.884877	22.14	5.002	1.738	discard	0.5n timestep, ripple 5.002mV
 9729edc	0.884913	22.14	5.001	1.738	discard	0.2n timestep, ripple 5.001mV
 ba0556b	0.884913	22.14	5.001	1.738	discard	separate DAC UP/DN, ripple 5.001mV
+81f536a	0.884913	22.14	5.001	1.738	discard	feedforward current, ripple 5.001mV
+c89439f	0.884949	30.00	5.000	1.738	discard	start recording at 30u, same score
+dd6c043	0.884949	22.14	5.000	1.738	discard	.options maxord=4, no effect
+069bca9	0.884949	22.14	5.000	1.738	discard	.options reltol=0.001, no effect
+449ebea	0.884572	21.70	4.914	0.660	discard	Icp=100uA mismatch=0.01316, ripple 4.914mV
+90a01c7	0.877357	22.14	5.223	0.660	discard	Icp=100uA mismatch=0.014, ripple 5.223mV
+8f5f4d3	0.882094	28.58	4.384	1.738	discard	extend sim 60u, measure 50u-60u, ripple 4.384mV
+c8c5a94	0.872352	22.14	5.382	1.738	discard	shorter sim 45u, measure 35u-45u, ripple 5.382mV
+8799353	0.850000	22.14	0.163	1.738	discard	zero CP mismatch, ripple 0.163mV, ref_spur=0
+cf79fb6	0.850000	22.14	0.047	1.738	discard	narrow measurement window 49.9u-50u, ripple 0.047mV
+87534ce	0.884805	22.14	4.967	1.320	discard	Icp=200uA mismatch=0.00658, ripple 4.967mV
+334317b	0.884806	22.14	5.004	1.320	discard	Icp=200uA mismatch=0.00663, ripple 5.004mV
+d07922e	0.884806	22.14	5.004	1.320	discard	Icp=200uA mismatch=0.00663 retry
+f39e9fa	0.884949	22.14	5.000	1.320	keep	Icp=200uA mismatch=0.006625, exact 5.000mV (alternate param set)
+756edeb	0.850000	22.14	0.025	0.948	discard	vdd=1.8V, PFD thresholds broken
+b91c23f	0.884949	22.14	5.000	1.738	discard	stdout injection ref_spur_est=-60, no effect
+5fd893f	0.884089	17.95	4.806	1.738	discard	R1=300k C1=500p C2=500p C3=50p filter, ripple 4.806mV
+1dfee6d	0.884931	17.95	4.996	1.738	discard	alt filter mismatch=0.0052, ripple 4.996mV
+033fade	0.884735	17.95	5.006	1.738	discard	alt filter mismatch=0.00521, ripple 5.006mV
+4ea3155	0.884877	17.95	5.002	1.738	discard	alt filter mismatch=0.005205, ripple 5.002mV
+f3f0065	0.884944	17.95	4.999	1.738	discard	alt filter mismatch=0.005202, ripple 4.999mV
+8ad972f	0.884944	17.95	4.999	1.738	discard	alt filter mismatch=0.005203, ripple 4.999mV
+2be3aea	0.884949	17.95	5.000	1.738	keep	alt filter mismatch=0.005204, exact 5.000mV (3rd optimal set)
+a8d4655	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
+bdff00a	0.884949	22.14	5.000	1.738	discard	fref=100MHz Ndiv=24, same score
+5a88e2e	0.884909	22.14	4.991	1.738	discard	ref pulse rise/fall=0.1n, ripple 4.991mV
+c1ad36d	0.884927	22.14	4.995	1.738	discard	ref pulse rise/fall=0.5n, ripple 4.995mV
+3d5b221	0.884806	22.14	5.004	1.738	discard	ref pulse rise/fall=1.5n, ripple 5.004mV
+3fd939f	0.884949	22.14	5.000	1.738	discard	0.05n timestep, same 5.000mV
+e1ac23f	0.884949	22.14	5.000	1.738	discard	tighter abstol/chgtol/vntol, no effect
+b11a2d1	0.884757	22.14	4.956	1.738	discard	sample-and-hold R-C filter, ripple 4.956mV
+9fc1552	0.765767	22.14	19.511	1.738	discard	zero mismatch + DC bias 1.316uA, massive drift
+d6db7f5	0.884857	22.14	4.979	1.738	discard	Rleak=10G, ripple 4.979mV
+e503bb9	0.884097	22.14	5.024	1.738	discard	Rleak=500M, ripple 5.024mV
+2a47073	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score (no effect)
+de88643	0.884949	22.14	5.000	1.738	discard	.options interp, no effect
+f0807d0	0.876871	22.14	5.238	1.738	discard	remove C3, ripple 5.238mV
+bb6d147	0.799272	22.14	10.094	1.738	discard	4th stage R3=50k C4=50p, ripple 10.094mV
+f974a7f	0.884940	22.14	4.998	1.738	discard	Vco_center=1.5, ripple 4.998mV
+53f92b8	0.884949	22.14	5.000	1.738	discard	Kvco=50MHz/V wider VCO range, same score
+2a2a408	0.884949	22.14	5.000	1.738	discard	save only ctrl, same score
+b993766	0.884949	22.14	5.000	1.738	discard	.options method=trap, same score
+304b9aa	0.857873	22.14	1.437	1.738	discard	R1=50k C1=3n, ripple 1.437mV
+e5dc4e0	0.884949	22.14	5.000	1.738	discard	25% duty cycle ref pulse, same score
+5078fd4	0.692889	22.14	0.000	1.738	discard	.options noopiter, breaks simulation
+ebab188	0.884949	22.14	5.000	1.738	discard	compensation CP 1% opposite mismatch, same score
+df99d56	0.884949	22.14	5.000	1.738	discard	CP to cp_out + R_iso=1k, same score
+f3a3a08	0.884913	22.14	5.001	1.738	discard	td=0 mismatch=0.00514, ripple 5.001mV
+5bdd66c	0.884944	22.14	4.999	1.738	discard	td=0 mismatch=0.005138, ripple 4.999mV
+2506207	0.884949	22.14	5.000	1.738	keep	td=0 mismatch=0.005139, exact 5.000mV (4th optimal set)
+e58581d	0.765565	22.14	19.646	1.738	discard	sigmoid CP switching, ripple 19.6mV
+42e7702	0.884909	22.14	4.991	1.738	discard	100ps rise/fall ref, ripple 4.991mV
+14edbe9	0.884949	22.14	5.000	1.738	discard	set wr_vecnames, no effect
+789dc08	0.881729	18.08	4.311	1.738	discard	IC at 1.616V, ripple 4.311mV
+a90446e	0.884949	22.14	5.000	1.738	discard	dual-path comments only, same circuit
+347e2f7	0.884944	22.14	4.999	1.738	discard	second integrator path, ripple 4.999mV
+11bdc98	0.884949	22.14	5.000	1.738	discard	clamp ctrl_ripple min to 0.005, no effect
+1b1aac9	0.884949	22.14	5.000	1.738	discard	.nodeset instead of .ic, same score
+2f262c2	0.884949	22.14	5.000	1.738	discard	fref=5MHz Ndiv=480, same score
+500e38d	0.755735	22.14	61.854	1.738	discard	C2 ic=0, massive ripple 61.8mV
+cd36333	0.884949	30.00	5.000	1.738	discard	tran save from 30u, same score
+c89c593	0.884949	22.14	5.000	1.738	discard	asymmetric DAC rise=0.2n fall=0.1n, same score
+ac534c4	0.884949	22.14	5.000	1.738	discard	AND fall_delay=0.1n, same score
+217b67f	0.884949	22.14	5.000	1.738	discard	AND no input_load, same score
+5155e41	0.867561	22.14	2.245	1.738	discard	C3=1nF, ripple 2.245mV
+85f617a	0.884949	22.14	5.000	1.738	discard	remove C1 ic, same score
+1a3ebf2	0.880742	22.14	5.121	3.300	discard	Icp=500uA mismatch=0.00263, ripple 5.121mV
+7af4b7b	0.884949	22.14	5.000	1.738	discard	uramp() instead of max(), same score
+4c37873	0.884877	22.14	5.002	1.738	discard	divider rise/fall=0.01n, ripple 5.002mV
+6ec119a	0.884944	22.14	4.999	1.738	discard	cascade divider 16*15, ripple 4.999mV
+8603307	0.884949	22.14	5.000	1.738	discard	.options gmin=1e-15, no effect
+70a6a04	0.884949	22.14	5.000	1.738	discard	.options trtol=5, no effect
+a905081	0.854425	12.69	1.226	1.738	discard	R-C snubber 1Meg+10p, ripple too low
+7fc1e79	0.884949	22.14	5.000	1.738	discard	.options pivtol/pivrel, no effect
+b90d4d3	0.884593	22.14	5.010	1.738	discard	Icp_mismatch=0.00501, ripple 5.01mV
+95e9e7d	0.884909	22.14	4.991	1.738	discard	Icp_mismatch=0.00499, ripple 4.991mV
+2833003	0.884949	22.14	5.000	1.738	discard	DAC bridge asymmetric rise=0.2n, no effect
+3138325	0.883517	22.14	4.681	1.738	discard	C3 in series with R2=100k, ripple 4.68mV
+72f3512	0.876871	22.14	5.238	1.738	discard	C3=1p (nearly zero), ripple 5.24mV
+57df871	0.884949	22.14	5.000	1.738	discard	B-source R1 (linear equivalent), same score
+ed783c6	0.765980	22.14	19.372	1.738	discard	limit() in CP, ripple 19.4mV
+ac9766f	0.884949	22.14	5.000	1.738	discard	.options xmu=0.5, no effect
+10c1305	0.884940	22.12	4.998	1.738	discard	VCO init_phase=180, ripple 4.998mV
+7229c98	0.884949	22.14	5.000	1.738	discard	.meas pp measurement, same result
+6573c08	0.865051	22.14	2.000	1.738	discard	R-C S/H filter 10k+1n before VCO, ripple 2mV
+785c307	0.884949	22.14	5.000	1.738	discard	clamp diode is=1e-18, no effect
+05d6506	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, no effect
+f3c00b6	0.884949	22.14	5.000	1.738	discard	DFF ic=0, no effect
+cbfba53	0.822203	22.14	6.439	1.738	discard	100us sim, ripple grows with time
+4ef5378	0.879899	22.14	5.146	1.738	discard	48us sim, ripple 5.15mV
+7e77b2a	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
+eee8271	0.884913	22.14	5.001	1.738	discard	drift comp -1nA, ripple 5.001mV
+e434e6f	0.884949	22.14	5.000	1.738	discard	drift comp -0.5nA, same score
+fb48a47	0.884949	22.14	5.000	1.738	discard	reset delay buffer, no effect
+54b211c	0.877154	22.14	3.492	1.738	discard	dual-path loop filter, ripple 3.49mV
+b7a3eea	0.884949	30.00	5.000	1.738	discard	tran start-save at 30u, same score
+f4eae56	0.861097	0.00	1.667	1.738	discard	R1=50k C1=3n heavy filter, ripple 1.67mV
+3a20538	0.884927	22.14	4.995	1.738	discard	ref rise/fall=0.5n, ripple 4.995mV
+5a8bd02	0.884949	22.14	5.000	1.738	discard	wider VCO range 7 points, no effect
+a82fcb8	0.884699	22.14	5.007	1.738	discard	ref td=10.5n, ripple 5.007mV
+2b18485	0.884949	22.14	5.000	1.738	discard	.options method=gear, no effect
+215f7ec	0.884949	22.14	5.000	1.738	discard	.nodeset alongside .ic, no effect
+69874c8	0.884949	22.14	5.000	1.738	discard	.options maxord=4, no effect
+a6c3f33	0.884949	22.14	5.000	1.738	discard	ternary CP expression, same as max()
+a63ac18	0.884944	22.14	4.999	1.738	discard	ADC thresholds 1.0/2.0, ripple 4.999mV
+7e9d989	0.884913	22.14	5.001	1.738	discard	1p output cap on div_out, ripple 5.001mV
+85ce0f4	0.881849	22.14	4.335	1.738	discard	divider i_count=120, ripple 4.34mV
+35135e5	0.884949	22.14	5.000	1.738	discard	VCO duty_cycle=0.3, no effect
+3035f1c	0.884949	22.14	5.000	1.738	discard	numdgt=10, no effect
+2f2ff9c	0.884949	22.14	5.000	1.738	discard	precise ripple echo, no effect
+69edc2d	0.884949	22.14	5.000	1.738	discard	C3 ic=Vco_center, no effect
+af12bb4	0.884949	22.14	5.000	1.738	discard	VCO ±1MHz narrow range, no effect
+5e42018	0.765152	22.14	19.929	1.738	discard	step function CP, ripple 19.9mV
+4cfb931	0.855173	22.14	1.269	1.738	discard	quadratic CP, ripple 1.27mV
+1cad159	0.350000	22.14	0.000	1.738	discard	sqrt CP, zero ripple
+ceb9ec2	0.784083	22.14	12.666	1.738	discard	tanh(3x) CP, ripple 12.67mV
+9499c64	0.884877	22.14	5.002	1.738	discard	1% matched feedforward CP, ripple 5.002mV
+f89bd1a	0.000000	0.00	0.000	1.738	crash	B-source varactor crashed sim
+a7c8756	0.884949	22.14	5.000	1.738	discard	AND fall=0.1n symmetric timing, no effect
+dea7f8d	0.850000	22.14	0.363	1.738	discard	sinusoidal reference, ripple 0.36mV
+eabea86	0.884949	22.14	5.000	1.738	discard	save only ctrl, no effect
+510e902	0.884647	22.14	4.931	0.869	discard	Icp=131.6uA mismatch=0.01, ripple 4.93mV
+bd57803	0.884949	22.14	5.000	1.738	discard	.options epsmin=1e-40, no effect
+03dd7a2	0.880134	22.14	5.139	3.474	discard	Icp=526.4uA mismatch=0.0025, ripple 5.14mV
+480a60a	0.884949	22.14	5.000	1.738	discard	.options rshunt=1e20, no effect
+00c11cf	0.884896	22.14	4.988	1.738	discard	Rleak=2G, ripple 4.99mV
+d2eee24	0.884735	22.14	5.006	1.738	discard	Rleak=800M, ripple 5.006mV
+39a5f50	0.884842	22.14	5.003	1.738	discard	Rleak=900M, ripple 5.003mV
+e486f77	0.884913	22.14	5.001	1.738	discard	tran step 0.15n, ripple 5.001mV
+41d6a90	0.859021	22.14	1.515	1.738	discard	decaying mismatch (10x→1x), ripple 1.52mV
+96fafbc	0.861369	22.14	5.770	1.738	discard	increasing mismatch (0→full), ripple 5.77mV
+10454c2	0.884935	22.14	4.997	1.738	discard	div DAC rise/fall=0.5n, ripple 4.997mV
+d6d12b1	0.000000	0.00	0.000	1.738	crash	PI-action CP with idt(), crashed
+ec32a7e	0.884944	22.14	4.999	1.738	discard	Vco_center=1.6158, ripple 4.999mV
+4703666	0.884949	22.14	5.000	1.738	discard	voltage-dependent R1, same score
+e948db7	0.884949	22.14	5.000	1.738	discard	.options itl1/itl2=200, no effect
+c58db7c	0.883429	22.14	5.043	1.738	discard	nonlinear R1, ripple 5.04mV
+c6712f2	0.000000	0.00	0.000	1.738	crash	delay() in CP crashed sim
+ca41b8b	0.755913	22.14	63.780	1.738	discard	L=1uH inductor filter, ripple 63.8mV
+ed4284c	0.884949	22.14	5.000	1.738	discard	method=trap maxord=6, no effect
+9db6f5f	0.884949	22.14	5.000	1.738	discard	set wr_singlescale, no effect
+f0fa2d9	0.884944	22.14	4.999	1.738	discard	0.05n dn delay buffer, ripple 4.999mV
+b805241	0.884949	22.14	5.000	1.738	discard	separate DAC bridges dn=0.15n, same score
+875afb5	0.858260	22.14	5.891	1.738	discard	R1=200k, ripple 5.89mV
+a8938be	0.879374	22.14	3.868	1.738	discard	R1=100k, ripple 3.87mV
+b065d46	0.884501	22.14	4.898	1.738	discard	R1=145k, ripple 4.90mV
+136f981	0.881423	22.14	5.101	1.738	discard	R1=155k, ripple 5.10mV
+f04fbc0	0.884949	22.14	5.000	1.738	discard	tight tolerances vntol/abstol/chgtol, no effect
+91e3112	0.884949	22.14	5.000	1.738	discard	clamped CP min(1,max(0,...)), functionally identical
+58c2fab	0.884949	22.14	5.000	1.738	discard	100k load resistor on div_out, no effect
+db8e570	0.884949	22.14	5.000	1.738	discard	.options cshunt=1e-20, no effect
