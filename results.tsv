@@ -481,3 +481,9 @@ f85ae7e	0.884877	22.14	5.002	1.738	discard	ref td=10.1n, ripple slightly above 5
 7e07068	0.881814	18.18	4.530	1.738	discard	dual-path CP with 1ohm merge, worse
 4f03a13	0.884940	22.12	4.999	1.738	discard	VCO init_phase=180, marginal
 28ab9f2	0.884949	22.14	5.000	1.738	discard	D-FF all delays 0.05n, same score
+2263a94	0.884949	22.14	5.000	1.738	discard	set wr_singlescale, same score
+712e2cc	0.884949	22.14	5.000	1.738	discard	reset buffer 1n delay, same score
+3ad1119	0.850000	0.00	0.600	1.738	discard	zero mismatch + 16.67nA drift, ref_spur=0
+960f8ba	0.884949	22.14	5.000	1.738	discard	AND input_load=0, same score
+6383c13	0.884877	22.14	5.002	1.738	discard	R1=150.1k, ripple barely over 5mV
+aa23d78	0.884949	22.14	5.000	1.738	discard	.options trtol=7, same score
