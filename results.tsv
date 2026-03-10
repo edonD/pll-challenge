@@ -520,3 +520,99 @@ b5c0ea7	0.884593	22.17	5.010	1.738	discard	Rleak2=1G on lf_zero, worse
 ab68f8e	0.884949	22.14	5.000	1.738	discard	D-FF reset_delay=0.15n, same score
 e824d07	0.884949	23.43	5.000	1.738	discard	sim 52u meas 40-50u, same score
 a8fbb62	0.884913	22.14	5.001	1.738	discard	tran step 0.2n, slightly worse
+4f2fca0	0.760613	22.14	105.000	1.738	discard	C_lf1 ic=0, huge ripple from wrong initial condition
+89ea74e	0.884913	22.14	5.001	1.738	discard	asymmetric mismatch (1+m) on up, 1 on dn
+d1ef68f	0.884770	22.14	5.005	1.743	discard	Icp=264uA R1=149.5k combined fine-tune
+1b2ac34	0.884949	22.14	5.000	1.738	discard	AND gate reversed rise/fall delays, same score
+79d2cb2	0.765353	42.23	19.790	1.738	discard	CP with sgn() gating, much worse ripple
+6e6f38d	0.884949	22.14	5.000	1.738	discard	C_lf2 ic removal, same score
+4c8bdc5	0.880032	15.59	5.000	1.738	discard	ic=1.6V, worse ref_spur
+b0f2619	0.855261	26.28	6.014	1.738	discard	ic=1.7V, worse ripple
+2fade98	0.884877	22.14	5.002	1.738	discard	div DAC asymmetric rise/fall 0.05n/0.2n
+f7957d6	0.884949	22.14	5.000	1.738	discard	.options pivtol/pivrel, same score
+840ebba	0.881849	18.24	5.000	1.738	discard	divider i_count=120 half of Ndiv
+cd3f0d2	0.884949	22.14	5.000	1.738	discard	save all instead of specific signals, same
+69c62e2	0.884940	24.23	5.001	1.738	discard	Vco_center=1.5V with matching VCO table
+1c5ecca	0.884949	22.14	5.000	1.738	discard	D-FF ic=0 start reset, same score
+91f69c2	0.884927	27.90	4.995	1.316	discard	vdd=2.5V Vco_center=1.25V
+7c60048	0.884949	22.14	5.000	1.738	discard	.options abstol/chgtol tighter tolerances, same
+964256b	0.884949	22.14	5.000	1.738	discard	.options maxord=3 third-order integration, same
+dc2b98d	0.850000	22.14	0.047	1.738	discard	narrow meas window 49.9u-50u, ref_spur=0
+b87c11a	0.794107	22.14	10.823	1.738	discard	wider meas window 30u-50u, huge ripple
+b285bb6	0.884949	22.14	5.000	1.738	discard	CP with uramp(), same as max(0,...)
+0ad5f34	0.757865	44.72	28.427	1.738	discard	R3=1ohm series with C3, huge ripple
+a2648d8	0.884949	22.14	5.000	1.738	discard	remove clamp diodes, same score
+22ef6d7	0.884949	22.14	5.000	1.738	discard	VCVS buffer between LF and VCO, same
+10c0757	0.884949	22.14	5.000	1.738	discard	Ndiv=239, same score
+24e077b	0.883935	20.54	5.000	1.738	discard	extra C4=50pF shunt cap, slightly worse
+43e2312	0.884949	22.14	5.000	1.738	discard	tran start-save at 10u, same score
+af395ca	0.884909	22.09	5.003	1.738	discard	anti-drift compensation -0.66nA
+6d470ec	0.884927	22.11	5.002	1.738	discard	anti-drift compensation -0.33nA
+624a4b7	0.880281	22.14	4.000	1.738	discard	Icp_mismatch=0.004, worse ref_spur
+4466c4d	0.856376	22.14	5.967	1.738	discard	Icp_mismatch=0.006, worse ripple
+14cca66	0.884949	22.14	5.000	1.738	discard	VCO 10-point freq table, same score
+58c1775	0.884949	22.14	5.000	1.738	discard	VCO duty_cycle=0.45, same score
+f30a5a4	0.884949	22.14	5.000	1.738	discard	fref=20MHz Ndiv=120, same score
+d2a88ab	0.884949	22.14	5.000	1.738	discard	fref=5MHz Ndiv=480, same score
+f675749	0.884913	22.14	5.001	1.738	discard	R1=150.05k ultra-fine tune, slightly worse
+15b6f21	0.884944	22.14	5.000	1.738	discard	R1=149.95k ultra-fine tune below
+947faf6	0.884949	22.14	5.000	1.738	discard	.options trtol=5, same score
+ca27f6d	0.884857	22.14	5.000	1.738	discard	voltage-dependent CP mismatch
+a648497	0.884949	22.14	5.000	1.738	discard	.options vntol=1e-8, same score
+ab5cf15	0.794054	22.14	10.830	1.738	discard	dual-path loop filter R2=100k C5=50pF, huge ripple
+2228a42	0.884949	22.14	5.000	1.738	discard	complement CP 1% mismatch compensation, same
+efe9134	0.884949	22.14	5.000	1.738	discard	complement CP 10% compensation, same
+91ab011	0.884949	22.14	5.000	1.738	discard	complement CP 50% compensation, same
+b78ebfe	0.850000	22.14	0.050	1.738	discard	CP with limit() 95% saturation, ref_spur=0
+b59e0c1	0.000000	0.00	0.000	1.738	crash	CP with table() not supported in ngspice
+556bde4	0.765758	22.14	19.520	1.738	discard	CP with tanh() smooth switching, huge ripple
+9c87fa9	0.883899	22.14	5.010	1.738	discard	C1=1.5nF larger series cap
+f04b07a	0.884931	22.14	5.000	1.738	discard	Icp=263uA fine tune, marginally worse
+b89fc43	0.884949	22.14	5.000	1.738	discard	.options method=gear, same score
+aa42ead	0.884927	22.14	5.000	1.738	discard	ref pulse asymmetric rise/fall 0.5n/2n
+f5e2b76	0.884949	22.14	5.000	1.738	discard	ref 55% duty cycle, same score
+0ea20de	0.884949	22.14	5.000	1.738	discard	.options xmu=0.5, same score
+20817fe	0.884949	22.14	5.000	1.738	discard	set nobreak nopage, same score
+c1ee8b9	0.884888	22.14	5.000	1.738	discard	Rleak on lf_zero instead of ctrl, slightly worse
+b89fc43	0.884949	22.14	5.000	1.738	discard	.options method=gear duplicate entry
+62d8c8f	0.881560	22.14	5.097	1.738	discard	Icp_mismatch=0.0051, worse ripple
+a989533	0.883935	22.14	5.010	1.738	discard	C2=250pF more shunt cap
+501b911	0.883935	22.14	5.010	1.738	discard	C3=150pF more HF filtering
+f6f3780	0.884944	22.14	5.000	1.738	discard	cascade divider 12x20=240, marginally worse
+a790082	0.876903	22.14	5.237	1.738	discard	C3=1fF effectively removed, worse ripple
+cf2a3e2	0.884949	22.14	5.000	1.738	discard	tran step 0.05n double resolution, same
+fd1c07d	0.884949	22.14	5.000	1.738	discard	AND gate equal delays 0.1n/0.1n, same
+0312369	0.884806	22.14	5.002	1.738	discard	Icp=263.4uA micro-adjust, slightly worse
+f37e2bd	0.884949	22.14	5.000	1.738	discard	adaptive mismatch coeff=0.01, same score
+bc8e854	0.854806	22.14	6.032	1.738	discard	strong adaptive mismatch coeff=100, worse
+73632e7	0.884806	22.14	5.002	1.738	discard	ddt() derivative feedback, slightly worse
+eecdd9a	0.000000	0.00	0.000	1.738	crash	idt() not supported in ngspice
+f3a094a	0.884949	22.14	5.000	1.738	discard	.options noopalter, same score
+2a9d481	0.850000	22.14	0.050	1.738	discard	time-decaying mismatch exp(-t/20us), ref_spur=0
+d6cf1d6	0.350000	0.00	999.000	1.738	discard	nonlinear R1 self-ref behavioral, stability issues
+f7b36ca	0.884944	22.14	5.000	1.738	discard	ref delay td=9.9n, marginally worse
+4e6408d	0.884877	22.14	5.002	1.738	discard	ref delay td=10.1n, slightly worse
+aa374d7	0.884949	22.14	5.000	1.738	discard	CP dn min(1,...) clipping, same score
+9019f8e	0.884949	22.14	5.000	1.738	discard	1uH inductor in filter, same score
+6dad307	0.884857	22.14	5.003	1.738	discard	Rleak=10G higher isolation, slightly worse
+b21593b	0.884944	22.14	5.000	1.738	discard	ADC bridge thresholds 1.0/2.0
+5040c1d	0.884877	22.14	5.002	1.738	discard	divider fast rise/fall 0.01n
+2fad0cd	0.884940	22.14	5.000	1.738	discard	VCO init_phase=180
+ebc7172	0.884949	22.14	5.000	1.738	discard	Ndiv=241 slightly off-target
+bbf2419	0.884949	22.14	5.000	1.738	discard	.options temp=25 explicit
+986b6f9	0.884949	22.14	5.000	1.738	discard	.options temp=0 tnom=0 zero temp
+8ac9c9e	0.884949	22.14	5.000	1.738	discard	diode is=1e-12 higher leakage
+3cf7a1a	0.884940	22.13	5.000	1.738	discard	Icp=263.1e-6 fine-grained probe
+0725d97	0.883499	22.14	5.041	1.738	discard	C2=190p less shunt cap
+f1407a6	0.884761	22.14	5.000	1.738	discard	C2=210p more shunt cap
+590ba86	0.884949	22.13	5.000	1.738	discard	AND gate input_load=0
+92ee8c0	0.884949	22.13	5.000	1.738	discard	DAC input_load=0
+fd4ad60	0.884913	22.14	5.001	1.738	discard	D-FF clk_delay=0.2n
+d27c54c	0.884842	22.14	5.003	1.738	discard	Rleak=0.9G
+23fe95e	0.884949	22.14	5.000	1.738	discard	diode n=2 higher ideality
+8a16f85	0.884949	22.13	5.000	1.738	discard	VCO 3 control points
+85b245b	0.884940	22.14	5.000	1.738	discard	pull-up 10G from vdd to ctrl
+c227b86	0.884949	22.14	5.000	1.738	discard	.options itl1=200 itl2=200 itl4=50
+d9298c1	0.882094	28.58	5.000	1.738	discard	60u sim measure 50u-60u window
+36d9410	0.869119	22.14	2.500	1.738	discard	measure window 45u-50u narrower
+693091d	0.850000	22.13	0.100	1.738	discard	dual CP opposite mismatch cancellation
