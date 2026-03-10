@@ -270,3 +270,9 @@ b9b1aaa	0.884949	22.14	5.000	1.738	discard	ngbehavior=ltpsa, same score
 09aadde	0.858260	25.23	5.891	1.738	discard	R1=200k, ripple 5.891mV
 40a05cc	0.883331	21.12	4.641	1.738	discard	C1=2nF, ripple 4.641mV
 c7303d9	0.876871	24.38	5.238	1.738	discard	C2=100pF, ripple 5.238mV
+3983bd9	0.884949	22.13	5.000	1.738	discard	VCO duty_cycle=0.3, same score
+49175a3	0.884877	22.14	5.002	1.738	discard	VCO init_phase=90, ripple 5.002mV
+63e095a	0.884944	22.13	4.999	1.738	discard	two-stage /8 /30 prescaler
+76085b8	0.884918	22.10	4.993	1.738	discard	ref delay td=9.5n
+d302fb7	0.884699	22.17	5.007	1.738	discard	ref delay td=10.5n
+d6c27aeb	0.850000	10.40	0.363	1.738	discard	sine ref (logged dup)
