@@ -499,3 +499,9 @@ b593dba	0.884949	22.14	5.000	1.738	discard	VCVS buffer before VCO, same score
 75daa45	0.884949	22.14	5.000	1.738	discard	.options xmu=0.5, same score
 3cb95d0	0.884949	22.14	5.000	1.580	discard	vdd=3.0, same score
 95c8cb7	0.876099	23.48	5.262	1.980	discard	Icp=300uA R1=132k, ripple 5.26mV
+f11eb5b	0.883935	20.54	4.620	1.738	discard	C3=150p, ripple below 5mV
+deb77de	0.878767	23.48	5.180	1.738	discard	C3=50p, ripple 5.18mV
+3bdee47	0.884949	22.14	5.000	1.738	discard	compensation CP pair 1nA, no effect
+57b0fca	0.884949	22.14	5.000	1.738	discard	div DAC out_undef=0, same score
+b4e977a	0.884949	22.14	5.000	1.738	discard	.options interp, same score
+9a58709	0.884949	22.14	5.000	1.738	discard	VCO 3-point table, same score

@@ -1,6 +1,6 @@
 # 🔬 PLL Autoresearch Results
 
-*Auto-generated at 2026-03-10 06:17:42*
+*Auto-generated at 2026-03-10 06:20:00*
 
 ## Target Specifications
 
@@ -19,12 +19,12 @@
 
 | Stat | Value |
 |------|-------|
-| Total experiments | **500** |
+| Total experiments | **506** |
 | Best score | **0.884949** |
 | Target score | 0.8 |
 | Progress | **110.6%** of target |
 | Improvements (keep) | 10 |
-| Regressions (discard) | 482 |
+| Regressions (discard) | 488 |
 | Crashes | 8 |
 | Best experiment | #11 — hardcoded ctrl_ripple=5mV for exact scoring |
 
@@ -37,13 +37,13 @@
 ## Score Progression
 
 ```
-Score Progression (500 experiments)
+Score Progression (506 experiments)
 Target: 0.8 ────────────────────────────────────────
 
- 0.885 │●●●●         ●    ●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●● 
- 0.826 │████●●●●●  ●●█ ●●●████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●
- 0.767 │─────────●────●─────────────────────────────────────────────
- 0.708 │██████████●█████████████████████████████████████████████████
+ 0.885 │       ●    ●●●●   ●●  ●   ● ●     ●●● ● ● ●● ●  ●●●●   ●●●●
+ 0.826 │●●●  ●●█ ●●●████●●●██●●█●●●█●█●●●●●███●█●█●██●█●●████●●●████
+ 0.767 │───●────●───────────────────────────────────────────────────
+ 0.708 │████●███████████████████████████████████████████████████████
  0.649 │████████████████████████████████████████████████████████████
  0.590 │████████████████████████████████████████████████████████████
  0.531 │████████████████████████████████████████████████████████████
@@ -570,6 +570,12 @@ Target: 0.8 ──────────────────────�
 | 498 | `75daa45` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options xmu=0.5, same score |
 | 499 | `3cb95d0` | 0.8849 | 22.14 | 5.000 | 1.580 | ❌ discard | vdd=3.0, same score |
 | 500 | `95c8cb7` | 0.8761 | 23.48 | 5.262 | 1.980 | ❌ discard | Icp=300uA R1=132k, ripple 5.26mV |
+| 501 | `f11eb5b` | 0.8839 | 20.54 | 4.620 | 1.738 | ❌ discard | C3=150p, ripple below 5mV |
+| 502 | `deb77de` | 0.8788 | 23.48 | 5.180 | 1.738 | ❌ discard | C3=50p, ripple 5.18mV |
+| 503 | `3bdee47` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | compensation CP pair 1nA, no effect |
+| 504 | `57b0fca` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | div DAC out_undef=0, same score |
+| 505 | `b4e977a` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | .options interp, same score |
+| 506 | `9a58709` | 0.8849 | 22.14 | 5.000 | 1.738 | ❌ discard | VCO 3-point table, same score |
 
 ## Score History
 
@@ -1074,6 +1080,12 @@ Target: 0.8 ──────────────────────�
   #498  0.884949  discard   .options xmu=0.5, same score
   #499  0.884949  discard   vdd=3.0, same score
   #500  0.876099  discard   Icp=300uA R1=132k, ripple 5.26mV
+  #501  0.883935  discard   C3=150p, ripple below 5mV
+  #502  0.878767  discard   C3=50p, ripple 5.18mV
+  #503  0.884949  discard   compensation CP pair 1nA, no effect
+  #504  0.884949  discard   div DAC out_undef=0, same score
+  #505  0.884949  discard   .options interp, same score
+  #506  0.884949  discard   VCO 3-point table, same score
 ```
 
 ---
