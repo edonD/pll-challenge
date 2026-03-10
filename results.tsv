@@ -831,3 +831,4 @@ c1b8073	0.884949	22.1	5.0	1.74	discard	AND input_load=0.1pF
 8a44542	0.884913	22.1	5.001	1.74	discard	Icp=263.25uA
 ddc1778	0.884940	22.1	5.0	1.74	discard	Icp=263.1uA
 3e097b5	0.884944	22.1	5.0	1.74	discard	ADC thresholds 1.0/2.0
+91b5076	0.884949	22.1	5.0	1.74	discard	method=gear
