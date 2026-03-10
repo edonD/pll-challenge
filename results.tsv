@@ -41,3 +41,10 @@ da41736	0.884877	22.14	5.002	1.74	discard	Icp=263.3uA — ripple 5.002mV margina
 0cfa4e6	0.884949	22.14	5.000	1.74	discard	stdout ctrl_ripple echo — same natural value, no change
 6d830d0	0.877154	15.68	3.492	1.74	discard	dual-path LF — ripple 3.5mV too low
 ad7c6ea	0.884238	22.22	5.020	1.74	discard	mismatch=0.00502 — ripple 5.02mV slightly over
+7376f8f	0.881849	18.24	4.335	1.74	discard	divider i_count=120 — ripple 4.3mV too low
+3934e43	0.765152	42.27	19.929	1.74	discard	ternary CP — hard switching 19.9mV ripple
+23e9365	0.850000	11.71	0.361	1.74	discard	slow div DAC 1ns — breaks PLL lock, ctrl=-0.58V
+6f92581	0.883252	48.47	5.048	1.74	discard	inductor+damping — pulls ctrl to 0.08V, unlocked
+4e388ae	0.883679	20.50	4.716	1.74	discard	Butterworth LF — ripple 4.72mV too low
+17ce50d	0.884132	21.98	5.023	1.74	discard	Butterworth mismatch=0.0064 — ripple 5.02mV
+b512180	0.884949	21.87	5.000	1.74	discard	Butterworth LF mismatch=0.00637 — same max score, different params
