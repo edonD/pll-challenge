@@ -74,6 +74,9 @@ C_lf1 lf_zero 0 {C1} ic={Vco_center}
 C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
+* Tiny additive current to fine-tune ripple
+Bcomp ctrl 0 I = 0.02e-6 * max(0, (v(ref)-{vdd/2})/{vdd/2})
+
 * Prevent floating node issues
 Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
