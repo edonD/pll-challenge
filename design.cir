@@ -75,7 +75,7 @@ C_lf2 ctrl 0 {C2} ic={Vco_center}
 C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
-Rleak ctrl 0 800Meg
+Rleak ctrl 0 1G
 * Clamp control voltage to VCO input range
 Dclamp_hi ctrl vdd_node dmod
 Dclamp_lo gnd_node ctrl dmod
