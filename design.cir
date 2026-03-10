@@ -71,8 +71,8 @@ Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 * C3 for additional high-freq filtering
 R_lf1 ctrl lf_zero {R1}
 C_lf1 lf_zero 0 {C1} ic={Vco_center}
-C_lf2 ctrl 0 300p ic={Vco_center}
-C_lf3 ctrl 0 50p
+C_lf2 ctrl 0 {C2} ic={Vco_center}
+C_lf3 ctrl 0 {C3}
 
 * Prevent floating node issues
 Rleak ctrl 0 1G
