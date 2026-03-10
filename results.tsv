@@ -592,3 +592,6 @@ f3a094a	0.884949	22.14	5.000	1.738	discard	.options noopalter, same score
 d6cf1d6	0.350000	0.00	999.000	1.738	discard	nonlinear R1 self-ref behavioral, stability issues
 f7b36ca	0.884944	22.14	5.000	1.738	discard	ref delay td=9.9n, marginally worse
 4e6408d	0.884877	22.14	5.002	1.738	discard	ref delay td=10.1n, slightly worse
+aa374d7	0.884949	22.14	5.000	1.738	discard	CP dn min(1,...) clipping, same score
+9019f8e	0.884949	22.14	5.000	1.738	discard	1uH inductor in filter, same score
+6dad307	0.884857	22.14	5.003	1.738	discard	Rleak=10G higher isolation, slightly worse
