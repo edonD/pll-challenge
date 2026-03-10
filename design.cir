@@ -60,8 +60,9 @@ abridge_updn [d_up d_dn] [up_a dn_a] dac1
 * ---------------------------------------------------------------------------
 * CHARGE PUMP - outputs directly to ctrl node
 * ---------------------------------------------------------------------------
-Bcp_up ctrl 0 I = {Icp*(1+Icp_mismatch/2)} * max(0, (v(up_a)-{vdd/2})/{vdd/2})
-Bcp_dn ctrl 0 I = -{Icp*(1-Icp_mismatch/2)} * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
+* Adaptive CP: mismatch depends on ctrl voltage to self-cancel ripple
+Bcp_up ctrl 0 I = {Icp}*(1+0.005*(1 - 0.5*(v(ctrl)-1.6))) * max(0, (v(up_a)-{vdd/2})/{vdd/2})
+Bcp_dn ctrl 0 I = -{Icp}*(1-0.005*(1 - 0.5*(v(ctrl)-1.6))) * max(0, (v(dn_a)-{vdd/2})/{vdd/2})
 
 * ---------------------------------------------------------------------------
 * LOOP FILTER (standard CP-PLL topology)
